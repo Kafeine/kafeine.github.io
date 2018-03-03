@@ -345,7 +345,7 @@
               
             
 
-              <ul class="no-bullet shadow-black">
+              <ul class="no-bullet shadow-white">
               
                 
                   <li >
@@ -387,7 +387,7 @@
               
             
 
-            <ul class="no-bullet shadow-black">
+            <ul class="no-bullet shadow-white">
             
               
                 <li >
