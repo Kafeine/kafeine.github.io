@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<!-- Pages: 25 links with priority=0.3, changefreq=monthly -->
+<!-- Pages: 45 links with priority=0.3, changefreq=monthly -->
 
 	
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/404.html</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -22,7 +22,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/blog/archive/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -39,7 +39,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/atom.xml</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -56,7 +56,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/changelog/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -71,7 +71,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/contact/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -86,7 +86,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/design/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -101,7 +101,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/documentation/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -116,7 +116,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/feed.xml</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -131,7 +131,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/getting-started/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -146,7 +146,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/headers/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -161,22 +161,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/humans.txt</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://malware2.dontneedcoffee.com/blog/</loc>
-	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -191,7 +176,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/blog/_old</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -206,7 +191,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -221,7 +206,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/info/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -236,7 +221,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/redirect-page/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -251,7 +236,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/roadmap/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -266,7 +251,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/robots.txt</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -285,7 +270,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/search/</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -300,7 +285,7 @@
 	<url>
 	<loc>http://malware2.dontneedcoffee.com/sitemap.xml</loc>
 	
-		<lastmod>2018-03-03T16:40:26+01:00</lastmod>
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -311,6 +296,321 @@
 	</url>
 	
 
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/2/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/3/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/4/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/5/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/6/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/7/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/8/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/9/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/10/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/11/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/12/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/13/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/14/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/15/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/16/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/17/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/18/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/19/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/20/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://malware2.dontneedcoffee.com/blog/page/21/</loc>
+	
+		<lastmod>2018-03-03T16:51:10+01:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
 	
 
 
