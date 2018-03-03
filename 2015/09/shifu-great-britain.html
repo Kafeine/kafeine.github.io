@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shifu &lt;3 Great Britain</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="I noticed since several days a shift in malware distribution in the UK.Many infection path that I follow are now dropping a banker that i already saw&amp;nbsp;many times, especially at the end of 2014 and mostly in Italy.First time I encountered that threat : 2014-10-08Angler EK dropping 165146e43ccee9c29b62693caf290df7 in an IT focused infection path2014-10-08At that time I learnt from&amp;nbsp;Frank Ruiz&amp;nbsp;( FoxIT ) that he spotted it 1 month earlier (2014-09-03 exactly). We&amp;nbsp;were using a &quot;non public&quot; name to talk about it.So two days ago in UK traffic :2015-09-22 - An Angler EK dropping &amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422 via malvertising on GBR trafficI saw that banking trojan again. (note : contacted, &amp;nbsp;Frank Ruiz told me that this banker activity never really stopped). What was new to me is that it was installing Apache,Apache folder installed by&amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422&amp;nbsp;2015-09-22Apache ConfigData folder of the Apache installationCustomers of 4 financial institutions are targeted by the injects stored in the config.xmlconfig.xmlThe same day i saw it again, other malvertising campaign (read: other actor bringing the traffic) and not dropped directly but as a 2nd Stage in a bedep thread which was not grabbing an adfraud module:Angler EK pushing bedep grabbing&amp;nbsp;791491ba9f0a7670659f45f1e5421c83 2015-09-22Seeing it again today in malvertising campaign focused on UK, I decided to write about that and contacted Brett StoneGross (Dell SecureWorks) to try and get the &#39;defense name&#39; for this. He told me that what I was describing was probably Shifu ..and fast confirmed it looking at the sample. (Edit reaction to twitter : He also told me that Shifu is based on Shiz)So here we are: Shifu &amp;lt;3 GBRShifu &amp;lt;3 GBR2015-09-24Side note : Here are some of the DGA&amp;nbsp;in case main domain stop working.Files : ShifuPackage_2015-09-24.zip&amp;nbsp;Password : malwareContains : 4 fiddler, 1 pcap, 6 samples and 2 apache config folder (with injects).Thanks:&amp;nbsp;Frank Ruiz&amp;nbsp;(Foxit) and Brett StoneGross (Dell SecureWorks) for their inputs/insight/awesomeness.Read More:Shifu: ‘Masterful’ New Banking Trojan Is Attacking 14 Japanese Banks - 2015-08-31 - Limor Kessem - IBM X-ForceJapanese Banking Trojan Shifu Combines Malware Tools - 2015-09-24 - Diwakar Dinkar - McAfeePost publication Reading:3,000 High-Profile Japanese Sites Hit By Massive Malvertising Campaign&amp;nbsp; 2015-09-30 - Trenmicro">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2015/09/shifu-great-britain.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Shifu &lt;3 Great Britain">
+	<meta property="og:description" content="I noticed since several days a shift in malware distribution in the UK.Many infection path that I follow are now dropping a banker that i already saw&amp;nbsp;many times, especially at the end of 2014 and mostly in Italy.First time I encountered that threat : 2014-10-08Angler EK dropping 165146e43ccee9c29b62693caf290df7 in an IT focused infection path2014-10-08At that time I learnt from&amp;nbsp;Frank Ruiz&amp;nbsp;( FoxIT ) that he spotted it 1 month earlier (2014-09-03 exactly). We&amp;nbsp;were using a &quot;non public&quot; name to talk about it.So two days ago in UK traffic :2015-09-22 - An Angler EK dropping &amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422 via malvertising on GBR trafficI saw that banking trojan again. (note : contacted, &amp;nbsp;Frank Ruiz told me that this banker activity never really stopped). What was new to me is that it was installing Apache,Apache folder installed by&amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422&amp;nbsp;2015-09-22Apache ConfigData folder of the Apache installationCustomers of 4 financial institutions are targeted by the injects stored in the config.xmlconfig.xmlThe same day i saw it again, other malvertising campaign (read: other actor bringing the traffic) and not dropped directly but as a 2nd Stage in a bedep thread which was not grabbing an adfraud module:Angler EK pushing bedep grabbing&amp;nbsp;791491ba9f0a7670659f45f1e5421c83 2015-09-22Seeing it again today in malvertising campaign focused on UK, I decided to write about that and contacted Brett StoneGross (Dell SecureWorks) to try and get the &#39;defense name&#39; for this. He told me that what I was describing was probably Shifu ..and fast confirmed it looking at the sample. (Edit reaction to twitter : He also told me that Shifu is based on Shiz)So here we are: Shifu &amp;lt;3 GBRShifu &amp;lt;3 GBR2015-09-24Side note : Here are some of the DGA&amp;nbsp;in case main domain stop working.Files : ShifuPackage_2015-09-24.zip&amp;nbsp;Password : malwareContains : 4 fiddler, 1 pcap, 6 samples and 2 apache config folder (with injects).Thanks:&amp;nbsp;Frank Ruiz&amp;nbsp;(Foxit) and Brett StoneGross (Dell SecureWorks) for their inputs/insight/awesomeness.Read More:Shifu: ‘Masterful’ New Banking Trojan Is Attacking 14 Japanese Banks - 2015-08-31 - Limor Kessem - IBM X-ForceJapanese Banking Trojan Shifu Combines Malware Tools - 2015-09-24 - Diwakar Dinkar - McAfeePost publication Reading:3,000 High-Profile Japanese Sites Hit By Massive Malvertising Campaign&amp;nbsp; 2015-09-30 - Trenmicro">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2015/09/shifu-great-britain.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Shifu &lt;3 Great Britain">
+	<meta name="twitter:description" content="I noticed since several days a shift in malware distribution in the UK.Many infection path that I follow are now dropping a banker that i already saw&amp;nbsp;many times, especially at the end of 2014 and mostly in Italy.First time I encountered that threat : 2014-10-08Angler EK dropping 165146e43ccee9c29b62693caf290df7 in an IT focused infection path2014-10-08At that time I learnt from&amp;nbsp;Frank Ruiz&amp;nbsp;( FoxIT ) that he spotted it 1 month earlier (2014-09-03 exactly). We&amp;nbsp;were using a &quot;non public&quot; name to talk about it.So two days ago in UK traffic :2015-09-22 - An Angler EK dropping &amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422 via malvertising on GBR trafficI saw that banking trojan again. (note : contacted, &amp;nbsp;Frank Ruiz told me that this banker activity never really stopped). What was new to me is that it was installing Apache,Apache folder installed by&amp;nbsp;0598ee3e06c681d7f9e05d83bb7ea422&amp;nbsp;2015-09-22Apache ConfigData folder of the Apache installationCustomers of 4 financial institutions are targeted by the injects stored in the config.xmlconfig.xmlThe same day i saw it again, other malvertising campaign (read: other actor bringing the traffic) and not dropped directly but as a 2nd Stage in a bedep thread which was not grabbing an adfraud module:Angler EK pushing bedep grabbing&amp;nbsp;791491ba9f0a7670659f45f1e5421c83 2015-09-22Seeing it again today in malvertising campaign focused on UK, I decided to write about that and contacted Brett StoneGross (Dell SecureWorks) to try and get the &#39;defense name&#39; for this. He told me that what I was describing was probably Shifu ..and fast confirmed it looking at the sample. (Edit reaction to twitter : He also told me that Shifu is based on Shiz)So here we are: Shifu &amp;lt;3 GBRShifu &amp;lt;3 GBR2015-09-24Side note : Here are some of the DGA&amp;nbsp;in case main domain stop working.Files : ShifuPackage_2015-09-24.zip&amp;nbsp;Password : malwareContains : 4 fiddler, 1 pcap, 6 samples and 2 apache config folder (with injects).Thanks:&amp;nbsp;Frank Ruiz&amp;nbsp;(Foxit) and Brett StoneGross (Dell SecureWorks) for their inputs/insight/awesomeness.Read More:Shifu: ‘Masterful’ New Banking Trojan Is Attacking 14 Japanese Banks - 2015-08-31 - Limor Kessem - IBM X-ForceJapanese Banking Trojan Shifu Combines Malware Tools - 2015-09-24 - Diwakar Dinkar - McAfeePost publication Reading:3,000 High-Profile Japanese Sites Hit By Massive Malvertising Campaign&amp;nbsp; 2015-09-30 - Trenmicro">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Shifu <3 Great Britain</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-PHt9riR87QI/VgQ_w76W7mI/AAAAAAAAFIo/lCdM1AF9qxM/s1600/Shifu_ME%2521.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="https://3.bp.blogspot.com/-PHt9riR87QI/VgQ_w76W7mI/AAAAAAAAFIo/lCdM1AF9qxM/s1600/Shifu_ME%2521.png" /></a></div><br /><br /><br />I noticed since several days a shift in malware distribution in the UK.<br />Many infection path that I follow are now dropping a banker that i already saw&nbsp;many times, especially at the end of 2014 and mostly in Italy.<br /><br />First time I encountered that threat : 2014-10-08<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-3bvpbvtFRDQ/VgQ66KnAkMI/AAAAAAAAFIY/hNyCit2Vyxo/s1600/2015-09-24_19h59_14.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="196" src="https://3.bp.blogspot.com/-3bvpbvtFRDQ/VgQ66KnAkMI/AAAAAAAAFIY/hNyCit2Vyxo/s640/2015-09-24_19h59_14.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Angler EK dropping <a href="https://www.virustotal.com/file/372c1c4ecde6c4b2012bd8e80d62b7c6d8421a87f68d2fe93b774e86b1ba7f84/analysis/">165146e43ccee9c29b62693caf290df7</a> in an IT focused infection path<br />2014-10-08</td></tr></tbody></table>At that time I learnt from&nbsp;<a href="https://twitter.com/francruar">Frank Ruiz</a>&nbsp;( <a href="https://twitter.com/foxit">FoxIT</a> ) that he spotted it 1 month earlier (2014-09-03 exactly). We&nbsp;were using a "non public" name to talk about it.<br /><br />So two days ago in UK traffic :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-QLr0D00TNfA/VgQ_M6JyO_I/AAAAAAAAFIg/kCOvcvO5SiA/s1600/2015-09-24_20h21_23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="52" src="https://1.bp.blogspot.com/-QLr0D00TNfA/VgQ_M6JyO_I/AAAAAAAAFIg/kCOvcvO5SiA/s640/2015-09-24_20h21_23.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">2015-09-22 - An Angler EK dropping &nbsp;<span data-sheets-userformat="[null,null,513,[null,0],null,null,null,null,null,null,null,null,0]" data-sheets-value="[null,2,&quot;0598ee3e06c681d7f9e05d83bb7ea422&quot;]" style="font-family: &quot;arial&quot; , &quot;sans&quot; , sans-serif; font-size: 13px;"><a href="https://www.virustotal.com/file/82f8f2cf13cbee18ac25833eec1b62fc4bd5ebf3b18888572398b6b236da30ed/analysis/1443124685/">0598ee3e06c681d7f9e05d83bb7ea422 </a><br />via malvertising on GBR traffic</span></td></tr></tbody></table>I saw that banking trojan again. (note : contacted, &nbsp;<a href="https://twitter.com/francruar">Frank Ruiz</a> told me that this banker activity never really stopped). What was new to me is that it was installing Apache,<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-Glf2KvpdN-4/VgRAyZ0J9HI/AAAAAAAAFI0/vVdip1SMTbM/s1600/ApacheFolder.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="https://3.bp.blogspot.com/-Glf2KvpdN-4/VgRAyZ0J9HI/AAAAAAAAFI0/vVdip1SMTbM/s1600/ApacheFolder.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Apache folder installed by&nbsp;<a href="https://www.virustotal.com/file/82f8f2cf13cbee18ac25833eec1b62fc4bd5ebf3b18888572398b6b236da30ed/analysis/1443124685/" style="font-family: arial, sans, sans-serif; font-size: 13px;">0598ee3e06c681d7f9e05d83bb7ea422&nbsp;</a><span style="font-family: &quot;arial&quot; , &quot;sans&quot; , sans-serif; font-size: 13px;"><br />2015-09-22</span></td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/--IPgg_2rNh8/VgRDXHlYYZI/AAAAAAAAFJg/yoCqaAdvLqQ/s1600/2015-09-24_20h32_09.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="320" src="https://4.bp.blogspot.com/--IPgg_2rNh8/VgRDXHlYYZI/AAAAAAAAFJg/yoCqaAdvLqQ/s320/2015-09-24_20h32_09.png" width="289" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Apache Config</td></tr></tbody></table><br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-3ElyrAermWI/VgRBeMnNtjI/AAAAAAAAFI8/rEU-54lKIFI/s1600/2015-09-24_20h31_06.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="https://4.bp.blogspot.com/-3ElyrAermWI/VgRBeMnNtjI/AAAAAAAAFI8/rEU-54lKIFI/s1600/2015-09-24_20h31_06.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Data folder of the Apache installation</td></tr></tbody></table><br /><div class="separator" style="clear: both; text-align: center;"><br /></div><br />Customers of 4 financial institutions are targeted by the injects stored in the config.xml<br /><div class="separator" style="clear: both; text-align: center;"><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-Dqr3bwsnxCA/VgRF-qcl1II/AAAAAAAAFJs/0FRH35JGcSo/s1600/2015-09-24_20h47_48.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="https://1.bp.blogspot.com/-Dqr3bwsnxCA/VgRF-qcl1II/AAAAAAAAFJs/0FRH35JGcSo/s320/2015-09-24_20h47_48.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">config.xml</td></tr></tbody></table>The same day i saw it again, other malvertising campaign (read: other actor bringing the traffic) and not dropped directly but as a 2nd Stage in a bedep thread which was not grabbing an adfraud module:<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-3VmBAyjScgg/VgRIVPKPExI/AAAAAAAAFJ0/LEFhneViCFs/s1600/2015-09-24_20h54_42.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="188" src="https://1.bp.blogspot.com/-3VmBAyjScgg/VgRIVPKPExI/AAAAAAAAFJ0/LEFhneViCFs/s640/2015-09-24_20h54_42.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Angler EK pushing bedep grabbing&nbsp;<a href="https://www.virustotal.com/file/584aea0cb35a6fc09281a1f3013231135072aece74616a3994c94e05ec23ad64/analysis/1443125857/">791491ba9f0a7670659f45f1e5421c83 </a><br />2015-09-22</td></tr></tbody></table><br />Seeing it again today in malvertising campaign focused on UK, I decided to write about that and contacted <a href="https://twitter.com/pushecx">Brett StoneGross</a> (<a href="https://twitter.com/dellsecureworks">Dell SecureWorks</a>) to try and get the 'defense name' for this. He told me that what I was describing was probably Shifu ..and fast confirmed it looking at the sample. (<i>Edit reaction to twitter : He also told me that Shifu is based on Shiz</i>)<br /><br />So here we are: Shifu &lt;3 GBR<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-zp5bSSuMQSY/VgRQ6mAn7JI/AAAAAAAAFKE/Rn2BqnVLhgk/s1600/2015-09-24_21h15_55.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="142" src="https://2.bp.blogspot.com/-zp5bSSuMQSY/VgRQ6mAn7JI/AAAAAAAAFKE/Rn2BqnVLhgk/s640/2015-09-24_21h15_55.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Shifu &lt;3 GBR<br />2015-09-24</td></tr></tbody></table>Side note : Here are <a href="http://pastebin.com/raw.php?i=JZ6U9H0j">some of the DGA</a>&nbsp;in case main domain stop working.<br /><br /><b><u>Files :</u></b> <a href="https://files.dontneedcoffee.com/index.php/s/ZZekezPmSPZG0wD">ShifuPackage_2015-09-24.zip</a>&nbsp;Password : malware<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-Ce4qV2ZjDOA/VgRSKD6-sEI/AAAAAAAAFKM/O_kWkOFYZyw/s1600/2015-09-24_21h42_10.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="127" src="https://1.bp.blogspot.com/-Ce4qV2ZjDOA/VgRSKD6-sEI/AAAAAAAAFKM/O_kWkOFYZyw/s320/2015-09-24_21h42_10.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: xx-small; text-align: start;">Contains : 4 fiddler, 1 pcap, 6 samples and 2 apache config folder (with injects).</span></td></tr></tbody></table><br /><b><u>Thanks:</u></b>&nbsp;<a href="https://twitter.com/francruar">Frank Ruiz</a>&nbsp;(<a href="https://twitter.com/foxit">Foxit</a>) and <a href="https://twitter.com/pushecx">Brett StoneGross</a> (<a href="https://twitter.com/dellsecureworks">Dell SecureWorks</a>) for their inputs/insight/awesomeness.<br /><br /><b><u>Read More:</u></b><br /><a href="https://securityintelligence.com/shifu-masterful-new-banking-trojan-is-attacking-14-japanese-banks/">Shifu: ‘Masterful’ New Banking Trojan Is Attacking 14 Japanese Banks</a> - 2015-08-31 - Limor Kessem - IBM X-Force<br /><a href="https://blogs.mcafee.com/mcafee-labs/japanese-banking-trojan-shifu-combines-malware-tools/">Japanese Banking Trojan Shifu Combines Malware Tools</a> - 2015-09-24 - Diwakar Dinkar - McAfee<br /><br /><b><u>Post publication Reading:</u></b><br /><a href="http://blog.trendmicro.com/trendlabs-security-intelligence/3000-high-profile-japanese-sites-hit-by-massive-malvertising-campaign/">3,000 High-Profile Japanese Sites Hit By Massive Malvertising Campaign</a>&nbsp; 2015-09-30 - Trenmicro
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2015-09-24" itemprop="datePublished"> 2015-09-24</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Banking Malware</span> <span class="icon-price-tag pr10"> GBR</span> <span class="icon-price-tag pr10"> Shifu</span> <span class="icon-price-tag pr10"> Angler EK</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2015/08/cve-2015-flash-player-up-to-1800209-and.html">&laquo; CVE-2015-5560 (Flash up to 18.0.0.209) and Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/design/mediaelement_js/">Play Audio & Video with media&shy;element.js &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

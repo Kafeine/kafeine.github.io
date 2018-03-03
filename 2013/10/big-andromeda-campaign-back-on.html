@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Big Andromeda Campaign back on track. From Sweet Orange to Neutrino</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="This is not the usual post I write but decided to go on as the campaign is quite big (enough to modify the EK market share feeling) and I have some compromised domain to share for remediation (see at the end)A big campaign was active from at least 2013-09-27 to 2013-10-14.A huge number of compromised website were conditionally redirecting to a Sweet Orange pushing Andromeda : (Post by Sucuri about this campaign)Sweet Orange 82 2013-09-27Payload : AndromedaOne of the payload :&amp;nbsp;82735517dd73de39a17c01a74c4fa232 nicely named by Microsoft (as often)The campaign was really widespread and was imo responsible for the feeling from some that Sweet Orange was prevailing after Paunch&#39;s &amp;nbsp;Arrest (so maybe in &quot;tilt number&quot; but I think most actors are on Neutrino, Magnitude and Nuclear Pack)The campaign suddenly stopped redirecting to Sweet Orange on 2013-10-14 redirecting instead to google.com and the day after to [rotating].sytes.net/atb/counter.php then to google.(Note: at same time 4-5 other Sweet Orange threads I was following also disappeared which made me tweet few days laterSweet Orange out of the &quot;battlefield&quot; since around 60 hours. Is something happening here too ?— kafeine (@kafeine) October 18, 2013 Note : have been pointed to at least 2 SWO threads that are still active )That campaign has a huge placeby SucuriThat campaign was still &quot;on hold&quot; yesterday (&amp;nbsp;BadwareBusters&amp;nbsp;thread)On Hold Campaign. Redirectin to Google2013-10-22The infection process is on again but redirecting now to Neutrino.(it&#39;s&amp;nbsp;enough to assume that actors can speak russian or are better than most of us at using google translate)Neutrino thread pushing AndromedaHaving no access to compromised server, based on the way the redirection is handled I thought it was driven by an Apache Rogue module (Darkleech or CDorked installed on compromised server via Cpanel/Parallels Plesk server vulns) but it seems it&#39;s more likely compromised Joomla/WordpressPayload I got (it&#39;s obviously rotating) :1074b843c0b6e783ee1314c9759067a2&amp;nbsp;(sample - VT&amp;nbsp; - Malwr )Am not 100% sure it&#39;s Andromeda but chances for it are really high...@kafeine This is is Andromeda 2.7 ( CKF81X) i confirmed .67c7f325d951a444f203489274a0ca62 is the actual payload has after unpacking.— Raashid Bhat (@raashidbhatt) October 23, 2013 @kafeine here is the c2c config http://t.co/erF2v7WqkW currently c2c is replying with no updates— Raashid Bhat (@raashidbhatt) October 23, 2013   -----46.22.211.60 34702 | 46.22.208.0/20 | WAVECOM | EE | WAVECOM.EE | AKTSIASELTS WAVECOMPOST /rukomorsdx/forum.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: base.thecreatureteacher.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud-----At least &amp;nbsp;&amp;gt;8000 domains were redirecting to the rotator (but I think it&#39;s far more than than).http://pastebin.com/raw.php?i=1vFNKdSW (Please use for remediation - some Cert (CA/CH/CZ/FR/FI/PL) should have already been informed)&amp;lt;edit1 : 2013-11-01&amp;gt;After few days out (after that post). They are back again. Using intermediate redictor in : [rotating].dezit/counter.phpCounter-Andro gang back on NeutrinoPayload :&amp;nbsp;3b75c1b705ce8f0e4e3a09d137a842c1&amp;lt;/edit1&amp;gt;Read More :Neutrino: Caught in the Act&amp;nbsp;- Karmina Aquino &amp;amp; Daavid &amp;nbsp;Hentunen - 2013-10-23 - F-SecureMalware iFrame Campaign from Sytes(.)net&amp;nbsp;Daniel Cid - 2013-10-03 &amp;nbsp;Sucuri.netHello Neutrino ! (just one more Exploit Kit)&amp;nbsp;2013-03-17 - last update 2013-10-03Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel&amp;nbsp;2012-07-02">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2013/10/big-andromeda-campaign-back-on.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Big Andromeda Campaign back on track. From Sweet Orange to Neutrino">
+	<meta property="og:description" content="This is not the usual post I write but decided to go on as the campaign is quite big (enough to modify the EK market share feeling) and I have some compromised domain to share for remediation (see at the end)A big campaign was active from at least 2013-09-27 to 2013-10-14.A huge number of compromised website were conditionally redirecting to a Sweet Orange pushing Andromeda : (Post by Sucuri about this campaign)Sweet Orange 82 2013-09-27Payload : AndromedaOne of the payload :&amp;nbsp;82735517dd73de39a17c01a74c4fa232 nicely named by Microsoft (as often)The campaign was really widespread and was imo responsible for the feeling from some that Sweet Orange was prevailing after Paunch&#39;s &amp;nbsp;Arrest (so maybe in &quot;tilt number&quot; but I think most actors are on Neutrino, Magnitude and Nuclear Pack)The campaign suddenly stopped redirecting to Sweet Orange on 2013-10-14 redirecting instead to google.com and the day after to [rotating].sytes.net/atb/counter.php then to google.(Note: at same time 4-5 other Sweet Orange threads I was following also disappeared which made me tweet few days laterSweet Orange out of the &quot;battlefield&quot; since around 60 hours. Is something happening here too ?— kafeine (@kafeine) October 18, 2013 Note : have been pointed to at least 2 SWO threads that are still active )That campaign has a huge placeby SucuriThat campaign was still &quot;on hold&quot; yesterday (&amp;nbsp;BadwareBusters&amp;nbsp;thread)On Hold Campaign. Redirectin to Google2013-10-22The infection process is on again but redirecting now to Neutrino.(it&#39;s&amp;nbsp;enough to assume that actors can speak russian or are better than most of us at using google translate)Neutrino thread pushing AndromedaHaving no access to compromised server, based on the way the redirection is handled I thought it was driven by an Apache Rogue module (Darkleech or CDorked installed on compromised server via Cpanel/Parallels Plesk server vulns) but it seems it&#39;s more likely compromised Joomla/WordpressPayload I got (it&#39;s obviously rotating) :1074b843c0b6e783ee1314c9759067a2&amp;nbsp;(sample - VT&amp;nbsp; - Malwr )Am not 100% sure it&#39;s Andromeda but chances for it are really high...@kafeine This is is Andromeda 2.7 ( CKF81X) i confirmed .67c7f325d951a444f203489274a0ca62 is the actual payload has after unpacking.— Raashid Bhat (@raashidbhatt) October 23, 2013 @kafeine here is the c2c config http://t.co/erF2v7WqkW currently c2c is replying with no updates— Raashid Bhat (@raashidbhatt) October 23, 2013   -----46.22.211.60 34702 | 46.22.208.0/20 | WAVECOM | EE | WAVECOM.EE | AKTSIASELTS WAVECOMPOST /rukomorsdx/forum.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: base.thecreatureteacher.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud-----At least &amp;nbsp;&amp;gt;8000 domains were redirecting to the rotator (but I think it&#39;s far more than than).http://pastebin.com/raw.php?i=1vFNKdSW (Please use for remediation - some Cert (CA/CH/CZ/FR/FI/PL) should have already been informed)&amp;lt;edit1 : 2013-11-01&amp;gt;After few days out (after that post). They are back again. Using intermediate redictor in : [rotating].dezit/counter.phpCounter-Andro gang back on NeutrinoPayload :&amp;nbsp;3b75c1b705ce8f0e4e3a09d137a842c1&amp;lt;/edit1&amp;gt;Read More :Neutrino: Caught in the Act&amp;nbsp;- Karmina Aquino &amp;amp; Daavid &amp;nbsp;Hentunen - 2013-10-23 - F-SecureMalware iFrame Campaign from Sytes(.)net&amp;nbsp;Daniel Cid - 2013-10-03 &amp;nbsp;Sucuri.netHello Neutrino ! (just one more Exploit Kit)&amp;nbsp;2013-03-17 - last update 2013-10-03Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel&amp;nbsp;2012-07-02">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2013/10/big-andromeda-campaign-back-on.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Big Andromeda Campaign back on track. From Sweet Orange to Neutrino">
+	<meta name="twitter:description" content="This is not the usual post I write but decided to go on as the campaign is quite big (enough to modify the EK market share feeling) and I have some compromised domain to share for remediation (see at the end)A big campaign was active from at least 2013-09-27 to 2013-10-14.A huge number of compromised website were conditionally redirecting to a Sweet Orange pushing Andromeda : (Post by Sucuri about this campaign)Sweet Orange 82 2013-09-27Payload : AndromedaOne of the payload :&amp;nbsp;82735517dd73de39a17c01a74c4fa232 nicely named by Microsoft (as often)The campaign was really widespread and was imo responsible for the feeling from some that Sweet Orange was prevailing after Paunch&#39;s &amp;nbsp;Arrest (so maybe in &quot;tilt number&quot; but I think most actors are on Neutrino, Magnitude and Nuclear Pack)The campaign suddenly stopped redirecting to Sweet Orange on 2013-10-14 redirecting instead to google.com and the day after to [rotating].sytes.net/atb/counter.php then to google.(Note: at same time 4-5 other Sweet Orange threads I was following also disappeared which made me tweet few days laterSweet Orange out of the &quot;battlefield&quot; since around 60 hours. Is something happening here too ?— kafeine (@kafeine) October 18, 2013 Note : have been pointed to at least 2 SWO threads that are still active )That campaign has a huge placeby SucuriThat campaign was still &quot;on hold&quot; yesterday (&amp;nbsp;BadwareBusters&amp;nbsp;thread)On Hold Campaign. Redirectin to Google2013-10-22The infection process is on again but redirecting now to Neutrino.(it&#39;s&amp;nbsp;enough to assume that actors can speak russian or are better than most of us at using google translate)Neutrino thread pushing AndromedaHaving no access to compromised server, based on the way the redirection is handled I thought it was driven by an Apache Rogue module (Darkleech or CDorked installed on compromised server via Cpanel/Parallels Plesk server vulns) but it seems it&#39;s more likely compromised Joomla/WordpressPayload I got (it&#39;s obviously rotating) :1074b843c0b6e783ee1314c9759067a2&amp;nbsp;(sample - VT&amp;nbsp; - Malwr )Am not 100% sure it&#39;s Andromeda but chances for it are really high...@kafeine This is is Andromeda 2.7 ( CKF81X) i confirmed .67c7f325d951a444f203489274a0ca62 is the actual payload has after unpacking.— Raashid Bhat (@raashidbhatt) October 23, 2013 @kafeine here is the c2c config http://t.co/erF2v7WqkW currently c2c is replying with no updates— Raashid Bhat (@raashidbhatt) October 23, 2013   -----46.22.211.60 34702 | 46.22.208.0/20 | WAVECOM | EE | WAVECOM.EE | AKTSIASELTS WAVECOMPOST /rukomorsdx/forum.php HTTP/1.1Content-Type: application/x-www-form-urlencodedConnection: closeUser-Agent: Mozilla/4.0Host: base.thecreatureteacher.comAnalysis&amp;nbsp;by&amp;nbsp;Joe Sandbox Cloud-----At least &amp;nbsp;&amp;gt;8000 domains were redirecting to the rotator (but I think it&#39;s far more than than).http://pastebin.com/raw.php?i=1vFNKdSW (Please use for remediation - some Cert (CA/CH/CZ/FR/FI/PL) should have already been informed)&amp;lt;edit1 : 2013-11-01&amp;gt;After few days out (after that post). They are back again. Using intermediate redictor in : [rotating].dezit/counter.phpCounter-Andro gang back on NeutrinoPayload :&amp;nbsp;3b75c1b705ce8f0e4e3a09d137a842c1&amp;lt;/edit1&amp;gt;Read More :Neutrino: Caught in the Act&amp;nbsp;- Karmina Aquino &amp;amp; Daavid &amp;nbsp;Hentunen - 2013-10-23 - F-SecureMalware iFrame Campaign from Sytes(.)net&amp;nbsp;Daniel Cid - 2013-10-03 &amp;nbsp;Sucuri.netHello Neutrino ! (just one more Exploit Kit)&amp;nbsp;2013-03-17 - last update 2013-10-03Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel&amp;nbsp;2012-07-02">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Big Andromeda Campaign back on track. From Sweet Orange to Neutrino</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-zFzaDQg4zhw/Ume4AilP0-I/AAAAAAAABoo/kiCPnsOQVWM/s1600/screenshot_2013-10-23_010.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-zFzaDQg4zhw/Ume4AilP0-I/AAAAAAAABoo/kiCPnsOQVWM/s1600/screenshot_2013-10-23_010.png" /></a></div><br /><br /><span style="font-size: x-small;"><i>This is not the usual post I write but decided to go on as the campaign is quite big (enough to modify the EK market share feeling) and I have some compromised domain to share for remediation (see at the end)</i></span><br /><br />A big campaign was active from at least 2013-09-27 to 2013-10-14.<br />A huge number of compromised website were conditionally redirecting to a Sweet Orange pushing Andromeda : (<a href="http://blog.sucuri.net/2013/10/malware-iframe-campaign-from-sytes-net.html">Post by Sucuri about this campaign</a>)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-nzEOr89_go8/UmeodG9ehSI/AAAAAAAABoU/0PpghLWqcTs/s1600/screenshot_2013-10-23_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="52" src="http://2.bp.blogspot.com/-nzEOr89_go8/UmeodG9ehSI/AAAAAAAABoU/0PpghLWqcTs/s640/screenshot_2013-10-23_008.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sweet Orange 82 2013-09-27<br />Payload : Andromeda</td></tr></tbody></table>One of the payload :&nbsp;<span style="background-color: white; font-family: arial, sans, sans-serif; font-size: 13px; white-space: pre-wrap;"><a href="https://www.virustotal.com/fr/file/74f18430550c48e027e652c07e631d5306269de1f748d10594dd72e8f7e4a315/analysis/">82735517dd73de39a17c01a74c4fa232</a> nicely named by Microsoft (as often)</span><br /><br />The campaign was really widespread and was imo responsible for the feeling from some that Sweet Orange was prevailing after Paunch's &nbsp;Arrest (so maybe in "tilt number" but I think most actors are on Neutrino, Magnitude and Nuclear Pack)<br /><br />The campaign suddenly stopped redirecting to Sweet Orange on 2013-10-14 redirecting instead to google.com and the day after to [rotating].sytes.net/atb/counter.php then to google.<br /><br /><i><span style="color: #351c75;">(Note: at same time 4-5 other Sweet Orange threads I was following also disappeared which made me tweet few days later</span></i><br /><br /><blockquote class="twitter-tweet">Sweet Orange out of the "battlefield" since around 60 hours. Is something happening here too ?<br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/391227346268610562">October 18, 2013</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script><i><span style="color: #351c75;"> Note : have been pointed to at least 2 SWO threads that are still active )</span></i><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-fAJbKHKsnWg/Ume7fFDxjTI/AAAAAAAABow/Ed2PaJiTRxE/s1600/screenshot_2013-10-23_012.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="524" src="http://3.bp.blogspot.com/-fAJbKHKsnWg/Ume7fFDxjTI/AAAAAAAABow/Ed2PaJiTRxE/s640/screenshot_2013-10-23_012.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">That campaign has a huge place<br />by <a href="http://labs.sucuri.net/">Sucuri</a></td></tr></tbody></table><br /><br />That campaign was still "on hold" yesterday (&nbsp;<a href="https://www.badwarebusters.org/main/itemview/33665">BadwareBusters</a>&nbsp;thread)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://i.imgur.com/FhaUZFQ.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="122" src="http://i.imgur.com/FhaUZFQ.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">On Hold Campaign. Redirectin to Google<br />2013-10-22</td></tr></tbody></table><br /><br />The infection process is on again but redirecting now to Neutrino.<br />(it's&nbsp;<a href="http://malware.dontneedcoffee.com/2013/10/paunch-arrestationthe-end-of-era.html">enough to assume</a> that actors can speak russian or are better than most of us at using google translate)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-bNRmZijH1jo/UmesG5qMShI/AAAAAAAABoc/v4cX4MAUY-s/s1600/screenshot_2013-10-23_009.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="118" src="http://1.bp.blogspot.com/-bNRmZijH1jo/UmesG5qMShI/AAAAAAAABoc/v4cX4MAUY-s/s640/screenshot_2013-10-23_009.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Neutrino thread pushing Andromeda</td></tr></tbody></table><br />Having no access to compromised server, based on the way the redirection is handled I thought it was driven by an Apache Rogue module (Darkleech or CDorked installed on compromised server via Cpanel/Parallels Plesk server vulns) but it seems it's more likely compromised Joomla/Wordpress<br /><br />Payload I got (it's obviously rotating) :<br /><a href="http://files.dontneedcoffee.com/public.php?service=files&amp;t=b64fb64c69cf99b90d8b5a6e545e0e35">1074b843c0b6e783ee1314c9759067a2</a>&nbsp;(sample - <a href="https://www.virustotal.com/fr/file/7f5f3fa8a2b31cadf6c9c88f2efe1bee08fb0a456c8f2dbb4f0b01f1c8759259/analysis/1382526975/">VT</a>&nbsp; - <a href="https://malwr.com/analysis/MjJjZWFmNGJhN2UxNGJmOGFhNGIzNGEyNThkZGI3YTA/">Malwr</a> )<br /><strike>Am not 100% sure it's Andromeda but chances for it are really high...</strike><br /><br /><edit1></edit1><br /><blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/kafeine">@kafeine</a> This is is Andromeda 2.7 ( CKF81X) i confirmed .67c7f325d951a444f203489274a0ca62 is the actual payload has after unpacking.<br />— Raashid Bhat (@raashidbhatt) <a href="https://twitter.com/raashidbhatt/statuses/392999697616347138">October 23, 2013</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script> <br /><blockquote class="twitter-tweet" data-conversation="none"><a href="https://twitter.com/kafeine">@kafeine</a> here is the c2c config <a href="http://t.co/erF2v7WqkW">http://t.co/erF2v7WqkW</a> currently c2c is replying with no updates<br />— Raashid Bhat (@raashidbhatt) <a href="https://twitter.com/raashidbhatt/statuses/392999865765986304">October 23, 2013</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>   <br /><br />-----<br />46.22.211.60<span class="Apple-tab-span" style="white-space: pre;"> </span><br />34702 | 46.22.208.0/20 | WAVECOM | EE | WAVECOM.EE | AKTSIASELTS WAVECOM<br />POST /rukomorsdx/forum.php HTTP/1.1<br />Content-Type: application/x-www-form-urlencoded<br />Connection: close<br />User-Agent: Mozilla/4.0<br />Host: base.thecreatureteacher.com<br /><i><a href="http://files.dontneedcoffee.com/joesandbox/report-1074b843c0b6e783ee1314c9759067a2.html">Analysis</a>&nbsp;by&nbsp;<a href="http://www.joesecurity.org/joe-sandbox-cloud">Joe Sandbox Cloud</a></i><br />-----<br /><br />At least &nbsp;&gt;8000 domains were redirecting to the rotator (but I think it's far more than than).<br /><a href="http://pastebin.com/raw.php?i=1vFNKdSW">http://pastebin.com/raw.php?i=1vFNKdSW</a> (<b>Please use for remediation </b>- some Cert (CA/CH/CZ/FR/FI/PL) should have already been informed)<br /><br />&lt;edit1 : 2013-11-01&gt;<br />After few days out (after that post). They are back again. Using intermediate redictor in : [rotating].dezit/counter.php<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-nubKI8L1i6s/UnVvBJHQAWI/AAAAAAAABuk/uhDmoeikNvM/s1600/screenshot_2013-11-02_005.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="102" src="http://3.bp.blogspot.com/-nubKI8L1i6s/UnVvBJHQAWI/AAAAAAAABuk/uhDmoeikNvM/s640/screenshot_2013-11-02_005.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Counter-Andro gang back on Neutrino</td></tr></tbody></table>Payload :&nbsp;<a href="https://www.virustotal.com/fr/file/1d41d5086642866a42fa8c1164246f187b9a2b0878e2164ea3e6c13e760db425/analysis/1383427707/">3b75c1b705ce8f0e4e3a09d137a842c1</a><br />&lt;/edit1&gt;<br /><br /><b><u>Read More :</u></b><br /><a href="http://www.f-secure.com/weblog/archives/00002626.html">Neutrino: Caught in the Act</a>&nbsp;- Karmina Aquino &amp; Daavid &nbsp;Hentunen - 2013-10-23 - F-Secure<br /><a href="http://blog.sucuri.net/2013/10/malware-iframe-campaign-from-sytes-net.html">Malware iFrame Campaign from Sytes(.)net</a>&nbsp;Daniel Cid - 2013-10-03 &nbsp;Sucuri.net<br /><a href="http://malware.dontneedcoffee.com/2013/03/hello-neutrino-just-one-more-exploit-kit.html">Hello Neutrino ! (just one more Exploit Kit)</a>&nbsp;2013-03-17 - last update 2013-10-03<br /><div><a href="http://malware.dontneedcoffee.com/2012/07/inside-andromeda-bot-v206-webpanel-aka.html">Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel</a>&nbsp;2012-07-02<br /><br /><br /></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-10-23" itemprop="datePublished"> 2013-10-23</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Andromeda</span> <span class="icon-price-tag pr10"> atp/counter.php</span> <span class="icon-price-tag pr10"> Neutrino</span> <span class="icon-price-tag pr10"> Sweet Orange</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2013/10/kovter-even-more-abominable-also-add.html">&laquo; Kovter becomes even more abominable . Also add new targets.</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2013/10/Magnitude.html">Magnitude EK : Pop Pop ! &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

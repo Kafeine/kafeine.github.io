@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fast look at Sundown EK</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Sun Down - Top GunDisclaimer : There is nothing worth a post there...except mentionning this EK is around.I would put that &quot;kit&quot; in the same sad basket than Archie (same level, same kind of traffic source)The exploit kit is out there since middle of April. I first heard about it by Will Metcalf from Emerging Threats.Studying the TDS in front of it we concluded that this specific thread was focused on Japan, hence the name Will Metcalf decided to give. Please note that obviously this was only one thread and many are focused on other country or are&amp;nbsp;even&amp;nbsp;not delivery path &quot;geo-locked&quot;.TL:DNR----It has code to exploit :CVE-2013-7331,&amp;nbsp;CVE-2014-6332, CVE-2014-0569, CVE-2014-0556, CVE-2015-0311, CVE-2015-0313&amp;nbsp;, uses vbePowershell and IE dependant.No decision tree : carpet bombing.No locking feature yet (IP/Geo...etc - has to be done in front of it)----In one image :Sundown EK2015-06-08----------------GET http://dessawert.co .vu/?9a91fd589e97ce5c007615a4de72a74d7e8ffd200 OK (text/html) Landing in Carpet bombing mode.Sundown Landing - 2015-06-08GET http://dessawert.co .vu/SDDS2/asddfs.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/665h311.swf200 OK (application/x-shockwave-flash)&amp;nbsp;9c58582d688b228f7e6aa7c81977fe39&amp;nbsp;CVE-2015-0311GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/es6L313.swf200 OK (application/x-shockwave-flash)&amp;nbsp;dfa724814e82af648737e8bb59dd76d8&amp;nbsp;CVE-2015-0313GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/asdt17.swf200 OK (application/x-shockwave-flash)&amp;nbsp;8ae899555cd88b89e4762fb5653d1633&amp;nbsp;CVE-2014-0569GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street1.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/5Z9T14.swf200 OK (application/x-shockwave-flash)&amp;nbsp;37f0844c742e8ecd32cdfbaa290fed61&amp;nbsp;CVE-2014-0556GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street2.php200 OK (text/html) CVE-2013-7331 and&amp;nbsp;Wscript ActiveXCVE-2013-7331&amp;nbsp;once decodedGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street3.php200 OK (text/html) &amp;nbsp;Wscript ActiveXGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street4.php200 OK (text/html) &amp;nbsp;CVE-2014-6332GET http://msiurgfhjrlsuhgfrslihkj.co .vu/SDDS2/d.php?d=EDWEDRFEDDF-3.exe200 OK (Application/octet-stream) e0c925d1a0c5c7022bfb00ab8b63628e PayloadGET http://dessawert.co .vu/url.php200 OK (text/html)----------------Note : you can use : ayra.ch VBScript encoder and decoder&amp;nbsp;to decode those :#@~^XXXXXX== [Stuff] ==^#~@Login Screen :Sundown - Customer login ScreenSundown - PanelNB : the panel shown here is not tied to the traffic studied.the screenshots are 1 monh older than the traffic analysedFiles :&amp;nbsp;Fiddler and Piece of code.Thanks :&amp;nbsp; Will Metcalf&amp;nbsp;and Fox-IT for inputs/intelPost Publication Reading :Beta exploit pack: one more piece of crimeware for the infection road! - 2015-06-18 -&amp;nbsp;Aditya K. Sood &amp;amp; Rohit Bansal - VirusBulletin">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2015/06/fast-look-at-sundown-ek.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Fast look at Sundown EK">
+	<meta property="og:description" content="Sun Down - Top GunDisclaimer : There is nothing worth a post there...except mentionning this EK is around.I would put that &quot;kit&quot; in the same sad basket than Archie (same level, same kind of traffic source)The exploit kit is out there since middle of April. I first heard about it by Will Metcalf from Emerging Threats.Studying the TDS in front of it we concluded that this specific thread was focused on Japan, hence the name Will Metcalf decided to give. Please note that obviously this was only one thread and many are focused on other country or are&amp;nbsp;even&amp;nbsp;not delivery path &quot;geo-locked&quot;.TL:DNR----It has code to exploit :CVE-2013-7331,&amp;nbsp;CVE-2014-6332, CVE-2014-0569, CVE-2014-0556, CVE-2015-0311, CVE-2015-0313&amp;nbsp;, uses vbePowershell and IE dependant.No decision tree : carpet bombing.No locking feature yet (IP/Geo...etc - has to be done in front of it)----In one image :Sundown EK2015-06-08----------------GET http://dessawert.co .vu/?9a91fd589e97ce5c007615a4de72a74d7e8ffd200 OK (text/html) Landing in Carpet bombing mode.Sundown Landing - 2015-06-08GET http://dessawert.co .vu/SDDS2/asddfs.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/665h311.swf200 OK (application/x-shockwave-flash)&amp;nbsp;9c58582d688b228f7e6aa7c81977fe39&amp;nbsp;CVE-2015-0311GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/es6L313.swf200 OK (application/x-shockwave-flash)&amp;nbsp;dfa724814e82af648737e8bb59dd76d8&amp;nbsp;CVE-2015-0313GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/asdt17.swf200 OK (application/x-shockwave-flash)&amp;nbsp;8ae899555cd88b89e4762fb5653d1633&amp;nbsp;CVE-2014-0569GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street1.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/5Z9T14.swf200 OK (application/x-shockwave-flash)&amp;nbsp;37f0844c742e8ecd32cdfbaa290fed61&amp;nbsp;CVE-2014-0556GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street2.php200 OK (text/html) CVE-2013-7331 and&amp;nbsp;Wscript ActiveXCVE-2013-7331&amp;nbsp;once decodedGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street3.php200 OK (text/html) &amp;nbsp;Wscript ActiveXGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street4.php200 OK (text/html) &amp;nbsp;CVE-2014-6332GET http://msiurgfhjrlsuhgfrslihkj.co .vu/SDDS2/d.php?d=EDWEDRFEDDF-3.exe200 OK (Application/octet-stream) e0c925d1a0c5c7022bfb00ab8b63628e PayloadGET http://dessawert.co .vu/url.php200 OK (text/html)----------------Note : you can use : ayra.ch VBScript encoder and decoder&amp;nbsp;to decode those :#@~^XXXXXX== [Stuff] ==^#~@Login Screen :Sundown - Customer login ScreenSundown - PanelNB : the panel shown here is not tied to the traffic studied.the screenshots are 1 monh older than the traffic analysedFiles :&amp;nbsp;Fiddler and Piece of code.Thanks :&amp;nbsp; Will Metcalf&amp;nbsp;and Fox-IT for inputs/intelPost Publication Reading :Beta exploit pack: one more piece of crimeware for the infection road! - 2015-06-18 -&amp;nbsp;Aditya K. Sood &amp;amp; Rohit Bansal - VirusBulletin">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2015/06/fast-look-at-sundown-ek.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Fast look at Sundown EK">
+	<meta name="twitter:description" content="Sun Down - Top GunDisclaimer : There is nothing worth a post there...except mentionning this EK is around.I would put that &quot;kit&quot; in the same sad basket than Archie (same level, same kind of traffic source)The exploit kit is out there since middle of April. I first heard about it by Will Metcalf from Emerging Threats.Studying the TDS in front of it we concluded that this specific thread was focused on Japan, hence the name Will Metcalf decided to give. Please note that obviously this was only one thread and many are focused on other country or are&amp;nbsp;even&amp;nbsp;not delivery path &quot;geo-locked&quot;.TL:DNR----It has code to exploit :CVE-2013-7331,&amp;nbsp;CVE-2014-6332, CVE-2014-0569, CVE-2014-0556, CVE-2015-0311, CVE-2015-0313&amp;nbsp;, uses vbePowershell and IE dependant.No decision tree : carpet bombing.No locking feature yet (IP/Geo...etc - has to be done in front of it)----In one image :Sundown EK2015-06-08----------------GET http://dessawert.co .vu/?9a91fd589e97ce5c007615a4de72a74d7e8ffd200 OK (text/html) Landing in Carpet bombing mode.Sundown Landing - 2015-06-08GET http://dessawert.co .vu/SDDS2/asddfs.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/665h311.swf200 OK (application/x-shockwave-flash)&amp;nbsp;9c58582d688b228f7e6aa7c81977fe39&amp;nbsp;CVE-2015-0311GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/es6L313.swf200 OK (application/x-shockwave-flash)&amp;nbsp;dfa724814e82af648737e8bb59dd76d8&amp;nbsp;CVE-2015-0313GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/asdt17.swf200 OK (application/x-shockwave-flash)&amp;nbsp;8ae899555cd88b89e4762fb5653d1633&amp;nbsp;CVE-2014-0569GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street1.php200 OK (text/html)GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/5Z9T14.swf200 OK (application/x-shockwave-flash)&amp;nbsp;37f0844c742e8ecd32cdfbaa290fed61&amp;nbsp;CVE-2014-0556GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street2.php200 OK (text/html) CVE-2013-7331 and&amp;nbsp;Wscript ActiveXCVE-2013-7331&amp;nbsp;once decodedGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street3.php200 OK (text/html) &amp;nbsp;Wscript ActiveXGET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street4.php200 OK (text/html) &amp;nbsp;CVE-2014-6332GET http://msiurgfhjrlsuhgfrslihkj.co .vu/SDDS2/d.php?d=EDWEDRFEDDF-3.exe200 OK (Application/octet-stream) e0c925d1a0c5c7022bfb00ab8b63628e PayloadGET http://dessawert.co .vu/url.php200 OK (text/html)----------------Note : you can use : ayra.ch VBScript encoder and decoder&amp;nbsp;to decode those :#@~^XXXXXX== [Stuff] ==^#~@Login Screen :Sundown - Customer login ScreenSundown - PanelNB : the panel shown here is not tied to the traffic studied.the screenshots are 1 monh older than the traffic analysedFiles :&amp;nbsp;Fiddler and Piece of code.Thanks :&amp;nbsp; Will Metcalf&amp;nbsp;and Fox-IT for inputs/intelPost Publication Reading :Beta exploit pack: one more piece of crimeware for the infection road! - 2015-06-18 -&amp;nbsp;Aditya K. Sood &amp;amp; Rohit Bansal - VirusBulletin">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Fast look at Sundown EK</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-zkCWNsgXwfk/VXWtS7GTJKI/AAAAAAAAEuk/MN_Mp5huaoM/s1600/Sundown.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="113" src="http://1.bp.blogspot.com/-zkCWNsgXwfk/VXWtS7GTJKI/AAAAAAAAEuk/MN_Mp5huaoM/s200/Sundown.jpg" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sun Down - Top Gun</td></tr></tbody></table><br /><u>Disclaimer :</u> There is nothing worth a post there...except mentionning this EK is around.<br />I would put that "kit" in the same sad basket than Archie (same level, same kind of traffic source)<br /><br />The exploit kit is out there since middle of April. I first heard about it by <a href="https://twitter.com/node5">Will Metcalf</a> from <a href="http://www.emergingthreats.net/">Emerging Threats</a>.<br /><br />Studying the TDS in front of it we concluded that this specific thread was focused on Japan, hence the name Will Metcalf decided to give.<i> Please note that obviously this was only one thread and many are focused on other country or are&nbsp;</i><i>even&nbsp;</i><i>not delivery path "geo-locked".</i><br /><i><br /></i>TL:DNR<br />----<br />It has code to exploit :<br /><a href="http://malware.dontneedcoffee.com/2014/10/cve-2013-7331-and-exploit-kits.html">CVE-2013-7331</a>,&nbsp;<a href="http://malware.dontneedcoffee.com/2014/11/cve-2014-6332.html">CVE-2014-6332</a>, <a href="http://malware.dontneedcoffee.com/2014/10/cve-2014-0569.html">CVE-2014-0569</a>, <a href="http://malware.dontneedcoffee.com/2014/10/cve-2014-0556-adobe-flash-player.html">CVE-2014-0556</a>, <a href="http://malware.dontneedcoffee.com/2015/01/cve-2015-0311-flash-up-to-1600287.html">CVE-2015-0311</a>, <a href="http://malware.dontneedcoffee.com/2015/02/cve-2015-0313-flash-up-to-1600296-and.html">CVE-2015-0313</a>&nbsp;, uses vbe<br />Powershell and IE dependant.<br />No decision tree : carpet bombing.<br />No locking feature yet (IP/Geo...etc - has to be done in front of it)<br />----<br />In one image :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-29xNn31AZk0/VXXeW4jKozI/AAAAAAAAEu0/BWtMERl_4mQ/s1600/2015-06-08_20h15_17.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="336" src="http://3.bp.blogspot.com/-29xNn31AZk0/VXXeW4jKozI/AAAAAAAAEu0/BWtMERl_4mQ/s640/2015-06-08_20h15_17.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sundown EK<br />2015-06-08</td></tr></tbody></table>----------------<br /><span style="color: blue;">GET http://dessawert.co .vu/?9a91fd589e97ce5c007615a4de72a74d7e8ffd</span><br /><span style="color: blue;">200 OK (text/html) Landing in Carpet bombing mode.</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-ipiSlMIfJNM/VXXkGXwwEhI/AAAAAAAAEvc/RG-Wvko5nm4/s1600/2015-06-08_18h49_06.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="528" src="http://2.bp.blogspot.com/-ipiSlMIfJNM/VXXkGXwwEhI/AAAAAAAAEvc/RG-Wvko5nm4/s640/2015-06-08_18h49_06.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sundown Landing - 2015-06-08</td></tr></tbody></table><br /><span style="color: blue;">GET http://dessawert.co .vu/SDDS2/asddfs.php</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><span style="color: red;"><br /></span><span style="color: red;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/665h311.swf</span><br /><span style="color: red;">200 OK (application/x-shockwave-flash)&nbsp;<a href="https://www.virustotal.com/latest-report.html?resource=9c58582d688b228f7e6aa7c81977fe39">9c58582d688b228f7e6aa7c81977fe39</a></span><span style="color: red;">&nbsp;</span>CVE-2015-0311<br /><span style="color: red;"><br /></span><span style="color: red;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/es6L313.swf</span><br /><span style="color: red;">200 OK (application/x-shockwave-flash)&nbsp;<a href="https://www.virustotal.com/latest-report.html?resource=dfa724814e82af648737e8bb59dd76d8">dfa724814e82af648737e8bb59dd76d8</a>&nbsp;</span>CVE-2015-0313<br /><span style="color: red;"><br /></span><span style="color: red;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/asdt17.swf</span><br /><span style="color: red;">200 OK (application/x-shockwave-flash)&nbsp;<a href="https://www.virustotal.com/latest-report.html?resource=8ae899555cd88b89e4762fb5653d1633">8ae899555cd88b89e4762fb5653d1633</a>&nbsp;</span>CVE-2014-0569<br /><br /><span style="color: blue;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street1.php</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><span style="color: red;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/5Z9T14.swf</span><br /><span style="color: red;">200 OK (application/x-shockwave-flash)&nbsp;<a href="https://www.virustotal.com/latest-report.html?resource=37f0844c742e8ecd32cdfbaa290fed61">37f0844c742e8ecd32cdfbaa290fed61</a>&nbsp;</span>CVE-2014-0556<br /><br /><span style="color: #351c75;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street2.php</span><br /><span style="color: #351c75;">200 OK (text/html) CVE-2013-7331 and&nbsp;Wscript ActiveX</span><br /><span style="color: blue;"><br /></span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-OPJWBwf8ecw/VXXjb9ppCKI/AAAAAAAAEvU/Onw7xjJHLSo/s1600/2015-06-08_20h18_45.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="284" src="http://2.bp.blogspot.com/-OPJWBwf8ecw/VXXjb9ppCKI/AAAAAAAAEvU/Onw7xjJHLSo/s320/2015-06-08_20h18_45.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="http://malware.dontneedcoffee.com/2014/10/cve-2013-7331-and-exploit-kits.html" style="font-size: medium; text-align: start;">CVE-2013-7331</a>&nbsp;once decoded</td></tr></tbody></table><span style="color: blue;"><br /></span><span style="color: blue;"><br /></span><span style="color: blue;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street3.php</span><br /><span style="color: blue;">200 OK (text/html) &nbsp;Wscript ActiveX</span><br /><span style="color: blue;"><br /></span><span style="color: blue;">GET http://dessawert.co .vu/JKHFLKJDGHBRKLJFGDBJHRFDGTBERHJKTERBHJ3/street4.php</span><br /><span style="color: blue;">200 OK (text/html) &nbsp;CVE-2014-6332</span><br /><br />GET http://msiurgfhjrlsuhgfrslihkj.co .vu/SDDS2/d.php?d=EDWEDRFEDDF-3.exe<br />200 OK (Application/octet-stream) <a href="https://www.virustotal.com/latest-report.html?resource=e0c925d1a0c5c7022bfb00ab8b63628e">e0c925d1a0c5c7022bfb00ab8b63628e</a> Payload<br /><br /><span style="color: blue;">GET http://dessawert.co .vu/url.php</span><br /><span style="color: blue;">200 OK (text/html)</span><br />----------------<br /><b><u>Note :</u></b> you can use : <a href="http://ayra.ch/service/vbs/vbs.asp">ayra.ch VBScript encoder and decoder</a>&nbsp;to decode those :<br />#@~^XXXXXX== [Stuff] ==^#~@<br />Login Screen :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-0GirqiLpP4Y/VXXe7Qan2SI/AAAAAAAAEu8/yhZ5xrCJypM/s1600/2015-06-08_20h28_52.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-0GirqiLpP4Y/VXXe7Qan2SI/AAAAAAAAEu8/yhZ5xrCJypM/s1600/2015-06-08_20h28_52.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sundown - Customer login Screen</td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-UhKwB8xDb4Y/VXXgs19ZBjI/AAAAAAAAEvI/vngIxgFYp0k/s1600/2015-04-24_15h38_26.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="508" src="http://4.bp.blogspot.com/-UhKwB8xDb4Y/VXXgs19ZBjI/AAAAAAAAEvI/vngIxgFYp0k/s640/2015-04-24_15h38_26.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sundown - Panel<br />NB : the panel shown here is not tied to the traffic studied.<br />the screenshots are 1 monh older than the traffic analysed</td></tr></tbody></table><br /><br /><b><u>Files :</u></b>&nbsp;<a href="http://files.dontneedcoffee.com/index.php/s/Cg1Mzg74KWmmiFo">Fiddler and Piece of code</a>.<br /><b><u>Thanks :</u></b>&nbsp; <a href="https://twitter.com/node5">Will Metcalf</a>&nbsp;and <a href="https://www.fox-it.com/en/">Fox-IT</a> for inputs/intel<br /><br /><b><u>Post Publication Reading :</u></b><br /><a href="https://www.virusbtn.com/virusbulletin/archive/2015/06/vb201506-Beta-BEP">Beta exploit pack: one more piece of crimeware for the infection road!</a> - 2015-06-18 -&nbsp;Aditya K. Sood &amp; Rohit Bansal - VirusBulletin<br /><br /><i><br /></i><br /><br />
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2015-06-08" itemprop="datePublished"> 2015-06-08</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> CVE-2015-0313</span> <span class="icon-price-tag pr10"> CVE-2013-7331</span> <span class="icon-price-tag pr10"> CVE-2014-0556</span> <span class="icon-price-tag pr10"> CVE-2015-0311</span> <span class="icon-price-tag pr10"> Sundown EK</span> <span class="icon-price-tag pr10"> CVE-2014-0569</span> <span class="icon-price-tag pr10"> CVE-2014-6332</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2015/05/cve-2015-3090-flash-up-to-1700169-and.html">&laquo; CVE-2015-3090 (Flash up to 17.0.0.169) and Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2015/06/cve-2015-3105-flash-up-to-1700188-and.html">CVE-2015-3104/3105 (Flash up to 17.0.0.188) and Exploit Kits &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

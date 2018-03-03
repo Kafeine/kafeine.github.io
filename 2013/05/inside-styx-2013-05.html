@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inside Styx Sploitpack 4.0 - Exploit Kit Control Panel</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="(Lorenz-84 - For the thumbnail)Styx LogoIn this post we&#39;ll just see how the panel looks like.If you want to know more about the price and exploits included see the &quot;Read more&quot; part at the end.&amp;lt;edit1 2013-05-23&amp;gt;Have learnt that this Styx is in version 4.0Here is what&#39;s new since the last post.Original Text :------------------------------------------Уважаемые пользователи!Мы проделали достаточно большой объем работы, чтобы объявить о новой версии Styx Sploit Pack 4.0 с суффиксом High Performance.Доработки по сравнению с версиями 3.0 и 2.0:Мультисерверная работа: связка может быть расположена на нескольких серверах, все обновления идут с мастер-сервера;Полностью переписан на компилируемом языке, что позволило избавиться от РНР чуть более, чем полностью;Дополнительные фильтры для защиты трафика: блокировка повторных заходов, без рефереров, боты гугля, кравлеры;Ротатор доменов: позволяет задавать домены либо сабдомены пачками, постепенно ротируя их в зависимости от ситуации; уникальный URL для слива трафика - един, он ведет на текущий домен для слива;Чекер доменов (позволяет проверять домены на нашем сервисе GhostBusters в автоматическом режиме);Чекер файлов (позволяет следить за чистотой файлов на нашем сервисе Captain Checker);Service Desk для оперативной работы с тикетами (с поддержкой работы и нотификаций через Jabber);Доработан API: полностью все фукнции продублированы в API, что позволяет добавить новый уровень автоматизиции;Экспорт статистики: простой и удобный - позволяет экспортировать статистику в человеко-читаемом формате, страны, браузеры, общая статистика и т.д.;Нотификации на Jabber или e-mail о текущей ситуации в системе: детект домена, файла, загрузка файла с нового URL и т.д.;Собственный плагин-детект: позволяет пробивать только тех, кто пробивается;Обратная выдача трафика: если по заданным критериям трафик отфильтровался как реджект, он будет слит на указанный вами Back URL, что позволяет не терять трафик;Черные списки рефереров и юзерагентов с поддержкой масок;Заливка файла с URL: теперь есть три варианта работы с файлами: загрузить файл на сервер, указать URL для периодической загрузки файла или вовсе грузить файл напрямую с указанного URL, минуя загрузки на сервер связки;Система весов для АВ, которая позволяет гибко настроить связку под ваш трафик (например, ротировать домен только в том случае, если имеются детекты Kaspersky и Spamhouse, в других случях - не ротировать);Возможность установить продукт на VPS с минимальной конфигурацией;Новые и актуальные свежие и чистые сплойты, сердце связки;Разумеется, как всегда - если у вас есть какая-либо актуальная для вас фича, мы готовы выслушать и реализовать данную возможность для вас.Русская версия: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------Translated by google as :------------------------------------------Dear customers!We have done a considerable amount of work to announce a new version of the Styx Sploit Pack 4.0 with the suffix High Performance.Improvements compared to versions 3.0 and 2.0:Multiserver job: bundle can be located on multiple servers, all of the updates coming from the master server;Completely re-written in a compiled language that will get rid of PHP slightly more than full;Additional filters for traffic protection: block repeated calls, no referrer, bots of Google, kravlery;Rotator domains: lets you specify domains or subdomain packs, gradually rotiruya them depending on the situation, a unique URL to drain traffic - one, it leads to the current domain to drain;Chequer domains (domains allows you to check on our service GhostBusters in automatic mode);Chequer files (allows to monitor the cleanliness of files on our service Captain Checker);Service Desk for operative work with tickets (with support for work and notifications via Jabber);Improved API: all fukntsii completely duplicated in the API, which lets you add a new level of automating the;Export statistics: simple and convenient - you can export statistics in human-readable format, countries, browsers, general statistics, etc.;Notification on Jabber or e-mail about the current situation in the system: Crime domain, file, file download from the new URL, etc.;Detective own plugin: allows you to punch only those breaks;Contact the issuance of traffic if the traffic on the specified criteria filtered as rejections, it will be merged to your specified Back URL, which allows you to not lose traffic;Black lists the referrers and yuzeragentov with support of masks;Fill the file URL: now have three options for dealing with files: download the file, specify a URL for a file or a batch file does ship directly from the specified URL, bypassing the load on the server bundles;The system of weights for AB, which allows you to flexibly configure a bunch of your traffic (for example, rotate a domain only if there is a detective and Kaspersky Spamhouse, in other cases - do not rotate);Ability to install the product on a VPS with minimal configuration;New and current fresh and clean sployty, heart ligament;Of course, as always - if you have any relevant feature for you, we are ready to listen and to implement this feature for you.Russian version: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------&amp;lt;/edit&amp;gt;However here is how look a successful attack with last (known to me) integrated exploit :Urausy pushed by Styx Using CVE-2013-2423 with Security Bypass (jnlp) - 2013-04-27&amp;nbsp;Here is the login screen.Open, Seasam - Login ScreenThe Lorenz-84 is animated :Statistics - Global - StyxAll menus - StyxStatistics - Country - StyxStatistics - Browser &amp;amp; OS - StyxThose stats raise some questions. But I don&#39;t have the answer.(i tried to land with IE10 last java...nothing terrible happen but I already badly failed in recognizing new bullet)Flow - Styx(No Traffic. So Empty)Settings - Domains - StyxSettings - Files - StyxSettings - Filters - Styx(hello &quot;402 Payment Required&quot; :) &amp;nbsp;)Settings - Notifications - StyxSettings - API - Styx(Unfolded : /api/stats_global)At the bottom of the API page :Which you can get here : styxAPI-samples.7z(unmodified files - Owncloud via Goo.gl - just remove the .zip extension)&quot;Another problem with your file, my Lord. Captain Checker says it&#39;s NOT ok&quot;Screenshot of StyxAPI sample.phpSettings - Global Settings - StyxSettings - Global Settings - Show BL Weigths - StyxAnd we&#39;ll finish by the 404 (have to admit i love it - Lorenz-84 rotating here too)Great job!You&#39;ve just broke it.Styx Panel in one word ?Professional.(but it seems some protection&amp;nbsp;functionality&amp;nbsp;are missing)Read more :Presentation :Crossing the Styx ( Styx Sploit Pack 2.0 ) - Meet CVE-2012-4969 via JS heapspray &amp;nbsp;- 2012-12-22Last integrated exploits :CVE-2013-2423 integrating Exploit Kits&amp;nbsp;(search for Styx) - 2013-04-23CVE-2013-1493 (jre17u15 - jre16u41) integrating Exploit Kits (search for Styx) - 2013-03-09CVE-2013-0431 (java 1.7 update 11) ermerging in Exploit Kits &amp;nbsp;(search for Styx) - 2013-02-25For fast network sigs :Styx Exploit Kit&amp;nbsp;by&amp;nbsp;@malwaresigsHow is it being used :The path to infection - Eye glance at the first line of &quot;Russian Underground&quot; - 2012-12-05Some References :An Overview of Exploit Packs&amp;nbsp;- Contagio &amp;nbsp;- MilaWild Wild West - Kahu Security">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2013/05/inside-styx-2013-05.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Inside Styx Sploitpack 4.0 - Exploit Kit Control Panel">
+	<meta property="og:description" content="(Lorenz-84 - For the thumbnail)Styx LogoIn this post we&#39;ll just see how the panel looks like.If you want to know more about the price and exploits included see the &quot;Read more&quot; part at the end.&amp;lt;edit1 2013-05-23&amp;gt;Have learnt that this Styx is in version 4.0Here is what&#39;s new since the last post.Original Text :------------------------------------------Уважаемые пользователи!Мы проделали достаточно большой объем работы, чтобы объявить о новой версии Styx Sploit Pack 4.0 с суффиксом High Performance.Доработки по сравнению с версиями 3.0 и 2.0:Мультисерверная работа: связка может быть расположена на нескольких серверах, все обновления идут с мастер-сервера;Полностью переписан на компилируемом языке, что позволило избавиться от РНР чуть более, чем полностью;Дополнительные фильтры для защиты трафика: блокировка повторных заходов, без рефереров, боты гугля, кравлеры;Ротатор доменов: позволяет задавать домены либо сабдомены пачками, постепенно ротируя их в зависимости от ситуации; уникальный URL для слива трафика - един, он ведет на текущий домен для слива;Чекер доменов (позволяет проверять домены на нашем сервисе GhostBusters в автоматическом режиме);Чекер файлов (позволяет следить за чистотой файлов на нашем сервисе Captain Checker);Service Desk для оперативной работы с тикетами (с поддержкой работы и нотификаций через Jabber);Доработан API: полностью все фукнции продублированы в API, что позволяет добавить новый уровень автоматизиции;Экспорт статистики: простой и удобный - позволяет экспортировать статистику в человеко-читаемом формате, страны, браузеры, общая статистика и т.д.;Нотификации на Jabber или e-mail о текущей ситуации в системе: детект домена, файла, загрузка файла с нового URL и т.д.;Собственный плагин-детект: позволяет пробивать только тех, кто пробивается;Обратная выдача трафика: если по заданным критериям трафик отфильтровался как реджект, он будет слит на указанный вами Back URL, что позволяет не терять трафик;Черные списки рефереров и юзерагентов с поддержкой масок;Заливка файла с URL: теперь есть три варианта работы с файлами: загрузить файл на сервер, указать URL для периодической загрузки файла или вовсе грузить файл напрямую с указанного URL, минуя загрузки на сервер связки;Система весов для АВ, которая позволяет гибко настроить связку под ваш трафик (например, ротировать домен только в том случае, если имеются детекты Kaspersky и Spamhouse, в других случях - не ротировать);Возможность установить продукт на VPS с минимальной конфигурацией;Новые и актуальные свежие и чистые сплойты, сердце связки;Разумеется, как всегда - если у вас есть какая-либо актуальная для вас фича, мы готовы выслушать и реализовать данную возможность для вас.Русская версия: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------Translated by google as :------------------------------------------Dear customers!We have done a considerable amount of work to announce a new version of the Styx Sploit Pack 4.0 with the suffix High Performance.Improvements compared to versions 3.0 and 2.0:Multiserver job: bundle can be located on multiple servers, all of the updates coming from the master server;Completely re-written in a compiled language that will get rid of PHP slightly more than full;Additional filters for traffic protection: block repeated calls, no referrer, bots of Google, kravlery;Rotator domains: lets you specify domains or subdomain packs, gradually rotiruya them depending on the situation, a unique URL to drain traffic - one, it leads to the current domain to drain;Chequer domains (domains allows you to check on our service GhostBusters in automatic mode);Chequer files (allows to monitor the cleanliness of files on our service Captain Checker);Service Desk for operative work with tickets (with support for work and notifications via Jabber);Improved API: all fukntsii completely duplicated in the API, which lets you add a new level of automating the;Export statistics: simple and convenient - you can export statistics in human-readable format, countries, browsers, general statistics, etc.;Notification on Jabber or e-mail about the current situation in the system: Crime domain, file, file download from the new URL, etc.;Detective own plugin: allows you to punch only those breaks;Contact the issuance of traffic if the traffic on the specified criteria filtered as rejections, it will be merged to your specified Back URL, which allows you to not lose traffic;Black lists the referrers and yuzeragentov with support of masks;Fill the file URL: now have three options for dealing with files: download the file, specify a URL for a file or a batch file does ship directly from the specified URL, bypassing the load on the server bundles;The system of weights for AB, which allows you to flexibly configure a bunch of your traffic (for example, rotate a domain only if there is a detective and Kaspersky Spamhouse, in other cases - do not rotate);Ability to install the product on a VPS with minimal configuration;New and current fresh and clean sployty, heart ligament;Of course, as always - if you have any relevant feature for you, we are ready to listen and to implement this feature for you.Russian version: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------&amp;lt;/edit&amp;gt;However here is how look a successful attack with last (known to me) integrated exploit :Urausy pushed by Styx Using CVE-2013-2423 with Security Bypass (jnlp) - 2013-04-27&amp;nbsp;Here is the login screen.Open, Seasam - Login ScreenThe Lorenz-84 is animated :Statistics - Global - StyxAll menus - StyxStatistics - Country - StyxStatistics - Browser &amp;amp; OS - StyxThose stats raise some questions. But I don&#39;t have the answer.(i tried to land with IE10 last java...nothing terrible happen but I already badly failed in recognizing new bullet)Flow - Styx(No Traffic. So Empty)Settings - Domains - StyxSettings - Files - StyxSettings - Filters - Styx(hello &quot;402 Payment Required&quot; :) &amp;nbsp;)Settings - Notifications - StyxSettings - API - Styx(Unfolded : /api/stats_global)At the bottom of the API page :Which you can get here : styxAPI-samples.7z(unmodified files - Owncloud via Goo.gl - just remove the .zip extension)&quot;Another problem with your file, my Lord. Captain Checker says it&#39;s NOT ok&quot;Screenshot of StyxAPI sample.phpSettings - Global Settings - StyxSettings - Global Settings - Show BL Weigths - StyxAnd we&#39;ll finish by the 404 (have to admit i love it - Lorenz-84 rotating here too)Great job!You&#39;ve just broke it.Styx Panel in one word ?Professional.(but it seems some protection&amp;nbsp;functionality&amp;nbsp;are missing)Read more :Presentation :Crossing the Styx ( Styx Sploit Pack 2.0 ) - Meet CVE-2012-4969 via JS heapspray &amp;nbsp;- 2012-12-22Last integrated exploits :CVE-2013-2423 integrating Exploit Kits&amp;nbsp;(search for Styx) - 2013-04-23CVE-2013-1493 (jre17u15 - jre16u41) integrating Exploit Kits (search for Styx) - 2013-03-09CVE-2013-0431 (java 1.7 update 11) ermerging in Exploit Kits &amp;nbsp;(search for Styx) - 2013-02-25For fast network sigs :Styx Exploit Kit&amp;nbsp;by&amp;nbsp;@malwaresigsHow is it being used :The path to infection - Eye glance at the first line of &quot;Russian Underground&quot; - 2012-12-05Some References :An Overview of Exploit Packs&amp;nbsp;- Contagio &amp;nbsp;- MilaWild Wild West - Kahu Security">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2013/05/inside-styx-2013-05.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Inside Styx Sploitpack 4.0 - Exploit Kit Control Panel">
+	<meta name="twitter:description" content="(Lorenz-84 - For the thumbnail)Styx LogoIn this post we&#39;ll just see how the panel looks like.If you want to know more about the price and exploits included see the &quot;Read more&quot; part at the end.&amp;lt;edit1 2013-05-23&amp;gt;Have learnt that this Styx is in version 4.0Here is what&#39;s new since the last post.Original Text :------------------------------------------Уважаемые пользователи!Мы проделали достаточно большой объем работы, чтобы объявить о новой версии Styx Sploit Pack 4.0 с суффиксом High Performance.Доработки по сравнению с версиями 3.0 и 2.0:Мультисерверная работа: связка может быть расположена на нескольких серверах, все обновления идут с мастер-сервера;Полностью переписан на компилируемом языке, что позволило избавиться от РНР чуть более, чем полностью;Дополнительные фильтры для защиты трафика: блокировка повторных заходов, без рефереров, боты гугля, кравлеры;Ротатор доменов: позволяет задавать домены либо сабдомены пачками, постепенно ротируя их в зависимости от ситуации; уникальный URL для слива трафика - един, он ведет на текущий домен для слива;Чекер доменов (позволяет проверять домены на нашем сервисе GhostBusters в автоматическом режиме);Чекер файлов (позволяет следить за чистотой файлов на нашем сервисе Captain Checker);Service Desk для оперативной работы с тикетами (с поддержкой работы и нотификаций через Jabber);Доработан API: полностью все фукнции продублированы в API, что позволяет добавить новый уровень автоматизиции;Экспорт статистики: простой и удобный - позволяет экспортировать статистику в человеко-читаемом формате, страны, браузеры, общая статистика и т.д.;Нотификации на Jabber или e-mail о текущей ситуации в системе: детект домена, файла, загрузка файла с нового URL и т.д.;Собственный плагин-детект: позволяет пробивать только тех, кто пробивается;Обратная выдача трафика: если по заданным критериям трафик отфильтровался как реджект, он будет слит на указанный вами Back URL, что позволяет не терять трафик;Черные списки рефереров и юзерагентов с поддержкой масок;Заливка файла с URL: теперь есть три варианта работы с файлами: загрузить файл на сервер, указать URL для периодической загрузки файла или вовсе грузить файл напрямую с указанного URL, минуя загрузки на сервер связки;Система весов для АВ, которая позволяет гибко настроить связку под ваш трафик (например, ротировать домен только в том случае, если имеются детекты Kaspersky и Spamhouse, в других случях - не ротировать);Возможность установить продукт на VPS с минимальной конфигурацией;Новые и актуальные свежие и чистые сплойты, сердце связки;Разумеется, как всегда - если у вас есть какая-либо актуальная для вас фича, мы готовы выслушать и реализовать данную возможность для вас.Русская версия: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------Translated by google as :------------------------------------------Dear customers!We have done a considerable amount of work to announce a new version of the Styx Sploit Pack 4.0 with the suffix High Performance.Improvements compared to versions 3.0 and 2.0:Multiserver job: bundle can be located on multiple servers, all of the updates coming from the master server;Completely re-written in a compiled language that will get rid of PHP slightly more than full;Additional filters for traffic protection: block repeated calls, no referrer, bots of Google, kravlery;Rotator domains: lets you specify domains or subdomain packs, gradually rotiruya them depending on the situation, a unique URL to drain traffic - one, it leads to the current domain to drain;Chequer domains (domains allows you to check on our service GhostBusters in automatic mode);Chequer files (allows to monitor the cleanliness of files on our service Captain Checker);Service Desk for operative work with tickets (with support for work and notifications via Jabber);Improved API: all fukntsii completely duplicated in the API, which lets you add a new level of automating the;Export statistics: simple and convenient - you can export statistics in human-readable format, countries, browsers, general statistics, etc.;Notification on Jabber or e-mail about the current situation in the system: Crime domain, file, file download from the new URL, etc.;Detective own plugin: allows you to punch only those breaks;Contact the issuance of traffic if the traffic on the specified criteria filtered as rejections, it will be merged to your specified Back URL, which allows you to not lose traffic;Black lists the referrers and yuzeragentov with support of masks;Fill the file URL: now have three options for dealing with files: download the file, specify a URL for a file or a batch file does ship directly from the specified URL, bypassing the load on the server bundles;The system of weights for AB, which allows you to flexibly configure a bunch of your traffic (for example, rotate a domain only if there is a detective and Kaspersky Spamhouse, in other cases - do not rotate);Ability to install the product on a VPS with minimal configuration;New and current fresh and clean sployty, heart ligament;Of course, as always - if you have any relevant feature for you, we are ready to listen and to implement this feature for you.Russian version: https://styx-crypt.com/ru/read/styx-pack.xml------------------------------------------&amp;lt;/edit&amp;gt;However here is how look a successful attack with last (known to me) integrated exploit :Urausy pushed by Styx Using CVE-2013-2423 with Security Bypass (jnlp) - 2013-04-27&amp;nbsp;Here is the login screen.Open, Seasam - Login ScreenThe Lorenz-84 is animated :Statistics - Global - StyxAll menus - StyxStatistics - Country - StyxStatistics - Browser &amp;amp; OS - StyxThose stats raise some questions. But I don&#39;t have the answer.(i tried to land with IE10 last java...nothing terrible happen but I already badly failed in recognizing new bullet)Flow - Styx(No Traffic. So Empty)Settings - Domains - StyxSettings - Files - StyxSettings - Filters - Styx(hello &quot;402 Payment Required&quot; :) &amp;nbsp;)Settings - Notifications - StyxSettings - API - Styx(Unfolded : /api/stats_global)At the bottom of the API page :Which you can get here : styxAPI-samples.7z(unmodified files - Owncloud via Goo.gl - just remove the .zip extension)&quot;Another problem with your file, my Lord. Captain Checker says it&#39;s NOT ok&quot;Screenshot of StyxAPI sample.phpSettings - Global Settings - StyxSettings - Global Settings - Show BL Weigths - StyxAnd we&#39;ll finish by the 404 (have to admit i love it - Lorenz-84 rotating here too)Great job!You&#39;ve just broke it.Styx Panel in one word ?Professional.(but it seems some protection&amp;nbsp;functionality&amp;nbsp;are missing)Read more :Presentation :Crossing the Styx ( Styx Sploit Pack 2.0 ) - Meet CVE-2012-4969 via JS heapspray &amp;nbsp;- 2012-12-22Last integrated exploits :CVE-2013-2423 integrating Exploit Kits&amp;nbsp;(search for Styx) - 2013-04-23CVE-2013-1493 (jre17u15 - jre16u41) integrating Exploit Kits (search for Styx) - 2013-03-09CVE-2013-0431 (java 1.7 update 11) ermerging in Exploit Kits &amp;nbsp;(search for Styx) - 2013-02-25For fast network sigs :Styx Exploit Kit&amp;nbsp;by&amp;nbsp;@malwaresigsHow is it being used :The path to infection - Eye glance at the first line of &quot;Russian Underground&quot; - 2012-12-05Some References :An Overview of Exploit Packs&amp;nbsp;- Contagio &amp;nbsp;- MilaWild Wild West - Kahu Security">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Inside Styx Sploitpack 4.0 - Exploit Kit Control Panel</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-2HJ8QE74vns/UNRlU3Ena3I/AAAAAAAAEec/EZMLQoI5QNA/s1600/screenshot_214.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-2HJ8QE74vns/UNRlU3Ena3I/AAAAAAAAEec/EZMLQoI5QNA/s1600/screenshot_214.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">(Lorenz-84 - For the thumbnail)</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-cgDU1Z2n9kM/UNRlgZAi3xI/AAAAAAAAEek/z4rFlf48uP0/s1600/Logo.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="72" src="http://4.bp.blogspot.com/-cgDU1Z2n9kM/UNRlgZAi3xI/AAAAAAAAEek/z4rFlf48uP0/s320/Logo.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Styx Logo</td></tr></tbody></table><br /><br />In this post we'll just see how the panel looks like.<br />If you want to know more about the price and exploits included see the "Read more" part at the end.<br /><br />&lt;edit1 2013-05-23&gt;<br />Have learnt that this Styx is in version 4.0<br />Here is what's new since the last post.<br />Original Text :<br />------------------------------------------<br /><span style="color: #38761d;">Уважаемые пользователи!</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Мы проделали достаточно большой объем работы, чтобы объявить о новой версии Styx Sploit Pack 4.0 с суффиксом High Performance.</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Доработки по сравнению с версиями 3.0 и 2.0:</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Мультисерверная работа: связка может быть расположена на нескольких серверах, все обновления идут с мастер-сервера;</span><br /><span style="color: #38761d;">Полностью переписан на компилируемом языке, что позволило избавиться от РНР чуть более, чем полностью;</span><br /><span style="color: #38761d;">Дополнительные фильтры для защиты трафика: блокировка повторных заходов, без рефереров, боты гугля, кравлеры;</span><br /><span style="color: #38761d;">Ротатор доменов: позволяет задавать домены либо сабдомены пачками, постепенно ротируя их в зависимости от ситуации; уникальный URL для слива трафика - един, он ведет на текущий домен для слива;</span><br /><span style="color: #38761d;">Чекер доменов (позволяет проверять домены на нашем сервисе GhostBusters в автоматическом режиме);</span><br /><span style="color: #38761d;">Чекер файлов (позволяет следить за чистотой файлов на нашем сервисе Captain Checker);</span><br /><span style="color: #38761d;">Service Desk для оперативной работы с тикетами (с поддержкой работы и нотификаций через Jabber);</span><br /><span style="color: #38761d;">Доработан API: полностью все фукнции продублированы в API, что позволяет добавить новый уровень автоматизиции;</span><br /><span style="color: #38761d;">Экспорт статистики: простой и удобный - позволяет экспортировать статистику в человеко-читаемом формате, страны, браузеры, общая статистика и т.д.;</span><br /><span style="color: #38761d;">Нотификации на Jabber или e-mail о текущей ситуации в системе: детект домена, файла, загрузка файла с нового URL и т.д.;</span><br /><span style="color: #38761d;">Собственный плагин-детект: позволяет пробивать только тех, кто пробивается;</span><br /><span style="color: #38761d;">Обратная выдача трафика: если по заданным критериям трафик отфильтровался как реджект, он будет слит на указанный вами Back URL, что позволяет не терять трафик;</span><br /><span style="color: #38761d;">Черные списки рефереров и юзерагентов с поддержкой масок;</span><br /><span style="color: #38761d;">Заливка файла с URL: теперь есть три варианта работы с файлами: загрузить файл на сервер, указать URL для периодической загрузки файла или вовсе грузить файл напрямую с указанного URL, минуя загрузки на сервер связки;</span><br /><span style="color: #38761d;">Система весов для АВ, которая позволяет гибко настроить связку под ваш трафик (например, ротировать домен только в том случае, если имеются детекты Kaspersky и Spamhouse, в других случях - не ротировать);</span><br /><span style="color: #38761d;">Возможность установить продукт на VPS с минимальной конфигурацией;</span><br /><span style="color: #38761d;">Новые и актуальные свежие и чистые сплойты, сердце связки;</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Разумеется, как всегда - если у вас есть какая-либо актуальная для вас фича, мы готовы выслушать и реализовать данную возможность для вас.</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Русская версия: https://styx-crypt.com/ru/read/styx-pack.xml</span><br />------------------------------------------<br />Translated by google as :<br />------------------------------------------<br /><span style="color: #351c75;">Dear customers!</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">We have done a considerable amount of work to announce a new version of the Styx Sploit Pack 4.0 with the suffix High Performance.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Improvements compared to versions 3.0 and 2.0:</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Multiserver job: bundle can be located on multiple servers, all of the updates coming from the master server;</span><br /><span style="color: #351c75;">Completely re-written in a compiled language that will get rid of PHP slightly more than full;</span><br /><span style="color: #351c75;">Additional filters for traffic protection: block repeated calls, no referrer, bots of Google, kravlery;</span><br /><span style="color: #351c75;">Rotator domains: lets you specify domains or subdomain packs, gradually rotiruya them depending on the situation, a unique URL to drain traffic - one, it leads to the current domain to drain;</span><br /><span style="color: #351c75;">Chequer domains (domains allows you to check on our service GhostBusters in automatic mode);</span><br /><span style="color: #351c75;">Chequer files (allows to monitor the cleanliness of files on our service Captain Checker);</span><br /><span style="color: #351c75;">Service Desk for operative work with tickets (with support for work and notifications via Jabber);</span><br /><span style="color: #351c75;">Improved API: all fukntsii completely duplicated in the API, which lets you add a new level of automating the;</span><br /><span style="color: #351c75;">Export statistics: simple and convenient - you can export statistics in human-readable format, countries, browsers, general statistics, etc.;</span><br /><span style="color: #351c75;">Notification on Jabber or e-mail about the current situation in the system: Crime domain, file, file download from the new URL, etc.;</span><br /><span style="color: #351c75;">Detective own plugin: allows you to punch only those breaks;</span><br /><span style="color: #351c75;">Contact the issuance of traffic if the traffic on the specified criteria filtered as rejections, it will be merged to your specified Back URL, which allows you to not lose traffic;</span><br /><span style="color: #351c75;">Black lists the referrers and yuzeragentov with support of masks;</span><br /><span style="color: #351c75;">Fill the file URL: now have three options for dealing with files: download the file, specify a URL for a file or a batch file does ship directly from the specified URL, bypassing the load on the server bundles;</span><br /><span style="color: #351c75;">The system of weights for AB, which allows you to flexibly configure a bunch of your traffic (for example, rotate a domain only if there is a detective and Kaspersky Spamhouse, in other cases - do not rotate);</span><br /><span style="color: #351c75;">Ability to install the product on a VPS with minimal configuration;</span><br /><span style="color: #351c75;">New and current fresh and clean sployty, heart ligament;</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Of course, as always - if you have any relevant feature for you, we are ready to listen and to implement this feature for you.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Russian version: https://styx-crypt.com/ru/read/styx-pack.xml</span><br />------------------------------------------<br />&lt;/edit&gt;<br /><br />However here is how look a successful attack with last<span style="font-size: xx-small;"> (known to me) </span>integrated exploit :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="https://pbs.twimg.com/media/BI4S3lDCAAAA-bL.png:large" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="250" src="https://pbs.twimg.com/media/BI4S3lDCAAAA-bL.png:large" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Urausy pushed by Styx Using CVE-2013-2423 with Security Bypass (jnlp) - 2013-04-27&nbsp;</td></tr></tbody></table>Here is the login screen.<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-lewFkn8Dqcg/UZkW6LsXMDI/AAAAAAAAAEs/s-2MHJuanzE/s1600/screenshot_50.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="354" src="http://4.bp.blogspot.com/-lewFkn8Dqcg/UZkW6LsXMDI/AAAAAAAAAEs/s-2MHJuanzE/s640/screenshot_50.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Open, Seasam - Login Screen</td></tr></tbody></table>The Lorenz-84 is animated :<br /><br /><div class="separator" style="clear: both; text-align: center;"><object class="BLOGGER-youtube-video" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" data-thumbnail-src="http://2.gvt0.com/vi/uuR9VRcpfZI/0.jpg" height="266" width="320"><param name="movie" value="http://www.youtube.com/v/uuR9VRcpfZI&fs=1&source=uds" /><param name="bgcolor" value="#FFFFFF" /><param name="allowFullScreen" value="true" /><embed width="320" height="266"  src="http://www.youtube.com/v/uuR9VRcpfZI&fs=1&source=uds" type="application/x-shockwave-flash" allowfullscreen="true"></embed></object></div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-Vr5N14msBHw/UZkYZfV2t5I/AAAAAAAAAE8/yCd1ueFfJ5E/s1600/Global+Statistics.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="432" src="http://1.bp.blogspot.com/-Vr5N14msBHw/UZkYZfV2t5I/AAAAAAAAAE8/yCd1ueFfJ5E/s640/Global+Statistics.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Statistics - Global - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-LSFHUxfE3BI/UZkZE20RwaI/AAAAAAAAAFE/g7iGWpwNnYI/s1600/screenshot_54.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-LSFHUxfE3BI/UZkZE20RwaI/AAAAAAAAAFE/g7iGWpwNnYI/s1600/screenshot_54.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">All menus - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-FgSLvuh1Hio/UZkc9UTO3tI/AAAAAAAAAFU/iWX7swZ5Iuk/s1600/screenshot_55.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="558" src="http://3.bp.blogspot.com/-FgSLvuh1Hio/UZkc9UTO3tI/AAAAAAAAAFU/iWX7swZ5Iuk/s640/screenshot_55.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Statistics - Country - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-vwKqISEulDY/UZke_HnF99I/AAAAAAAAAFk/Kcebb9Ha3lo/s1600/Statistics+Browser+&amp;+OS.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-vwKqISEulDY/UZke_HnF99I/AAAAAAAAAFk/Kcebb9Ha3lo/s640/Statistics+Browser+&amp;+OS.png" width="388" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Statistics - Browser &amp; OS - Styx</td></tr></tbody></table>Those stats raise some questions. But I don't have the answer.<br /><div><i><span style="font-size: xx-small;">(i tried to land with IE10 last java...nothing terrible happen but I already badly failed in recognizing new bullet)</span></i><br /><div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-y0UFX8GjsJ4/UZkhNkpLkLI/AAAAAAAAAF0/uTrfuLYbs4w/s1600/screenshot_57.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="502" src="http://1.bp.blogspot.com/-y0UFX8GjsJ4/UZkhNkpLkLI/AAAAAAAAAF0/uTrfuLYbs4w/s640/screenshot_57.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Flow - Styx<br /><span style="font-size: xx-small;">(No Traffic. So Empty)</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-MK47mkxxhR4/UZkiLNItSSI/AAAAAAAAAGA/Y282pDzB6xc/s1600/screenshot_58.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="420" src="http://2.bp.blogspot.com/-MK47mkxxhR4/UZkiLNItSSI/AAAAAAAAAGA/Y282pDzB6xc/s640/screenshot_58.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Domains - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-JRQIJWmwCLM/UZkjpVj-aYI/AAAAAAAAAGQ/4eim7cYIakc/s1600/screenshot_61.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://3.bp.blogspot.com/-JRQIJWmwCLM/UZkjpVj-aYI/AAAAAAAAAGQ/4eim7cYIakc/s640/screenshot_61.png" width="638" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Files - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-m42mJSihmGw/UZkvnIP7YnI/AAAAAAAAAGg/TiRnYCbACio/s1600/screenshot_64.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="300" src="http://3.bp.blogspot.com/-m42mJSihmGw/UZkvnIP7YnI/AAAAAAAAAGg/TiRnYCbACio/s640/screenshot_64.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Filters - Styx<br />(hello "402 Payment Required" :) &nbsp;)</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-SbgzJc_gkYE/UZkv_e2-ptI/AAAAAAAAAGo/J8_yjC7tlBQ/s1600/screenshot_66.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-SbgzJc_gkYE/UZkv_e2-ptI/AAAAAAAAAGo/J8_yjC7tlBQ/s1600/screenshot_66.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Notifications - Styx</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-7CNgq4uhX_w/UZkxocqPwUI/AAAAAAAAAHA/yMw-H7dGQ0c/s1600/screenshot_67.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-7CNgq4uhX_w/UZkxocqPwUI/AAAAAAAAAHA/yMw-H7dGQ0c/s640/screenshot_67.png" width="196" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - API - Styx<br />(Unfolded : /api/stats_global)</td></tr></tbody></table>At the bottom of the API page :<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-7V4vcTma3MU/UZkyABKjj3I/AAAAAAAAAHI/uAbnSgKwKBQ/s1600/screenshot_68.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="55" src="http://4.bp.blogspot.com/-7V4vcTma3MU/UZkyABKjj3I/AAAAAAAAAHI/uAbnSgKwKBQ/s320/screenshot_68.png" width="320" /></a></div><br />Which you can get here : <a href="http://goo.gl/WolMy">styxAPI-samples.7z</a><br /><span style="font-size: xx-small;">(unmodified files - Owncloud via Goo.gl - just remove the .zip extension)</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-KVIsDN384lw/UZkz6VAz0-I/AAAAAAAAAHY/io_oSirl-4o/s1600/screenshot_70.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="540" src="http://2.bp.blogspot.com/-KVIsDN384lw/UZkz6VAz0-I/AAAAAAAAAHY/io_oSirl-4o/s640/screenshot_70.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">"Another problem with your file, my Lord. Captain Checker says it's NOT ok"<br />Screenshot of StyxAPI sample.php</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-c7V0bxjbPUs/UZk05FHpIvI/AAAAAAAAAHk/KVFsWM_XeQE/s1600/screenshot_46.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="400" src="http://1.bp.blogspot.com/-c7V0bxjbPUs/UZk05FHpIvI/AAAAAAAAAHk/KVFsWM_XeQE/s640/screenshot_46.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Global Settings - Styx</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-hHm2n2VDtlE/UZo_b4Cuc8I/AAAAAAAAAH8/8cUqeqtJvUU/s1600/screenshot_79.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-hHm2n2VDtlE/UZo_b4Cuc8I/AAAAAAAAAH8/8cUqeqtJvUU/s1600/screenshot_79.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Settings - Global Settings - Show BL Weigths - Styx</td></tr></tbody></table><br /><br />And we'll finish by the 404 (<span style="font-size: x-small;"><i>have to admit i love it - Lorenz-84 rotating here too</i></span>)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-vHty5BwKXo0/UZk1P0JO6gI/AAAAAAAAAHs/CPo7WeagLbI/s1600/screenshot_43.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="428" src="http://4.bp.blogspot.com/-vHty5BwKXo0/UZk1P0JO6gI/AAAAAAAAAHs/CPo7WeagLbI/s640/screenshot_43.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Great job!<br />You've just broke it.</td></tr></tbody></table><br />Styx Panel in one word ?<br />Professional.<br /><i><span style="font-size: xx-small;">(but it seems some protection&nbsp;functionality&nbsp;are missing)</span></i><br /><br /><b><u>Read more :</u></b><br /><i>Presentation :</i><br /><a href="http://malware.dontneedcoffee.com/2012/12/crossing-styx-styx-sploit-pack-20-cve.html">Crossing the Styx ( Styx Sploit Pack 2.0 ) - Meet CVE-2012-4969 via JS heapspray</a> &nbsp;- 2012-12-22<br /><i>Last integrated exploits :</i><br /><a href="http://malware.dontneedcoffee.com/2013/04/cve-2013-2423-integrating-exploit-kits.html">CVE-2013-2423 integrating Exploit Kits</a>&nbsp;(search for Styx) - 2013-04-23<br /><a href="http://malware.dontneedcoffee.com/2013/03/cve-2013-1493-jre17u15-jre16u41.html">CVE-2013-1493 (jre17u15 - jre16u41) integrating Exploit Kits</a> (search for Styx) - 2013-03-09<br /><a href="http://malware.dontneedcoffee.com/2013/02/cve-2013-0431-java-17-update-11.html">CVE-2013-0431 (java 1.7 update 11) ermerging in Exploit Kits</a> &nbsp;(search for Styx) - 2013-02-25<br /><i>For fast network sigs :</i><br /><a href="http://www.malwaresigs.com/2012/12/19/styx-exploit-kit/">Styx Exploit Kit</a>&nbsp;by&nbsp;<a href="https://twitter.com/malwaresigs">@malwaresigs</a><br /><i>How is it being used :</i><br /><a href="http://malware.dontneedcoffee.com/2012/12/eyeglanceru.html">The path to infection - Eye glance at the first line of "Russian Underground"</a> - 2012-12-05<br /><br /><b><u>Some References :</u></b><br /><a href="http://contagiodump.blogspot.fr/search?q=An+Overview+of+Exploit+Packs">An Overview of Exploit Packs</a>&nbsp;- Contagio &nbsp;- Mila<br /><a href="http://www.kahusecurity.com/?s=Wild+Wild+West">Wild Wild West</a> - Kahu Security</div></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-05-19" itemprop="datePublished"> 2013-05-19</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> inside view</span> <span class="icon-price-tag pr10"> Styx</span> <span class="icon-price-tag pr10"> Styx Sploitpack 4.0</span> <span class="icon-price-tag pr10"> Styx Sploit Pack</span> <span class="icon-price-tag pr10"> Styx Sploitpack 4.0 High Performance</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2013/05/inside-rdpxterm-bot-442-panel-51-aka.html">&laquo; Inside RDPxTerm (panel 5.1 - bot 4.4.2) aka Neshta C&C - Botnet control panel</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2013/05/unveiling-locker-bomba-aka-lucky-locker.html">Unveiling the Locker Bomba (aka Lucky Locker v0.6 aka Lyposit/Adneukine ) &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

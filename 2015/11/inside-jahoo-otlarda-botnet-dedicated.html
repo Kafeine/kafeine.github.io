@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inside Jahoo (Otlard.A ?) - A spam Botnet</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Trash and Mailbox by Bethesda SoftworksOtlard.A (or let&#39;s say at least the malware triggering 2806902 || ETPRO TROJAN Win32.Otlard.A C&amp;amp;C Checkin response&amp;nbsp;)&amp;nbsp; is a Spam BotnetI saw it loaded as a plugin in an instance of AndromedaThat Andromeda is being spread via :Bedep build id 6005 and here 6007 from an Angler EK fed by Malvertising :VirtualDonna group redirecting traffic to an Angler instance loading Bedep buildid 6007 in memoryBedep 6007 loading Andromeda&amp;nbsp;55ead0e4010c7c1a601511286f879e33 before update task.2015-09-28Note : Bedep 6007 was sometimes loading it with other payload-2015-09-16 for : ec5d314fc392765d065ff16f21722008 with Trapwot (FakeAV) e600985d6797dec2f7388e86ae3e82ba and Pony a4f08c845cc8e2beae0d157a3624b686-2015-09-29 for : 37898c10a350651add962831daa4fffa with Kovter ( 24143f110e7492c3d040b2ec0cdfa3d0 )That Andromeda beaconing to dnswow .com enslaved &amp;gt;10k bots in a week :Andromeda dnswow 2015-11-22Andromeda dnswow 2015-11-27Here the Otlard.A task in that Andromeda instance :Task installing Otlard.A as a plugin to Andromedaa Task in a Smokebot dropped by Nuclear Pack fed by Malvertising :Malvertising &amp;gt; Nuclear Pack &amp;gt; Smokebot &amp;gt; Stealer, Ramnit, Htbot and Andromeda &amp;gt; Otlard.A2015-11-28Smokebot : cde587187622d5f23e50b1f5b6c86969Andromeda :&amp;nbsp;b75f4834770fe64da63e42b8c90c6fcd(out of topic Ramnit : 28ceafaef592986e4914bfa3f4c7f5c0&amp;nbsp;- It&#39;s being massively spread those days in many infection path.&amp;nbsp;(Edit 2015-12-29 :&amp;nbsp;&amp;nbsp;Htbot.B : &amp;nbsp;d0a14abe51a61c727420765f72de843a&amp;nbsp;named&amp;nbsp;ProxyBack&amp;nbsp;by&amp;nbsp;PaloAlto)Now here is what the control panel of that plugin looks like :Otlard.A panel :Otlard.A - JahooManager - Main - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Servers - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Settings - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Campaigns - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Bot - 2015-09-27that exe is :&amp;nbsp;2387fb927e6d9d6c027b4ba23d8c3073 and appears to be AndromedaOtlard.A - JahooSender - Tasks - 2015-09-27Otlard.A - JahooSender - Tasks - 2015-11-28Otlard.A - JahooSender - Tasks - Done Task - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - Attached image - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules &amp;gt; Spam - 2015-11-28Olard.A - JahooSender - Rules &amp;gt; User - 2015-11-28Olard.A -&amp;nbsp;Bases - Emails - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - Edit - 2015-11-28Olard.A -&amp;nbsp;Botnet - Main - 2015-09-27Olard.A -&amp;nbsp;Botnet - Main - 2015-11-28Otlard.A - Botnet - Modules - 2015-11-28Otlard.A - Botnet - Modules - Edit - 2015-11-28Otlard.A - Incubator - Accounts - 2015-11-28Otlard.A - Incubator - Settings - 2015-11-28Note : registrator menu has disappeared in last version.&amp;nbsp;--Andromeda C&amp;amp;C 2015-11-28 :5.8.35.241202023 | 5.8.35.0/24 | LLHOST | EU | llhost-inc.com | LLHost IncSpam Module C&amp;amp;C 2015-11-28 :5.8.32.10&amp;nbsp;5.8.32.85.8.32.525.8.34.205.8.32.535.8.32.56202023 | 5.8.32.0/24 | LLHOST | EU | zanufact.com | LLHost IncThanks : Brett StoneGross for helping me with decoding/understanding the network communicationsFiles :All samples which hashes have been discussed here are in that zip.Jahoo - socker.dll :&amp;nbsp;7d14c9edfd71d2b76dd18e3681fec798( If you want to look into this, i can provide associated network traffic)Read More :Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel  2012-07-02Inside Pony 1.7 / Fareit C&amp;amp;C - Botnet Control Panel - 2012-06-27Inside Smoke Bot - Botnet Control Panel - 2012-04-28Post publication Reading :ProxyBack Malware Turns User Systems Into Proxies Without Consent - 2015-12-23 - JeffWhite - PaloAlto">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2015/11/inside-jahoo-otlarda-botnet-dedicated.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Inside Jahoo (Otlard.A ?) - A spam Botnet">
+	<meta property="og:description" content="Trash and Mailbox by Bethesda SoftworksOtlard.A (or let&#39;s say at least the malware triggering 2806902 || ETPRO TROJAN Win32.Otlard.A C&amp;amp;C Checkin response&amp;nbsp;)&amp;nbsp; is a Spam BotnetI saw it loaded as a plugin in an instance of AndromedaThat Andromeda is being spread via :Bedep build id 6005 and here 6007 from an Angler EK fed by Malvertising :VirtualDonna group redirecting traffic to an Angler instance loading Bedep buildid 6007 in memoryBedep 6007 loading Andromeda&amp;nbsp;55ead0e4010c7c1a601511286f879e33 before update task.2015-09-28Note : Bedep 6007 was sometimes loading it with other payload-2015-09-16 for : ec5d314fc392765d065ff16f21722008 with Trapwot (FakeAV) e600985d6797dec2f7388e86ae3e82ba and Pony a4f08c845cc8e2beae0d157a3624b686-2015-09-29 for : 37898c10a350651add962831daa4fffa with Kovter ( 24143f110e7492c3d040b2ec0cdfa3d0 )That Andromeda beaconing to dnswow .com enslaved &amp;gt;10k bots in a week :Andromeda dnswow 2015-11-22Andromeda dnswow 2015-11-27Here the Otlard.A task in that Andromeda instance :Task installing Otlard.A as a plugin to Andromedaa Task in a Smokebot dropped by Nuclear Pack fed by Malvertising :Malvertising &amp;gt; Nuclear Pack &amp;gt; Smokebot &amp;gt; Stealer, Ramnit, Htbot and Andromeda &amp;gt; Otlard.A2015-11-28Smokebot : cde587187622d5f23e50b1f5b6c86969Andromeda :&amp;nbsp;b75f4834770fe64da63e42b8c90c6fcd(out of topic Ramnit : 28ceafaef592986e4914bfa3f4c7f5c0&amp;nbsp;- It&#39;s being massively spread those days in many infection path.&amp;nbsp;(Edit 2015-12-29 :&amp;nbsp;&amp;nbsp;Htbot.B : &amp;nbsp;d0a14abe51a61c727420765f72de843a&amp;nbsp;named&amp;nbsp;ProxyBack&amp;nbsp;by&amp;nbsp;PaloAlto)Now here is what the control panel of that plugin looks like :Otlard.A panel :Otlard.A - JahooManager - Main - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Servers - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Settings - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Campaigns - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Bot - 2015-09-27that exe is :&amp;nbsp;2387fb927e6d9d6c027b4ba23d8c3073 and appears to be AndromedaOtlard.A - JahooSender - Tasks - 2015-09-27Otlard.A - JahooSender - Tasks - 2015-11-28Otlard.A - JahooSender - Tasks - Done Task - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - Attached image - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules &amp;gt; Spam - 2015-11-28Olard.A - JahooSender - Rules &amp;gt; User - 2015-11-28Olard.A -&amp;nbsp;Bases - Emails - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - Edit - 2015-11-28Olard.A -&amp;nbsp;Botnet - Main - 2015-09-27Olard.A -&amp;nbsp;Botnet - Main - 2015-11-28Otlard.A - Botnet - Modules - 2015-11-28Otlard.A - Botnet - Modules - Edit - 2015-11-28Otlard.A - Incubator - Accounts - 2015-11-28Otlard.A - Incubator - Settings - 2015-11-28Note : registrator menu has disappeared in last version.&amp;nbsp;--Andromeda C&amp;amp;C 2015-11-28 :5.8.35.241202023 | 5.8.35.0/24 | LLHOST | EU | llhost-inc.com | LLHost IncSpam Module C&amp;amp;C 2015-11-28 :5.8.32.10&amp;nbsp;5.8.32.85.8.32.525.8.34.205.8.32.535.8.32.56202023 | 5.8.32.0/24 | LLHOST | EU | zanufact.com | LLHost IncThanks : Brett StoneGross for helping me with decoding/understanding the network communicationsFiles :All samples which hashes have been discussed here are in that zip.Jahoo - socker.dll :&amp;nbsp;7d14c9edfd71d2b76dd18e3681fec798( If you want to look into this, i can provide associated network traffic)Read More :Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel  2012-07-02Inside Pony 1.7 / Fareit C&amp;amp;C - Botnet Control Panel - 2012-06-27Inside Smoke Bot - Botnet Control Panel - 2012-04-28Post publication Reading :ProxyBack Malware Turns User Systems Into Proxies Without Consent - 2015-12-23 - JeffWhite - PaloAlto">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2015/11/inside-jahoo-otlarda-botnet-dedicated.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Inside Jahoo (Otlard.A ?) - A spam Botnet">
+	<meta name="twitter:description" content="Trash and Mailbox by Bethesda SoftworksOtlard.A (or let&#39;s say at least the malware triggering 2806902 || ETPRO TROJAN Win32.Otlard.A C&amp;amp;C Checkin response&amp;nbsp;)&amp;nbsp; is a Spam BotnetI saw it loaded as a plugin in an instance of AndromedaThat Andromeda is being spread via :Bedep build id 6005 and here 6007 from an Angler EK fed by Malvertising :VirtualDonna group redirecting traffic to an Angler instance loading Bedep buildid 6007 in memoryBedep 6007 loading Andromeda&amp;nbsp;55ead0e4010c7c1a601511286f879e33 before update task.2015-09-28Note : Bedep 6007 was sometimes loading it with other payload-2015-09-16 for : ec5d314fc392765d065ff16f21722008 with Trapwot (FakeAV) e600985d6797dec2f7388e86ae3e82ba and Pony a4f08c845cc8e2beae0d157a3624b686-2015-09-29 for : 37898c10a350651add962831daa4fffa with Kovter ( 24143f110e7492c3d040b2ec0cdfa3d0 )That Andromeda beaconing to dnswow .com enslaved &amp;gt;10k bots in a week :Andromeda dnswow 2015-11-22Andromeda dnswow 2015-11-27Here the Otlard.A task in that Andromeda instance :Task installing Otlard.A as a plugin to Andromedaa Task in a Smokebot dropped by Nuclear Pack fed by Malvertising :Malvertising &amp;gt; Nuclear Pack &amp;gt; Smokebot &amp;gt; Stealer, Ramnit, Htbot and Andromeda &amp;gt; Otlard.A2015-11-28Smokebot : cde587187622d5f23e50b1f5b6c86969Andromeda :&amp;nbsp;b75f4834770fe64da63e42b8c90c6fcd(out of topic Ramnit : 28ceafaef592986e4914bfa3f4c7f5c0&amp;nbsp;- It&#39;s being massively spread those days in many infection path.&amp;nbsp;(Edit 2015-12-29 :&amp;nbsp;&amp;nbsp;Htbot.B : &amp;nbsp;d0a14abe51a61c727420765f72de843a&amp;nbsp;named&amp;nbsp;ProxyBack&amp;nbsp;by&amp;nbsp;PaloAlto)Now here is what the control panel of that plugin looks like :Otlard.A panel :Otlard.A - JahooManager - Main - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Servers - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Settings - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Campaigns - 2015-09-27Otlard.A -&amp;nbsp;JahooManager&amp;nbsp;- Bot - 2015-09-27that exe is :&amp;nbsp;2387fb927e6d9d6c027b4ba23d8c3073 and appears to be AndromedaOtlard.A - JahooSender - Tasks - 2015-09-27Otlard.A - JahooSender - Tasks - 2015-11-28Otlard.A - JahooSender - Tasks - Done Task - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Domains - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-09-27Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Messages - Edit a Message - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Headers - Editing Header - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Macross - Editing macross - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Attach - Attached image - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules - 2015-11-28Otlard.A -&amp;nbsp;JahooSender&amp;nbsp;- Rules &amp;gt; Spam - 2015-11-28Olard.A - JahooSender - Rules &amp;gt; User - 2015-11-28Olard.A -&amp;nbsp;Bases - Emails - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - 2015-11-28Olard.A -&amp;nbsp;Bases - Blacklist - Edit - 2015-11-28Olard.A -&amp;nbsp;Botnet - Main - 2015-09-27Olard.A -&amp;nbsp;Botnet - Main - 2015-11-28Otlard.A - Botnet - Modules - 2015-11-28Otlard.A - Botnet - Modules - Edit - 2015-11-28Otlard.A - Incubator - Accounts - 2015-11-28Otlard.A - Incubator - Settings - 2015-11-28Note : registrator menu has disappeared in last version.&amp;nbsp;--Andromeda C&amp;amp;C 2015-11-28 :5.8.35.241202023 | 5.8.35.0/24 | LLHOST | EU | llhost-inc.com | LLHost IncSpam Module C&amp;amp;C 2015-11-28 :5.8.32.10&amp;nbsp;5.8.32.85.8.32.525.8.34.205.8.32.535.8.32.56202023 | 5.8.32.0/24 | LLHOST | EU | zanufact.com | LLHost IncThanks : Brett StoneGross for helping me with decoding/understanding the network communicationsFiles :All samples which hashes have been discussed here are in that zip.Jahoo - socker.dll :&amp;nbsp;7d14c9edfd71d2b76dd18e3681fec798( If you want to look into this, i can provide associated network traffic)Read More :Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel  2012-07-02Inside Pony 1.7 / Fareit C&amp;amp;C - Botnet Control Panel - 2012-06-27Inside Smoke Bot - Botnet Control Panel - 2012-04-28Post publication Reading :ProxyBack Malware Turns User Systems Into Proxies Without Consent - 2015-12-23 - JeffWhite - PaloAlto">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Inside Jahoo (Otlard.A ?) - A spam Botnet</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-Rkw_mgiDpP4/Vlm2-sASwhI/AAAAAAAAFVA/G7tnSVEndYQ/s1600/2015-11-28_15h14_26.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-Rkw_mgiDpP4/Vlm2-sASwhI/AAAAAAAAFVA/G7tnSVEndYQ/s1600/2015-11-28_15h14_26.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Trash and Mailbox by Bethesda Softworks</td></tr></tbody></table><br /><br /><br />Otlard.A (<span style="font-size: x-small;">or let's say at least the malware triggering 2806902 || ETPRO TROJAN Win32.Otlard.A C&amp;C Checkin response</span>&nbsp;<span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 18.1818px;">)</span>&nbsp; is a Spam Botnet<br /><br />I saw it loaded as a plugin in an instance of <a href="http://malware.dontneedcoffee.com/2012/07/inside-andromeda-bot-v206-webpanel-aka.html">Andromeda</a><br /><br />That Andromeda is being spread via :<br /><br /><br /><ul><li><b><u>Bedep build id 6005 and here 6007 from an Angler EK fed by Malvertising :</u></b></li></ul><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-cy1pVIAvcaY/Vll8JzWBfqI/AAAAAAAAFOc/LJeuvEFzIRM/s1600/2015-11-28_11h02_53.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="122" src="http://3.bp.blogspot.com/-cy1pVIAvcaY/Vll8JzWBfqI/AAAAAAAAFOc/LJeuvEFzIRM/s640/2015-11-28_11h02_53.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="http://malware.dontneedcoffee.com/2015/10/a-doubleclick-https-open-redirect-used.html">VirtualDonna</a> group redirecting traffic to an Angler instance loading Bedep buildid 6007 in memory<br />Bedep 6007 loading Andromeda&nbsp;<span data-sheets-userformat="[null,null,513,[null,0],null,null,null,null,null,null,null,null,0]" data-sheets-value="[null,2,&quot;55ead0e4010c7c1a601511286f879e33&quot;]" style="font-family: &quot;arial&quot;; font-size: 13px;"><a href="https://www.virustotal.com/latest-report.html?resource=55ead0e4010c7c1a601511286f879e33">55ead0e4010c7c1a601511286f879e33</a> before update task.</span><br />2015-09-28</td></tr></tbody></table><br /><br /><i>Note : Bedep 6007 was sometimes loading it with other payload<br />-2015-09-16 for : <a href="https://www.virustotal.com/latest-report.html?resource=ec5d314fc392765d065ff16f21722008">ec5d314fc392765d065ff16f21722008 </a>with Trapwot (FakeAV) <a href="https://www.virustotal.com/latest-report.html?resource=e600985d6797dec2f7388e86ae3e82ba">e600985d6797dec2f7388e86ae3e82ba</a> and <a href="http://malware.dontneedcoffee.com/2012/06/inside-pony-17.html">Pony</a> <a href="https://www.virustotal.com/latest-report.html?resource=a4f08c845cc8e2beae0d157a3624b686">a4f08c845cc8e2beae0d157a3624b686</a><br />-2015-09-29 for : <a href="https://www.virustotal.com/latest-report.html?resource=37898c10a350651add962831daa4fffa">37898c10a350651add962831daa4fffa</a> with Kovter ( <a href="https://www.virustotal.com/latest-report.html?resource=24143f110e7492c3d040b2ec0cdfa3d0">24143f110e7492c3d040b2ec0cdfa3d0</a> )</i><br />That Andromeda beaconing to dnswow .com enslaved &gt;10k bots in a week :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-2lxwbsezavE/VlmEJJQyymI/AAAAAAAAFO0/4S3S0Gxjcek/s1600/2015-09-22_09h17_51.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="408" src="http://1.bp.blogspot.com/-2lxwbsezavE/VlmEJJQyymI/AAAAAAAAFO0/4S3S0Gxjcek/s640/2015-09-22_09h17_51.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Andromeda dnswow 2015-11-22</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-wB4SgrxhRf0/VlmDvZvC_tI/AAAAAAAAFOs/hnH1uxzuNog/s1600/2015-09-28_14h50_08.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="408" src="http://4.bp.blogspot.com/-wB4SgrxhRf0/VlmDvZvC_tI/AAAAAAAAFOs/hnH1uxzuNog/s640/2015-09-28_14h50_08.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Andromeda dnswow 2015-11-27</td></tr></tbody></table>Here the Otlard.A task in that Andromeda instance :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-5CNirFc5Sww/VlmEiLMriQI/AAAAAAAAFO8/NwQuQHpSfv8/s1600/2015-09-27_10h26_09.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="64" src="http://4.bp.blogspot.com/-5CNirFc5Sww/VlmEiLMriQI/AAAAAAAAFO8/NwQuQHpSfv8/s640/2015-09-27_10h26_09.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Task installing Otlard.A as a plugin to Andromeda</td></tr></tbody></table><br /><ul><li><b><u>a Task in a <a href="http://malware.dontneedcoffee.com/2012/04/inside-smoke-bot.html">Smokebot</a> dropped by Nuclear Pack fed by Malvertising :</u></b></li></ul><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-q6DHxMxzxE4/Vl6egZtNOCI/AAAAAAAAFV8/oUGvDSCp8zg/s1600/2015-11-28_14h17_28.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="274" src="http://4.bp.blogspot.com/-q6DHxMxzxE4/Vl6egZtNOCI/AAAAAAAAFV8/oUGvDSCp8zg/s640/2015-11-28_14h17_28.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><div style="font-size: 12.8px;">Malvertising &gt; Nuclear Pack &gt; Smokebot &gt; Stealer, Ramnit, Htbot and Andromeda &gt; Otlard.A</div><div style="font-size: 12.8px;">2015-11-28</div></td></tr></tbody></table>Smokebot : <a href="https://www.virustotal.com/intelligence/search/?query=cde587187622d5f23e50b1f5b6c86969">cde587187622d5f23e50b1f5b6c86969</a><br /><span style="background-color: white; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">Andromeda :&nbsp;</span><span style="background-color: white; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;"><a href="https://www.virustotal.com/intelligence/search/?query=b75f4834770fe64da63e42b8c90c6fcd">b75f4834770fe64da63e42b8c90c6fcd</a></span><br /><span style="font-size: x-small;">(out of topic Ramnit : <a href="https://www.virustotal.com/intelligence/search/?query=28ceafaef592986e4914bfa3f4c7f5c0">28ceafaef592986e4914bfa3f4c7f5c0</a>&nbsp;- It's being massively spread those days in many infection path.&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 26.6667px;">(Edit 2015-12-29 :</span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 26.6667px;">&nbsp;</span>&nbsp;Htbot.B : &nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 26.6667px;"><a href="https://www.virustotal.com/file/b2caaee0d55f0094ce158fe6a418043f90354105e3a27ab31bd64682ccdff4fd/analysis/1451409323/">d0a14abe51a61c727420765f72de843a</a>&nbsp;named</span></span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: x-small; line-height: 26.6667px;">&nbsp;</span><a href="http://researchcenter.paloaltonetworks.com/2015/12/proxyback-malware-turns-user-systems-into-proxies-without-consent/" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: small; line-height: 26.6667px;">ProxyBack</a><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: x-small; line-height: 26.6667px;">&nbsp;by</span><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: x-small; line-height: 26.6667px;">&nbsp;PaloAlto</span><span style="font-size: x-small;">)</span><br /><br />Now here is what the control panel of that plugin looks like :<br /><br /><b><u>Otlard.A panel :</u></b><br /><b><u><br /></u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-x8SG1a0WPpI/VlmIY-f7YmI/AAAAAAAAFPQ/fHXWo-TH16M/s1600/2015-09-27_10h05_36.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="242" src="http://2.bp.blogspot.com/-x8SG1a0WPpI/VlmIY-f7YmI/AAAAAAAAFPQ/fHXWo-TH16M/s640/2015-09-27_10h05_36.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A - JahooManager - Main - 2015-09-27</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-YWRW2ltFAIU/VlmI4bYBjgI/AAAAAAAAFPY/axA0W9H--HM/s1600/2015-09-27_10h06_59.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="340" src="http://3.bp.blogspot.com/-YWRW2ltFAIU/VlmI4bYBjgI/AAAAAAAAFPY/axA0W9H--HM/s640/2015-09-27_10h06_59.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooManager&nbsp;</span>- Servers - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-UrXXrl-VHjE/VlmJWYqjK4I/AAAAAAAAFPg/urwAeMqLxdk/s1600/2015-09-27_10h07_35.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="306" src="http://2.bp.blogspot.com/-UrXXrl-VHjE/VlmJWYqjK4I/AAAAAAAAFPg/urwAeMqLxdk/s640/2015-09-27_10h07_35.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooManager&nbsp;</span>- Settings - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-DZ5WJeNPdCo/VlmJgbcu4FI/AAAAAAAAFPo/ueKLDkn2H5c/s1600/2015-09-27_10h07_59.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="208" src="http://2.bp.blogspot.com/-DZ5WJeNPdCo/VlmJgbcu4FI/AAAAAAAAFPo/ueKLDkn2H5c/s640/2015-09-27_10h07_59.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooManager&nbsp;</span>- Campaigns - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-QH0ZkLx9MIQ/VlmJzI59cjI/AAAAAAAAFPw/sDOtdvQpyFA/s1600/2015-09-27_10h08_21.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="210" src="http://3.bp.blogspot.com/-QH0ZkLx9MIQ/VlmJzI59cjI/AAAAAAAAFPw/sDOtdvQpyFA/s640/2015-09-27_10h08_21.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: x-small;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooManager&nbsp;</span>- Bot - 2015-09-27</span><br /><span style="font-size: x-small;">that exe is :&nbsp;<span style="text-align: start;">2387fb927e6d9d6c027b4ba23d8c3073 and appears to be Andromeda</span></span></td></tr></tbody></table><b><u><br /></u></b><b><u><br /></u></b><b><u><br /></u></b><b><u><br /></u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-Re6mSjUhaVo/VlmIHM2E3HI/AAAAAAAAFPI/ku57TwnHnJ0/s1600/2015-09-27_10h03_55.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="284" src="http://3.bp.blogspot.com/-Re6mSjUhaVo/VlmIHM2E3HI/AAAAAAAAFPI/ku57TwnHnJ0/s640/2015-09-27_10h03_55.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A - JahooSender - Tasks - 2015-09-27</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-PGB3XI4d2SI/VlmfYkXiqKI/AAAAAAAAFRQ/gmxBGgC5FWQ/s1600/2015-11-28_13h33_23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="264" src="http://1.bp.blogspot.com/-PGB3XI4d2SI/VlmfYkXiqKI/AAAAAAAAFRQ/gmxBGgC5FWQ/s640/2015-11-28_13h33_23.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A - JahooSender - Tasks - 2015-11-28</span></td></tr></tbody></table><br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-Yk-vUEbW3zs/VlmKdEJlmVI/AAAAAAAAFP4/576cDblaA28/s1600/2015-09-27_10h09_58.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="310" src="http://2.bp.blogspot.com/-Yk-vUEbW3zs/VlmKdEJlmVI/AAAAAAAAFP4/576cDblaA28/s640/2015-09-27_10h09_58.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A - JahooSender - Tasks - Done Task - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-IlWijsvwAfk/VlmKxRRSgmI/AAAAAAAAFQA/FzEkOGw0NQA/s1600/2015-09-27_10h11_01.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="312" src="http://1.bp.blogspot.com/-IlWijsvwAfk/VlmKxRRSgmI/AAAAAAAAFQA/FzEkOGw0NQA/s640/2015-09-27_10h11_01.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Domains - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-5WFfeSC_7zA/VlmLs1XZrqI/AAAAAAAAFQY/QHtGVBLlmOc/s1600/2015-11-28_12h09_44.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="280" src="http://3.bp.blogspot.com/-5WFfeSC_7zA/VlmLs1XZrqI/AAAAAAAAFQY/QHtGVBLlmOc/s640/2015-11-28_12h09_44.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Domains - 2015-11-28</span></td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-KADgmJkENc8/VlmK84DthyI/AAAAAAAAFQI/W5V9U3k8tq8/s1600/2015-09-27_10h11_45.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="402" src="http://1.bp.blogspot.com/-KADgmJkENc8/VlmK84DthyI/AAAAAAAAFQI/W5V9U3k8tq8/s640/2015-09-27_10h11_45.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Messages - 2015-09-27</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-VRwFPr_TYUU/VlmMQId3DbI/AAAAAAAAFQo/6EvYaqTtMGQ/s1600/2015-11-28_12h12_36.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="468" src="http://4.bp.blogspot.com/-VRwFPr_TYUU/VlmMQId3DbI/AAAAAAAAFQo/6EvYaqTtMGQ/s640/2015-11-28_12h12_36.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Messages - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-7ZkhcSPoLoA/VlmMhZywRUI/AAAAAAAAFQw/9RSbs3hSh-4/s1600/2015-11-28_12h14_09.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="434" src="http://1.bp.blogspot.com/-7ZkhcSPoLoA/VlmMhZywRUI/AAAAAAAAFQw/9RSbs3hSh-4/s640/2015-11-28_12h14_09.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Messages - Edit a Message - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-2agR8ygRqlI/VlmM0PpHcDI/AAAAAAAAFQ4/Rrha33opAU0/s1600/2015-11-28_12h15_13.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="422" src="http://3.bp.blogspot.com/-2agR8ygRqlI/VlmM0PpHcDI/AAAAAAAAFQ4/Rrha33opAU0/s640/2015-11-28_12h15_13.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Messages - Edit a Message - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-Yrx9wmZcGoE/Vlmfv1LITeI/AAAAAAAAFRY/bYqqRnaJCJs/s1600/2015-11-28_13h36_07.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="446" src="http://3.bp.blogspot.com/-Yrx9wmZcGoE/Vlmfv1LITeI/AAAAAAAAFRY/bYqqRnaJCJs/s640/2015-11-28_13h36_07.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Messages - Edit a Message - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-DfVekFGG5T4/Vlmf9Ds_nfI/AAAAAAAAFRg/1Eq8scsK0FI/s1600/2015-11-28_13h37_07.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="500" src="http://3.bp.blogspot.com/-DfVekFGG5T4/Vlmf9Ds_nfI/AAAAAAAAFRg/1Eq8scsK0FI/s640/2015-11-28_13h37_07.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Headers - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-bJBA6xbjrWA/VlmgjF2I35I/AAAAAAAAFRw/Fvr3Vqq7HZk/s1600/2015-11-28_13h38_16.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="284" src="http://2.bp.blogspot.com/-bJBA6xbjrWA/VlmgjF2I35I/AAAAAAAAFRw/Fvr3Vqq7HZk/s640/2015-11-28_13h38_16.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Headers - Editing Header - 2015-11-28</span></td></tr></tbody></table></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-RT1hUByD-K8/Vlmg1Vhqg1I/AAAAAAAAFR4/VA8shOAQiGg/s1600/2015-11-28_13h40_47.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="292" src="http://2.bp.blogspot.com/-RT1hUByD-K8/Vlmg1Vhqg1I/AAAAAAAAFR4/VA8shOAQiGg/s640/2015-11-28_13h40_47.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Headers - Editing Header - 2015-11-28</span></td></tr></tbody></table></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-pN8pajFWtm4/VlmhGNSlcgI/AAAAAAAAFSA/tDPDhEWanqg/s1600/2015-11-28_13h42_00.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://3.bp.blogspot.com/-pN8pajFWtm4/VlmhGNSlcgI/AAAAAAAAFSA/tDPDhEWanqg/s640/2015-11-28_13h42_00.png" width="626" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Macross - 2015-11-28</span></td></tr></tbody></table></td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-hqMsjm2cZnw/VlmiK8FtJTI/AAAAAAAAFSQ/fiVAZC9RDmQ/s1600/2015-11-28_13h46_08.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-hqMsjm2cZnw/VlmiK8FtJTI/AAAAAAAAFSQ/fiVAZC9RDmQ/s640/2015-11-28_13h46_08.png" width="334" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Macross - 2015-11-28</span></td></tr></tbody></table></td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-TyUJE8DmPoo/VlmhWaf6f6I/AAAAAAAAFSI/sT6oRRxoH78/s1600/2015-11-28_13h43_05.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="478" src="http://3.bp.blogspot.com/-TyUJE8DmPoo/VlmhWaf6f6I/AAAAAAAAFSI/sT6oRRxoH78/s640/2015-11-28_13h43_05.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td class="tr-caption" style="font-size: 12.8px;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Macross - Editing macross - 2015-11-28</span></td></tr></tbody></table></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-mPy3l-5v7hQ/VlmicGia1YI/AAAAAAAAFSY/YpmNd7uTPTM/s1600/2015-11-28_13h47_40.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="398" src="http://1.bp.blogspot.com/-mPy3l-5v7hQ/VlmicGia1YI/AAAAAAAAFSY/YpmNd7uTPTM/s640/2015-11-28_13h47_40.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;</span><span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span><span style="font-size: 12.8px;">&nbsp;- Macross - Editing macross - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-qzuauG8jFa4/VlmirQja-0I/AAAAAAAAFSg/zh9kdpnOOGA/s1600/2015-11-28_13h48_43.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="310" src="http://4.bp.blogspot.com/-qzuauG8jFa4/VlmirQja-0I/AAAAAAAAFSg/zh9kdpnOOGA/s640/2015-11-28_13h48_43.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;</span><span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span><span style="font-size: 12.8px;">- Macross - Editing macross - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-H-WySw49R9M/Vlmi9IuHj9I/AAAAAAAAFSo/BOFl4ERqoUE/s1600/2015-11-28_13h49_51.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="336" src="http://1.bp.blogspot.com/-H-WySw49R9M/Vlmi9IuHj9I/AAAAAAAAFSo/BOFl4ERqoUE/s640/2015-11-28_13h49_51.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;</span><span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span><span style="font-size: 12.8px;">- Attach - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-RvFwfGNkIQs/VlmjNNSD_AI/AAAAAAAAFSw/zrD2XIBFw7c/s1600/2015-11-28_13h50_53.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="306" src="http://1.bp.blogspot.com/-RvFwfGNkIQs/VlmjNNSD_AI/AAAAAAAAFSw/zrD2XIBFw7c/s640/2015-11-28_13h50_53.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;</span><span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span><span style="font-size: 12.8px;">- Attach - Attached image - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-daB3t8J92Ro/Vlmjd6kXPCI/AAAAAAAAFS4/8wTURswqwlA/s1600/2015-11-28_13h52_08.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="266" src="http://2.bp.blogspot.com/-daB3t8J92Ro/Vlmjd6kXPCI/AAAAAAAAFS4/8wTURswqwlA/s640/2015-11-28_13h52_08.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A -&nbsp;<span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span>- Rules - 2015-11-28</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-xvgui73EcCE/VlmjxAQeyVI/AAAAAAAAFTA/cjf9yvO8o3w/s1600/2015-11-28_13h53_14.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-xvgui73EcCE/VlmjxAQeyVI/AAAAAAAAFTA/cjf9yvO8o3w/s640/2015-11-28_13h53_14.png" width="538" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A -&nbsp;</span><span style="font-size: 12.8px;">JahooSender</span><span style="font-size: 12.8px;">&nbsp;</span><span style="font-size: 12.8px;">- Rules &gt; Spam - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-boPlV3SU72s/Vlmj_hKCuMI/AAAAAAAAFTI/kpEU1uljBx0/s1600/2015-11-28_13h54_17.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://3.bp.blogspot.com/-boPlV3SU72s/Vlmj_hKCuMI/AAAAAAAAFTI/kpEU1uljBx0/s640/2015-11-28_13h54_17.png" width="444" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Olard.A - JahooSender - Rules &gt; User - 2015-11-28</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-wY03SO-Mn40/Vlmk1gFNxGI/AAAAAAAAFTc/4fFNdawNxVE/s1600/2015-11-28_13h57_53.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://4.bp.blogspot.com/-wY03SO-Mn40/Vlmk1gFNxGI/AAAAAAAAFTc/4fFNdawNxVE/s640/2015-11-28_13h57_53.png" width="576" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Olard.A -&nbsp;</span><span style="font-size: 12.8px;">Bases - Emails - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-kkV2AoCdD2I/VlmlDm0wDzI/AAAAAAAAFTk/DnGOGNba7jY/s1600/2015-11-28_13h58_53.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="492" src="http://1.bp.blogspot.com/-kkV2AoCdD2I/VlmlDm0wDzI/AAAAAAAAFTk/DnGOGNba7jY/s640/2015-11-28_13h58_53.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Olard.A -&nbsp;</span><span style="font-size: 12.8px;">Bases - Blacklist - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-DWcVTgv645I/VlmlZsSzqjI/AAAAAAAAFTs/HtDIiamItc0/s1600/2015-11-28_13h59_53.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="486" src="http://2.bp.blogspot.com/-DWcVTgv645I/VlmlZsSzqjI/AAAAAAAAFTs/HtDIiamItc0/s640/2015-11-28_13h59_53.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Olard.A -</span><span style="font-size: 12.8px;">&nbsp;Bases - Blacklist - Edit - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-9pIoAqay6D4/VlmlsMEh3UI/AAAAAAAAFT0/Qb-FxIYVjOI/s1600/2015-09-27_10h17_43.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="276" src="http://1.bp.blogspot.com/-9pIoAqay6D4/VlmlsMEh3UI/AAAAAAAAFT0/Qb-FxIYVjOI/s640/2015-09-27_10h17_43.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Olard.A -</span><span style="font-size: 12.8px;">&nbsp;Botnet - Main - 2015-09-27</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-Rbf2eo23ZRA/VlmmFLad9qI/AAAAAAAAFT8/fb8Nu-g6x9M/s1600/2015-11-28_14h03_12.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="552" src="http://1.bp.blogspot.com/-Rbf2eo23ZRA/VlmmFLad9qI/AAAAAAAAFT8/fb8Nu-g6x9M/s640/2015-11-28_14h03_12.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Olard.A -</span><span style="font-size: 12.8px;">&nbsp;Botnet - Main - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-GNpFCbTC2pM/VlmmYiIHx3I/AAAAAAAAFUE/E9ag33_LmFE/s1600/2015-11-28_14h04_23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="212" src="http://3.bp.blogspot.com/-GNpFCbTC2pM/VlmmYiIHx3I/AAAAAAAAFUE/E9ag33_LmFE/s640/2015-11-28_14h04_23.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A - Botnet - Modules - 2015-11-28</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-d1A6WenWtRY/Vlmmts8rFII/AAAAAAAAFUM/8dUZ-JpW7EM/s1600/2015-11-28_14h05_57.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="308" src="http://4.bp.blogspot.com/-d1A6WenWtRY/Vlmmts8rFII/AAAAAAAAFUM/8dUZ-JpW7EM/s640/2015-11-28_14h05_57.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A - Botnet - Modules - Edit - 2015-11-28</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-idyKSzngh1w/Vlmm8H5Wj_I/AAAAAAAAFUU/PnqG15GV3bo/s1600/2015-11-28_14h06_56.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="214" src="http://1.bp.blogspot.com/-idyKSzngh1w/Vlmm8H5Wj_I/AAAAAAAAFUU/PnqG15GV3bo/s640/2015-11-28_14h06_56.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Otlard.A - Incubator - Accounts - 2015-11-28</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-ywNNhxeKh0s/VlmnT7fmSNI/AAAAAAAAFUc/FlFrlx_dHKo/s1600/2015-11-28_14h07_49.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="196" src="http://1.bp.blogspot.com/-ywNNhxeKh0s/VlmnT7fmSNI/AAAAAAAAFUc/FlFrlx_dHKo/s640/2015-11-28_14h07_49.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 12.8px;">Otlard.A - Incubator - Settings - 2015-11-28</span></td></tr></tbody></table>Note : registrator menu has disappeared in last version.&nbsp;<b><u><br /></u></b><br /><br />--<br /><u>Andromeda C&amp;C 2015-11-28 :</u><br /><span style="background-color: white; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.35.241</span><br /><span style="background-color: white; font-size: 14px; line-height: 20px;"><span style="color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif;">202023 | 5.8.35.0/24 | LLHOST | EU | llhost-inc.com | LLHost Inc</span></span><br /><u><span style="background-color: white; font-size: 14px; line-height: 20px;"><span style="color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif;"><br /></span></span>Spam Module C&amp;C 2015-11-28 :</u><br /><span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.32.10&nbsp;</span><br /><span style="background-color: white; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.32.8</span><br /><span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.32.52</span><br /><span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.34.20</span><br /><span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.32.53</span><br /><span style="background-color: #f9f9f9; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 14px; line-height: 20px;">5.8.32.56</span><br />202023 | 5.8.32.0/24 | LLHOST | EU | zanufact.com | LLHost Inc<br /><br /><b><u>Thanks :</u></b> Brett StoneGross for helping me with decoding/understanding the network communications<br /><br /><b><u>Files :</u></b><br />All samples which hashes have been discussed here are <a href="https://files.dontneedcoffee.com/index.php/s/d3g8KfwtSTRvA9x">in that zip</a>.<br />Jahoo - socker.dll :&nbsp;<a href="https://www.virustotal.com/file/16faaf03b730b7fceddff7e1c29752a43adbaee0b358bbad40426c453c1aac10/analysis/1449041429/">7d14c9edfd71d2b76dd18e3681fec798</a><br /><i><span style="font-size: x-small;">( If you want to look into this, i can provide associated network traffic)</span></i><br /><i><span style="font-size: x-small;"><br /></span></i><b><u>Read More :</u></b><br /><br /><a href="http://malware.dontneedcoffee.com/2012/07/inside-andromeda-bot-v206-webpanel-aka.html">Inside Andromeda Bot v2.06 Webpanel / AKA Gamarue - Botnet Control Panel </a> 2012-07-02<br /><a href="http://malware.dontneedcoffee.com/2012/06/inside-pony-17.html">Inside Pony 1.7 / Fareit C&amp;C - Botnet Control Panel</a> - 2012-06-27<br /><a href="http://malware.dontneedcoffee.com/2012/04/inside-smoke-bot.html">Inside Smoke Bot - Botnet Control Panel</a> - 2012-04-28<br /><br /><b><u>Post publication Reading :</u></b><br /><a href="http://researchcenter.paloaltonetworks.com/2015/12/proxyback-malware-turns-user-systems-into-proxies-without-consent/">ProxyBack Malware Turns User Systems Into Proxies Without Consent</a> - 2015-12-23 - JeffWhite - PaloAlto
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2015-11-28" itemprop="datePublished"> 2015-11-28</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> kye</span> <span class="icon-price-tag pr10"> Andromeda</span> <span class="icon-price-tag pr10"> ProxyBack</span> <span class="icon-price-tag pr10"> Botnet control panel</span> <span class="icon-price-tag pr10"> JahooSender</span> <span class="icon-price-tag pr10"> Jahoo</span> <span class="icon-price-tag pr10"> Otlard.A</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2015/10/cve-2015-7645.html">&laquo; CVE-2015-7645 (Flash up to 19.0.0.207) and Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2015/12/nuclear-pack-loading-fileless-cve-2014.html">Nuclear Pack loads a fileless CVE-2014-4113 Exploit &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

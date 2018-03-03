@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CBeplay.P : Now target Australia and moved to server side localization</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="The VMaware CBeplay.P is moving (to learn about the past look here ).&amp;nbsp;CBeplay is stealing/borrowing design from Urausy (AU - ES - NL)- It&#39;s not talking anymore to UK Citizen- The design is not embedded anymore in the binary but downloaded from the C&amp;amp;C.(to be honest I was expecting that move to occur earlier, this choice was complicating their life for sure. This required one exploit kit landing by binary (on Cool EK) and traff work in front of the exploit kit + more compilation/crypting)This move allow the team to enjoy font drop with one fixed payload &amp;nbsp;and to easily target more countries.Expect far more to come.....All Design :&amp;nbsp;(a small &amp;nbsp;watermark has been included, up left, on some - &amp;nbsp;sorry about that, too lazy to remake affected screenshots)Australia (newly targeted by this threat - it&#39;s also the Default design) :CBeplay.P AU in it&#39;s Windows Form - 2013-02CBeplay.P AU (scroll inside the form) 2013-02Austria (updated design):CBeplay.P AT 2013-02 in its Windows formCBeplay AT 2013-02 ScrolledBelgium (no change) :CBeplay.P BE 2013-02France (no change but new capture for me) :CBeplay.P FRGermany (no change):CBeplay.P DE 2013-02Italy (no change):CBeplay.P IT 2013-02Luxembourg (no change):CBeplay.P LU (2013-02)Netherlands (no change):CBeplay NL 2013-02Spain (updated design) :CBeplay.P ES in its windows Form (2013-02)CBeplay.P ES Scrolled 2013-02Sweden (no change) :CBeplay.P SE 2013-02United Kingdom (no more voice):CBeplay.P UK 2013-02United States (recent but not change) :CBeplay.P US 2013-02C&amp;amp;C :Design : 87.117.253.11French Design download by CBeplay.PPayment/Check : 93.115.240.226&quot;Mama&#39;s gonna make all your nightmares come true.&quot;Infection:&amp;nbsp;(Got some help on that one. Waiting approval for proper credits)&amp;nbsp;Cool EK &amp;nbsp;CVE-2013-0431 successfull path leading to infection by CBeplay.PFiles :&amp;nbsp;&amp;nbsp;883cfd95ccc89de70c20015e8479e936&amp;nbsp;(vt link)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(Mega via Goo.g shortener)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(OwnCloud via Goo.gl shortener)Read:Botnets.fr CBeplay.P&amp;nbsp;pageDon’t Pay Up – How To Beat Ransomware!&amp;nbsp;- 2013-04-05 - MakeUsOf - Guy McDowell">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2013/02/cbeplayp-now-target-australia-and-moved.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="CBeplay.P : Now target Australia and moved to server side localization">
+	<meta property="og:description" content="The VMaware CBeplay.P is moving (to learn about the past look here ).&amp;nbsp;CBeplay is stealing/borrowing design from Urausy (AU - ES - NL)- It&#39;s not talking anymore to UK Citizen- The design is not embedded anymore in the binary but downloaded from the C&amp;amp;C.(to be honest I was expecting that move to occur earlier, this choice was complicating their life for sure. This required one exploit kit landing by binary (on Cool EK) and traff work in front of the exploit kit + more compilation/crypting)This move allow the team to enjoy font drop with one fixed payload &amp;nbsp;and to easily target more countries.Expect far more to come.....All Design :&amp;nbsp;(a small &amp;nbsp;watermark has been included, up left, on some - &amp;nbsp;sorry about that, too lazy to remake affected screenshots)Australia (newly targeted by this threat - it&#39;s also the Default design) :CBeplay.P AU in it&#39;s Windows Form - 2013-02CBeplay.P AU (scroll inside the form) 2013-02Austria (updated design):CBeplay.P AT 2013-02 in its Windows formCBeplay AT 2013-02 ScrolledBelgium (no change) :CBeplay.P BE 2013-02France (no change but new capture for me) :CBeplay.P FRGermany (no change):CBeplay.P DE 2013-02Italy (no change):CBeplay.P IT 2013-02Luxembourg (no change):CBeplay.P LU (2013-02)Netherlands (no change):CBeplay NL 2013-02Spain (updated design) :CBeplay.P ES in its windows Form (2013-02)CBeplay.P ES Scrolled 2013-02Sweden (no change) :CBeplay.P SE 2013-02United Kingdom (no more voice):CBeplay.P UK 2013-02United States (recent but not change) :CBeplay.P US 2013-02C&amp;amp;C :Design : 87.117.253.11French Design download by CBeplay.PPayment/Check : 93.115.240.226&quot;Mama&#39;s gonna make all your nightmares come true.&quot;Infection:&amp;nbsp;(Got some help on that one. Waiting approval for proper credits)&amp;nbsp;Cool EK &amp;nbsp;CVE-2013-0431 successfull path leading to infection by CBeplay.PFiles :&amp;nbsp;&amp;nbsp;883cfd95ccc89de70c20015e8479e936&amp;nbsp;(vt link)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(Mega via Goo.g shortener)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(OwnCloud via Goo.gl shortener)Read:Botnets.fr CBeplay.P&amp;nbsp;pageDon’t Pay Up – How To Beat Ransomware!&amp;nbsp;- 2013-04-05 - MakeUsOf - Guy McDowell">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2013/02/cbeplayp-now-target-australia-and-moved.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="CBeplay.P : Now target Australia and moved to server side localization">
+	<meta name="twitter:description" content="The VMaware CBeplay.P is moving (to learn about the past look here ).&amp;nbsp;CBeplay is stealing/borrowing design from Urausy (AU - ES - NL)- It&#39;s not talking anymore to UK Citizen- The design is not embedded anymore in the binary but downloaded from the C&amp;amp;C.(to be honest I was expecting that move to occur earlier, this choice was complicating their life for sure. This required one exploit kit landing by binary (on Cool EK) and traff work in front of the exploit kit + more compilation/crypting)This move allow the team to enjoy font drop with one fixed payload &amp;nbsp;and to easily target more countries.Expect far more to come.....All Design :&amp;nbsp;(a small &amp;nbsp;watermark has been included, up left, on some - &amp;nbsp;sorry about that, too lazy to remake affected screenshots)Australia (newly targeted by this threat - it&#39;s also the Default design) :CBeplay.P AU in it&#39;s Windows Form - 2013-02CBeplay.P AU (scroll inside the form) 2013-02Austria (updated design):CBeplay.P AT 2013-02 in its Windows formCBeplay AT 2013-02 ScrolledBelgium (no change) :CBeplay.P BE 2013-02France (no change but new capture for me) :CBeplay.P FRGermany (no change):CBeplay.P DE 2013-02Italy (no change):CBeplay.P IT 2013-02Luxembourg (no change):CBeplay.P LU (2013-02)Netherlands (no change):CBeplay NL 2013-02Spain (updated design) :CBeplay.P ES in its windows Form (2013-02)CBeplay.P ES Scrolled 2013-02Sweden (no change) :CBeplay.P SE 2013-02United Kingdom (no more voice):CBeplay.P UK 2013-02United States (recent but not change) :CBeplay.P US 2013-02C&amp;amp;C :Design : 87.117.253.11French Design download by CBeplay.PPayment/Check : 93.115.240.226&quot;Mama&#39;s gonna make all your nightmares come true.&quot;Infection:&amp;nbsp;(Got some help on that one. Waiting approval for proper credits)&amp;nbsp;Cool EK &amp;nbsp;CVE-2013-0431 successfull path leading to infection by CBeplay.PFiles :&amp;nbsp;&amp;nbsp;883cfd95ccc89de70c20015e8479e936&amp;nbsp;(vt link)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(Mega via Goo.g shortener)883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip&amp;nbsp;(OwnCloud via Goo.gl shortener)Read:Botnets.fr CBeplay.P&amp;nbsp;pageDon’t Pay Up – How To Beat Ransomware!&amp;nbsp;- 2013-04-05 - MakeUsOf - Guy McDowell">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>CBeplay.P : Now target Australia and moved to server side localization</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-nkRBHks5_yc/USZfAqRMNhI/AAAAAAAAH6U/P7T_SH54LWQ/s1600/screenshot_193+(from+Xps-8300+-+28).png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-nkRBHks5_yc/USZfAqRMNhI/AAAAAAAAH6U/P7T_SH54LWQ/s1600/screenshot_193+(from+Xps-8300+-+28).png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><br /></td></tr></tbody></table>The VMaware CBeplay.P is moving (to <a href="http://malware.dontneedcoffee.com/2013/02/cbeplayp-target-us-and-at-now-talks-to.html">learn about the past look here</a> ).<br /><br />&nbsp;CBeplay is stealing/borrowing design from Urausy (AU - ES - NL)<br />- It's not <a href="http://malware.dontneedcoffee.com/2013/02/cbeplayp-target-us-and-at-now-talks-to.html">talking anymore to UK Citizen</a><br />- The design is not embedded anymore in the binary but downloaded from the C&amp;C.<br />(to be honest I was expecting that move to occur earlier, this choice was complicating their life for sure. This required one exploit kit landing by binary (on Cool EK) and traff work in front of the exploit kit + more compilation/crypting)<br /><br />This move allow the team to enjoy font drop with one fixed payload &nbsp;and to easily target more countries.<br />Expect far more to come.....<br /><br />All Design :<br /><i><span style="font-size: x-small;">&nbsp;(a small &nbsp;watermark has been included, up left, on some - &nbsp;sorry about that, too lazy to remake affected screenshots)</span></i><br /><br />Australia (newly targeted by this threat - it's also the Default design) :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-vcH1Vq2U2Sw/USYehLwrY1I/AAAAAAAAH3U/cpuHE-vOQzw/s1600/CBeplay.P+AU+2013-02_Small.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="239" src="http://4.bp.blogspot.com/-vcH1Vq2U2Sw/USYehLwrY1I/AAAAAAAAH3U/cpuHE-vOQzw/s320/CBeplay.P+AU+2013-02_Small.png" width="320" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P AU in it's Windows Form - 2013-02</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-19_cXeHna6c/USYezL6ZgUI/AAAAAAAAH3c/XSAHegto9hA/s1600/CBeplay.P+AU+2013-02+(scroll).png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-19_cXeHna6c/USYezL6ZgUI/AAAAAAAAH3c/XSAHegto9hA/s640/CBeplay.P+AU+2013-02+(scroll).png" width="404" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P AU (scroll inside the form) 2013-02</td></tr></tbody></table><br />Austria (updated design):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-3yulxYgWLBU/USZWqJB5kVI/AAAAAAAAH5c/cNiNnphbc7I/s1600/CBeplay.P+AT+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://3.bp.blogspot.com/-3yulxYgWLBU/USZWqJB5kVI/AAAAAAAAH5c/cNiNnphbc7I/s640/CBeplay.P+AT+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P AT 2013-02 in its Windows form</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-HICblDc02t4/USZW16lIz6I/AAAAAAAAH5k/V7o2oleh64c/s1600/CBeplay.P+AT+Scrolled+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://3.bp.blogspot.com/-HICblDc02t4/USZW16lIz6I/AAAAAAAAH5k/V7o2oleh64c/s640/CBeplay.P+AT+Scrolled+2013-02.png" width="392" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay AT 2013-02 Scrolled</td></tr></tbody></table><br /><br /><br />Belgium (no change) :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-n_gOsO2JRSU/USZWZ_Ox_9I/AAAAAAAAH5U/KM2kxJYN8eU/s1600/CBeplay.P+BE+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://2.bp.blogspot.com/-n_gOsO2JRSU/USZWZ_Ox_9I/AAAAAAAAH5U/KM2kxJYN8eU/s640/CBeplay.P+BE+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P BE 2013-02</td></tr></tbody></table><br /><br />France (no change but new capture for me) :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-FfslYboMfqI/USYlE0ALdfI/AAAAAAAAH4k/nW9E53LvoOo/s1600/CBeplay.P+FR+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://1.bp.blogspot.com/-FfslYboMfqI/USYlE0ALdfI/AAAAAAAAH4k/nW9E53LvoOo/s640/CBeplay.P+FR+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P FR</td></tr></tbody></table>Germany (no change):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-um0ypeff-i4/USYohzBwAvI/AAAAAAAAH5E/sh3JD7c5ZvU/s1600/CBeplay.P+DE+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://3.bp.blogspot.com/-um0ypeff-i4/USYohzBwAvI/AAAAAAAAH5E/sh3JD7c5ZvU/s640/CBeplay.P+DE+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P DE 2013-02</td></tr></tbody></table>Italy (no change):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-AjVwzYPUdPQ/USZeRH8xwKI/AAAAAAAAH6M/kJB3XK3UQME/s1600/CBeplay.P+IT+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="482" src="http://2.bp.blogspot.com/-AjVwzYPUdPQ/USZeRH8xwKI/AAAAAAAAH6M/kJB3XK3UQME/s640/CBeplay.P+IT+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P IT 2013-02</td></tr></tbody></table>Luxembourg (no change):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-G0vBJMmtaGo/USbK7M2e8QI/AAAAAAAAH6k/wQzcxXNF4EQ/s1600/CBeplay.P+LU+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://1.bp.blogspot.com/-G0vBJMmtaGo/USbK7M2e8QI/AAAAAAAAH6k/wQzcxXNF4EQ/s640/CBeplay.P+LU+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P LU (2013-02)</td></tr></tbody></table><br /><br />Netherlands (no change):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-mMZdn6EAjTg/USZd3O1p2LI/AAAAAAAAH6E/2aKNS8Dz_Ao/s1600/CBeplay.P+NL+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://3.bp.blogspot.com/-mMZdn6EAjTg/USZd3O1p2LI/AAAAAAAAH6E/2aKNS8Dz_Ao/s640/CBeplay.P+NL+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay NL 2013-02</td></tr></tbody></table><br /><br />Spain (updated design) :<br /><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-Gsy13Jx2-c4/USYjj9Vw54I/AAAAAAAAH4M/FJ4A44ycJ3g/s1600/CBeplay.P+ES+2013-02_Small.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="478" src="http://3.bp.blogspot.com/-Gsy13Jx2-c4/USYjj9Vw54I/AAAAAAAAH4M/FJ4A44ycJ3g/s640/CBeplay.P+ES+2013-02_Small.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P ES in its windows Form (2013-02)</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-kuYsoMbCtM4/USYjvLZA4lI/AAAAAAAAH4Y/MjwCCJ3gpGo/s1600/CBeplay.P+ES+2013-02+(scroll).png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://1.bp.blogspot.com/-kuYsoMbCtM4/USYjvLZA4lI/AAAAAAAAH4Y/MjwCCJ3gpGo/s640/CBeplay.P+ES+2013-02+(scroll).png" width="390" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P ES Scrolled 2013-02</td></tr></tbody></table>Sweden (no change) :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-fGDhY4ZWoi8/USYncKaK4RI/AAAAAAAAH48/q8nsNOmwP-A/s1600/CBeplay.P+SE+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="438" src="http://2.bp.blogspot.com/-fGDhY4ZWoi8/USYncKaK4RI/AAAAAAAAH48/q8nsNOmwP-A/s640/CBeplay.P+SE+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P SE 2013-02</td></tr></tbody></table><br /><br />United Kingdom (no more voice):<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-wZYqM8pn_14/USYf2l9syUI/AAAAAAAAH3s/gh19VrH2IQU/s1600/CBeplay.P+UK+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://4.bp.blogspot.com/-wZYqM8pn_14/USYf2l9syUI/AAAAAAAAH3s/gh19VrH2IQU/s640/CBeplay.P+UK+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P UK 2013-02</td></tr></tbody></table>United States (recent but not change) :<br /><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-atCjQKr1ERk/USYlOYwrMvI/AAAAAAAAH4s/w8vxnveHgxA/s1600/CBeplay.P+US+2013-02.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="480" src="http://2.bp.blogspot.com/-atCjQKr1ERk/USYlOYwrMvI/AAAAAAAAH4s/w8vxnveHgxA/s640/CBeplay.P+US+2013-02.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CBeplay.P US 2013-02</td></tr></tbody></table><br /><br /><b><u>C&amp;C :</u></b><br /><br />Design : 87.117.253.11<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-kD7PIfaAOws/USZZQodGOdI/AAAAAAAAH50/ownxKsDPYFI/s1600/screenshot_193+(from+Xps-8300+-+31).png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-kD7PIfaAOws/USZZQodGOdI/AAAAAAAAH50/ownxKsDPYFI/s1600/screenshot_193+(from+Xps-8300+-+31).png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">French Design download by CBeplay.P</td></tr></tbody></table>Payment/Check : 93.115.240.226<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-MdDwHsOJ7NE/USZcuW0m6xI/AAAAAAAAH58/k06pXV5PS9s/s1600/screenshot_193+(from+Xps-8300+-+34)1.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-MdDwHsOJ7NE/USZcuW0m6xI/AAAAAAAAH58/k06pXV5PS9s/s1600/screenshot_193+(from+Xps-8300+-+34)1.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">"<span style="background-color: white; font-family: 'Segoe UI', Corbel, helvetica, verdana, arial; line-height: 20px; text-align: left;">Mama's gonna make all your nightmares come true."</span></td></tr></tbody></table><b><u>Infection:</u></b><br /><i>&nbsp;(Got some help on that one. Waiting approval for proper credits)&nbsp;</i><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-sF8wbDYO_v0/USZYjLwVDfI/AAAAAAAAH5s/V6FavkABE6w/s1600/screenshot_193.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="294" src="http://3.bp.blogspot.com/-sF8wbDYO_v0/USZYjLwVDfI/AAAAAAAAH5s/V6FavkABE6w/s640/screenshot_193.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Cool EK &nbsp;<a href="http://malware.dontneedcoffee.com/2013/02/cve-2013-0431-java-17-update-11.html">CVE-2013-0431</a> successfull path leading to infection by CBeplay.P</td></tr></tbody></table><u style="font-weight: bold;">Files :</u>&nbsp;&nbsp;<a href="https://www.virustotal.com/en/file/883cfd95ccc89de70c20015e8479e936/analysis/">883cfd95ccc89de70c20015e8479e936</a>&nbsp;(vt link)<br /><br /><a href="http://goo.gl/29QPh">883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip</a>&nbsp;<span style="font-size: x-small;">(Mega via Goo.g shortener)</span><br /><span style="font-size: x-small;"><br /></span><span style="font-size: x-small;"><a href="http://goo.gl/vKPrr">883cfd95ccc89de70c20015e8479e936_CBeplay.P_210213.zip</a>&nbsp;</span><span style="font-size: xx-small;">(OwnCloud via Goo.gl shortener)</span><br /><br /><b><u>Read:</u></b><br /><a href="https://www.botnets.fr/index.php/CBeplay.P">Botnets.fr CBeplay.P</a>&nbsp;page<br /><a href="http://www.makeuseof.com/tag/dont-pay-up-how-to-beat-ransomware/">Don’t Pay Up – How To Beat Ransomware!</a>&nbsp;- 2013-04-05 - MakeUsOf - Guy McDowell
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-02-21" itemprop="datePublished"> 2013-02-21</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> update</span> <span class="icon-price-tag pr10"> CBeplay.P</span> <span class="icon-price-tag pr10"> Australia</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2013/02/cve-2013-0431-java-17-update-11.html">&laquo; CVE-2013-0431 (java 1.7 update 11) ermerging in Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2013/02/jre17u15unpatchedvuln.html">Popads add Social Engineering : Self-Generated fake cert on jar applet &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

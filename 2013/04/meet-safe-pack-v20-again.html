@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meet Safe Pack (v2.0)... Again :)</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A &quot;new&quot; pack is advertised on underground. Thanks Kahu Security for locating and providing initial image of the advert.In fact I faced it before seeing the advert, and reading it really puzzled me.Initial advert for SafePack as spotted by @KahuSecurityWhat i faced was not matching this at all.No CVE-2011-3402 (Duqu like fontdrop), no CVE-2013-0634 (LadyBoyle), no CVE-2013-1493So I was kind of lost...This advert could be for Popads or Old version of Cool EK but not for what i saw.But...going back checking if I could find more information :Updated Advert - more realistic :)Ok. Sound better !Here is btw the image that we are supposed to see in the advert :Screenshot Provided in the advertAnd now here is what i faced :CritXPack for sure !hum...As CritXPack was kind of calm past days...i checked :Safe Pack v2.0 Login ScreenI see two explanation :1-&amp;nbsp;CritXPack&amp;nbsp;(Formerly Vintage Pack) is now called Safe Pack v2.02- Safe Pack v2.0 is a rip of CritXPack...Don&#39;t know for sure...based on initial advert + ProHack&#39;s other posts I bet for option 2.Anyway won&#39;t make a full review of this pack.As i was not aware of CVE-2013-1493 in CritXPack I tried that against Safe Pack v2.0And yes...you are safe with java 7u15 and 6u41.Chances are low to see major updates on this pack.&amp;lt;edit1 2013-04-26&amp;gt;Safe Pack v2 - Private version of CritXPack now gone into commercial sales (?)&amp;lt;/edit1&amp;gt;&amp;lt;edit2 2013-06-06&amp;gt;Seems like it has been renamed FlashPack.Safe Pack Renamed : FlashPackNot a fork. It&#39;s the same thing.Little modification in the pattern :FlashPack aka SafePack aka CritXPackGET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/js.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/gate.php?ver=Eg1l8cwwgE:E:E:w:EglPPCwwgC:88pP8cg18c&amp;amp;p=9.3.0.0&amp;amp;j=1.7.0.7&amp;amp;f=11.7.700.202200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/deployJava.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/j07.php?i=EglPPCww1p200 OK (application/java-archive)GET http://62.76.188 .7/c1905hfosv/bods2903bue/load.php?e=g&amp;amp;ip=Eg1l8cwwgE200 OK (application/octet-stream)GET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456302 Found to http://www.adobe.com&amp;lt;/edit2&amp;gt;Files:SafePack_2pass_2013-04-20.zip&amp;nbsp;(OwnCloud via Goo.gl)Read More:Meet CritXPack (Previously Vintage Pack)&amp;nbsp;- 2012-11-12">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2013/04/meet-safe-pack-v20-again.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Meet Safe Pack (v2.0)... Again :)">
+	<meta property="og:description" content="A &quot;new&quot; pack is advertised on underground. Thanks Kahu Security for locating and providing initial image of the advert.In fact I faced it before seeing the advert, and reading it really puzzled me.Initial advert for SafePack as spotted by @KahuSecurityWhat i faced was not matching this at all.No CVE-2011-3402 (Duqu like fontdrop), no CVE-2013-0634 (LadyBoyle), no CVE-2013-1493So I was kind of lost...This advert could be for Popads or Old version of Cool EK but not for what i saw.But...going back checking if I could find more information :Updated Advert - more realistic :)Ok. Sound better !Here is btw the image that we are supposed to see in the advert :Screenshot Provided in the advertAnd now here is what i faced :CritXPack for sure !hum...As CritXPack was kind of calm past days...i checked :Safe Pack v2.0 Login ScreenI see two explanation :1-&amp;nbsp;CritXPack&amp;nbsp;(Formerly Vintage Pack) is now called Safe Pack v2.02- Safe Pack v2.0 is a rip of CritXPack...Don&#39;t know for sure...based on initial advert + ProHack&#39;s other posts I bet for option 2.Anyway won&#39;t make a full review of this pack.As i was not aware of CVE-2013-1493 in CritXPack I tried that against Safe Pack v2.0And yes...you are safe with java 7u15 and 6u41.Chances are low to see major updates on this pack.&amp;lt;edit1 2013-04-26&amp;gt;Safe Pack v2 - Private version of CritXPack now gone into commercial sales (?)&amp;lt;/edit1&amp;gt;&amp;lt;edit2 2013-06-06&amp;gt;Seems like it has been renamed FlashPack.Safe Pack Renamed : FlashPackNot a fork. It&#39;s the same thing.Little modification in the pattern :FlashPack aka SafePack aka CritXPackGET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/js.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/gate.php?ver=Eg1l8cwwgE:E:E:w:EglPPCwwgC:88pP8cg18c&amp;amp;p=9.3.0.0&amp;amp;j=1.7.0.7&amp;amp;f=11.7.700.202200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/deployJava.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/j07.php?i=EglPPCww1p200 OK (application/java-archive)GET http://62.76.188 .7/c1905hfosv/bods2903bue/load.php?e=g&amp;amp;ip=Eg1l8cwwgE200 OK (application/octet-stream)GET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456302 Found to http://www.adobe.com&amp;lt;/edit2&amp;gt;Files:SafePack_2pass_2013-04-20.zip&amp;nbsp;(OwnCloud via Goo.gl)Read More:Meet CritXPack (Previously Vintage Pack)&amp;nbsp;- 2012-11-12">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2013/04/meet-safe-pack-v20-again.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Meet Safe Pack (v2.0)... Again :)">
+	<meta name="twitter:description" content="A &quot;new&quot; pack is advertised on underground. Thanks Kahu Security for locating and providing initial image of the advert.In fact I faced it before seeing the advert, and reading it really puzzled me.Initial advert for SafePack as spotted by @KahuSecurityWhat i faced was not matching this at all.No CVE-2011-3402 (Duqu like fontdrop), no CVE-2013-0634 (LadyBoyle), no CVE-2013-1493So I was kind of lost...This advert could be for Popads or Old version of Cool EK but not for what i saw.But...going back checking if I could find more information :Updated Advert - more realistic :)Ok. Sound better !Here is btw the image that we are supposed to see in the advert :Screenshot Provided in the advertAnd now here is what i faced :CritXPack for sure !hum...As CritXPack was kind of calm past days...i checked :Safe Pack v2.0 Login ScreenI see two explanation :1-&amp;nbsp;CritXPack&amp;nbsp;(Formerly Vintage Pack) is now called Safe Pack v2.02- Safe Pack v2.0 is a rip of CritXPack...Don&#39;t know for sure...based on initial advert + ProHack&#39;s other posts I bet for option 2.Anyway won&#39;t make a full review of this pack.As i was not aware of CVE-2013-1493 in CritXPack I tried that against Safe Pack v2.0And yes...you are safe with java 7u15 and 6u41.Chances are low to see major updates on this pack.&amp;lt;edit1 2013-04-26&amp;gt;Safe Pack v2 - Private version of CritXPack now gone into commercial sales (?)&amp;lt;/edit1&amp;gt;&amp;lt;edit2 2013-06-06&amp;gt;Seems like it has been renamed FlashPack.Safe Pack Renamed : FlashPackNot a fork. It&#39;s the same thing.Little modification in the pattern :FlashPack aka SafePack aka CritXPackGET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/js.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/gate.php?ver=Eg1l8cwwgE:E:E:w:EglPPCwwgC:88pP8cg18c&amp;amp;p=9.3.0.0&amp;amp;j=1.7.0.7&amp;amp;f=11.7.700.202200 OK (text/html)GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/deployJava.js200 OK (application/x-javascript)GET http://62.76.188 .7/c1905hfosv/bods2903bue/j07.php?i=EglPPCww1p200 OK (application/java-archive)GET http://62.76.188 .7/c1905hfosv/bods2903bue/load.php?e=g&amp;amp;ip=Eg1l8cwwgE200 OK (application/octet-stream)GET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456302 Found to http://www.adobe.com&amp;lt;/edit2&amp;gt;Files:SafePack_2pass_2013-04-20.zip&amp;nbsp;(OwnCloud via Goo.gl)Read More:Meet CritXPack (Previously Vintage Pack)&amp;nbsp;- 2012-11-12">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>Meet Safe Pack (v2.0)... Again :)</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-RhTl0qGlUdg/UXPawMynQ5I/AAAAAAAAIRk/nHQGXBVRweA/s1600/screenshot_241.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://4.bp.blogspot.com/-RhTl0qGlUdg/UXPawMynQ5I/AAAAAAAAIRk/nHQGXBVRweA/s1600/screenshot_241.png" /></a></div><div><br /></div><div>A "new" pack is advertised on underground. Thanks <a href="http://www.kahusecurity.com/">Kahu Security</a> for locating and providing initial image of the advert.</div><div><br /></div><div>In fact I faced it before seeing the advert, and reading it really puzzled me.</div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-j7Z239v8zEM/UXPQFKfGw-I/AAAAAAAAIRE/2dQ5YKPjCtE/s1600/safepack.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="564" src="http://4.bp.blogspot.com/-j7Z239v8zEM/UXPQFKfGw-I/AAAAAAAAIRE/2dQ5YKPjCtE/s640/safepack.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Initial advert for SafePack as spotted by @<a href="https://twitter.com/kahusecurity">KahuSecurity</a></td></tr></tbody></table><div>What i faced was not matching this at all.</div><div>No CVE-2011-3402 (Duqu like fontdrop), no CVE-2013-0634 (LadyBoyle), no CVE-2013-1493</div><div>So I was kind of lost...This advert could be for Popads or Old version of Cool EK but not for what i saw.</div><div><br /></div><div>But...going back checking if I could find more information :</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-WO4CjaRP-V0/UXPRR-BPCBI/AAAAAAAAIRM/keQm0lTT1JY/s1600/screenshot_238.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="346" src="http://3.bp.blogspot.com/-WO4CjaRP-V0/UXPRR-BPCBI/AAAAAAAAIRM/keQm0lTT1JY/s640/screenshot_238.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Updated Advert - more realistic :)</td></tr></tbody></table><div>Ok. Sound better !</div><div>Here is btw the image that we are supposed to see in the advert :</div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-L9zpSDAfhkE/UXPRo2EqrBI/AAAAAAAAIRU/aAEmM9YILzc/s1600/%C3%91%C3%AD%C3%A8%C3%AC%C3%AE%C3%AA.PNG" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="48" src="http://2.bp.blogspot.com/-L9zpSDAfhkE/UXPRo2EqrBI/AAAAAAAAIRU/aAEmM9YILzc/s640/%C3%91%C3%AD%C3%A8%C3%AC%C3%AE%C3%AA.PNG" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Screenshot Provided in the advert</td></tr></tbody></table><div>And now here is what i faced :</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-sKelU4-FvtQ/UXPSUTCYx2I/AAAAAAAAIRc/cpj1dfNIdeE/s1600/screenshot_240.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="178" src="http://1.bp.blogspot.com/-sKelU4-FvtQ/UXPSUTCYx2I/AAAAAAAAIRc/cpj1dfNIdeE/s640/screenshot_240.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">CritXPack for sure !<br />hum...</td></tr></tbody></table><div>As CritXPack was kind of calm past days...i checked :</div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-zY_amIu7qyo/UXJe1GUlbMI/AAAAAAAAIQw/_G4q_jvnTNo/s1600/screenshot_226.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="226" src="http://2.bp.blogspot.com/-zY_amIu7qyo/UXJe1GUlbMI/AAAAAAAAIQw/_G4q_jvnTNo/s640/screenshot_226.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Safe Pack v2.0 Login Screen</td></tr></tbody></table><div><br /></div><div>I see two explanation :</div><div>1-&nbsp;<a href="http://malware.dontneedcoffee.com/2012/11/meet-critxpack-previously-vintage-pack.html?q=CritXPack">CritXPack</a>&nbsp;(Formerly Vintage Pack) is now called Safe Pack v2.0</div><div>2- Safe Pack v2.0 is a rip of CritXPack...</div><div>Don't know for sure...based on initial advert + ProHack's other posts I bet for option 2.</div><div>Anyway won't make a full review of this pack.</div><div><br /></div><div>As i was not aware of CVE-2013-1493 in CritXPack I tried that against Safe Pack v2.0</div><div>And yes...you are safe with java 7u15 and 6u41.</div><div>Chances are low to see major updates on this pack.<br /><br />&lt;edit1 2013-04-26&gt;<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-AdSPCmKTZx4/UXojENQLvTI/AAAAAAAAISs/spKtRddUjNI/s1600/screenshot_260.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="106" src="http://4.bp.blogspot.com/-AdSPCmKTZx4/UXojENQLvTI/AAAAAAAAISs/spKtRddUjNI/s640/screenshot_260.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Safe Pack v2 - Private version of CritXPack now gone into commercial sales (?)</td></tr></tbody></table>&lt;/edit1&gt;</div><div>&lt;edit2 2013-06-06&gt;<br />Seems like it has been renamed FlashPack.<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-24Dndgujka8/UbCnPpJ-1-I/AAAAAAAAAYU/plR4GyWc7EU/s1600/screenshot_2013-06-06_011.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-24Dndgujka8/UbCnPpJ-1-I/AAAAAAAAAYU/plR4GyWc7EU/s1600/screenshot_2013-06-06_011.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Safe Pack Renamed : FlashPack</td></tr></tbody></table>Not a fork. It's the same thing.<br />Little modification in the pattern :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/--F3k4sT75Wg/UbCnfZlwSgI/AAAAAAAAAYc/BW7B25uknDo/s1600/screenshot_2013-06-06_001.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="122" src="http://4.bp.blogspot.com/--F3k4sT75Wg/UbCnfZlwSgI/AAAAAAAAAYc/BW7B25uknDo/s640/screenshot_2013-06-06_001.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">FlashPack aka SafePack aka CritXPack</td></tr></tbody></table><br /><span style="color: blue;">GET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456</span><br /><span style="color: blue;">200 OK (text/html)</span><br /><br /><span style="color: #6aa84f;">GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/js.js</span><br /><span style="color: #6aa84f;">200 OK (application/x-javascript)</span><br /><br />GET http://62.76.188 .7/c1905hfosv/bods2903bue/gate.php?ver=Eg1l8cwwgE:E:E:w:EglPPCwwgC:88pP8cg18c&amp;p=9.3.0.0&amp;j=1.7.0.7&amp;f=11.7.700.202<br />200 OK (text/html)<br /><br /><span style="color: #6aa84f;">GET http://62.76.188 .7/c1905hfosv/bods2903bue/js/deployJava.js</span><br /><span style="color: #6aa84f;">200 OK (application/x-javascript)</span><br /><br /><span style="color: red;">GET http://62.76.188 .7/c1905hfosv/bods2903bue/j07.php?i=EglPPCww1p</span><br /><span style="color: red;">200 OK (application/java-archive)</span><br /><br /><b>GET http://62.76.188 .7/c1905hfosv/bods2903bue/load.php?e=g&amp;ip=Eg1l8cwwgE</b><br /><b>200 OK (application/octet-stream)</b><br /><br />GET http://62.76.188 .7/c1905hfosv/bods2903bue/index.php?id=5520563456<br />302 Found to http://www.adobe.com<br />&lt;/edit2&gt;<br /><br /></div><div><b><u>Files:</u></b></div><div><a href="http://goo.gl/ciZRn">SafePack_2pass_2013-04-20.zip</a>&nbsp;<i style="font-size: small;">(OwnCloud via Goo.gl)</i></div><div><br /></div><div><b><u>Read More:</u></b></div><div><div><a href="http://malware.dontneedcoffee.com/2012/11/meet-critxpack-previously-vintage-pack.html">Meet CritXPack (Previously Vintage Pack)</a>&nbsp;- 2012-11-12</div></div><div><br /></div><div class="separator" style="clear: both; text-align: center;"></div><div><br /></div><div><br /></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-04-21" itemprop="datePublished"> 2013-04-21</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> FlashPack</span> <span class="icon-price-tag pr10"> update</span> <span class="icon-price-tag pr10"> CritXPack</span> <span class="icon-price-tag pr10"> Exploit Kit</span> <span class="icon-price-tag pr10"> Safe Pack</span> <span class="icon-price-tag pr10"> VintagePack</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2013/04/urausy-ransomware-middle-east-under.html">&laquo; Urausy Ransomware - Arab world targeted</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2013/04/cve-2013-2423-integrating-exploit-kits.html">CVE-2013-2423 integrating Exploit Kits &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BlackHat-TDS (v1.4)</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Infection schemes often implicate TDS (Traffic Direction System - See read more at the end if you don&#39;t know what is that). A lot of groups are using custom tools, but when they are not, they are using tools like SimpleTDS (old...but we can still see it here and there) Sutra , Keitaro....In middle of December XShaman started to advertised a new one : BlackHat-TDS a remake of Ninja TDSBlackHat-TDS advertised on underground by XShaman2013-12-11XShaman is the father of many tools from &quot;Shamans Dream Exploit Kit&quot;, Antibot Guard System :Antibot Guard System v1.0&amp;nbsp;&amp;nbsp;in front of a Sakura&amp;nbsp;2013-09More image hereFakeMaker :FakeMakerTraffic Shop Analyser :Traffic Shop Analyser -2012-09More image hereor NinjaTDSText of the Advert :------------------------------------------Я рад представить уважаемому сообществу, новый проект BlackHat-TDS.К созданию софта, меня сподвигли многочисленные просьбы об универсальнойТДС для применения в сером бизе(блэк-сео, слив с ломанных ресурсов и т.д.).Софт вобрал в себя наиболее эффективные(но не все) методики из Ninja-TDS.Основу подхода, как и прежде, составляют - хитрые алиасы, для защиты домена админки, матричный клоакинг, запись входного трафика в режиме апрува и антибот методики. База тдс на основе SQLite, с загрузкой полностью в память, что , я полагаю увеличит производительность и переносимость.Функции антибота:- Запрет кэширования статических страниц, для уменьшения палева в поисковых системах и скриптовых чекерах;- Определение мобильного трафика и возможность его перенаправления на определенные линки слива- Блэклист ип , как по диапазону, так и по отдельным ип;- Блэклист по рефу, юзер-агенту, оси, хосту(lookup IP);- Блокировка прокси и TOR сетей;- Блокировка пустого рефа и перенаправление таких пользователей на безопасные ресурсы;- Хонейпот для поисковых систем не исполняющих правила из robots.txt идля скриптов , пытающихся сканировать как админку, так и фейки;- Редирект специфических рефов и поисковых запросов на безопасные линки;- Создание фейк страниц и последующее редактирование с определенных вами урлов;- Возможность использования &quot;ручных&quot; фейков;- Авторские методики определения ботов.Фукции ТДС:- Создавать неограниченное количество редиректов- Указывать кучу стран для редиректа.- Указывать типы браузера для редиректа.- Указывать типы ОС для редиректа.- Вы также можете отматывать траф до заданного числа.- Вы можете заморозить редирект на некоторое времмя.- При просмотре статистики вы можете видеть графичекую шкалу статуса редиректа. (%)- Просмотр статистики по странам.- Просмотр статистики по браузерам, ОС.- Просмотр статистики за последние день, сутки, 7 суток, за весь период- Просмотр статистики по дням.- Разновидность редиректа (со скрытием и без)- Пользователи, Создание пользователей.- Учет посещений- Общая Статистика по браузерам и версии ОС.- Общая статистика по странам.- Учет REFERER- Тип рефера: header или popup, во втором случае используется JavаScript, который скрывает referer,таким образом УРЛ тдс узнать невозможно! Но в этом есть и свой минус: попап(Ajax tinybox2).- Пользователи: Из админки вы можете создавать пользователей и привязать к ним заявки.Таким образом ваш клиент может зайти и посмотреть статистику по своему трафику.. Очень удобно.Это экономит ваше время (не нужно делать скрипны и т.д) и клиенту - все он видит на лицо.- Статистка по дням. Теперь вы можете узнать сколько трафа шло в какой день.- Поддержка схем. Теперь вы можете расспределить, например адалт лить на одну ссылку,фарму на другую и среди них распределять согласно опциям.- Фильтр на язык браузера.- Запрет повторного редиректа по записи в HTML5 Local Storage.Цена вопроса 700wmz, контакт через ПМ форума.------------------------------------------Translated by google as :------------------------------------------I am pleased to introduce the distinguished community , the new project BlackHat-TDS.By creating software, I spodvigli numerous requests about the universalTDS for use in gray meringue ( black seo , plums with polygonal resources, etc.) .Software incorporates the most effective ( but not all) methods of Ninja-TDS.The basis of the approach , as before, make up - clever aliases to protect the domain admin , cloaking matrix , recording the input traffic in apruva antibot and techniques . Base TDS based on SQLite, boot completely into memory, which I believe will increase the performance and portability.Options Security Code :- Prevent caching of static pages to reduce fawn in search engines and scripting checker ;- Definition of mobile traffic and the possibility of redirecting certain links drain- Ip blacklist , as the band, and for individual un ;- Blacklist for refu , user - agent axis host (lookup IP);- Proxy blocker and TOR networks;- Lock empty Refah and redirecting users to secure such resources ;- Honeypot for search engines not to follow the rules of the robots.txt andscripts , trying to scan as admin and fakes ;- Redirect specific refs and queries safe links ;- Creating fake pages and subsequent editing with specific URLs you ;- Ability to use &quot;manual&quot; fakes ;- All methods for determining bots .Fuktsii TDS :- Create unlimited number of redirections- Specify a bunch of countries to redirect.- Specify the types of browser to redirect.- Specify the types of operating systems for redirect.- You can also rewind cores to a predetermined number .- You can redirect to a freeze vremmya .- When viewing the statistics you can see grafichekuyu scale redirect status . ( %)- View statistics by country.- View statistics on browsers , operating systems.- View Statistics for the last day , day, 7 days , for the entire period- View statistics by day .- Variety redirect ( with and without hiding )- Customers Creating users .- Accounting visits- General Statistics on browsers and OS.- General statistics by country.- Accounting REFERER- Referrer type : header or popup, in the second case the JavaScript that hides referer,thus RLC TDS is impossible to know ! But there is and the minus : popap (Ajax tinybox2).- Members : From admin you can create users and applications to bind to them .Thus, your client can come and see statistics about your traffic .. Very convenient.This saves you time ( no need to do skripny etc) and client - all he sees on the face.- Statistics in the afternoons. Now you can find out how many cores going on what day .- Support schemes. Now you can rasspredelit eg adult casting on one linkPharma to another and distribute among them according to options.- Filter on the browser language .- Prohibition of re- entry in the redirect on HTML5 Local Storage.Issue price 700wmz, contact via PM forum.------------------------------------------BlackHat TDS redirecting to Magnitude thread - 2014-04-24(by the look of the 2nd stage call some may recognize a threat that was pushed in Nuclear several months ago)Now let&#39;s get in (another one) :BlackHat TDS Login Page2014-04BlackHat TDS - Job ListBlackHat TDS - Stats from a Job.BlackHat TDS - Create a new SchemeBlackHat TDS - Schemes listBlackHat TDS - Create a JobBlackHat TDS - Statistics MonthBlackHat TDS - Month Statistics - selecting one dayBlackHat TDS - Montly RefererBlackHat TDS - Referer for a DayBlackHat TDS - Create UserBlackHat TDS - User listFiles: BHTDS_Magnitude_SecondStage_2014-04Read more :Using Traffic Direction Systems&amp;nbsp;to simplify fraud... &amp;nbsp;and complicate investigations!&amp;nbsp;- Maxim Goncharov - Trendmicro for VB2011Antibot Guard System v.1.0 Experimental&amp;nbsp;- 2013-01-27 -&amp;nbsp;&amp;nbsp;Jose Dos SantosUnmasking the Dreaming Shaman - the Shamans Dream exploit kit&amp;nbsp;- 2010-01-02 Perpetual Horizon">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2014/04/meet-blackhat-tds.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="BlackHat-TDS (v1.4)">
+	<meta property="og:description" content="Infection schemes often implicate TDS (Traffic Direction System - See read more at the end if you don&#39;t know what is that). A lot of groups are using custom tools, but when they are not, they are using tools like SimpleTDS (old...but we can still see it here and there) Sutra , Keitaro....In middle of December XShaman started to advertised a new one : BlackHat-TDS a remake of Ninja TDSBlackHat-TDS advertised on underground by XShaman2013-12-11XShaman is the father of many tools from &quot;Shamans Dream Exploit Kit&quot;, Antibot Guard System :Antibot Guard System v1.0&amp;nbsp;&amp;nbsp;in front of a Sakura&amp;nbsp;2013-09More image hereFakeMaker :FakeMakerTraffic Shop Analyser :Traffic Shop Analyser -2012-09More image hereor NinjaTDSText of the Advert :------------------------------------------Я рад представить уважаемому сообществу, новый проект BlackHat-TDS.К созданию софта, меня сподвигли многочисленные просьбы об универсальнойТДС для применения в сером бизе(блэк-сео, слив с ломанных ресурсов и т.д.).Софт вобрал в себя наиболее эффективные(но не все) методики из Ninja-TDS.Основу подхода, как и прежде, составляют - хитрые алиасы, для защиты домена админки, матричный клоакинг, запись входного трафика в режиме апрува и антибот методики. База тдс на основе SQLite, с загрузкой полностью в память, что , я полагаю увеличит производительность и переносимость.Функции антибота:- Запрет кэширования статических страниц, для уменьшения палева в поисковых системах и скриптовых чекерах;- Определение мобильного трафика и возможность его перенаправления на определенные линки слива- Блэклист ип , как по диапазону, так и по отдельным ип;- Блэклист по рефу, юзер-агенту, оси, хосту(lookup IP);- Блокировка прокси и TOR сетей;- Блокировка пустого рефа и перенаправление таких пользователей на безопасные ресурсы;- Хонейпот для поисковых систем не исполняющих правила из robots.txt идля скриптов , пытающихся сканировать как админку, так и фейки;- Редирект специфических рефов и поисковых запросов на безопасные линки;- Создание фейк страниц и последующее редактирование с определенных вами урлов;- Возможность использования &quot;ручных&quot; фейков;- Авторские методики определения ботов.Фукции ТДС:- Создавать неограниченное количество редиректов- Указывать кучу стран для редиректа.- Указывать типы браузера для редиректа.- Указывать типы ОС для редиректа.- Вы также можете отматывать траф до заданного числа.- Вы можете заморозить редирект на некоторое времмя.- При просмотре статистики вы можете видеть графичекую шкалу статуса редиректа. (%)- Просмотр статистики по странам.- Просмотр статистики по браузерам, ОС.- Просмотр статистики за последние день, сутки, 7 суток, за весь период- Просмотр статистики по дням.- Разновидность редиректа (со скрытием и без)- Пользователи, Создание пользователей.- Учет посещений- Общая Статистика по браузерам и версии ОС.- Общая статистика по странам.- Учет REFERER- Тип рефера: header или popup, во втором случае используется JavаScript, который скрывает referer,таким образом УРЛ тдс узнать невозможно! Но в этом есть и свой минус: попап(Ajax tinybox2).- Пользователи: Из админки вы можете создавать пользователей и привязать к ним заявки.Таким образом ваш клиент может зайти и посмотреть статистику по своему трафику.. Очень удобно.Это экономит ваше время (не нужно делать скрипны и т.д) и клиенту - все он видит на лицо.- Статистка по дням. Теперь вы можете узнать сколько трафа шло в какой день.- Поддержка схем. Теперь вы можете расспределить, например адалт лить на одну ссылку,фарму на другую и среди них распределять согласно опциям.- Фильтр на язык браузера.- Запрет повторного редиректа по записи в HTML5 Local Storage.Цена вопроса 700wmz, контакт через ПМ форума.------------------------------------------Translated by google as :------------------------------------------I am pleased to introduce the distinguished community , the new project BlackHat-TDS.By creating software, I spodvigli numerous requests about the universalTDS for use in gray meringue ( black seo , plums with polygonal resources, etc.) .Software incorporates the most effective ( but not all) methods of Ninja-TDS.The basis of the approach , as before, make up - clever aliases to protect the domain admin , cloaking matrix , recording the input traffic in apruva antibot and techniques . Base TDS based on SQLite, boot completely into memory, which I believe will increase the performance and portability.Options Security Code :- Prevent caching of static pages to reduce fawn in search engines and scripting checker ;- Definition of mobile traffic and the possibility of redirecting certain links drain- Ip blacklist , as the band, and for individual un ;- Blacklist for refu , user - agent axis host (lookup IP);- Proxy blocker and TOR networks;- Lock empty Refah and redirecting users to secure such resources ;- Honeypot for search engines not to follow the rules of the robots.txt andscripts , trying to scan as admin and fakes ;- Redirect specific refs and queries safe links ;- Creating fake pages and subsequent editing with specific URLs you ;- Ability to use &quot;manual&quot; fakes ;- All methods for determining bots .Fuktsii TDS :- Create unlimited number of redirections- Specify a bunch of countries to redirect.- Specify the types of browser to redirect.- Specify the types of operating systems for redirect.- You can also rewind cores to a predetermined number .- You can redirect to a freeze vremmya .- When viewing the statistics you can see grafichekuyu scale redirect status . ( %)- View statistics by country.- View statistics on browsers , operating systems.- View Statistics for the last day , day, 7 days , for the entire period- View statistics by day .- Variety redirect ( with and without hiding )- Customers Creating users .- Accounting visits- General Statistics on browsers and OS.- General statistics by country.- Accounting REFERER- Referrer type : header or popup, in the second case the JavaScript that hides referer,thus RLC TDS is impossible to know ! But there is and the minus : popap (Ajax tinybox2).- Members : From admin you can create users and applications to bind to them .Thus, your client can come and see statistics about your traffic .. Very convenient.This saves you time ( no need to do skripny etc) and client - all he sees on the face.- Statistics in the afternoons. Now you can find out how many cores going on what day .- Support schemes. Now you can rasspredelit eg adult casting on one linkPharma to another and distribute among them according to options.- Filter on the browser language .- Prohibition of re- entry in the redirect on HTML5 Local Storage.Issue price 700wmz, contact via PM forum.------------------------------------------BlackHat TDS redirecting to Magnitude thread - 2014-04-24(by the look of the 2nd stage call some may recognize a threat that was pushed in Nuclear several months ago)Now let&#39;s get in (another one) :BlackHat TDS Login Page2014-04BlackHat TDS - Job ListBlackHat TDS - Stats from a Job.BlackHat TDS - Create a new SchemeBlackHat TDS - Schemes listBlackHat TDS - Create a JobBlackHat TDS - Statistics MonthBlackHat TDS - Month Statistics - selecting one dayBlackHat TDS - Montly RefererBlackHat TDS - Referer for a DayBlackHat TDS - Create UserBlackHat TDS - User listFiles: BHTDS_Magnitude_SecondStage_2014-04Read more :Using Traffic Direction Systems&amp;nbsp;to simplify fraud... &amp;nbsp;and complicate investigations!&amp;nbsp;- Maxim Goncharov - Trendmicro for VB2011Antibot Guard System v.1.0 Experimental&amp;nbsp;- 2013-01-27 -&amp;nbsp;&amp;nbsp;Jose Dos SantosUnmasking the Dreaming Shaman - the Shamans Dream exploit kit&amp;nbsp;- 2010-01-02 Perpetual Horizon">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2014/04/meet-blackhat-tds.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="BlackHat-TDS (v1.4)">
+	<meta name="twitter:description" content="Infection schemes often implicate TDS (Traffic Direction System - See read more at the end if you don&#39;t know what is that). A lot of groups are using custom tools, but when they are not, they are using tools like SimpleTDS (old...but we can still see it here and there) Sutra , Keitaro....In middle of December XShaman started to advertised a new one : BlackHat-TDS a remake of Ninja TDSBlackHat-TDS advertised on underground by XShaman2013-12-11XShaman is the father of many tools from &quot;Shamans Dream Exploit Kit&quot;, Antibot Guard System :Antibot Guard System v1.0&amp;nbsp;&amp;nbsp;in front of a Sakura&amp;nbsp;2013-09More image hereFakeMaker :FakeMakerTraffic Shop Analyser :Traffic Shop Analyser -2012-09More image hereor NinjaTDSText of the Advert :------------------------------------------Я рад представить уважаемому сообществу, новый проект BlackHat-TDS.К созданию софта, меня сподвигли многочисленные просьбы об универсальнойТДС для применения в сером бизе(блэк-сео, слив с ломанных ресурсов и т.д.).Софт вобрал в себя наиболее эффективные(но не все) методики из Ninja-TDS.Основу подхода, как и прежде, составляют - хитрые алиасы, для защиты домена админки, матричный клоакинг, запись входного трафика в режиме апрува и антибот методики. База тдс на основе SQLite, с загрузкой полностью в память, что , я полагаю увеличит производительность и переносимость.Функции антибота:- Запрет кэширования статических страниц, для уменьшения палева в поисковых системах и скриптовых чекерах;- Определение мобильного трафика и возможность его перенаправления на определенные линки слива- Блэклист ип , как по диапазону, так и по отдельным ип;- Блэклист по рефу, юзер-агенту, оси, хосту(lookup IP);- Блокировка прокси и TOR сетей;- Блокировка пустого рефа и перенаправление таких пользователей на безопасные ресурсы;- Хонейпот для поисковых систем не исполняющих правила из robots.txt идля скриптов , пытающихся сканировать как админку, так и фейки;- Редирект специфических рефов и поисковых запросов на безопасные линки;- Создание фейк страниц и последующее редактирование с определенных вами урлов;- Возможность использования &quot;ручных&quot; фейков;- Авторские методики определения ботов.Фукции ТДС:- Создавать неограниченное количество редиректов- Указывать кучу стран для редиректа.- Указывать типы браузера для редиректа.- Указывать типы ОС для редиректа.- Вы также можете отматывать траф до заданного числа.- Вы можете заморозить редирект на некоторое времмя.- При просмотре статистики вы можете видеть графичекую шкалу статуса редиректа. (%)- Просмотр статистики по странам.- Просмотр статистики по браузерам, ОС.- Просмотр статистики за последние день, сутки, 7 суток, за весь период- Просмотр статистики по дням.- Разновидность редиректа (со скрытием и без)- Пользователи, Создание пользователей.- Учет посещений- Общая Статистика по браузерам и версии ОС.- Общая статистика по странам.- Учет REFERER- Тип рефера: header или popup, во втором случае используется JavаScript, который скрывает referer,таким образом УРЛ тдс узнать невозможно! Но в этом есть и свой минус: попап(Ajax tinybox2).- Пользователи: Из админки вы можете создавать пользователей и привязать к ним заявки.Таким образом ваш клиент может зайти и посмотреть статистику по своему трафику.. Очень удобно.Это экономит ваше время (не нужно делать скрипны и т.д) и клиенту - все он видит на лицо.- Статистка по дням. Теперь вы можете узнать сколько трафа шло в какой день.- Поддержка схем. Теперь вы можете расспределить, например адалт лить на одну ссылку,фарму на другую и среди них распределять согласно опциям.- Фильтр на язык браузера.- Запрет повторного редиректа по записи в HTML5 Local Storage.Цена вопроса 700wmz, контакт через ПМ форума.------------------------------------------Translated by google as :------------------------------------------I am pleased to introduce the distinguished community , the new project BlackHat-TDS.By creating software, I spodvigli numerous requests about the universalTDS for use in gray meringue ( black seo , plums with polygonal resources, etc.) .Software incorporates the most effective ( but not all) methods of Ninja-TDS.The basis of the approach , as before, make up - clever aliases to protect the domain admin , cloaking matrix , recording the input traffic in apruva antibot and techniques . Base TDS based on SQLite, boot completely into memory, which I believe will increase the performance and portability.Options Security Code :- Prevent caching of static pages to reduce fawn in search engines and scripting checker ;- Definition of mobile traffic and the possibility of redirecting certain links drain- Ip blacklist , as the band, and for individual un ;- Blacklist for refu , user - agent axis host (lookup IP);- Proxy blocker and TOR networks;- Lock empty Refah and redirecting users to secure such resources ;- Honeypot for search engines not to follow the rules of the robots.txt andscripts , trying to scan as admin and fakes ;- Redirect specific refs and queries safe links ;- Creating fake pages and subsequent editing with specific URLs you ;- Ability to use &quot;manual&quot; fakes ;- All methods for determining bots .Fuktsii TDS :- Create unlimited number of redirections- Specify a bunch of countries to redirect.- Specify the types of browser to redirect.- Specify the types of operating systems for redirect.- You can also rewind cores to a predetermined number .- You can redirect to a freeze vremmya .- When viewing the statistics you can see grafichekuyu scale redirect status . ( %)- View statistics by country.- View statistics on browsers , operating systems.- View Statistics for the last day , day, 7 days , for the entire period- View statistics by day .- Variety redirect ( with and without hiding )- Customers Creating users .- Accounting visits- General Statistics on browsers and OS.- General statistics by country.- Accounting REFERER- Referrer type : header or popup, in the second case the JavaScript that hides referer,thus RLC TDS is impossible to know ! But there is and the minus : popap (Ajax tinybox2).- Members : From admin you can create users and applications to bind to them .Thus, your client can come and see statistics about your traffic .. Very convenient.This saves you time ( no need to do skripny etc) and client - all he sees on the face.- Statistics in the afternoons. Now you can find out how many cores going on what day .- Support schemes. Now you can rasspredelit eg adult casting on one linkPharma to another and distribute among them according to options.- Filter on the browser language .- Prohibition of re- entry in the redirect on HTML5 Local Storage.Issue price 700wmz, contact via PM forum.------------------------------------------BlackHat TDS redirecting to Magnitude thread - 2014-04-24(by the look of the 2nd stage call some may recognize a threat that was pushed in Nuclear several months ago)Now let&#39;s get in (another one) :BlackHat TDS Login Page2014-04BlackHat TDS - Job ListBlackHat TDS - Stats from a Job.BlackHat TDS - Create a new SchemeBlackHat TDS - Schemes listBlackHat TDS - Create a JobBlackHat TDS - Statistics MonthBlackHat TDS - Month Statistics - selecting one dayBlackHat TDS - Montly RefererBlackHat TDS - Referer for a DayBlackHat TDS - Create UserBlackHat TDS - User listFiles: BHTDS_Magnitude_SecondStage_2014-04Read more :Using Traffic Direction Systems&amp;nbsp;to simplify fraud... &amp;nbsp;and complicate investigations!&amp;nbsp;- Maxim Goncharov - Trendmicro for VB2011Antibot Guard System v.1.0 Experimental&amp;nbsp;- 2013-01-27 -&amp;nbsp;&amp;nbsp;Jose Dos SantosUnmasking the Dreaming Shaman - the Shamans Dream exploit kit&amp;nbsp;- 2010-01-02 Perpetual Horizon">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>BlackHat-TDS (v1.4)</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-hwmtEtREwHw/U10LE3MhwZI/AAAAAAAACp4/0lKGiWxM9gE/s1600/screenshot_2014-04-27_058.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-hwmtEtREwHw/U10LE3MhwZI/AAAAAAAACp4/0lKGiWxM9gE/s1600/screenshot_2014-04-27_058.png" /></a></div><br /><br /><br /><a href="http://malware.dontneedcoffee.com/2012/12/eyeglanceru.html">Infection schemes</a> often implicate TDS (Traffic Direction System -<span style="font-size: x-small;"> See read more at the end if you don't know what is that</span>). A lot of groups are using custom tools, but when they are not, they are using tools like SimpleTDS (old...but we can still see it here and there) Sutra , Keitaro....<br /><br />In middle of December XShaman started to advertised a new one : BlackHat-TDS a remake of Ninja TDS<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-7ocFBrSjE8M/U1zvXOuT3WI/AAAAAAAACnI/cqkZsOz5unU/s1600/screenshot_2014-04-27_040.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-7ocFBrSjE8M/U1zvXOuT3WI/AAAAAAAACnI/cqkZsOz5unU/s1600/screenshot_2014-04-27_040.png" height="454" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat-TDS advertised on underground by XShaman<br />2013-12-11</td></tr></tbody></table><br />XShaman is the father of many tools from "<a href="http://perpetualhorizon.blogspot.fr/2010/01/unmasking-dreaming-shaman-shamans-dream.html">Shamans Dream Exploit Kit</a>", Antibot Guard System :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-SQvSweoHki0/U1zxmz3fk8I/AAAAAAAACnU/WJC_N7DGOsw/s1600/screenshot_2014-04-27_041.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-SQvSweoHki0/U1zxmz3fk8I/AAAAAAAACnU/WJC_N7DGOsw/s1600/screenshot_2014-04-27_041.png" height="302" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Antibot Guard System v1.0&nbsp;&nbsp;in front of a Sakura&nbsp;2013-09<br /><a href="http://minus.com/ms4auJbZJqVSF">More image here</a></td></tr></tbody></table>FakeMaker :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://i.minus.com/iBYkanzo5vVsu.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://i.minus.com/iBYkanzo5vVsu.gif" height="360" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="http://kafeine.minus.com/i/BYkanzo5vVsu">FakeMaker</a></td></tr></tbody></table><br /><br /><br />Traffic Shop Analyser :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://i5.minus.com/i76GkT6GtBV0Z.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://i5.minus.com/i76GkT6GtBV0Z.png" height="444" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Traffic Shop Analyser -2012-09<br /><a href="http://kafeine.minus.com/mbdKF0PaWf">More image here</a></td></tr></tbody></table>or NinjaTDS<br /><br />Text of the Advert :<br />------------------------------------------<br /><span style="color: #38761d;">Я рад представить уважаемому сообществу, новый проект BlackHat-TDS.</span><br /><span style="color: #38761d;">К созданию софта, меня сподвигли многочисленные просьбы об универсальной</span><br /><span style="color: #38761d;">ТДС для применения в сером бизе(блэк-сео, слив с ломанных ресурсов и т.д.).</span><br /><span style="color: #38761d;">Софт вобрал в себя наиболее эффективные(но не все) методики из Ninja-TDS.</span><br /><span style="color: #38761d;">Основу подхода, как и прежде, составляют - хитрые алиасы, для защиты домена админки, матричный клоакинг, запись входного трафика в режиме апрува и антибот методики. База тдс на основе SQLite, с загрузкой полностью в память, что , я полагаю увеличит производительность и переносимость.</span><br /><span style="color: #38761d;">Функции антибота:</span><br /><span style="color: #38761d;">- Запрет кэширования статических страниц, для уменьшения палева в поисковых системах и скриптовых чекерах;</span><br /><span style="color: #38761d;">- Определение мобильного трафика и возможность его перенаправления на определенные линки слива</span><br /><span style="color: #38761d;">- Блэклист ип , как по диапазону, так и по отдельным ип;</span><br /><span style="color: #38761d;">- Блэклист по рефу, юзер-агенту, оси, хосту(lookup IP);</span><br /><span style="color: #38761d;">- Блокировка прокси и TOR сетей;</span><br /><span style="color: #38761d;">- Блокировка пустого рефа и перенаправление таких пользователей на безопасные ресурсы;</span><br /><span style="color: #38761d;">- Хонейпот для поисковых систем не исполняющих правила из robots.txt и</span><br /><span style="color: #38761d;">для скриптов , пытающихся сканировать как админку, так и фейки;</span><br /><span style="color: #38761d;">- Редирект специфических рефов и поисковых запросов на безопасные линки;</span><br /><span style="color: #38761d;">- Создание фейк страниц и последующее редактирование с определенных вами урлов;</span><br /><span style="color: #38761d;">- Возможность использования "ручных" фейков;</span><br /><span style="color: #38761d;">- Авторские методики определения ботов.</span><br /><span style="color: #38761d;"><br /></span><span style="color: #38761d;">Фукции ТДС:</span><br /><span style="color: #38761d;">- Создавать неограниченное количество редиректов</span><br /><span style="color: #38761d;">- Указывать кучу стран для редиректа.</span><br /><span style="color: #38761d;">- Указывать типы браузера для редиректа.</span><br /><span style="color: #38761d;">- Указывать типы ОС для редиректа.</span><br /><span style="color: #38761d;">- Вы также можете отматывать траф до заданного числа.</span><br /><span style="color: #38761d;">- Вы можете заморозить редирект на некоторое времмя.</span><br /><span style="color: #38761d;">- При просмотре статистики вы можете видеть графичекую шкалу статуса редиректа. (%)</span><br /><span style="color: #38761d;">- Просмотр статистики по странам.</span><br /><span style="color: #38761d;">- Просмотр статистики по браузерам, ОС.</span><br /><span style="color: #38761d;">- Просмотр статистики за последние день, сутки, 7 суток, за весь период</span><br /><span style="color: #38761d;">- Просмотр статистики по дням.</span><br /><span style="color: #38761d;">- Разновидность редиректа (со скрытием и без)</span><br /><span style="color: #38761d;">- Пользователи, Создание пользователей.</span><br /><span style="color: #38761d;">- Учет посещений</span><br /><span style="color: #38761d;">- Общая Статистика по браузерам и версии ОС.</span><br /><span style="color: #38761d;">- Общая статистика по странам.</span><br /><span style="color: #38761d;">- Учет REFERER</span><br /><span style="color: #38761d;">- Тип рефера: header или popup, во втором случае используется JavаScript, который скрывает referer,</span><br /><span style="color: #38761d;">таким образом УРЛ тдс узнать невозможно! Но в этом есть и свой минус: попап(Ajax tinybox2).</span><br /><span style="color: #38761d;">- Пользователи: Из админки вы можете создавать пользователей и привязать к ним заявки.</span><br /><span style="color: #38761d;">Таким образом ваш клиент может зайти и посмотреть статистику по своему трафику.. Очень удобно.</span><br /><span style="color: #38761d;">Это экономит ваше время (не нужно делать скрипны и т.д) и клиенту - все он видит на лицо.</span><br /><span style="color: #38761d;">- Статистка по дням. Теперь вы можете узнать сколько трафа шло в какой день.</span><br /><span style="color: #38761d;">- Поддержка схем. Теперь вы можете расспределить, например адалт лить на одну ссылку,</span><br /><span style="color: #38761d;">фарму на другую и среди них распределять согласно опциям.</span><br /><span style="color: #38761d;">- Фильтр на язык браузера.</span><br /><span style="color: #38761d;">- Запрет повторного редиректа по записи в HTML5 Local Storage.</span><br /><span style="color: #38761d;">Цена вопроса 700wmz, контакт через ПМ форума.</span><br /><br /><div>------------------------------------------</div>Translated by google as :<br />------------------------------------------<br /><span style="color: #351c75;">I am pleased to introduce the distinguished community , the new project BlackHat-TDS.</span><br /><span style="color: #351c75;">By creating software, I spodvigli numerous requests about the universal</span><br /><span style="color: #351c75;">TDS for use in gray meringue ( black seo , plums with polygonal resources, etc.) .</span><br /><span style="color: #351c75;">Software incorporates the most effective ( but not all) methods of Ninja-TDS.</span><br /><span style="color: #351c75;">The basis of the approach , as before, make up - clever aliases to protect the domain admin , cloaking matrix , recording the input traffic in apruva antibot and techniques . Base TDS based on SQLite, boot completely into memory, which I believe will increase the performance and portability.</span><br /><span style="color: #351c75;">Options Security Code :</span><br /><span style="color: #351c75;">- Prevent caching of static pages to reduce fawn in search engines and scripting checker ;</span><br /><span style="color: #351c75;">- Definition of mobile traffic and the possibility of redirecting certain links drain</span><br /><span style="color: #351c75;">- Ip blacklist , as the band, and for individual un ;</span><br /><span style="color: #351c75;">- Blacklist for refu , user - agent axis host (lookup IP);</span><br /><span style="color: #351c75;">- Proxy blocker and TOR networks;</span><br /><span style="color: #351c75;">- Lock empty Refah and redirecting users to secure such resources ;</span><br /><span style="color: #351c75;">- Honeypot for search engines not to follow the rules of the robots.txt and</span><br /><span style="color: #351c75;">scripts , trying to scan as admin and fakes ;</span><br /><span style="color: #351c75;">- Redirect specific refs and queries safe links ;</span><br /><span style="color: #351c75;">- Creating fake pages and subsequent editing with specific URLs you ;</span><br /><span style="color: #351c75;">- Ability to use "manual" fakes ;</span><br /><span style="color: #351c75;">- All methods for determining bots .</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Fuktsii TDS :</span><br /><span style="color: #351c75;">- Create unlimited number of redirections</span><br /><span style="color: #351c75;">- Specify a bunch of countries to redirect.</span><br /><span style="color: #351c75;">- Specify the types of browser to redirect.</span><br /><span style="color: #351c75;">- Specify the types of operating systems for redirect.</span><br /><span style="color: #351c75;">- You can also rewind cores to a predetermined number .</span><br /><span style="color: #351c75;">- You can redirect to a freeze vremmya .</span><br /><span style="color: #351c75;">- When viewing the statistics you can see grafichekuyu scale redirect status . ( %)</span><br /><span style="color: #351c75;">- View statistics by country.</span><br /><span style="color: #351c75;">- View statistics on browsers , operating systems.</span><br /><span style="color: #351c75;">- View Statistics for the last day , day, 7 days , for the entire period</span><br /><span style="color: #351c75;">- View statistics by day .</span><br /><span style="color: #351c75;">- Variety redirect ( with and without hiding )</span><br /><span style="color: #351c75;">- Customers Creating users .</span><br /><span style="color: #351c75;">- Accounting visits</span><br /><span style="color: #351c75;">- General Statistics on browsers and OS.</span><br /><span style="color: #351c75;">- General statistics by country.</span><br /><span style="color: #351c75;">- Accounting REFERER</span><br /><span style="color: #351c75;">- Referrer type : header or popup, in the second case the JavaScript that hides referer,</span><br /><span style="color: #351c75;">thus RLC TDS is impossible to know ! But there is and the minus : popap (Ajax tinybox2).</span><br /><span style="color: #351c75;">- Members : From admin you can create users and applications to bind to them .</span><br /><span style="color: #351c75;">Thus, your client can come and see statistics about your traffic .. Very convenient.</span><br /><span style="color: #351c75;">This saves you time ( no need to do skripny etc) and client - all he sees on the face.</span><br /><span style="color: #351c75;">- Statistics in the afternoons. Now you can find out how many cores going on what day .</span><br /><span style="color: #351c75;">- Support schemes. Now you can rasspredelit eg adult casting on one link</span><br /><span style="color: #351c75;">Pharma to another and distribute among them according to options.</span><br /><span style="color: #351c75;">- Filter on the browser language .</span><br /><span style="color: #351c75;">- Prohibition of re- entry in the redirect on HTML5 Local Storage.</span><br /><span style="color: #351c75;">Issue price 700wmz, contact via PM forum.</span><br />------------------------------------------<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-xOPYbScqB8I/U1z5VJBCtzI/AAAAAAAACnk/MZCy3lIAOTg/s1600/screenshot_2014-04-27_051.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-xOPYbScqB8I/U1z5VJBCtzI/AAAAAAAACnk/MZCy3lIAOTg/s1600/screenshot_2014-04-27_051.png" height="306" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS redirecting to Magnitude thread - 2014-04-24<br />(<span style="font-size: xx-small;">by the look of the 2nd stage call some may recognize a threat that was pushed in Nuclear several months ago</span>)</td></tr></tbody></table>Now let's get in (<span style="font-size: xx-small;">another one</span>) :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-zlnWwZYIQkU/U1z6aCZKFPI/AAAAAAAACns/7GLhXdW7aDA/s1600/screenshot_2014-04-24_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-zlnWwZYIQkU/U1z6aCZKFPI/AAAAAAAACns/7GLhXdW7aDA/s1600/screenshot_2014-04-24_003.png" height="364" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS Login Page<br />2014-04</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-g9j7Oko_J7Q/U1z8e5HLL4I/AAAAAAAACoA/DqxkbhrUHYw/s1600/screenshot_2014-04-27_035.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-g9j7Oko_J7Q/U1z8e5HLL4I/AAAAAAAACoA/DqxkbhrUHYw/s1600/screenshot_2014-04-27_035.png" height="162" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Job List</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-CdGtrvZKpLA/U10IYH_wlcI/AAAAAAAACpI/MdSxqIU2Mbg/s1600/screenshot_2014-04-27_039.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-CdGtrvZKpLA/U10IYH_wlcI/AAAAAAAACpI/MdSxqIU2Mbg/s1600/screenshot_2014-04-27_039.png" height="640" width="430" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Stats from a Job.</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-cBfGmEPQB7o/U1z-kjkhc8I/AAAAAAAACoM/tbwFwbnzAL4/s1600/screenshot_2014-04-27_052.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-cBfGmEPQB7o/U1z-kjkhc8I/AAAAAAAACoM/tbwFwbnzAL4/s1600/screenshot_2014-04-27_052.png" height="290" width="640" /></a></div></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Create a new Scheme</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-OlPvSCV7hOI/U1z-4oENJ1I/AAAAAAAACoU/HQ_3nyvqUZ8/s1600/screenshot_2014-04-27_053.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-OlPvSCV7hOI/U1z-4oENJ1I/AAAAAAAACoU/HQ_3nyvqUZ8/s1600/screenshot_2014-04-27_053.png" height="290" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Schemes list</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-DescsKoA8bo/U10BZaaS0hI/AAAAAAAACog/tdg_ORiVF1s/s1600/screenshot_2014-04-27_054.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-DescsKoA8bo/U10BZaaS0hI/AAAAAAAACog/tdg_ORiVF1s/s1600/screenshot_2014-04-27_054.png" height="640" width="526" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Create a Job</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-4unl49X3hys/U10Dp35fCpI/AAAAAAAACo0/9KPj2t_vHPw/s1600/screenshot_2014-04-27_044.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-4unl49X3hys/U10Dp35fCpI/AAAAAAAACo0/9KPj2t_vHPw/s1600/screenshot_2014-04-27_044.png" height="548" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Statistics Month</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-VIgrN8Up__E/U10H5et3hjI/AAAAAAAACpA/P_-HxB1AZlw/s1600/screenshot_2014-04-27_046.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-VIgrN8Up__E/U10H5et3hjI/AAAAAAAACpA/P_-HxB1AZlw/s1600/screenshot_2014-04-27_046.png" height="468" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Month Statistics - selecting one day</td></tr></tbody></table><br /><div class="separator" style="clear: both; text-align: center;"><br /></div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-J9NTcXyaO0A/U10KDFViD5I/AAAAAAAACpk/fFIA9Z1sszs/s1600/screenshot_2014-04-27_056.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-J9NTcXyaO0A/U10KDFViD5I/AAAAAAAACpk/fFIA9Z1sszs/s1600/screenshot_2014-04-27_056.png" height="484" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Montly Referer</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-L85319YjKZo/U10KQpqfgaI/AAAAAAAACps/E4YNMetG3YQ/s1600/screenshot_2014-04-27_057.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-L85319YjKZo/U10KQpqfgaI/AAAAAAAACps/E4YNMetG3YQ/s1600/screenshot_2014-04-27_057.png" height="450" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Referer for a Day</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><br /><a href="http://4.bp.blogspot.com/-A8rBa8oC34Y/U10JrozCirI/AAAAAAAACpU/fV2hJP0mWF8/s1600/screenshot_2014-04-27_048.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-A8rBa8oC34Y/U10JrozCirI/AAAAAAAACpU/fV2hJP0mWF8/s1600/screenshot_2014-04-27_048.png" height="244" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - Create User</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-YrZyEMfaU6g/U10J0Z6ytMI/AAAAAAAACpc/W9DXMMut5bc/s1600/screenshot_2014-04-27_049.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-YrZyEMfaU6g/U10J0Z6ytMI/AAAAAAAACpc/W9DXMMut5bc/s1600/screenshot_2014-04-27_049.png" height="242" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">BlackHat TDS - User list</td></tr></tbody></table><br /><b><u>Files:</u></b> <a href="http://files.dontneedcoffee.com/public.php?service=files&amp;t=ce749290ffec8b4ab9c7212f4b9f8721">BHTDS_Magnitude_SecondStage_2014-04</a><br /><br /><b><u>Read more :</u></b><br /><a href="http://www.virusbtn.com/pdf/conference_slides/2011/Goncharov-VB2011.pdf">Using Traffic Direction Systems&nbsp;to simplify fraud... &nbsp;and complicate investigations!</a><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14.44444465637207px; line-height: 21.77777862548828px; text-align: justify;">&nbsp;- Maxim Goncharov - Trendmicro for VB2011</span><br /><span style="background-color: white; font-size: 14.44444465637207px; line-height: 21.77777862548828px; text-align: justify;"><span style="color: #333333; font-family: Helvetica Neue Light, HelveticaNeue-Light, Helvetica Neue, Helvetica, Arial, sans-serif;"><a href="http://laboratoriomalware.blogspot.fr/2013/01/antibot-guard-system-v10-experimental.html">Antibot Guard System v.1.0 Experimental</a>&nbsp;- 2013-01-27 -&nbsp;&nbsp;Jose Dos Santos</span></span><br /><span style="background-color: white; font-size: 14.44444465637207px; line-height: 21.77777862548828px; text-align: justify;"><span style="color: #333333; font-family: Helvetica Neue Light, HelveticaNeue-Light, Helvetica Neue, Helvetica, Arial, sans-serif;"><a href="http://perpetualhorizon.blogspot.fr/2010/01/unmasking-dreaming-shaman-shamans-dream.html">Unmasking the Dreaming Shaman - the Shamans Dream exploit kit</a>&nbsp;- 2010-01-02 Perpetual Horizon</span></span>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2014-04-27" itemprop="datePublished"> 2014-04-27</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> kye</span> <span class="icon-price-tag pr10"> XShaman</span> <span class="icon-price-tag pr10"> BlackHat TDS</span> <span class="icon-price-tag pr10"> TDS</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2014/04/communizm-ramdoredyms-affiliate.html">&laquo; Communizm : the Ramdo/Redyms Affiliate</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/2014/05/police-locker-available-for-your.html">Police Locker land on Android Devices &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

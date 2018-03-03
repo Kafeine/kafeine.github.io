@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A ScarePakage variant is targeting more countries :  impersonating Europol and AFP</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="(image from GadgetMaxim.comOn July 16th Lookout wrote about a new &quot;police ransomware&quot; on Android. They named it ScarePakage. (aliases : Eset:Android/Locker.B , Kaspersky:Trojan-Ransom.AndroidOS.Aples.a)It (or a variant ? seems Norton focused here) is advertised on underground since beginning of July as &quot;Android Locker&quot; by the seller of a fork of Titan Browlock System.ScarePakage advertised as &quot;Android Locker&quot; on underground - 2014-07-06Original text of the advert :------------------------------------------Android Locker, андройд локерИз функционала:- эмитация сканера нелегального контента (Hello Nortan!)- &quot;жесткая&quot; установка, невозможно удалить приложение даже через безоп. режим- блокирует любые действия/приложения/активность юзера- шифрование/дешифрование файлов на флешке, если она имеется в устройстве- &quot;прослушивание&quot; всех доступных сигналов на устройстве, перехват и старт приложения по каждому из них- попытка &quot;убить&quot; любой процесс при старте- работает после ребута- есть возможность разблокировки либо постоянной блокировки девайса после ввода ваучера- удобная админ панель- web лендинг в комплектеОсновная цель - получение Moneypak чеков, софт заточен под US андройд трафик,под другие страны приложение не адаптировано.СкриныВажно: я не не криптую апк файлы и сорцы не продаю.Я в праве отказать в продаже без объяснения причины.Ребилд на другой домен бесплатный, если ваш прежний домен спалился.Приложение апк не даю на тест (точнее даю, но не всем подряд) - полно любителей энтузиастов.Оплата строго через гарант или предоплата.Цена 2000$ без торгаПосле покупки вы получаете web лендинг и апк файл.Вам останется только запустить траф и ждать чеки.knsant@exploit.im - OTR&amp;nbsp;------------------------------------------Translated by Google as :------------------------------------------Android Locker, андройд локерWe developed our own product androyd locker.&amp;nbsp;Of the functional:&amp;nbsp;- Emitatsii scanner illegal content (Hello Nortan!)&amp;nbsp;- &quot;Hard&quot; setting, you can not remove the application even after bezop. mode&amp;nbsp;- Blocks any action / application / user activity&amp;nbsp;- Encryption / decryption of files on a flash drive, if available in your device&amp;nbsp;- &quot;Listening&quot; all available signals on a device to intercept and start the application on each of them&amp;nbsp;- An attempt to &quot;kill&quot; any process at startup&amp;nbsp;- Working after reboot&amp;nbsp;- Have the ability to unlock or lock devaysa constant after entering the voucher&amp;nbsp;- Comfortable admin panel&amp;nbsp;- Web Landing complete&amp;nbsp;The main goal - getting Moneypak checks, soft ground under US androyd traffic&amp;nbsp;for other countries the application is not adapted.&amp;nbsp;screens&amp;nbsp;user posted image&amp;nbsp;user posted image&amp;nbsp;Important: I do not not crypto apk file and sortsy not sell.&amp;nbsp;I&#39;m right to refuse sale without explanation.&amp;nbsp;Rebuild to another domain for free, if your old domain bedrooms.&amp;nbsp;Appendix ank not give a test (or rather to give, but not all in a row) - fully lovers enthusiasts.&amp;nbsp;Payment is strictly through a guarantee or prepayment.&amp;nbsp;Price $ 2000 without bargaining&amp;nbsp;After purchase you get web Landing and apk file.&amp;nbsp;You just need to run and wait for traf checks.&amp;nbsp;knsant@exploit.im - OTR------------------------------------------Later Updates : Seller provided some numbers :------------------------------------------Умеете добывать андройд трафик?Приглашаю несколько человек посотрудничать с нашим софтом.Конверт жгет.Примерные показатили конверта:Download apk: 89690Launch apk: 1379All vouchers: 76Valid vouchers: 54~9к$Принимает от 50к трафика в сутки.------------------------------------------Able to produce androyd traffic?&amp;nbsp;Invite several people to collaborate with our software.&amp;nbsp;Zhget envelope.&amp;nbsp;Exemplary indicators envelope:&amp;nbsp;Download apk: 89690&amp;nbsp;Launch apk: 1379&amp;nbsp;All vouchers: 76&amp;nbsp;Valid vouchers: 54&amp;nbsp;~ $ 9k&amp;nbsp;Receives from 50k daily traffic.------------------------------------------And on the 16th he wrote about new countries targeted.knstant announcing DE, ES, FR and AU design were now available2014-07-16------------------------------------------I spotted a &quot;badvert&quot; yesterday on Spankwire (big (alexa 500 US, 800 worldwide) porn site) that was redirecting to a Browlock hidden behind cloudflare (after a jump on a keitaro TDS on 94.102.48.63)new Browlock on @youporn network - thanks to @kafeine for the info #malware #malvertising #infosec pic.twitter.com/C8rfi5Y86E— Malekal&#39;s site (@malekal_morte) August 6, 2014The Browlock was showing the exact same design than the one featured in that post : Titan Browlock System&amp;nbsp;so also advertised by konstant.Landing on this badvert with android from at least FR, ES and DE would prompt you with a virus alert (hidden behind cloudflare)Popup alert you could get while browsing Spankwirewith an Android Powered device &amp;amp;&amp;amp; Chrome Browser from FranceThen a file named Norton_Internet_Security.apk is downloaded.Launching it :Impersonates Norton Internet SecurityOn launch : fake ScanAfter fake Scan trying to get &quot;Administrator of the device&quot; rights(US version)I spotted 5 different APK on the server (which perfectly match what we saw in the advert):AU -&amp;nbsp;d6c6bc0dc803f7891b9db745c24de541DE -&amp;nbsp;06c7a02d49b97930fb9c696cde1350d1ES -&amp;nbsp;d21e1c0f992ed70c6881c1f31c7a555aFR -&amp;nbsp;e13523d97e2390ca4529abf06ebe01eeUS -&amp;nbsp;28726f772f6b4b63fb40696a28afafc9One country one apk...the coder should really take a look at : &quot;Localizing with Resources&quot;ScarePakage - DE - 2014-08-05ScarePakage - FR - 2014-08-05ScarePakage - ES - 2014-08-05ScarePakage - AU - 2014-08-05ScarePakage - US - 2014-08-05The locking feature is working far better than in Koler.C&amp;amp;Cverify-terms\.com/admcp/api.php(cloudflared ... )Sharing Infra with the Titan Browlock.Files :&amp;nbsp;ScarePakage_2014-08-06.zip (5 apk)Read More:ScarePakage – Fake FBI RansomLocker - 2014-07-24 -&amp;nbsp;Darien Huss&amp;nbsp;- Emerging ThreatsU.S. targeted by coercive mobile ransomware impersonating the FBI - 2014-07-16 - &amp;nbsp;Meghan Kelly&amp;nbsp; - Lookout">
+  	
+	
+	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
+	
+	
+	<link rel="canonical" href="http://malware2.dontneedcoffee.com/2014/08/scarepackageknstant.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="A ScarePakage variant is targeting more countries :  impersonating Europol and AFP">
+	<meta property="og:description" content="(image from GadgetMaxim.comOn July 16th Lookout wrote about a new &quot;police ransomware&quot; on Android. They named it ScarePakage. (aliases : Eset:Android/Locker.B , Kaspersky:Trojan-Ransom.AndroidOS.Aples.a)It (or a variant ? seems Norton focused here) is advertised on underground since beginning of July as &quot;Android Locker&quot; by the seller of a fork of Titan Browlock System.ScarePakage advertised as &quot;Android Locker&quot; on underground - 2014-07-06Original text of the advert :------------------------------------------Android Locker, андройд локерИз функционала:- эмитация сканера нелегального контента (Hello Nortan!)- &quot;жесткая&quot; установка, невозможно удалить приложение даже через безоп. режим- блокирует любые действия/приложения/активность юзера- шифрование/дешифрование файлов на флешке, если она имеется в устройстве- &quot;прослушивание&quot; всех доступных сигналов на устройстве, перехват и старт приложения по каждому из них- попытка &quot;убить&quot; любой процесс при старте- работает после ребута- есть возможность разблокировки либо постоянной блокировки девайса после ввода ваучера- удобная админ панель- web лендинг в комплектеОсновная цель - получение Moneypak чеков, софт заточен под US андройд трафик,под другие страны приложение не адаптировано.СкриныВажно: я не не криптую апк файлы и сорцы не продаю.Я в праве отказать в продаже без объяснения причины.Ребилд на другой домен бесплатный, если ваш прежний домен спалился.Приложение апк не даю на тест (точнее даю, но не всем подряд) - полно любителей энтузиастов.Оплата строго через гарант или предоплата.Цена 2000$ без торгаПосле покупки вы получаете web лендинг и апк файл.Вам останется только запустить траф и ждать чеки.knsant@exploit.im - OTR&amp;nbsp;------------------------------------------Translated by Google as :------------------------------------------Android Locker, андройд локерWe developed our own product androyd locker.&amp;nbsp;Of the functional:&amp;nbsp;- Emitatsii scanner illegal content (Hello Nortan!)&amp;nbsp;- &quot;Hard&quot; setting, you can not remove the application even after bezop. mode&amp;nbsp;- Blocks any action / application / user activity&amp;nbsp;- Encryption / decryption of files on a flash drive, if available in your device&amp;nbsp;- &quot;Listening&quot; all available signals on a device to intercept and start the application on each of them&amp;nbsp;- An attempt to &quot;kill&quot; any process at startup&amp;nbsp;- Working after reboot&amp;nbsp;- Have the ability to unlock or lock devaysa constant after entering the voucher&amp;nbsp;- Comfortable admin panel&amp;nbsp;- Web Landing complete&amp;nbsp;The main goal - getting Moneypak checks, soft ground under US androyd traffic&amp;nbsp;for other countries the application is not adapted.&amp;nbsp;screens&amp;nbsp;user posted image&amp;nbsp;user posted image&amp;nbsp;Important: I do not not crypto apk file and sortsy not sell.&amp;nbsp;I&#39;m right to refuse sale without explanation.&amp;nbsp;Rebuild to another domain for free, if your old domain bedrooms.&amp;nbsp;Appendix ank not give a test (or rather to give, but not all in a row) - fully lovers enthusiasts.&amp;nbsp;Payment is strictly through a guarantee or prepayment.&amp;nbsp;Price $ 2000 without bargaining&amp;nbsp;After purchase you get web Landing and apk file.&amp;nbsp;You just need to run and wait for traf checks.&amp;nbsp;knsant@exploit.im - OTR------------------------------------------Later Updates : Seller provided some numbers :------------------------------------------Умеете добывать андройд трафик?Приглашаю несколько человек посотрудничать с нашим софтом.Конверт жгет.Примерные показатили конверта:Download apk: 89690Launch apk: 1379All vouchers: 76Valid vouchers: 54~9к$Принимает от 50к трафика в сутки.------------------------------------------Able to produce androyd traffic?&amp;nbsp;Invite several people to collaborate with our software.&amp;nbsp;Zhget envelope.&amp;nbsp;Exemplary indicators envelope:&amp;nbsp;Download apk: 89690&amp;nbsp;Launch apk: 1379&amp;nbsp;All vouchers: 76&amp;nbsp;Valid vouchers: 54&amp;nbsp;~ $ 9k&amp;nbsp;Receives from 50k daily traffic.------------------------------------------And on the 16th he wrote about new countries targeted.knstant announcing DE, ES, FR and AU design were now available2014-07-16------------------------------------------I spotted a &quot;badvert&quot; yesterday on Spankwire (big (alexa 500 US, 800 worldwide) porn site) that was redirecting to a Browlock hidden behind cloudflare (after a jump on a keitaro TDS on 94.102.48.63)new Browlock on @youporn network - thanks to @kafeine for the info #malware #malvertising #infosec pic.twitter.com/C8rfi5Y86E— Malekal&#39;s site (@malekal_morte) August 6, 2014The Browlock was showing the exact same design than the one featured in that post : Titan Browlock System&amp;nbsp;so also advertised by konstant.Landing on this badvert with android from at least FR, ES and DE would prompt you with a virus alert (hidden behind cloudflare)Popup alert you could get while browsing Spankwirewith an Android Powered device &amp;amp;&amp;amp; Chrome Browser from FranceThen a file named Norton_Internet_Security.apk is downloaded.Launching it :Impersonates Norton Internet SecurityOn launch : fake ScanAfter fake Scan trying to get &quot;Administrator of the device&quot; rights(US version)I spotted 5 different APK on the server (which perfectly match what we saw in the advert):AU -&amp;nbsp;d6c6bc0dc803f7891b9db745c24de541DE -&amp;nbsp;06c7a02d49b97930fb9c696cde1350d1ES -&amp;nbsp;d21e1c0f992ed70c6881c1f31c7a555aFR -&amp;nbsp;e13523d97e2390ca4529abf06ebe01eeUS -&amp;nbsp;28726f772f6b4b63fb40696a28afafc9One country one apk...the coder should really take a look at : &quot;Localizing with Resources&quot;ScarePakage - DE - 2014-08-05ScarePakage - FR - 2014-08-05ScarePakage - ES - 2014-08-05ScarePakage - AU - 2014-08-05ScarePakage - US - 2014-08-05The locking feature is working far better than in Koler.C&amp;amp;Cverify-terms\.com/admcp/api.php(cloudflared ... )Sharing Infra with the Titan Browlock.Files :&amp;nbsp;ScarePakage_2014-08-06.zip (5 apk)Read More:ScarePakage – Fake FBI RansomLocker - 2014-07-24 -&amp;nbsp;Darien Huss&amp;nbsp;- Emerging ThreatsU.S. targeted by coercive mobile ransomware impersonating the FBI - 2014-07-16 - &amp;nbsp;Meghan Kelly&amp;nbsp; - Lookout">
+	<meta property="og:url" content="http://malware2.dontneedcoffee.com/2014/08/scarepackageknstant.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="A ScarePakage variant is targeting more countries :  impersonating Europol and AFP">
+	<meta name="twitter:description" content="(image from GadgetMaxim.comOn July 16th Lookout wrote about a new &quot;police ransomware&quot; on Android. They named it ScarePakage. (aliases : Eset:Android/Locker.B , Kaspersky:Trojan-Ransom.AndroidOS.Aples.a)It (or a variant ? seems Norton focused here) is advertised on underground since beginning of July as &quot;Android Locker&quot; by the seller of a fork of Titan Browlock System.ScarePakage advertised as &quot;Android Locker&quot; on underground - 2014-07-06Original text of the advert :------------------------------------------Android Locker, андройд локерИз функционала:- эмитация сканера нелегального контента (Hello Nortan!)- &quot;жесткая&quot; установка, невозможно удалить приложение даже через безоп. режим- блокирует любые действия/приложения/активность юзера- шифрование/дешифрование файлов на флешке, если она имеется в устройстве- &quot;прослушивание&quot; всех доступных сигналов на устройстве, перехват и старт приложения по каждому из них- попытка &quot;убить&quot; любой процесс при старте- работает после ребута- есть возможность разблокировки либо постоянной блокировки девайса после ввода ваучера- удобная админ панель- web лендинг в комплектеОсновная цель - получение Moneypak чеков, софт заточен под US андройд трафик,под другие страны приложение не адаптировано.СкриныВажно: я не не криптую апк файлы и сорцы не продаю.Я в праве отказать в продаже без объяснения причины.Ребилд на другой домен бесплатный, если ваш прежний домен спалился.Приложение апк не даю на тест (точнее даю, но не всем подряд) - полно любителей энтузиастов.Оплата строго через гарант или предоплата.Цена 2000$ без торгаПосле покупки вы получаете web лендинг и апк файл.Вам останется только запустить траф и ждать чеки.knsant@exploit.im - OTR&amp;nbsp;------------------------------------------Translated by Google as :------------------------------------------Android Locker, андройд локерWe developed our own product androyd locker.&amp;nbsp;Of the functional:&amp;nbsp;- Emitatsii scanner illegal content (Hello Nortan!)&amp;nbsp;- &quot;Hard&quot; setting, you can not remove the application even after bezop. mode&amp;nbsp;- Blocks any action / application / user activity&amp;nbsp;- Encryption / decryption of files on a flash drive, if available in your device&amp;nbsp;- &quot;Listening&quot; all available signals on a device to intercept and start the application on each of them&amp;nbsp;- An attempt to &quot;kill&quot; any process at startup&amp;nbsp;- Working after reboot&amp;nbsp;- Have the ability to unlock or lock devaysa constant after entering the voucher&amp;nbsp;- Comfortable admin panel&amp;nbsp;- Web Landing complete&amp;nbsp;The main goal - getting Moneypak checks, soft ground under US androyd traffic&amp;nbsp;for other countries the application is not adapted.&amp;nbsp;screens&amp;nbsp;user posted image&amp;nbsp;user posted image&amp;nbsp;Important: I do not not crypto apk file and sortsy not sell.&amp;nbsp;I&#39;m right to refuse sale without explanation.&amp;nbsp;Rebuild to another domain for free, if your old domain bedrooms.&amp;nbsp;Appendix ank not give a test (or rather to give, but not all in a row) - fully lovers enthusiasts.&amp;nbsp;Payment is strictly through a guarantee or prepayment.&amp;nbsp;Price $ 2000 without bargaining&amp;nbsp;After purchase you get web Landing and apk file.&amp;nbsp;You just need to run and wait for traf checks.&amp;nbsp;knsant@exploit.im - OTR------------------------------------------Later Updates : Seller provided some numbers :------------------------------------------Умеете добывать андройд трафик?Приглашаю несколько человек посотрудничать с нашим софтом.Конверт жгет.Примерные показатили конверта:Download apk: 89690Launch apk: 1379All vouchers: 76Valid vouchers: 54~9к$Принимает от 50к трафика в сутки.------------------------------------------Able to produce androyd traffic?&amp;nbsp;Invite several people to collaborate with our software.&amp;nbsp;Zhget envelope.&amp;nbsp;Exemplary indicators envelope:&amp;nbsp;Download apk: 89690&amp;nbsp;Launch apk: 1379&amp;nbsp;All vouchers: 76&amp;nbsp;Valid vouchers: 54&amp;nbsp;~ $ 9k&amp;nbsp;Receives from 50k daily traffic.------------------------------------------And on the 16th he wrote about new countries targeted.knstant announcing DE, ES, FR and AU design were now available2014-07-16------------------------------------------I spotted a &quot;badvert&quot; yesterday on Spankwire (big (alexa 500 US, 800 worldwide) porn site) that was redirecting to a Browlock hidden behind cloudflare (after a jump on a keitaro TDS on 94.102.48.63)new Browlock on @youporn network - thanks to @kafeine for the info #malware #malvertising #infosec pic.twitter.com/C8rfi5Y86E— Malekal&#39;s site (@malekal_morte) August 6, 2014The Browlock was showing the exact same design than the one featured in that post : Titan Browlock System&amp;nbsp;so also advertised by konstant.Landing on this badvert with android from at least FR, ES and DE would prompt you with a virus alert (hidden behind cloudflare)Popup alert you could get while browsing Spankwirewith an Android Powered device &amp;amp;&amp;amp; Chrome Browser from FranceThen a file named Norton_Internet_Security.apk is downloaded.Launching it :Impersonates Norton Internet SecurityOn launch : fake ScanAfter fake Scan trying to get &quot;Administrator of the device&quot; rights(US version)I spotted 5 different APK on the server (which perfectly match what we saw in the advert):AU -&amp;nbsp;d6c6bc0dc803f7891b9db745c24de541DE -&amp;nbsp;06c7a02d49b97930fb9c696cde1350d1ES -&amp;nbsp;d21e1c0f992ed70c6881c1f31c7a555aFR -&amp;nbsp;e13523d97e2390ca4529abf06ebe01eeUS -&amp;nbsp;28726f772f6b4b63fb40696a28afafc9One country one apk...the coder should really take a look at : &quot;Localizing with Resources&quot;ScarePakage - DE - 2014-08-05ScarePakage - FR - 2014-08-05ScarePakage - ES - 2014-08-05ScarePakage - AU - 2014-08-05ScarePakage - US - 2014-08-05The locking feature is working far better than in Koler.C&amp;amp;Cverify-terms\.com/admcp/api.php(cloudflared ... )Sharing Infra with the Titan Browlock.Files :&amp;nbsp;ScarePakage_2014-08-06.zip (5 apk)Read More:ScarePakage – Fake FBI RansomLocker - 2014-07-24 -&amp;nbsp;Darien Huss&amp;nbsp;- Emerging ThreatsU.S. targeted by coercive mobile ransomware impersonating the FBI - 2014-07-16 - &amp;nbsp;Meghan Kelly&amp;nbsp; - Lookout">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-tree"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/blog/">Blog</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/external/">External Blog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/headers/">Header Styles</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-full-width-image/">Header with Full-Width-Image</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-pattern/">Header with Image and Pattern</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-image-color/">Header with image and color</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-logo-only/">Header Only With Logo</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/header-with-text/">Header With Text</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header/">No Header</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/design/no-header-but-image/">No Header but Image</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+
+              <li class="has-dropdown">
+                <a href="http://malware2.dontneedcoffee.com/documentation/">Documentation</a>
+
+                  <ul class="dropdown">
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/changelog/">Changelog</a></li>
+                    
+
+                      
+
+                      <li><a href="http://malware2.dontneedcoffee.com/roadmap/">Roadmap</a></li>
+                    
+                  </ul>
+
+              </li>
+              <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-12 columns">
+			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					
+					<h1>A ScarePakage variant is targeting more countries :  impersonating Europol and AFP</h1>
+				</div>
+			</header>
+
+
+			
+
+			<div itemprop="articleSection">
+			<div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-3_i-ggVbaBc/U-JraPmyOwI/AAAAAAAADlQ/H4S_9RCQWY4/s1600/screenshot_2014-08-06_048.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-3_i-ggVbaBc/U-JraPmyOwI/AAAAAAAADlQ/H4S_9RCQWY4/s1600/screenshot_2014-08-06_048.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: xx-small;">(image from GadgetMaxim.com</span></td></tr></tbody></table><br /><br /></div><div>On July 16th Lookout <a href="https://blog.lookout.com/blog/2014/07/16/scarepakage/">wrote about a new "police ransomware"</a> on Android. They named it ScarePakage. <span style="font-size: x-small;">(aliases : Eset:Android/Locker.B , Kaspersky:Trojan-Ransom.AndroidOS.Aples.a)</span></div><div><br /></div><div>It (<i><span style="font-size: x-small;">or a variant ? seems Norton focused here</span></i>) is advertised on underground since beginning of July as "Android Locker" by the seller of a fork of <a href="http://malware.dontneedcoffee.com/2014/06/titan-browlock-system.html">Titan Browlock System</a>.</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-F0V5iE9FvYI/U-JEQnplV8I/AAAAAAAADiQ/pbFaqH086nw/s1600/screenshot_2014-08-06_037.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-F0V5iE9FvYI/U-JEQnplV8I/AAAAAAAADiQ/pbFaqH086nw/s1600/screenshot_2014-08-06_037.png" height="480" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">ScarePakage advertised as "Android Locker" on underground - 2014-07-06</td></tr></tbody></table><div>Original text of the advert :</div><div>------------------------------------------</div><div><span style="color: #38761d;"><b>Android Locker</b>, андройд локер</span></div><div><span style="color: #38761d;"><br /></span></div><div><span style="color: #38761d;"><b>Из функционала:</b><br />- эмитация сканера нелегального контента (Hello Nortan!)<br />- "жесткая" установка, невозможно удалить приложение даже через безоп. режим<br />- блокирует любые действия/приложения/активность юзера<br />- шифрование/дешифрование файлов на флешке, если она имеется в устройстве<br />- "прослушивание" всех доступных сигналов на устройстве, перехват и старт приложения по каждому из них<br />- попытка "убить" любой процесс при старте<br />- работает после ребута<br />- есть возможность разблокировки либо постоянной блокировки девайса после ввода ваучера<br />- удобная админ панель<br />- web лендинг в комплекте<br /><br />Основная цель - получение Moneypak чеков, софт заточен под US андройд трафик,<br />под другие страны приложение не адаптировано.<br /><br />Скрины</span></div><div><span style="color: #38761d;"><br /></span></div><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-RxWufEMKJKM/U-JGa9pGL-I/AAAAAAAADik/Ln9l4QXeBiI/s1600/screenshot_2014-08-06_038.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><span style="color: #38761d;"><img border="0" src="http://2.bp.blogspot.com/-RxWufEMKJKM/U-JGa9pGL-I/AAAAAAAADik/Ln9l4QXeBiI/s1600/screenshot_2014-08-06_038.png" height="320" width="316" /></span></a></div><div><span style="color: #38761d;"><br /></span></div><div><span style="color: #38761d;"><br /></span></div><div><span style="color: #38761d;"><b>Важно</b>: я не не криптую апк файлы и сорцы не продаю.<br />Я в праве отказать в продаже без объяснения причины.<br />Ребилд на другой домен бесплатный, если ваш прежний домен спалился.<br />Приложение апк не даю на тест (точнее даю, но не всем подряд) - полно любителей энтузиастов.<br />Оплата строго через гарант или предоплата.<br /><br /><b>Цена</b> 2000$ без торга<br />После покупки вы получаете web лендинг и апк файл.<br />Вам останется </span><br /><div class="separator" style="clear: both; text-align: center;"><span style="color: #38761d;"><br /></span></div><span style="color: #38761d;">только запустить траф и ждать чеки.<br /><br />knsant@exploit.im - OTR&nbsp;</span></div><div><br /></div><div>------------------------------------------</div><div>Translated by Google as :</div><div>------------------------------------------</div><div><span style="color: #351c75;"><b>Android Locker</b>, андройд локер</span></div><div><span style="color: #351c75;"><br /></span></div><div><div><span style="color: #351c75;">We developed our own product androyd locker.&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><b><span style="color: #351c75;">Of the functional:&nbsp;</span></b></div><div><span style="color: #351c75;">- Emitatsii scanner illegal content (Hello Nortan!)&nbsp;</span></div><div><span style="color: #351c75;">- "Hard" setting, you can not remove the application even after bezop. mode&nbsp;</span></div><div><span style="color: #351c75;">- Blocks any action / application / user activity&nbsp;</span></div><div><span style="color: #351c75;">- Encryption / decryption of files on a flash drive, if available in your device&nbsp;</span></div><div><span style="color: #351c75;">- "Listening" all available signals on a device to intercept and start the application on each of them&nbsp;</span></div><div><span style="color: #351c75;">- An attempt to "kill" any process at startup&nbsp;</span></div><div><span style="color: #351c75;">- Working after reboot&nbsp;</span></div><div><span style="color: #351c75;">- Have the ability to unlock or lock devaysa constant after entering the voucher&nbsp;</span></div><div><span style="color: #351c75;">- Comfortable admin panel&nbsp;</span></div><div><span style="color: #351c75;">- Web Landing complete&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;">The main goal - getting Moneypak checks, soft ground under US androyd traffic&nbsp;</span></div><div><span style="color: #351c75;">for other countries the application is not adapted.&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;">screens&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;">user posted image&nbsp;</span></div><div><span style="color: #351c75;">user posted image&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;"><b>Important:</b> I do not not crypto apk file and sortsy not sell.&nbsp;</span></div><div><span style="color: #351c75;">I'm right to refuse sale without explanation.&nbsp;</span></div><div><span style="color: #351c75;">Rebuild to another domain for free, if your old domain bedrooms.&nbsp;</span></div><div><span style="color: #351c75;">Appendix ank not give a test (or rather to give, but not all in a row) - fully lovers enthusiasts.&nbsp;</span></div><div><span style="color: #351c75;">Payment is strictly through a guarantee or prepayment.&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;"><b>Price</b> $ 2000 without bargaining&nbsp;</span></div><div><span style="color: #351c75;">After purchase you get web Landing and apk file.&nbsp;</span></div><div><span style="color: #351c75;">You just need to run and wait for traf checks.&nbsp;</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;">knsant@exploit.im - OTR</span></div></div><div>------------------------------------------<br /><br />Later Updates : Seller provided some numbers :<br />------------------------------------------<br /><span style="color: #38761d;">Умеете добывать андройд трафик?<br />Приглашаю несколько человек посотрудничать с нашим софтом.<br />Конверт жгет.<br /><br />Примерные показатили конверта:<br /><br />Download apk: 89690<br />Launch apk: 1379<br />All vouchers: 76<br />Valid vouchers: 54<br /><br />~9к$<br /><br />Принимает от 50к трафика в сутки.</span><br />------------------------------------------<br /><span style="color: #134f5c;">Able to produce androyd traffic?&nbsp;</span><br /><span style="color: #134f5c;">Invite several people to collaborate with our software.&nbsp;</span><br /><span style="color: #134f5c;">Zhget envelope.&nbsp;</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">Exemplary indicators envelope:&nbsp;</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">Download apk: 89690&nbsp;</span><br /><span style="color: #134f5c;">Launch apk: 1379&nbsp;</span><br /><span style="color: #134f5c;">All vouchers: 76&nbsp;</span><br /><span style="color: #134f5c;">Valid vouchers: 54&nbsp;</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">~ $ 9k&nbsp;</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">Receives from 50k daily traffic.</span><br />------------------------------------------<br /><br />And on the 16th he wrote about new countries targeted.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-a50prc27T_U/U-JqpaqrpqI/AAAAAAAADlI/LmsqgCa7C0A/s1600/screenshot_2014-08-06_054.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-a50prc27T_U/U-JqpaqrpqI/AAAAAAAADlI/LmsqgCa7C0A/s1600/screenshot_2014-08-06_054.png" height="550" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">knstant announcing DE, ES, FR and AU design were now available<br />2014-07-16</td></tr></tbody></table>------------------------------------------<br /><br /></div><div>I spotted a "badvert" yesterday on Spankwire (big (<span style="font-size: xx-small;">alexa 500 US, 800 worldwide</span>) porn site) that was redirecting to a Browlock hidden behind cloudflare (after a jump on a keitaro TDS on 94.102.48.63)<br /><blockquote class="twitter-tweet" lang="en">new Browlock on <a href="https://twitter.com/YouPorn">@youporn</a> network - thanks to <a href="https://twitter.com/kafeine">@kafeine</a> for the info <a href="https://twitter.com/hashtag/malware?src=hash">#malware</a> <a href="https://twitter.com/hashtag/malvertising?src=hash">#malvertising</a> <a href="https://twitter.com/hashtag/infosec?src=hash">#infosec</a> <a href="http://t.co/C8rfi5Y86E">pic.twitter.com/C8rfi5Y86E</a><br />— Malekal's site (@malekal_morte) <a href="https://twitter.com/malekal_morte/statuses/496920648959414273">August 6, 2014</a></blockquote><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-_uC0lwU1s2o/U-JKVtNGLBI/AAAAAAAADiw/fCU4A0bkI6c/s1600/screenshot_2014-08-06_039.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-_uC0lwU1s2o/U-JKVtNGLBI/AAAAAAAADiw/fCU4A0bkI6c/s1600/screenshot_2014-08-06_039.png" height="222" width="320" /></a></div><br /><br />The Browlock was showing the exact same design than the one featured in that post : <a href="http://malware.dontneedcoffee.com/2014/06/titan-browlock-system.html">Titan Browlock System</a>&nbsp;so also advertised by konstant.<br /><br />Landing on this badvert with android from at least FR, ES and DE would prompt you with a virus alert (hidden behind cloudflare)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-lpVBSc24DFQ/U-JP0NnbFVI/AAAAAAAADjA/PQfFYSLjqGE/s1600/screenshot_2014-08-06_040.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-lpVBSc24DFQ/U-JP0NnbFVI/AAAAAAAADjA/PQfFYSLjqGE/s1600/screenshot_2014-08-06_040.png" height="640" width="380" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Popup alert you could get while browsing Spankwire<br />with an Android Powered device &amp;&amp; Chrome Browser from France</td></tr></tbody></table>Then a file named Norton_Internet_Security.apk is downloaded.<br /><br />Launching it :<br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-Oua8dVrYDCU/U-JQqrfaR7I/AAAAAAAADjI/QyOMXyT6rk8/s1600/screenshot_2014-08-06_005.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-Oua8dVrYDCU/U-JQqrfaR7I/AAAAAAAADjI/QyOMXyT6rk8/s1600/screenshot_2014-08-06_005.png" height="320" width="317" /></a></div><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/-wd1fblYS6wM/U-JRPapdO5I/AAAAAAAADjU/B5JdYMHcPQM/s1600/screenshot_2014-08-06_006.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://1.bp.blogspot.com/-wd1fblYS6wM/U-JRPapdO5I/AAAAAAAADjU/B5JdYMHcPQM/s1600/screenshot_2014-08-06_006.png" height="320" width="316" /></a></div><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-RevDr0ODhAk/U-JR6LQ9SQI/AAAAAAAADjk/qWGmfdk9axI/s1600/screenshot_2014-08-06_028.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-RevDr0ODhAk/U-JR6LQ9SQI/AAAAAAAADjk/qWGmfdk9axI/s1600/screenshot_2014-08-06_028.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Impersonates Norton Internet Security</td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-DXLw2gBFOP0/U-JRuWQa0jI/AAAAAAAADjc/PbTJVYFw1Zo/s1600/screenshot_2014-08-06_009.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-DXLw2gBFOP0/U-JRuWQa0jI/AAAAAAAADjc/PbTJVYFw1Zo/s1600/screenshot_2014-08-06_009.png" height="400" width="251" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">On launch : fake Scan</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-p4oITc4SDao/U-JSJYYvXoI/AAAAAAAADjs/pE6kDMagvpA/s1600/screenshot_2014-08-06_029.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-p4oITc4SDao/U-JSJYYvXoI/AAAAAAAADjs/pE6kDMagvpA/s1600/screenshot_2014-08-06_029.png" height="640" width="414" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">After fake Scan trying to get "Administrator of the device" rights<br />(US version)</td></tr></tbody></table>I spotted 5 different APK on the server (which perfectly match what we saw in the advert):<br />AU -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/bf4a72cd7a12abd1dfc43c78c325026a93e0a3c9414a6c86c2b72f03de985ab8/analysis/1407335921/">d6c6bc0dc803f7891b9db745c24de541</a></span><br />DE -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/87ab7f918a4794a1d449a972bd68f51b5b2146896624fe01476fc276ef6e2b12/analysis/1407335605/">06c7a02d49b97930fb9c696cde1350d1</a></span><br />ES -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/f172a87f27d4063698841a34df879a547568046dc3875645255a1b13103c0e6b/analysis/1407335595/">d21e1c0f992ed70c6881c1f31c7a555a</a></span><br />FR -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/924f1d64fa1c4e4e711e8268f1708f22ac3c2d3428c225a848824112003c9254/analysis/1407314604/">e13523d97e2390ca4529abf06ebe01ee</a></span><br />US -&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/ebed6a20738f68787e19eaafc725bc8c76fba6b104e468ddcfb05a4d88a11811/analysis/1407335599/">28726f772f6b4b63fb40696a28afafc9</a></span><br /><br />One country one apk...the coder should really take a look at : "<a href="http://developer.android.com/guide/topics/resources/localization.html">Localizing with Resources</a>"<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-iCvUvwDMPUE/U-JWoOW3p4I/AAAAAAAADkQ/D8P0UzyI_zI/s1600/screenshot_2014-08-06_043.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-iCvUvwDMPUE/U-JWoOW3p4I/AAAAAAAADkQ/D8P0UzyI_zI/s1600/screenshot_2014-08-06_043.png" height="322" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">ScarePakage - DE - 2014-08-05</td></tr></tbody></table><br /><br /><div class="separator" style="clear: both; text-align: center;"><br /></div><div class="separator" style="clear: both; text-align: center;"><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-OaiVm9JjGBM/U-JVUf_b4aI/AAAAAAAADj4/BtU007RgPIA/s1600/screenshot_2014-08-06_041.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-OaiVm9JjGBM/U-JVUf_b4aI/AAAAAAAADj4/BtU007RgPIA/s1600/screenshot_2014-08-06_041.png" height="640" width="606" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 13.3333339691162px;">ScarePakage - FR - 2014-08-05</span></td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-tJjPXVfZtV0/U-JV8dkXgHI/AAAAAAAADkA/X4vuGSjw0nw/s1600/screenshot_2014-08-06_042.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-tJjPXVfZtV0/U-JV8dkXgHI/AAAAAAAADkA/X4vuGSjw0nw/s1600/screenshot_2014-08-06_042.png" height="334" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 13.3333339691162px;">ScarePakage - ES - 2014-08-05</span></td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-F8dm57keFIg/U-JWUsY_SzI/AAAAAAAADkI/TpOlcLx68gY/s1600/screenshot_2014-08-06_025.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-F8dm57keFIg/U-JWUsY_SzI/AAAAAAAADkI/TpOlcLx68gY/s1600/screenshot_2014-08-06_025.png" height="640" width="424" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 13.3333339691162px;">ScarePakage - AU - 2014-08-05</span></td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-hOyB5IvscFQ/U-JXE06LceI/AAAAAAAADkY/6NLhinYvZu8/s1600/screenshot_2014-08-06_044.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-hOyB5IvscFQ/U-JXE06LceI/AAAAAAAADkY/6NLhinYvZu8/s1600/screenshot_2014-08-06_044.png" height="322" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><span style="font-size: 13.3333339691162px;">ScarePakage - US - 2014-08-05</span></td></tr></tbody></table><br />The locking feature is working far better than in <a href="http://malware.dontneedcoffee.com/2014/05/police-locker-available-for-your.html">Koler</a>.<br /><br />C&amp;C<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-SeaiQ94PcYM/U-JY9faxp9I/AAAAAAAADkk/X88HWZeDf1I/s1600/screenshot_2014-08-06_045.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-SeaiQ94PcYM/U-JY9faxp9I/AAAAAAAADkk/X88HWZeDf1I/s1600/screenshot_2014-08-06_045.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">verify-terms\.com/admcp/api.php<br />(cloudflared ... )</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-wLmdL4ou-wU/U-JZkrOdUOI/AAAAAAAADks/uoOqSj70ass/s1600/screenshot_2014-08-06_046.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-wLmdL4ou-wU/U-JZkrOdUOI/AAAAAAAADks/uoOqSj70ass/s1600/screenshot_2014-08-06_046.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Sharing Infra with the Titan Browlock.</td></tr></tbody></table><br /><br /><br /><b><u>Files :</u></b>&nbsp;<a href="http://goo.gl/hbDNVM">ScarePakage_2014-08-06.zip</a> (5 apk)<br /><br /><b><u>Read More:</u></b><br /><a href="http://emergingthreats.net/scarepakage-fake-fbi-ransomlocker/">ScarePakage – Fake FBI RansomLocker</a> - 2014-07-24 -&nbsp;Darien Huss&nbsp;- Emerging Threats<br /><a href="https://blog.lookout.com/blog/2014/07/16/scarepakage/">U.S. targeted by coercive mobile ransomware impersonating the FBI</a> - 2014-07-16 - &nbsp;Meghan Kelly&nbsp; - Lookout<br /><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://malware.dontneedcoffee.com/" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2014-08-06" itemprop="datePublished"> 2014-08-06</time>
+				
+
+				<span class="icon-archive pr20"> </span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Knstant</span> <span class="icon-price-tag pr10"> Locker.B</span> <span class="icon-price-tag pr10"> Aples.A</span> <span class="icon-price-tag pr10"> Konstant</span> <span class="icon-price-tag pr10"> Locker</span> <span class="icon-price-tag pr10"> Ransomware</span> <span class="icon-price-tag pr10"> ScarePakage</span> <span class="icon-price-tag pr10"> Android</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware2.dontneedcoffee.com/2014/07/ctb-locker.html">&laquo; "Crypto Ransomware" CTB-Locker (Critroni.A) on the rise</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware2.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware2.dontneedcoffee.com/design/page-fullwidth/">The Full-Width Page Template &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of  »caffeine« deprivation!
+              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://github.com/MISP" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-3016897-22', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
