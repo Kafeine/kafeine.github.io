@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware2.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-03T14:05:35+01:00</updated>
+	<updated>2018-03-03T14:34:56+01:00</updated>
 
 	<subtitle>Sleep is a symptom of  »caffeine« deprivation!</subtitle>
 
@@ -15,6 +15,8 @@
 				<name>Kafeine</name>
 			
 			
+			
+				<uri>https://malware.dontneedcoffee.com/</uri>
 			
 		</author>
 	
@@ -38,6 +40,8 @@
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -100,6 +104,8 @@
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -567,6 +573,8 @@ element&lt;/td&gt;
 					
 					
 					
+						<uri>https://malware.dontneedcoffee.com/</uri>
+					
 				</author>
 			
 			<summary>For a blog you need comments. Like all those other jekyll themes we baked in Disqus. It's easy to set, it works and makes a static jekyll blog more dynamic.</summary>
@@ -597,6 +605,8 @@ element&lt;/td&gt;
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -661,6 +671,8 @@ element&lt;/td&gt;
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -729,6 +741,8 @@ image:
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -799,6 +813,8 @@ image:
 					
 					
 					
+						<uri>https://malware.dontneedcoffee.com/</uri>
+					
 				</author>
 			
 			<summary>Feeling Responsive allows you to use all kinds of headers. This is the default mode. It shows a header just with your logo on the standard background.</summary>
@@ -859,6 +875,8 @@ image:
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
@@ -933,6 +951,8 @@ image:
 					
 					
 					
+						<uri>https://malware.dontneedcoffee.com/</uri>
+					
 				</author>
 			
 			<summary>Feeling Responsive allows you to use all kinds of headers. This example shows a header with a &lt;em&gt;full-width-image&lt;/em&gt;.</summary>
@@ -1001,6 +1021,8 @@ image:
 						<name>Kafeine</name>
 					
 					
+					
+						<uri>https://malware.dontneedcoffee.com/</uri>
 					
 				</author>
 			
