@@ -1,2 +1,1 @@
-User-agent: *
 Sitemap: http://malware2.dontneedcoffee.com/sitemap.xml

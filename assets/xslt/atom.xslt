@@ -141,6 +141,14 @@
 
           
           
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
         
 
               
@@ -150,7 +158,7 @@
             
             
               <li class="divider"></li>
-              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
 
             
             
@@ -218,21 +226,6 @@
 
               </li>
               <li class="divider"></li>
-            
-          
-        
-
-              
-
-          
-          
-
-            
-            
-              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
-              <li class="divider"></li>
-
-            
             
           
         
@@ -321,6 +314,12 @@
               </li>
               <li class="divider"></li>
             
+          
+        
+
+              
+
+          
           
         
 
