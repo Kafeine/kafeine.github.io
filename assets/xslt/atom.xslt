@@ -123,6 +123,12 @@
 
           
           
+        
+
+              
+
+          
+          
             
             
               <li class="divider"></li>
@@ -182,17 +188,27 @@
 
                       
 
-                      <li><a href="http://malware2.dontneedcoffee.com/external/">External Posts</a></li>
-                    
-
-                      
-
                       <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Blog Archive</a></li>
                     
                   </ul>
 
               </li>
               <li class="divider"></li>
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware2.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
             
           
         
