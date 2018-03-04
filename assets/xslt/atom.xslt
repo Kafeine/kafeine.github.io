@@ -123,12 +123,6 @@
 
           
           
-        
-
-              
-
-          
-          
             
             
               <li class="divider"></li>
@@ -170,21 +164,6 @@
       </ul>
 
       <ul class="left">
-        
-
-              
-
-          
-          
-
-            
-            
-              <li><a href="http://malware2.dontneedcoffee.com/">Home</a></li>
-              <li class="divider"></li>
-
-            
-            
-          
         
 
               
