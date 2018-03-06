@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware2.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-06T12:30:43+01:00</updated>
+	<updated>2018-03-07T00:55:08+01:00</updated>
 
 	<subtitle>Sleep is a symptom of  »caffeine« deprivation!</subtitle>
 
@@ -26,6 +26,600 @@
 
 	<generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://malware2.dontneedcoffee.com/hosted/anynous/kotd.html</id>
+			<title>The King of traffic distribution</title>
+			<link href="http://malware2.dontneedcoffee.com/hosted/anynous/kotd.html" rel="alternate" type="text/html" title="The King of traffic distribution" />
+			<updated>2018-03-06T21:30:39+01:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Anonymous</name>
+					
+					
+					
+				</author>
+			
+			<summary>__Disclaimer__: This post is hosted here as a courtesy for his author who prefer remaining anonymous. In no way MDNC helped or was involved at any step of this study</summary>
+			<content type="html" xml:base="http://malware2.dontneedcoffee.com/hosted/anynous/kotd.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;EITest is one of the longest malicious delivery campaigns that has continued to evolve. In the spring of 2017, it started redirecting Internet Explorer users to tech support scams in addition to the existing redirections with the fake Chrome fonts.&lt;/p&gt;
+
+&lt;p&gt;We believe the tech support scam campaign we are describing in this post is one of the most widespread and well organized because it relies on several schemes in addition to EITest, such as traffic redirection using a distributed system infrastructure.&lt;/p&gt;
+
+&lt;p&gt;Actors behind this campaign are generating hundreds of domains per day.The only purpose of those domains names is to redirect users to tech support scams or malicious websites.&lt;/p&gt;
+&lt;h2 id=&quot;highlights&quot;&gt;Highlights&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;We were able to redirect a considerable amount of traffic destined to Tech Support Scam websites to a controlled infrastructure for a period of 8 hours. After they fixed the flaw that allowed us to do that, we were able to bypass the new protection in place to take control again of the traffic for another 6 hours.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We discovered a network of bots controlled by a fraudulent Traffic Monetization company&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We’ve collected a list of 1562+1294 compromised websites responsible for the redirections of users to scams&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The actors are generating over 100 new domains each day to serve TSS via &lt;a href=&quot;http://www.freenom.com&quot;&gt;Freenom&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-scam&quot;&gt;The scam&lt;/h2&gt;
+&lt;p&gt;The landing page sometimes changes, but always has the same goal: trying to take control of the browser so the user cannot close it, in hopes that they will panic and call the phone number for assistance.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/TSS-IE.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tech support scammer (TSS) are sometimes changing the landing page to better abuse the browser. Anyhow, this is what the current landing page looks like.&lt;/p&gt;
+
+&lt;p&gt;People that call those numbers will be told how to install a remote control software so the interlocutor can show Windows log events and services to the user, pretending that those are signs of an infected machine. The crooks will then offer a remote reparation service varying from $100 to $600.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Tech Support Scammer.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;look-at-different-redirection-mechanisms&quot;&gt;Look at different redirection mechanisms&lt;/h2&gt;
+&lt;p&gt;While analyzing the different ways for a user to be redirected to those scam support pages that try to hijack the browsers, we quickly documented multiple different redirection schemes using many different infrastructure. For this reason, we believe that many differents actors are responsible for sending traffic to the redirection network. Let’s begin by describing the most prolific methods of redirections.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Redirections_mechanisms.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;eitest-redirection&quot;&gt;EITest Redirection&lt;/h2&gt;
+&lt;p&gt;EITest infected websites have the capability of injecting javascript in page upon loading. We can observe redirections to tech support scam (TSS) websites &lt;a href=&quot;http://www.malware-traffic-analysis.net/2017/05/25/index3.html&quot;&gt;since 2017&lt;/a&gt;. The injection that occurs when the victim’s user-agent is IE, Edge or Firefox, is the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/EITest TSS.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This script will, after verifying that it is running  in a real browser, set a cookie named “&lt;strong&gt;popundr&lt;/strong&gt;” and redirect the user at a decoy URL, &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://checkalldir.bid/index/?MGjJPm&lt;/code&gt; in this case. Decoy domains injected resolve to IP &lt;strong&gt;204.155.28.5&lt;/strong&gt;, in a range belonging to KING-SERVERS (AS 14576). Since 2018-02-26, injected domains were resolving to IP &lt;strong&gt;54.36.180.110&lt;/strong&gt; at OVH instead (AS16276). It later changed back to &lt;strong&gt;162.244.35.33&lt;/strong&gt;, where TSS domains are now pointing.&lt;/p&gt;
+
+&lt;p&gt;This EITest campaign is generating ~1 new domain per day (usually with the TLD .bid). Those are easily recognizable by their patterns “&lt;strong&gt;/?{6 characters}&lt;/strong&gt;” in the URL, but the pattern is changing about 4 times per day. The reason they are using a decoy URL and a specific pattern is so they can be routed through their Keitaro TDS (traffic distribution system). In fact, we can browse to the panel of this TDS by accessing it with the IP address at URN &lt;strong&gt;/admin&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/tds.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Routing requests to their TDS before landing on the final destination allows them to have better control of the traffic and manage multiple campaigns. They are also doing more filtering on who will be redirected through this URL. We know that they are verifying at least the user-agent of the requester before allowing any redirection. Here is what will happen when the victims get redirected to one of those domains:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Curl referenz.bid.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, querying the decoy EITest URL with an user-agent set to “MSIE” was enough for the TDS to send a 302 redirection to the landing page: &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://coloured-canvas.tk/?number=800-803-1741&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;crypper-redirection&quot;&gt;Crypper Redirection&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Crypper Redirection.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This campaign generates about 165 redirections / hour. Website &lt;code class=&quot;highlighter-rouge&quot;&gt;luyengame.com&lt;/code&gt; was responsible for 904 redirections (68%).&lt;/p&gt;
+
+&lt;p&gt;For this redirection, we were able to get our hands on the malicious PHP file that is responsible for the generation of the script that redirects users:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Crypper code.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The PHP code will start by hiding any errors from the output and get the user-agent and referer of the visitor. Prior to the creation of the javascript that will redirect the user, the code checks that the visitor is not a bot (crawler) and that the visitor is not on a mobile device. If those checks pass, it will fetch the current Tech Support Scam (TSS) domain &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://roi777.com/domain.php&lt;/code&gt; and append the path “&lt;strong&gt;/index/?2661511868997&lt;/strong&gt;” to it.&lt;/p&gt;
+
+&lt;p&gt;Finally, the function “&lt;strong&gt;redirectdd&lt;/strong&gt;” is called with the created URL and the script will output with the latest domain that &lt;code class=&quot;highlighter-rouge&quot;&gt;roi777.com&lt;/code&gt; provided:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Crypper TSS.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The script then sets a cookie “&lt;strong&gt;1561065164894_CRYPPER&lt;/strong&gt;” and redirects the user with &lt;strong&gt;window.location&lt;/strong&gt;. Although simple, this script is efficient enough to redirect many visitors.&lt;/p&gt;
+
+&lt;h2 id=&quot;biz-redirection&quot;&gt;Biz Redirection&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Biz Redirection.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This campaign generates about 1888 redirections / hour. Website &lt;code class=&quot;highlighter-rouge&quot;&gt;myilifestyle.com&lt;/code&gt; was responsible for 1199 redirections (8%) and &lt;code class=&quot;highlighter-rouge&quot;&gt;www.fertilitychef.com&lt;/code&gt; for 1091 (7%) of the redirections.&lt;/p&gt;
+
+&lt;p&gt;This redirection is distinguishable with the added path to the TSS domain: “&lt;strong&gt;/index/?2171506271081&lt;/strong&gt;”.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Biz Code.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The script will fetch another script from &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://5.45.67.97/1/jquery.js.php&lt;/code&gt; and run it, leading to a redirection:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Biz Redirection.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;plugin-redirection&quot;&gt;Plugin Redirection&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Plugin Redirection.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This campaign generates about 184 redirections / hour. Website &lt;code class=&quot;highlighter-rouge&quot;&gt;Archive-s54.info&lt;/code&gt;  was responsible for 119 redirections (8%).&lt;/p&gt;
+
+&lt;p&gt;This campaign has malicious Javascript slightly obfuscated by using the “reverse string” function:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Plugin TSS.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are a few variants of this script containing different URLs. By applying the reverse string function again on the string containing the malicious URL, we were able to identified all of them:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;hxxp://kodmax.com/wp-content/plugins/twitter-widget-pro/lib/&lt;INFECTED.PHP&gt;&lt;/INFECTED.PHP&gt;&lt;/li&gt;
+  &lt;li&gt;hxxp://www.katiatenti.com/wp-content/plugins/sydney-toolbox/inc/&lt;INFECTED.PHP&gt;&lt;/INFECTED.PHP&gt;&lt;/li&gt;
+  &lt;li&gt;hxxp://emarketing-immobilier.com/wp-content/plugins/gotmls/safe-load/&lt;INFECTED.PHP&gt;&lt;/INFECTED.PHP&gt;&lt;/li&gt;
+  &lt;li&gt;hxxp://stefanialeto.it/wp-content/plugins/flexible-lightbox/css/&lt;INFECTED.PHP&gt;&lt;/INFECTED.PHP&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Once visited, those PHP files will set a cookie and redirect the user to the TSS landing page with the parameter “&lt;strong&gt;/index/?2101505838590&lt;/strong&gt;” without further verification:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Kodmax redirection.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Clearly, those four (4) website redirecting users have been hacked. One of them has the directory listing enabled, allowing us to see that the malicious file has been put there on 2017-11-17. It is probably at this date that this campaign started. Also, as &lt;a href=&quot;http://malware-traffic-analysis.net/2018/01/06/index.html&quot;&gt;another malware researcher did&lt;/a&gt;, we can search for some of the unique constants in the javascript file on Google and find more than 8000 indexed websites that are apparently infected with this script:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Google Query.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Sometimes, the script gets injected multiple times within a page or in a way that it doesn’t work. For example, this website got defaced with the badly injected javascript:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Basham Radio.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We went one step further when we realized that those malicious PHP files redirecting the users were logging every queries received in a .txt file accessible on the same server. For each redirected user, we had the timestamp of the query, their IP address, referrer and their user-agent. We then downloaded the logs for each of those 4 websites to index them in a database. To consider a request unique, we looked at the hash of: The &lt;strong&gt;timestamp&lt;/strong&gt; of the request + the victim &lt;strong&gt;IP&lt;/strong&gt; + the &lt;strong&gt;referer&lt;/strong&gt; domain name.&lt;/p&gt;
+
+&lt;p&gt;This allowed us to determine that more than 7400 unique redirections happened since february 20.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/chart.png&quot; alt=&quot;alt text&quot; /&gt;
+Country of redirected users for the ‘Plugin’ redirection&lt;/p&gt;
+
+&lt;p&gt;The campaign is still going on so the numbers are constantly increasing. We also looked at unique domains in the referer field. We spotted ~1294 different domains redirected those users. The ones that redirected the most users are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Revista.academiamaestre.es&lt;/code&gt; (5678 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;admission.covenantuniversity.edu.ng&lt;/code&gt; (1947 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;blog.apartmentfinder.com&lt;/code&gt;  (1844 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;rockthedirt.com&lt;/code&gt; (1566 redirections)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;location-for-expert-redirection&quot;&gt;Location For Expert Redirection&lt;/h2&gt;
+&lt;p&gt;Some website are redirecting users to TSS domains with the following path: “&lt;strong&gt;/index/?1641501770611&lt;/strong&gt;”.  It is the result of running this malicious javascript:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Expert Redirection.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After deobfuscation, the code becomes readable and we can see the redirection:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Expert Redirection 2.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The client will query the URL at &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://ads.locationforexpert.com/b.php&lt;/code&gt; (the filename often changes). The remote script then returns the URL where the user will be redirected.&lt;/p&gt;
+
+&lt;h2 id=&quot;containerru-redirection&quot;&gt;ContainerRU Redirection&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/ContainerRU Redirection.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This campaign generates about 335 redirections / hour. Website &lt;code class=&quot;highlighter-rouge&quot;&gt;www.cursosortografia.com&lt;/code&gt; was responsible for 158 redirections (6%) and &lt;code class=&quot;highlighter-rouge&quot;&gt;cursosaprende.com&lt;/code&gt; for 142 redirections (5%).&lt;/p&gt;
+
+&lt;p&gt;This Javascript found was obfuscated by hiding the content of the code in a fake image encoded in base64:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/containerRU TSS.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After deobfuscation, we can analyse the code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/ContainerRU - deobfuscated.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The script will verify If the navigator of the user is either Chrome or Firefox. In this scenario, the user is redirected to an URL serving a payload. If the browser is Internet Explorer, the user will be redirected to the following URL: &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://div-class-container.ru/index5.php&lt;/code&gt;, which will in turn redirect the user with an HTTP 301 to the TSS page with the parameter “&lt;strong&gt;/index/?801492446045&lt;/strong&gt;”:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/ContaierRU redirection.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In all cases, if the domain name of the actual infected website contains “edu”, “gov” or “mil”, the script will not redirect the user. 
+The IP address where this redirecting script is hosted (193.201.227.193) &lt;a href=&quot;https://blog.sucuri.net/2017/10/cryptominers-on-hacked-sites-part-2.html&quot;&gt;has been linked&lt;/a&gt; to unwanted redirects in late 2017.&lt;/p&gt;
+
+&lt;h2 id=&quot;doorways-redirections&quot;&gt;Doorways redirections&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;What is a Doorway?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;A &lt;a href=&quot;https://kb.sucuri.net/malware/signatures/php.spam-seo.doorway-gen.001&quot;&gt;dorway script&lt;/a&gt; is usually an obfuscated PHP script that can trick search engines crawler to perform black hat SEO by modifying the content of a website to specific combination of keywords. However, the one used in this campaign is pretty advanced and allows the owner to basically do whatever he wants with the infected websites, such as injecting content. We discovered that he will often ‘upgrade’ those doorway scripts to PHP backdoors.&lt;/p&gt;
+
+&lt;p&gt;We also saw other prolific campaigns for which we don’t have the redirections scripts. For instance, the one generating the largest amount of traffic (URLs are recognizable with “&lt;strong&gt;/index/?1051496225880&lt;/strong&gt;”) has been responsible for 43503 redirections over the 8 hours period (5437 redirections per hour) and represents 40% of the overwall traffic seen:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Top Campaigns seen.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The websites who redirected users for this largest campaign is mostly &lt;code class=&quot;highlighter-rouge&quot;&gt;archive-s54.info&lt;/code&gt; with 18331 redirects, followed by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sharesix.com&lt;/code&gt; (947 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;www.gowatchfreemovies.to&lt;/code&gt; (919 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;myilifestyle.com&lt;/code&gt; (871 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;www.primewire.ag&lt;/code&gt; (862 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Sharerepo.com&lt;/code&gt; (856 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;www.fertilitychef.com&lt;/code&gt;  (820 redirections)&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Filenuke.com&lt;/code&gt; (800 redirections)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We believe that those website have the &lt;a href=&quot;https://kb.sucuri.net/malware/signatures/php.spam-seo.doorway-gen.001&quot;&gt;doorways&lt;/a&gt; backdoor installed. Most of them are configured to get to latest TSS URL to :
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://fped8.org/doorways/settings_v2.php?clientid=&amp;lt;ID&amp;gt;&amp;amp;ineednewurltoredirect=yes&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This website will return the appropriate domain to redirect the user:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Doorway redirection.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;other-redirections&quot;&gt;Other redirections&lt;/h2&gt;
+&lt;p&gt;By monitoring the backend servers, we discovered that the same infrastructure also serves for other malicious activities.&lt;/p&gt;
+&lt;h3 id=&quot;chrome-plugin&quot;&gt;Chrome plugin&lt;/h3&gt;
+&lt;p&gt;We’ve also observed some redirections chains from malvertising leading to fake chrome extensions. For example, one customer of &lt;a href=&quot;https://www.popads.net/&quot;&gt;PopAds&lt;/a&gt;, whose account is now banned, was redirecting clients to a TDS system at this URL: &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://162.244.35.210/newantikas/?cP65FB&lt;/code&gt;. After multiple redirections, the users landed on the website &lt;code class=&quot;highlighter-rouge&quot;&gt;livelifeo.top&lt;/code&gt;, which resolved to IPs belonging to the back-end server we were monitoring:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/malicious-fake-chrome-addon.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After more digging into domains associated to the same scam, we also found another version of the landing page that tried to trick users to those malicious Chrome extensions:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Chrome Plugin.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The back-end server, owned by &lt;strong&gt;Roi777&lt;/strong&gt; was also responsible for the traffic generated by those malicious Chrome extensions.&lt;/p&gt;
+
+&lt;p&gt;We also found a control panel that allowed them to categorize the status of those applications. Fortunately for us, the developer had no idea how to properly protect this panel. The password verification function was implemented in client-side Javascript.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Plugin panel.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We later found those Chrome extension in the Chrome Store infected and heavily obfuscated. The purpose of them was to randomly redirect the user while browsing. The page where users get redirected can vary from nuisance advertisement to fake software installation page and TSS.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, those addons are no longer being pushed and the page is no longer being updated. The actors probably moved to something else.&lt;/p&gt;
+
+&lt;h3 id=&quot;pinterest&quot;&gt;Pinterest&lt;/h3&gt;
+&lt;p&gt;We also found some links to TSS on Pinterest: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;jeanclementcom.us&lt;/code&gt; has been registered with the email address &lt;strong&gt;opel73rus@gmail.com&lt;/strong&gt;, like many other domains name hosted on &lt;strong&gt;Roi777&lt;/strong&gt; infrastructure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Pinterest.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;android-applications&quot;&gt;Android applications&lt;/h3&gt;
+&lt;p&gt;Malicious APKs are also found to be served when browsing to a domain hosted on his infrastructure : &lt;code class=&quot;highlighter-rouge&quot;&gt;fped8.org/mob/antivirus/1/en/index.php&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Virus detected.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.virustotal.com/#/file/3cec545922252e0cfc3e0149a63d9df73b0f7f89aa0782a3c7ad16844f804c66/details&quot;&gt;The payload&lt;/a&gt; is then downloaded from: &lt;code class=&quot;highlighter-rouge&quot;&gt;fped8.org/mob/antivirus/1/en/downloader.php&lt;/code&gt;. Once installed, the application will contact another domain hosted on the same server (&lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://alija.xyz/panel/&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;This APK has the ability to redirect users to fraudulent ads and potentially TSS.&lt;/p&gt;
+
+&lt;h2 id=&quot;analysis-of-the-backend-traffic&quot;&gt;Analysis of the backend traffic&lt;/h2&gt;
+&lt;p&gt;By monitoring differents TDS and back-end server serving those TSS campaigns, we saw a lot of different traffic type linked to differents malicious activities.Not only is this actor involved in the selling of fake software and redirecting to scams, but also in severals webshells and doorways backdoors, allowing him to control a vast network of compromised websites. This section take a look at those differents access methods and how they are leveraged.&lt;/p&gt;
+
+&lt;h3 id=&quot;uses-of-scams-domains&quot;&gt;Uses of scams domains&lt;/h3&gt;
+
+&lt;p&gt;We observed TSS domains usually having the TLD .TK changing more than 100 times per day for this campaign. In the last 30 days only, we were able to log 2912 of those domains. Here is the most common IPs where they are pointing:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;999 of them (35%) are resolving to &lt;strong&gt;204.155.28.5&lt;/strong&gt; (King Servers)&lt;/li&gt;
+  &lt;li&gt;878 of them (30%) are resolving to &lt;strong&gt;185.159.83.47&lt;/strong&gt; (King Servers)&lt;/li&gt;
+  &lt;li&gt;162 of them (5%) are resolving to  &lt;strong&gt;54.36.151.52&lt;/strong&gt; (OVH)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;php-backdoor&quot;&gt;PHP Backdoor&lt;/h3&gt;
+&lt;p&gt;We discovered that many “bots” were reporting to the back-end server belonging to &lt;strong&gt;Roi777&lt;/strong&gt;. In fact we account for a total of 1562 infected websites reporting to his server. There are two types of backdoors that report to the infrastructure we monitored.&lt;/p&gt;
+
+&lt;p&gt;The first one being &lt;a href=&quot;https://kb.sucuri.net/malware/signatures/php.hacktool.doorway-gen.001&quot;&gt;Doorways&lt;/a&gt;.We counted 386 differents website constantly asking the server for content to inject.&lt;/p&gt;
+
+&lt;p&gt;For the other type of backdoor, we observed 1176 differents domains infected reporting to the server, also asking for content to inject. Here is some stats about the CMS they used:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;WordPress : 211&lt;/li&gt;
+  &lt;li&gt;OpenCart: 41&lt;/li&gt;
+  &lt;li&gt;Joomla: 19&lt;/li&gt;
+  &lt;li&gt;Magento: 1&lt;/li&gt;
+  &lt;li&gt;Unknown: 904&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This backdoor is described in the next section.&lt;/p&gt;
+
+&lt;h3 id=&quot;doorways-to-php-backdoor&quot;&gt;Doorways to PHP backdoor&lt;/h3&gt;
+&lt;p&gt;The Doorways have the capability to fetch for instruction and code to execute. We noticed that many of them were querying &lt;code class=&quot;highlighter-rouge&quot;&gt;fped8.org/doorways/settings_v2.php&lt;/code&gt;. This URL, when queried with the good parameters, returns code to execute. This allowed us to saw how they can deploy PHP shell through their Doorways:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/doorways_to_php.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The content returned contains the backdoor encoded in base64, rot13 and base64 again. After de-obfuscation, we got this code:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/shell.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The first part of this malicious PHP script will query &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://kost8med.org/get.php&lt;/code&gt; with the user-agent of the current visitor requesting the page and it’s IP address. If a content is returned, it will be outputted in the content of the page. That said, the owner of the backdoor can inject any code they want into the page. Again, &lt;code class=&quot;highlighter-rouge&quot;&gt;kost8med.org&lt;/code&gt; is resolving to &lt;strong&gt;162.244.35.30&lt;/strong&gt; which is an IP address belonging to &lt;strong&gt;Roi777&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The second part of the script contains a backdoor function executing every request received in the “c” field of the POST parameter of the request if the parameter “p” is also set with the correct password.&lt;/p&gt;
+
+&lt;p&gt;The password validation is done in a strange way. The received parameter “p” will be hashed twice before being compared to the hardcoded MD5 hash. However both the idea and the implementation is deficient here, because hashing twice is not more secure in this situation and the comparison is done with “==” instead of “===” (strict comparison), plus the fact that MD5 is no longer considered secure.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/giphy.gif&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It took less than 30 mins to crack the actual password allowing the control of those backdoors. We must say that the speciality of those guys is clearly not security, but rather the opposite.&lt;/p&gt;
+
+&lt;p&gt;On a Wordpress installation, this backdoor is usually found in those files:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;wp-config.php&lt;/li&gt;
+  &lt;li&gt;index.php&lt;/li&gt;
+  &lt;li&gt;wp-blog-header.php&lt;/li&gt;
+  &lt;li&gt;Footer.php&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also found what looks like the administrator panel on the same server that they are reporting to:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/panel.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;other-backdoors&quot;&gt;Other backdoors&lt;/h3&gt;
+&lt;p&gt;Many of the websites that were infected by the original backdoor we were investigating on were also infected with other PHP malicious scripts. However, we don’t think those other scripts were linked to this campaign.&lt;/p&gt;
+
+&lt;h3 id=&quot;infection-vector-plugin-that-is-hacked-infected-path&quot;&gt;Infection vector (plugin that is hacked, infected path)&lt;/h3&gt;
+
+&lt;p&gt;It is hard to know for sure how those CMS has been infected. One thing we did notice on lot of them is that the malicious code was in the file &lt;strong&gt;footer.php&lt;/strong&gt; of a WordPress plugins named Genesis. It turns out that this plugin was &lt;a href=&quot;https://www.pluginvulnerabilities.com/2016/09/22/arbitrary-file-upload-vulnerability-in-genesis-simple-defaults/&quot;&gt;known to be vulnerable&lt;/a&gt; against Arbitrary File Upload in late 2016. However a lot of them have been exploited by other means, such as with other vulnerable plugins and passwords stealings / brute forcing.&lt;/p&gt;
+
+&lt;h2 id=&quot;redirecting-the-traffic-flow-or-dethroning-the-king&quot;&gt;Redirecting the traffic flow (or dethroning the king)&lt;/h2&gt;
+&lt;p&gt;By looking at requests sent to the back-end servers, we noticed curious GET requests among a the traffic. The GET requests in question were formatted like the following : 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hxxps://wowbelieves.us/tech_supportv2.php?update_domain=&amp;lt;Tech support Scam domain&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;update_domain&lt;/strong&gt; parameter immediately drew our attention, so we tried to do a query to the same PHP file with a domain under our control as the value of this parameter. Immediately, our server started receiving traffic.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/image.jpeg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So apparently, calls to this PHP file change to current domain published for TSS that the backdoors are relying on to redirect the users. In fact, we were able to change the domain  returned by &lt;code class=&quot;highlighter-rouge&quot;&gt;roi777.com/domain.php&lt;/code&gt;, where multiple backdoors are fetching the current TSS domain. As said before, those domains are changing more than 100 times a day, and we observed that they have a script calling &lt;strong&gt;/tech_supportv2.php&lt;/strong&gt; frequently so users can be redirected to the latest domain. That said, when we changed the TSS domain to point to a domain under our control, it took only few minutes before their script updated it with the real TSS, overwriting ours at the same time. To keep the traffic going to our server, we then had to query multiple time per minute this webpage, and it sure worked.&lt;/p&gt;
+
+&lt;p&gt;After the initial 8 hours in which we had control of most of the traffic, they updated &lt;strong&gt;&lt;em&gt;tech_supportv2.php&lt;/em&gt;&lt;/strong&gt; and their script calling it so that the parameters expect were now the domain name to update, plus a key: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hxxps://wowbelieves.us/tech_supportv2.php?update_domain=&amp;lt;Tech support Scam domain&amp;gt;&amp;amp;key=&amp;lt;Hash MD5&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To fix the aberrant lack of security in their mechanism to update the current TSS domains, they added this key to the parameters so our previous requests weren’t working anymore.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/playgame.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;What is this ‘key’ parameter ?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The key parameter was 32 characters long, so we immediately thought of an MD5 hash. We tried to hash the current domain to see if it was matching, but no luck. We also noticed that the ‘key’ value (or hash) was different for each TSS domain they were updating and we were able replay them without problem. Given this information, it looked like it they were probably using some sort of salting with the domain name before hashing it.&lt;/p&gt;
+
+&lt;p&gt;Knowing a part of the hashed value (the domain name), and giving their expertise in cryptography, we started a &lt;a href=&quot;https://hashcat.net/wiki/doku.php?id=mask_attack&quot;&gt;mask attack&lt;/a&gt; locally with hashcat. It took us less than 10 seconds to reveal the salt used. The MD5 hash was the result of the domain name concatenated to the string: “&lt;strong&gt;ropl&lt;/strong&gt;”. This allowed us to take the control back (on and off) of the traffic for another 7 hours. However, the stats used above for webshells and redirections are only based on the first 8 hours of collection.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/captain.jpg&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that we didn’t take advantage of the redirected traffic, we instead logged every request made and temporarily neutralized the campaigns by avoiding any redirections to malicious websites.&lt;/p&gt;
+
+&lt;p&gt;The first time we redirected the traffic, we collected more than 108700 requests (8 hours period). 
+The second attempt to redirect the traffic allowed us to log more than 55000 requests (6 hours).&lt;/p&gt;
+
+&lt;p&gt;By combining both data sets, we did some statistics:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/chart2.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Every request made by IP &lt;strong&gt;89.108.105.13&lt;/strong&gt; (Russia) was excluded from the graph because it generated by itself 48256 requests to &lt;strong&gt;/index/api.php&lt;/strong&gt; and we believe that this traffic is generated by one of their server that control doorways on their infrastructure.&lt;/p&gt;
+
+&lt;p&gt;Here are the top 15 most seen websites in the referer field (probably infected websites):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/domainstats.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are the most seen user-agents in those requests:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/uastats.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s interesting to note that a lot of requests were coming from &lt;a href=&quot;https://kodi.tv/&quot;&gt;Kodi&lt;/a&gt; (Open Source Home Theater Software), followed by Internet Explorer browser.&lt;/p&gt;
+
+&lt;h2 id=&quot;link-to-roi777&quot;&gt;Link to Roi777&lt;/h2&gt;
+&lt;p&gt;Considering the variety of coding styles, providers, IPs used and infected websites, we believe that many actors are involved in the traffic redirection. However, it is clear that the one known as &lt;strong&gt;roi777&lt;/strong&gt; has a central role in this whole scheme. As advertised on his website, he’s buying any type of traffic after all.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;How does all of that links to Roi777 ?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Redirections chains explained above will not always redirect users to TSS. In fact, they are often filtering clients base on GeoIP and user-agent. When the traffic is unwanted for TSS, the redirection chain will often lead to : &lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://balans.shahterworld.org&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The parameters passed to those requests is another indication that this campaign is lead by &lt;strong&gt;&lt;em&gt;roi77&lt;/em&gt;&lt;/strong&gt;: 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;hxxp://balans.shahterworld.org/?utm_medium=4c23b9fecf7dfd895dfe0da99e857f3bee8e9d42&amp;amp;utm_campaign=roi777_cloack&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, almost all of the redirections scripts are either pointing directly to &lt;code class=&quot;highlighter-rouge&quot;&gt;roi777.com/domain.php&lt;/code&gt; to fetch the latest domain or they are reporting to this same backend server, waiting for instruction.&lt;/p&gt;
+
+&lt;p&gt;We found an interesting discussion that happened on 06-01-2018 on a Russian forum&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; involving the owner of the company &lt;strong&gt;Roi77&lt;/strong&gt; (using the nickname &lt;em&gt;bagussusu&lt;/em&gt;) and another actor (&lt;em&gt;azuluk&lt;/em&gt;) providing him backdoors, doorways and other elements mean to increase the number of redirected users. You can read the &lt;a href=&quot;Russian Forum.pdf&quot;&gt;translated conversation here&lt;/a&gt;. In summary, we can learn that :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;They were involved in the traffic generated by some Chrome Extension&lt;/li&gt;
+  &lt;li&gt;They are using Quiwi / WebMoney financial services to transfer money.&lt;/li&gt;
+  &lt;li&gt;Their main offer is currently Tech Support Scam.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Bagussusu&lt;/em&gt; is accepting a minimum trade of 1000 webshells and can convert them to Doorways&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Azuluk&lt;/em&gt; had 30GB of mail accounts+passwords ready to sell. 5 millions of those were corporate accounts&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Bagussusu&lt;/em&gt; is also using SPAM to increase the traffic.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Bagussusu&lt;/em&gt; have some employees working for him (developers).&lt;/li&gt;
+  &lt;li&gt;The return on investment is apparently better in France (people get scammed easier).&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Azuluk&lt;/em&gt; is using &lt;a href=&quot;http://jako.tech&quot;&gt;JakoDorgen&lt;/a&gt; to create Doorways.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;Bagussusu&lt;/em&gt; recommands to fetch the latest TSS domain to his website with this PHP code:&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$domain = file_get_contents('http://roi777.com/domain.php');&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;They also provide other interesting details such as the IP of the TDS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;who-is-this-roi777-&quot;&gt;Who is this “Roi777” ?&lt;/h2&gt;
+&lt;p&gt;Being a young adult living in Russia, you can also find him using the following identities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://t.me/roi777Eng&lt;/li&gt;
+  &lt;li&gt;Tipatop&lt;/li&gt;
+  &lt;li&gt;ICQ #: 660-349-155&lt;/li&gt;
+  &lt;li&gt;ICQ #: 380-046-929&lt;/li&gt;
+  &lt;li&gt;Skype: live: compiknews&lt;/li&gt;
+  &lt;li&gt;Jabber: BagusSusu@exploit.im&lt;/li&gt;
+  &lt;li&gt;Telegram: @roi777Ru&lt;/li&gt;
+  &lt;li&gt;compiknews@gmail.com&lt;/li&gt;
+  &lt;li&gt;SocMaster&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This non-exhaustive list is some of the most common pseudonyms he uses online. He operates a company that does “Traffic Monetization”. We now know how this traffic is brought back to his network (by illegals means) and what it is for (fraud).&lt;/p&gt;
+
+&lt;h2 id=&quot;roi777-website&quot;&gt;Roi777 Website&lt;/h2&gt;
+&lt;p&gt;His official website advertises some Success stories !&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Traffic Monetization.png&quot; alt=&quot;alt text&quot; /&gt;
+Success stories include traffic generated by Doorways&lt;/p&gt;
+
+&lt;p&gt;And there’s also a Keitaro TDS installed directly on &lt;strong&gt;/tds/&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/Keitaro TDS.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;iocs&quot;&gt;IOCs:&lt;/h2&gt;
+&lt;p&gt;Most of the domains for domains used for scams are being resolved by &lt;code class=&quot;highlighter-rouge&quot;&gt;ns1.rakamakao.org&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;ns2.rakamakao.org&lt;/code&gt; (195.245.113.186 &amp;amp; 195.245.113.187). The PowerAdmin administration tool they are using is accessible on the same servers:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/_hosted/KoTD/poweradmin.png&quot; alt=&quot;alt text&quot; /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Some of the domains:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;alija.xyz&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;fped8.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wowbelieves.us&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;shahterworld.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;roi777.com&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kost8med.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;picturesun.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;websun.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;apelsinnik.site&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;chooseok.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;anyads.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;49frankov.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;africangirlskillingit.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;africanprint.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;africanpygmyhedgehog.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;africanamerican.top&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;arbuz01.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ava4.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jessica1.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;crispyom.org&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;kir2great.us&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;selenapix.us&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;wowbirth.us&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Also,  AS14576 &lt;a href=&quot;https://threatreconblog.com/2017/02/05/kings-and-secrets-not-a-good-combo/&quot;&gt;Bullet proof hoster: King Servers&lt;/a&gt; doesn’t seems to host any legitimate services except of cyber-crime on their infrastructure.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IPs:&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;204.155.28.5&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;54.36.180.110&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;54.36.151.52&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;89.108.105.13&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;185.159.83.48&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;185.159.83.47&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;190.2.132.198&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.34.20&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.21&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.30&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.33&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.35&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.36&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.54&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.55&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;162.244.35.234&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;195.245.113.187&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;195.245.113.186&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;By distributing fake applications, using underground malware distribution campaigns, and leveraging malvertisements, the actors behind the company &lt;strong&gt;Roi777&lt;/strong&gt; are trying to get as much traffic as they can, by any means possible. They are well active and always willing to get more traffic redirected to their scams so they can increase their income.&lt;/p&gt;
+
+&lt;p&gt;The EITest campaign, in part responsible for the TSS redirections, is still active even if it is one of the oldest campaign running and the backend servers IP have previous been revealed.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;https[://forum.exploit[.]in/index.php?act=ST&amp;amp;f=75&amp;amp;t=134802&amp;amp;st=0 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</content>
+
+			
+				<category term="Drive-By" />
+			
+			
+				<category term="TSS" />
+			
+				<category term="EITest" />
+			
+				<category term="Keitaro" />
+			
+
+			<published>2018-03-06T21:30:39+01:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://malware2.dontneedcoffee.com/2017/10/coalabot-http-ddos-bot.html</id>
@@ -394,45 +988,6 @@
 			
 
 			<published>2016-05-15T13:09:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>http://malware2.dontneedcoffee.com/2016/04/bedepantiVM.html</id>
-			<title>Bedep has raised its game vs Bot Zombies</title>
-			<link href="http://malware2.dontneedcoffee.com/2016/04/bedepantiVM.html" rel="alternate" type="text/html" title="Bedep has raised its game vs Bot Zombies" />
-			<updated>2016-04-14T18:33:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Kafeine</name>
-					
-					
-					
-						<uri>https://malware.dontneedcoffee.com/</uri>
-					
-				</author>
-			
-			<summary>Bedep could be described as a fileless loader with a resident module that can optionally perform AdFraud. It's intimate to Angler EK and appeared around August 2014. </summary>
-			<content type="html" xml:base="http://malware2.dontneedcoffee.com/2016/04/bedepantiVM.html">&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-WcJ4duLo3NE/Vw_dP02SvlI/AAAAAAAAFrE/nbjZ6jBuoHMHeiGfA_YXec5rtNGcvTU6ACK4B/s1600/g.jpg&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;138&quot; src=&quot;https://3.bp.blogspot.com/-WcJ4duLo3NE/Vw_dP02SvlI/AAAAAAAAFrE/nbjZ6jBuoHMHeiGfA_YXec5rtNGcvTU6ACK4B/s200/g.jpg&quot; width=&quot;200&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;div style=&quot;font-size: 12.8px;&quot;&gt;Simulacra &amp;amp; Simulation - Jean Baudrillard&lt;/div&gt;&lt;div style=&quot;font-size: 12.8px;&quot;&gt;Featured in Matrix&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;Bedep could be described as a fileless loader with a resident module that can optionally perform AdFraud. It's intimate to Angler EK and appeared around&amp;nbsp;&lt;a href=&quot;http://malware.dontneedcoffee.com/2014/08/angler-ek-now-capable-of-fileless.html&quot;&gt;August 2014&lt;/a&gt;.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;On the 2016-03-24 I noticed several move in Bedep.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-abxn9m0x1B4/Vw-RQNM9T8I/AAAAAAAAFpA/_OkOUSFsEtAjFkvnEwIWFrVTJbVR9ZfTACK4B/s1600/2016-04-14_14h44_29.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;190&quot; src=&quot;https://3.bp.blogspot.com/-abxn9m0x1B4/Vw-RQNM9T8I/AAAAAAAAFpA/_OkOUSFsEtAjFkvnEwIWFrVTJbVR9ZfTACK4B/s640/2016-04-14_14h44_29.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;font-size: 12.8px;&quot;&gt;Angler infecting a VM and integrating it into an instance of Bedep botnet&lt;br /&gt;2016-03-24&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div&gt;No more variable in the URI (as several month before), the protocol Key changed and in most of my manual checks, all threads were sending a strange payload in the first stream.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;2ko size for Win7 64bits :&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: white; color: #333333; font-family: &amp;quot;helvetica neue&amp;quot; , &amp;quot;helvetica&amp;quot; , &amp;quot;arial&amp;quot; , sans-serif; font-size: 13px; line-height: 20px;&quot;&gt;&lt;a href=&quot;https://www.virustotal.com/file/80eb8a6aba5e6e70fb6c4032242e9ae82ce305d656b4ed8b629b24e1df0aef9a/analysis/1460541070/&quot;&gt;80eb8a6aba5e6e70fb6c4032242e9ae82ce305d656b4ed8b629b24e1df0aef9a&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-go8uU47tUp4/Vw-Grw8lmaI/AAAAAAAAFoQ/7u0wmpvRn0EoZZio5658M6vYtYz7iF0gACK4B/s1600/2016-04-13_19h10_53.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;200&quot; src=&quot;https://2.bp.blogspot.com/-go8uU47tUp4/Vw-Grw8lmaI/AAAAAAAAFoQ/7u0wmpvRn0EoZZio5658M6vYtYz7iF0gACK4B/s320/2016-04-13_19h10_53.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Popup shown by the first payload from Bedep Stream - Win7&lt;br /&gt;(in the background Angler Landing)&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;48ko size for WinXP 32bits:&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;https://www.virustotal.com/file/a0fe4139133ddb62e6db8608696ecdaf5ea6ca79b5e049371a93a83cbcc8e780/analysis/1460550059/&quot;&gt;a0fe4139133ddb62e6db8608696ecdaf5ea6ca79b5e049371a93a83cbcc8e780&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-zduDkAoPUWs/Vw-Kzdtvn5I/AAAAAAAAFok/zfoMgypK83oW8fog_opMOX1UYVWC8tJlgCK4B/s1600/2016-03-24_10h43_40.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;102&quot; src=&quot;https://2.bp.blogspot.com/-zduDkAoPUWs/Vw-Kzdtvn5I/AAAAAAAAFok/zfoMgypK83oW8fog_opMOX1UYVWC8tJlgCK4B/s320/2016-03-24_10h43_40.png&quot; width=&quot;320&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12.8px;&quot;&gt;Popup shown by the first payload from Bedep Stream - WinXP&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;br /&gt;&lt;div&gt;Looking at my traffic I thought for some time that one of the Bedep instances was split in two.&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;div&gt;Then I understood that I got different result on my &quot;manually&quot; driven VM (on VMWare ESXi) and my automated Cuckoo driven one ( on VirtualBox). I suspected it was related to hardening, as this is one of the main difference between those two systems.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;And I got confirmation. Here is an example on a GooNky (&lt;a href=&quot;https://www.proofpoint.com/us/threat-insight/post/The-Shadow-Knows&quot;&gt;[1]&lt;/a&gt; &lt;a href=&quot;http://blog.trendmicro.com/trendlabs-security-intelligence/lets-encrypt-now-being-abused-by-malvertisers/&quot;&gt;[2]&lt;/a&gt; &lt;a href=&quot;https://www.proofpoint.com/us/threat-insight/post/video-malvertising-bringing-new-risks-high-profile-sites&quot;&gt;[3]&lt;/a&gt;) malvertising traffic in Australia :&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-sYLcWGrH93w/Vw-XWP46kyI/AAAAAAAAFpY/__6yQRW8SFseb8fWv30nn3_TWefePHO-QCK4B/s1600/2016-04-14_15h09_38.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;176&quot; src=&quot;https://4.bp.blogspot.com/-sYLcWGrH93w/Vw-XWP46kyI/AAAAAAAAFpY/__6yQRW8SFseb8fWv30nn3_TWefePHO-QCK4B/s640/2016-04-14_15h09_38.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;A VM not hardened enough against Bedep got redirected to a &quot;decoy&quot; instance of Bedep that i will refer as :&lt;br /&gt;Bedep &quot;Robot Town&quot; - 2016-04-12&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;Now look what i get instead with a VM that is not spotted as is:&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-39iVgntzWXU/Vw-YyDozHEI/AAAAAAAAFpk/hlOeVNjR528L5JQ8ZcrPCBO7u1tz09KuACK4B/s1600/2016-04-14_15h18_12.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;118&quot; src=&quot;https://1.bp.blogspot.com/-39iVgntzWXU/Vw-YyDozHEI/AAAAAAAAFpk/hlOeVNjR528L5JQ8ZcrPCBO7u1tz09KuACK4B/s640/2016-04-14_15h18_12.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Same Angler thread - VM not detected. 1st Stream get Vawtrak&lt;br /&gt;2016-04-12&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;(&lt;i&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&amp;nbsp;Vawtrak in that stream &amp;nbsp;&amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/file/d24674f2f9879ee9cec3eeb49185d4ea6bf555d150b4e840407051192eda1d61/analysis/1460644841/&quot;&gt;d24674f2f9879ee9cec3eeb49185d4ea6bf555d150b4e840407051192eda1d61&lt;/a&gt; &lt;/span&gt;&lt;/i&gt;)&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;I am not skilled enough to give you the list of checks Bedep is doing. But here is one of them spotted by Cuckoo :&lt;/div&gt;&lt;div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-geexrcYR9eY/Vw-TJJObZZI/AAAAAAAAFpM/2ahiBNANbwobNdts9mAKlnRnDvsyy0kXACK4B/s1600/2016-04-14_14h54_35.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;112&quot; src=&quot;https://1.bp.blogspot.com/-geexrcYR9eY/Vw-TJJObZZI/AAAAAAAAFpM/2ahiBNANbwobNdts9mAKlnRnDvsyy0kXACK4B/s640/2016-04-14_14h54_35.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Bedep doing some ACPI checks&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div&gt;I think there are multiple level of checks. Some resulting in Bedep not trying to contact the C&amp;amp;C, some where the positive check end up with a different seed for the Bedep DGA redirecting spotted machines in a dedicated instance.&amp;nbsp;&lt;/div&gt;&lt;div&gt;This is quite powerful :&lt;/div&gt;&lt;div&gt;- the checks are made without dropping an executable.&amp;nbsp;&lt;/div&gt;&lt;div&gt;- if you don't know what to expect it's quite difficult to figure out that you have been trapped&lt;/div&gt;&lt;div&gt;- there is a lot of things that operators can do with this list of known bots and initial Bedep thread ID.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;One of them is for instance knowing which of the infection path are researcher/bots &quot;highway&quot; :&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-AlT_p_AlGr4/Vw_HXEzFyPI/AAAAAAAAFqw/OoEO5trWrmkGoeNCf0mKER7vzreZwQ7UwCK4B/s1600/2016-04-14_12h40_05.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;570&quot; src=&quot;https://3.bp.blogspot.com/-AlT_p_AlGr4/Vw_HXEzFyPI/AAAAAAAAFqw/OoEO5trWrmkGoeNCf0mKER7vzreZwQ7UwCK4B/s640/2016-04-14_12h40_05.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12.8px;&quot;&gt;Illustration for Bedep &quot;Robot Town&quot; from an &quot;infection path&quot; focused point of view&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;&lt;div&gt;This could be just a move to perform different tasks (AdFraud only (?) ) on VMs, but my guess it that this Bedep evolution on 2016-03-24 is a fast reaction to this &lt;a href=&quot;https://www.proofpoint.com/us/threat-insight/post/video-malvertising-bringing-new-risks-high-profile-sites&quot;&gt;Proofpoint Blog&lt;/a&gt; from 2016-03-18 which &amp;nbsp;show how Bedep threads are additional connectable dots.&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Sharing publicly is often a difficult decision. The question is which side will benefits the most from it, in the long time.&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;For researchers:&lt;/u&gt;&lt;/div&gt;&lt;div&gt;In the &lt;u&gt;last 3 weeks&lt;/u&gt;, if your VM have communicated with :&lt;/div&gt;&lt;div&gt;&lt;div&gt;95.211.205.228 (&lt;i&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;which is a Bedep ip from end of 2015 reused&lt;/span&gt;&lt;/i&gt;) || ( 85.25.41.95&amp;nbsp; &amp;amp;&amp;amp; http.uri.path &amp;nbsp;&quot;ads.php?sid=&lt;b&gt;1901&lt;/b&gt;&quot; ) and you are interested by the &quot;real payload&quot; then you might want to give&amp;nbsp;&lt;a href=&quot;https://github.com/a0rtega/pafish&quot;&gt;PAfish&lt;/a&gt;&amp;nbsp;a run.&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;br /&gt;&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;img alt=&quot;Image result for robot movie sad robot&quot; height=&quot;200&quot; src=&quot;http://www.writeups.org/wp-content/uploads/Marvin-Paranoid-Android-Hitchiker-Guide.jpg&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot; width=&quot;126&quot; /&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Marvin - Paranoid Android&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;div&gt;On the other hand, any of your VM which has communicated with 104.193.252.245 (Bedep &quot;standard&quot; 18xx 19xx instance)&amp;nbsp;&amp;nbsp;since the 24 of March&amp;nbsp;is hardened enough to grab the real payload.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;[Edits]&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;- Removed the AU focused mention on the Vawtrak. I have been told (Thanks ! ) it's US focused. Got geo&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;Glitched. Maybe more about that a day or the other.&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;- Refine the check conditions for Researcher. IP &amp;nbsp;85.25.41.95 and sid=1901...otherwise...ok :)&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;[/Edits]&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;Acknowledgements :&lt;/u&gt;&lt;/div&gt;&lt;div&gt;Thanks &lt;a href=&quot;https://twitter.com/node5&quot;&gt;Will Metcalf&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/malc0de&quot;&gt;Malc0de&lt;/a&gt; for the discussions and help on this topic&lt;/div&gt;&lt;div&gt;--&lt;/div&gt;&lt;div&gt;I'm sorry, but I must do it...Greetings to Angler and Bedep guys. ;)&amp;nbsp;You are keeping us busy...and awake !&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;u&gt;Reading :&lt;/u&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;https://www.proofpoint.com/us/threat-insight/post/video-malvertising-bringing-new-risks-high-profile-sites&quot;&gt;Video Malvertising Bringing New Risks to High-Profile Sites&lt;/a&gt; - 2016-03-18 - Proofpoint&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;https://www.arbornetworks.com/blog/asert/bedeps-dga-trading-foreign-exchange-for-malware-domains/&quot;&gt;Bedep’s DGA: Trading Foreign Exchange for Malware Domains&lt;/a&gt; - 2015-04-21 - Dennis Schwarz - ArborSert&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;http://malware.dontneedcoffee.com/2014/08/angler-ek-now-capable-of-fileless.html&quot;&gt;Angler EK : now capable of &quot;fileless&quot; infection (memory malware)&lt;/a&gt; - 2014-08-30&lt;/div&gt;&lt;div&gt;&lt;a href=&quot;http://blog.prowling.nu/2012/08/modifying-virtualbox-settings-for.html&quot;&gt;Modifying VirtualBox settings for malware analysis&lt;/a&gt;&amp;nbsp;- 2012-08-23 &amp;nbsp;-&amp;nbsp;&lt;a href=&quot;https://twitter.com/nsmfoo&quot;&gt;Mikael Keri&lt;/a&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</content>
-
-			
-				<category term="Botnet" />
-			
-			
-				<category term="kye" />
-			
-				<category term="Bedep" />
-			
-				<category term="Robot Town" />
-			
-				<category term="DGA" />
-			
-				<category term="Angler EK" />
-			
-
-			<published>2016-04-14T18:33:00+02:00</published>
 		</entry>
 	
 </feed>
