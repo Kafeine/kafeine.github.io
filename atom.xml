@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware2.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-07T01:32:20+01:00</updated>
+	<updated>2018-03-07T01:53:19+01:00</updated>
 
 	<subtitle>Sleep is a symptom of  »caffeine« deprivation!</subtitle>
 
@@ -69,13 +69,13 @@
 &lt;h2 id=&quot;the-scam&quot;&gt;The scam&lt;/h2&gt;
 &lt;p&gt;The landing page sometimes changes, but always has the same goal: trying to take control of the browser so the user cannot close it, in hopes that they will panic and call the phone number for assistance.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/hosted/kotd/TSS-IE.png&quot; alt=&quot;alt text&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/tSJMGVg.png&quot; alt=&quot;TSS-IE&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Tech support scammer (TSS) are sometimes changing the landing page to better abuse the browser. Anyhow, this is what the current landing page looks like.&lt;/p&gt;
 
 &lt;p&gt;People that call those numbers will be told how to install a remote control software so the interlocutor can show Windows log events and services to the user, pretending that those are signs of an infected machine. The crooks will then offer a remote reparation service varying from $100 to $600.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://malware2.dontneedcoffee.com/images/blog/hosted/kotd/Tech Support Scammer.png&quot; alt=&quot;alt text&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/ofxzCJt.png&quot; alt=&quot;Tech Support Scammer&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;look-at-different-redirection-mechanisms&quot;&gt;Look at different redirection mechanisms&lt;/h2&gt;
 &lt;p&gt;While analyzing the different ways for a user to be redirected to those scam support pages that try to hijack the browsers, we quickly documented multiple different redirection schemes using many different infrastructure. For this reason, we believe that many differents actors are responsible for sending traffic to the redirection network. Let’s begin by describing the most prolific methods of redirections.&lt;/p&gt;
