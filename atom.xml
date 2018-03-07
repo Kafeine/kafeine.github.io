@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-07T16:10:54+01:00</updated>
+	<updated>2018-03-07T18:13:39+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -213,7 +213,7 @@ The IP address where this redirecting script is hosted (193.201.227.193) &lt;a h
 
 &lt;p&gt;&lt;em&gt;What is a Doorway?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;A &lt;a href=&quot;https://kb.sucuri.net/malware/signatures/php.spam-seo.doorway-gen.001&quot;&gt;dorway script&lt;/a&gt; is usually an obfuscated PHP script that can trick search engines crawler to perform black hat SEO by modifying the content of a website to specific combination of keywords. However, the one used in this campaign is pretty advanced and allows the owner to basically do whatever he wants with the infected websites, such as injecting content. We discovered that he will often ‘upgrade’ those doorway scripts to PHP backdoors.&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&quot;https://kb.sucuri.net/malware/signatures/php.spam-seo.doorway-gen.001&quot;&gt;doorway script&lt;/a&gt; is usually an obfuscated PHP script that can trick search engines crawler to perform black hat SEO by modifying the content of a website to specific combination of keywords. However, the one used in this campaign is pretty advanced and allows the owner to basically do whatever he wants with the infected websites, such as injecting content. We discovered that he will often ‘upgrade’ those doorway scripts to PHP backdoors.&lt;/p&gt;
 
 &lt;p&gt;We also saw other prolific campaigns for which we don’t have the redirections scripts. For instance, the one generating the largest amount of traffic (URLs are recognizable with “&lt;strong&gt;/index/?1051496225880&lt;/strong&gt;”) has been responsible for 43503 redirections over the 8 hours period (5437 redirections per hour) and represents 40% of the overwall traffic seen:&lt;/p&gt;
 
