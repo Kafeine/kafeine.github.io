@@ -31,7 +31,7 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Sleep is a symptom of  »caffeine« deprivation!">
+	<meta name="description" content="Sleep is a symptom of caffeine deprivation.">
   	
 	
 	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
@@ -42,7 +42,7 @@
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="Atom Feed (Styled)">
-	<meta property="og:description" content="Sleep is a symptom of  »caffeine« deprivation!">
+	<meta property="og:description" content="Sleep is a symptom of caffeine deprivation.">
 	<meta property="og:url" content="http://malware.dontneedcoffee.com/assets/xslt/atom.xslt">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
@@ -57,7 +57,7 @@
 	<meta name="twitter:site" content="Kafeine">
 	<meta name="twitter:creator" content="Kafeine">
 	<meta name="twitter:title" content="Atom Feed (Styled)">
-	<meta name="twitter:description" content="Sleep is a symptom of  »caffeine« deprivation!">
+	<meta name="twitter:description" content="Sleep is a symptom of caffeine deprivation.">
 	
 	
 
@@ -329,7 +329,7 @@
             <h5 class="shadow-black"></h5>
 
             <p class="shadow-black">
-              Sleep is a symptom of  »caffeine« deprivation!
+              Sleep is a symptom of caffeine deprivation.
             </p>
           </div><!-- /.large-6.columns -->
 
