@@ -10,11 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RSS Feed (Styled)</title>
 
-    <link rel="stylesheet" type="text/css" href="http://malware2.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
 
   
 
-	<script src="http://malware2.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
 	<script>
@@ -37,13 +37,13 @@
 	<link rel="author" href="https://www.blogger.com/profile/16711421957420573353">
 	
 	
-	<link rel="canonical" href="http://malware2.dontneedcoffee.com/assets/xslt/rss.xslt">
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/assets/xslt/rss.xslt">
 
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="RSS Feed (Styled)">
 	<meta property="og:description" content="Sleep is a symptom of  »caffeine« deprivation!">
-	<meta property="og:url" content="http://malware2.dontneedcoffee.com/assets/xslt/rss.xslt">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/assets/xslt/rss.xslt">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
@@ -61,34 +61,34 @@
 	
 	
 
-	<link type="text/plain" rel="author" href="http://malware2.dontneedcoffee.com/humans.txt">
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
 
 	
 
 	
 
-	<link rel="icon" sizes="32x32" href="http://malware2.dontneedcoffee.com/assets/img/favicon-32x32.png">
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
 
-	<link rel="icon" sizes="192x192" href="http://malware2.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
 
 	
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" href="http://malware2.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
 
-	<meta name="msapplication-TileImage" content="http://malware2.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
 
 	<meta name="msapplication-TileColor" content="#fabb00">
 
@@ -103,7 +103,7 @@
   <nav class="top-bar" role="navigation" data-topbar>
     <ul class="title-area">
       <li class="name">
-      <h1 class="show-for-small-only"><a href="http://malware2.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
     </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
@@ -138,7 +138,7 @@
             
             
               <li class="divider"></li>
-              <li><a href="http://malware2.dontneedcoffee.com/search/">Search</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
 
             
             
@@ -152,7 +152,7 @@
             
             
               <li class="divider"></li>
-              <li><a href="http://malware2.dontneedcoffee.com/faq/">FAQ</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
 
             
             
@@ -166,7 +166,7 @@
             
             
               <li class="divider"></li>
-              <li><a href="http://malware2.dontneedcoffee.com/contact/">Contact</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
 
             
             
@@ -185,7 +185,7 @@
 
             
             
-              <li><a href="http://malware2.dontneedcoffee.com/blog/">Blog</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
               <li class="divider"></li>
 
             
@@ -200,7 +200,7 @@
 
             
             
-              <li><a href="http://malware2.dontneedcoffee.com/external/">External</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
               <li class="divider"></li>
 
             
@@ -215,7 +215,7 @@
 
             
             
-              <li><a href="http://malware2.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
               <li class="divider"></li>
 
             
@@ -251,8 +251,8 @@
 <div id="masthead-no-image-header">
 	<div class="row">
 		<div class="small-6 columns">
-			<a id="logo" href="http://malware2.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
-				<img src="http://malware2.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
 			</a>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
@@ -330,7 +330,7 @@
 
             <p class="shadow-black">
               Sleep is a symptom of  »caffeine« deprivation!
-              <a href="http://malware2.dontneedcoffee.com/info/">More ›</a>
+              <a href="http://malware.dontneedcoffee.com/info/">More ›</a>
             </p>
           </div><!-- /.large-6.columns -->
 
@@ -354,27 +354,27 @@
               
                 
                   <li >
-                    <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
                   </li>
               
                 
                   <li >
-                    <a href="http://malware2.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://malware2.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://malware2.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
                   </li>
               
                 
                   <li >
-                    <a href="http://malware2.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
                   </li>
               
               </ul>
@@ -396,7 +396,7 @@
             
               
                 <li >
-                  <a href="http://malware2.dontneedcoffee.com"  title=""></a>
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
                 </li>
             
               
@@ -438,7 +438,7 @@
 		
 
 
-<script src="http://malware2.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
 
 
 

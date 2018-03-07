@@ -1,1 +1,1 @@
-Sitemap: http://malware2.dontneedcoffee.com/sitemap.xml
+Sitemap: http://malware.dontneedcoffee.com/sitemap.xml
