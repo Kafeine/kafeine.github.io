@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T12:49:47+01:00</updated>
+	<updated>2018-03-10T13:46:22+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -179,6 +179,8 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;If you saw this kind of traffic in your perimeter/telemetry, i’d be happy to get more referer&lt;/em&gt; &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
