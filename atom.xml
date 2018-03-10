@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T13:46:22+01:00</updated>
+	<updated>2018-03-10T14:15:07+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -62,7 +62,7 @@ GreenFlash is a private heavily modified version of &lt;a href=&quot;https://mal
 This group is getting traffic from crompromised OpenRevive/OpenX advertising server since at least &lt;a href=&quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&quot;&gt;may 2015&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/WordsJS.png&quot; alt=&quot;MISP WordsJS&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 2: Some tagged activity from WordsJS displayed &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 2: Some tagged activity from WordsJS displayed in &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;Some references about the activities of this group:&lt;/strong&gt;&lt;/p&gt;
