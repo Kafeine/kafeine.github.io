@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T16:09:52+01:00</updated>
+	<updated>2018-03-10T16:43:41+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -187,7 +187,12 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
 &lt;ul&gt;
   &lt;li&gt;Thanks to Genwei Jiang &lt;a href=&quot;https://www.fireeye.com/&quot;&gt;(FireEye)&lt;/a&gt; for the CVE identification.&lt;/li&gt;
   &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/jspchc&quot;&gt;Joseph Chen&lt;/a&gt; for inputs allowing the capture of a fresh pass of GreenFlash Sundown.&lt;/li&gt;
-  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/GelosSnake&quot;&gt;@GelosSnake&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://twitter.com/baberpervez2&quot;&gt;@baberpervez2&lt;/a&gt; for the ping on suspicious activity that could be associated to “WordsJS” (aka “ShadowGate”) and triggered those checks.&lt;/li&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/GelosSnake&quot;&gt;@GelosSnake&lt;/a&gt; &amp;amp; &lt;a href=&quot;https://twitter.com/baberpervez2&quot;&gt;@baberpervez2&lt;/a&gt; for the ping on suspicious activity that could be associated to “WordsJS” (aka “ShadowGate”) and triggered those checks.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Edits:&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2018-03-10 - 15:40 GMT - Removed mention of steganography. &lt;a href=&quot;https://twitter.com/smogoreli&quot;&gt;@smogoreli&lt;/a&gt;: “simple offset in the dat file” &lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
