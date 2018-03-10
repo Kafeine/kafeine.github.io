@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T12:22:04+01:00</updated>
+	<updated>2018-03-10T12:48:42+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -45,8 +45,8 @@
 					
 				</author>
 			
-			<summary>The CVE-2018-4878 is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, announced by the South-Korean CERT on the 31st of January.</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-4878&quot; title=&quot;Cirl.lu CVE-2018-4878&quot;&gt;CVE-2018-4878&lt;/a&gt;  is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, &lt;a href=&quot;https://www.krcert.or.kr/data/secNoticeView.do?bulletin_writing_sequence=26998&quot;&gt;announced by the South-Korean CERT on the 31st of January&lt;/a&gt;. Patched on February 6, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-03.html&quot;&gt;ASPB18-03&lt;/a&gt;. Seen in &lt;a href=&quot;https://blog.morphisec.com/flash-exploit-cve-2018-4878-spotted-in-the-wild-massive-malspam-campaign&quot; title=&quot;Morphisec Blog&quot;&gt;malspam campaign&lt;/a&gt; two weeks after, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
+			<summary>The CVE-2018-4878 is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, announced by the South-Korean CERT on the 31 of January.</summary>
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-4878&quot; title=&quot;Cirl.lu CVE-2018-4878&quot;&gt;CVE-2018-4878&lt;/a&gt;  is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, &lt;a href=&quot;https://www.krcert.or.kr/data/secNoticeView.do?bulletin_writing_sequence=26998&quot;&gt;announced by the South-Korean CERT on the 31 of January&lt;/a&gt;. Patched on February 6, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-03.html&quot;&gt;ASPB18-03&lt;/a&gt;. Seen in &lt;a href=&quot;https://blog.morphisec.com/flash-exploit-cve-2018-4878-spotted-in-the-wild-massive-malspam-campaign&quot; title=&quot;Morphisec Blog&quot;&gt;malspam campaign&lt;/a&gt; two weeks after, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
 
 &lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
 
