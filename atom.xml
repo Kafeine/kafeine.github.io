@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T14:24:17+01:00</updated>
+	<updated>2018-03-10T16:09:52+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -50,7 +50,7 @@
 
 &lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/26FxCOdhlvEQXbeH6/giphy.gif&quot; width=&quot;240&quot; alt=&quot;zzZz..what?!&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/zZzWhat.gif&quot; width=&quot;240&quot; alt=&quot;zzZz..what?!&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;greenflash-sundown&quot;&gt;GreenFlash Sundown:&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Spotted on the 2018-03-09 (but probably there since several days)&lt;/em&gt;&lt;/p&gt;
