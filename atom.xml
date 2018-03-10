@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-03-10T11:57:22+01:00</updated>
+	<updated>2018-03-10T12:22:04+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -48,7 +48,7 @@
 			<summary>The CVE-2018-4878 is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, announced by the South-Korean CERT on the 31st of January.</summary>
 			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-4878&quot; title=&quot;Cirl.lu CVE-2018-4878&quot;&gt;CVE-2018-4878&lt;/a&gt;  is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, &lt;a href=&quot;https://www.krcert.or.kr/data/secNoticeView.do?bulletin_writing_sequence=26998&quot;&gt;announced by the South-Korean CERT on the 31st of January&lt;/a&gt;. Patched on February 6, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-03.html&quot;&gt;ASPB18-03&lt;/a&gt;. Seen in &lt;a href=&quot;https://blog.morphisec.com/flash-exploit-cve-2018-4878-spotted-in-the-wild-massive-malspam-campaign&quot; title=&quot;Morphisec Blog&quot;&gt;malspam campaign&lt;/a&gt; two weeks after, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
 
-&lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;&amp;quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&amp;quot;&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
+&lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/26FxCOdhlvEQXbeH6/giphy.gif&quot; width=&quot;240&quot; alt=&quot;zzZz..what?!&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
@@ -58,8 +58,8 @@
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/SundownGF.png&quot; alt=&quot;CVE-2018-4878-Successful pass on GreenFlash Sundown&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 1: Greenflash Sundown successfully deploying Hermes 2.1 Ransomware after exploiting Flash 26.0.0.131 in IE11 on Windows 7 - 2018-03-09 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
-GreenFlash is a private heavily modified version of &lt;a href=&quot;&amp;quot;https://malware.dontneedcoffee.com/2015/06/fast-look-at-sundown-ek.html&amp;quot;&quot;&gt;Sundown EK&lt;/a&gt; spotted &lt;a href=&quot;&amp;quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-bizarro-sundown-exploit-kit-spreads-locky/&amp;quot;&quot;&gt;in october 2016 by Trendmicro&lt;/a&gt;. It’s beeing exclusively used by the “WordsJS” (aka “ShadowGate”) group.
-This group is getting traffic from crompromised OpenRevive/OpenX advertising server since at least &lt;a href=&quot;&amp;quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&amp;quot;&quot;&gt;may 2015&lt;/a&gt;.&lt;/p&gt;
+GreenFlash is a private heavily modified version of &lt;a href=&quot;https://malware.dontneedcoffee.com/2015/06/fast-look-at-sundown-ek.html&quot;&gt;Sundown EK&lt;/a&gt; spotted &lt;a href=&quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-bizarro-sundown-exploit-kit-spreads-locky/&quot;&gt;in october 2016 by Trendmicro&lt;/a&gt;. It’s beeing exclusively used by the “WordsJS” (aka “ShadowGate”) group.
+This group is getting traffic from crompromised OpenRevive/OpenX advertising server since at least &lt;a href=&quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&quot;&gt;may 2015&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/WordsJS.png&quot; alt=&quot;MISP WordsJS&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 2: Some tagged activity from WordsJS displayed &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
@@ -77,14 +77,14 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&amp;quot;&quot;&gt;OpenX Hacks example (malvertising)&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&quot;&gt;OpenX Hacks example (malvertising)&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;2015-05-19&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;https://twitter.com/malekal_morte&amp;quot;&quot;&gt;@malekal_morte&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://twitter.com/malekal_morte&quot;&gt;@malekal_morte&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;[Tweet] &lt;a href=&quot;https://twitter.com/BelchSpeak/status/653605534915014656&quot;&gt;Malvertising via psychecentral[.]com&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;2015-10-12&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;https://twitter.com/belchspeak&amp;quot;&quot;&gt;@BelchSpeak&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://twitter.com/belchspeak&quot;&gt;@BelchSpeak&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;a href=&quot;http://www-test.cyphort.com/psychcental-com-infected-with-angler-ek-installs-bedep-vawtrak-and-pos-malware/&quot;&gt;Psychcentral.com […] Angler EK: Installs bedep, vawtrak and POS malware&lt;/a&gt;&lt;/td&gt;
@@ -99,7 +99,7 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
     &lt;tr&gt;
       &lt;td&gt;[FR]  &lt;a href=&quot;http://www.malekal.com/malvertising-openx/&quot;&gt;Exemple d’une Malvertising sur OpenX&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;2016-04-13&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;https://twitter.com/malekal_morte&amp;quot;&quot;&gt;@malekal_morte&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://twitter.com/malekal_morte&quot;&gt;@malekal_morte&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;a href=&quot;https://blog.malwarebytes.org/threat-analysis/2016/05/top-chilean-news-website-emol-pushes-angler-exploit-kit/&quot;&gt;Top Chilean News Website Emol Pushes Angler Exploit Kit&lt;/a&gt;&lt;/td&gt;
@@ -124,10 +124,10 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
     &lt;tr&gt;
       &lt;td&gt;&lt;a href=&quot;http://www.malware-traffic-analysis.net/2016/10/17/index3.html&quot;&gt;Sundown EK from 37.139.47.53 sends Locky Ransomware&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;2016-10-17&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;https://twitter.com/malware_traffic&amp;quot;&quot;&gt;@malware_traffic&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://twitter.com/malware_traffic&quot;&gt;@malware_traffic&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;&amp;quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-bizarro-sundown-exploit-kit-spreads-locky/&amp;quot;&quot;&gt;New Bizarro Sundown Exploit Kit Spreads Locky&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-bizarro-sundown-exploit-kit-spreads-locky/&quot;&gt;New Bizarro Sundown Exploit Kit Spreads Locky&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt;2016-11-04&lt;/td&gt;
       &lt;td&gt;Trendmicro&lt;/td&gt;
     &lt;/tr&gt;
