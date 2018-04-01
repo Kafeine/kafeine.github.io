@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-04-01T19:37:06+02:00</updated>
+	<updated>2018-04-01T19:49:35+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -201,10 +201,15 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/Magnitude.png&quot; alt=&quot;Magnitude_CVE-2018-4878&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 3: Magnitude  successfully deploying Magniber Ransomware after exploiting CVE-2018-4878 on Flash 27.0.0.170 in IE11 on Windows 7 - 2018-04-01 &amp;lt;/center&amp;gt;
 
+Magnitude is using the [WSH injection described](https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/) by [Matt Nelson](https://twitter.com/enigma0x3) in August 2017.
+
+&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/magnitude_wshinjection.png&quot; alt=&quot;Magnitude_WSHinject&quot; class=&quot;center&quot; /&gt;
+&lt;center&gt;&lt;em&gt;Figure 4: UAC prompt on the wsh injection executed upon successful exploitation&lt;/em&gt;&lt;/center&gt;
+
 Payload is Magniber, first spotted in the wild in [october 2017][magnibertweet], in a [context documented][trendmagniber] by Trendmicro.
 
 &lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/magnitude_misp.png&quot; alt=&quot;MagnigateMagnitudeHistory&quot; class=&quot;center&quot; /&gt;
-&lt;center&gt;&lt;em&gt;Figure 4: Some tagged activity from Magnigate displayed in &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 5: Some tagged activity from Magnigate displayed in &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
 
 __Select OSINT about this infection chain:__
 
