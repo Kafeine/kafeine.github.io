@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-04-09T21:36:27+02:00</updated>
+	<updated>2018-04-09T21:38:41+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -50,18 +50,18 @@
 
 &lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/zZzWhat.gif&quot; width=&quot;240&quot; alt=&quot;zzZz..what?!&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/zZzWhat.gif&quot; width=&quot;240&quot; alt=&quot;zzZz..what?!&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;greenflash-sundown&quot;&gt;&lt;a href=&quot;#gf-sundown&quot;&gt;GreenFlash Sundown&lt;/a&gt;:&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Spotted on the 2018-03-09 (but probably there since several days)&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/SundownGF.png&quot; alt=&quot;CVE-2018-4878-Successful pass on GreenFlash Sundown&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/SundownGF.png&quot; alt=&quot;CVE-2018-4878-Successful pass on GreenFlash Sundown&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 1: Greenflash Sundown successfully deploying Hermes 2.1 Ransomware after exploiting Flash 26.0.0.131 in IE11 on Windows 7 - 2018-03-09 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
 GreenFlash is a private heavily modified version of &lt;a href=&quot;https://malware.dontneedcoffee.com/2015/06/fast-look-at-sundown-ek.html&quot;&gt;Sundown EK&lt;/a&gt; spotted &lt;a href=&quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-bizarro-sundown-exploit-kit-spreads-locky/&quot;&gt;in october 2016 by Trendmicro&lt;/a&gt;. It’s beeing exclusively used by the “WordsJS” (aka “ShadowGate”) group.
 This group is getting traffic from crompromised OpenRevive/OpenX advertising server since at least &lt;a href=&quot;http://www.malekal.com/en-openx-hacks-example-malvertising/&quot;&gt;may 2015&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/WordsJS.png&quot; alt=&quot;MISP WordsJS&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/WordsJS.png&quot; alt=&quot;MISP WordsJS&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 2: Some tagged activity from WordsJS displayed in &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;br /&gt;
@@ -198,17 +198,17 @@ This group is getting traffic from crompromised OpenRevive/OpenX advertising ser
 &lt;h2 id=&quot;magnitude&quot;&gt;&lt;a href=&quot;#magnitude&quot;&gt;Magnitude&lt;/a&gt;:&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Spotted on the 2018-04-01&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/Magnitude.png&quot; alt=&quot;Magnitude_CVE-2018-4878&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/Magnitude.png&quot; alt=&quot;Magnitude_CVE-2018-4878&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 3: Magnitude  successfully deploying Magniber Ransomware after exploiting CVE-2018-4878 on Flash 27.0.0.170 in IE11 on Windows 7 - 2018-04-01 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
 Magnitude is using the &lt;a href=&quot;https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/&quot;&gt;WSH injection described&lt;/a&gt; by &lt;a href=&quot;https://twitter.com/enigma0x3&quot;&gt;Matt Nelson&lt;/a&gt; in August 2017.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/magnitude_wshinjection.png&quot; alt=&quot;Magnitude_WSHinject&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/magnitude_wshinjection.png&quot; alt=&quot;Magnitude_WSHinject&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 4: UAC prompt on the wsh injection executed upon successful exploitation&lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
 Payload is the Magniber Ransomware, first spotted in the wild in &lt;a href=&quot;https://twitter.com/kafeine/status/920038453924024320&quot;&gt;october 2017&lt;/a&gt;, in a &lt;a href=&quot;https://blog.trendmicro.com/trendlabs-security-intelligence/magnitude-exploit-kit-now-targeting-korea-with-magniber-ransomware/&quot;&gt;context documented&lt;/a&gt; by Trendmicro.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/magnitude_misp.png&quot; alt=&quot;MagnigateMagnitudeHistory&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/magnitude_misp.png&quot; alt=&quot;MagnigateMagnitudeHistory&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 5: Some tagged activity from Magnigate displayed in &lt;a href=&quot;https://www.misp-project.org/&quot;&gt;MISP&lt;/a&gt;.&lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;strong&gt;Select OSINT about this infection chain:&lt;/strong&gt;&lt;/p&gt;
@@ -323,7 +323,7 @@ Of course, we added the flash CVE-2018-4878 it is available on subscription from
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;And indeed today as spotted by &lt;a href=&quot;https://twitter.com/nao_sec/status/983381097328214016&quot;&gt;@nao_sec&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://192.168.168.203:4000/images/blog/CVE-2018-4878/rig_cve-2018-4878.png&quot; alt=&quot;RIG_CVE-2018-4878&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-4878/rig_cve-2018-4878.png&quot; alt=&quot;RIG_CVE-2018-4878&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 6: RIG  successfully exploiting CVE-2018-4878 on Flash 27.0.0.170 in IE11 on Windows 7 - 2018-04-09 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;
 | IOC  | Type   | Comment  | Date |
@@ -743,7 +743,7 @@ The second attempt to redirect the traffic allowed us to log more than 55000 req
 
 &lt;p&gt;Also, almost all of the redirections scripts are either pointing directly to &lt;code class=&quot;highlighter-rouge&quot;&gt;roi777.com/domain.php&lt;/code&gt; to fetch the latest domain or they are reporting to this same backend server, waiting for instruction.&lt;/p&gt;
 
-&lt;p&gt;We found an interesting discussion that happened on 06-01-2018 on this Russian forum[^1] involving the owner of the company &lt;strong&gt;Roi777&lt;/strong&gt; (using the nickname &lt;em&gt;bagussusu&lt;/em&gt;) and another actor (&lt;em&gt;azuluk&lt;/em&gt;) providing him backdoors, doorways and other elements mean to increase the number of redirected users. You can read the &lt;a href=&quot;http://192.168.168.203:4000/images/blog/hosted/kotd/Russian Forum.pdf&quot;&gt;translated conversation here&lt;/a&gt;. In summary, we can learn that :&lt;/p&gt;
+&lt;p&gt;We found an interesting discussion that happened on 06-01-2018 on this Russian forum[^1] involving the owner of the company &lt;strong&gt;Roi777&lt;/strong&gt; (using the nickname &lt;em&gt;bagussusu&lt;/em&gt;) and another actor (&lt;em&gt;azuluk&lt;/em&gt;) providing him backdoors, doorways and other elements mean to increase the number of redirected users. You can read the &lt;a href=&quot;http://malware.dontneedcoffee.com/images/blog/hosted/kotd/Russian Forum.pdf&quot;&gt;translated conversation here&lt;/a&gt;. In summary, we can learn that :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;They were involved in the traffic generated by some Chrome Extension&lt;/li&gt;
   &lt;li&gt;They are using Quiwi / WebMoney financial services to transfer money.&lt;/li&gt;
