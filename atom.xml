@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-04-10T12:17:44+02:00</updated>
+	<updated>2018-04-12T21:14:33+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -372,13 +372,13 @@ Of course, we added the flash CVE-2018-4878 it is available on subscription from
 
 &lt;p&gt;&lt;strong&gt;Edits:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;2018-04-10 - 10:05 GMT - Modified to reflect payload id. &lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;2018-04-10 - 10:05 GMT - Modified to reflect payload id: Urausy. Not seen since 2015-06-09&lt;br /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/StopMalvertisin&quot;&gt;Kimberly&lt;/a&gt; for the Payload identification.&lt;/li&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/StopMalvertisin&quot;&gt;Kimberly&lt;/a&gt; for the payload identification.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;div class=&quot;footnotes&quot;&gt;
