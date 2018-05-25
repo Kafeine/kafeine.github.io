@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-05-25T09:06:31+02:00</updated>
+	<updated>2018-05-25T09:07:10+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -66,7 +66,7 @@ Add CVE-2018-8174&lt;br /&gt;
 &lt;p&gt;And indeed today:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/rig_cve-2018-8174.png&quot; alt=&quot;RIG_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 6: RIG  launching CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 6: RIG  launching code exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;table&gt;
