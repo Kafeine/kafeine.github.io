@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-04-12T22:37:51+02:00</updated>
+	<updated>2018-05-25T08:57:55+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -26,6 +26,142 @@
 
 	<generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html</id>
+			<title>CVE-2018-8174 (VBScript Engine) and Exploit Kits</title>
+			<link href="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html" rel="alternate" type="text/html" title="CVE-2018-8174 (VBScript Engine) and Exploit Kits" />
+			<updated>2018-05-25T07:50:00+02:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Kafeine</name>
+					
+					
+					
+						<uri>https://twitter.com/kafeine</uri>
+					
+				</author>
+			
+			<summary>The CVE-2018-8174 is a bug that allows remote code execution via the VBScript Engine, spotted in the wild as a 0day at the end of April 2018, announced by Qihoo360</summary>
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Cirl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot;&gt;announced by the Qihoo360 on April 20, 2018&lt;/a&gt;. &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot;&gt;Patched by Microsoft&lt;/a&gt; on May 8, 2018. Explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;Kaspersky&lt;/a&gt;,&lt;/p&gt;
+
+&lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
+
+&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 in Exploit Kits and might shake the Drive-By landscape for the coming months&lt;/p&gt;
+
+&lt;h2 id=&quot;rig&quot;&gt;&lt;a href=&quot;#rig&quot;&gt;RIG&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted on the 2018-05-25&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;“TakeThat” wrote yesterday (2018-05-24) that he has integrated it and that infection rate has increased:&lt;/p&gt;
+
+&lt;p&gt;Добавлен CVE-2018-8174&lt;br /&gt;
+Add CVE-2018-8174&lt;br /&gt;
+Пробив/rate +  &lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/boom.gif&quot; alt=&quot;boom.gif&quot; /&gt;&lt;br /&gt;
+[redacted]@exploit.im&lt;br /&gt;
+[redacted]@xmpp.jp&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And indeed today:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/rig_cve-2018-8174.png&quot; alt=&quot;RIG_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 6: RIG  launching CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;206.189.147.254&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;Redirector&lt;/td&gt;
+      &lt;td&gt;2018-05-23&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.187&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.185&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.184&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;46.30.42.164&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vnz[.]bit|104.239.213[.]7&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Smoke Bot C2&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vnz2107[.]ru|104.239.213[.]7&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Smoke Bot C2&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/eeaa1ff2e9d33573590a8acb63cc8e6f390c0b056ff709e2945bf375d5ac5003/analysis/&quot;&gt;92e7cfc803ff73ed14c6bf7384834a09&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Smoke Bot&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/21062145f36a21cd7d8de7066f18be71f3f5bb16b1347c6d1f1065f627744fe4/analysis/&quot;&gt;58648ed843655d63570f8809ec2d6b26&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Extracted CVE-2018-8174&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;*Files: &lt;a href=&quot;https://www.virustotal.com/#/file/57281640e8ed514803a1c47c4ecb4e14462795b02308511d154b56d33e57ec00/detection&quot;&gt;PCAP on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/node5&quot;&gt;William Metcalf&lt;/a&gt; and Frank Ruiz (FoxIT InTELL) for their help.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
+&lt;a href=&quot;http://blogs.360.cn/blog/cve-2018-8174-en/&quot;&gt;Analysis of CVE-2018-8174 VBScript 0day&lt;/a&gt; - 2018-05-09 - Qihoo360&lt;br /&gt;&lt;/p&gt;
+
+</content>
+
+			
+				<category term="Exploit-Kit" />
+			
+			
+				<category term="CVE-2018-8174" />
+			
+				<category term="RIG" />
+			
+
+			<published>2018-05-25T07:50:00+02:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html</id>
@@ -1280,51 +1416,6 @@ Success stories include traffic generated by Doorways&lt;/p&gt;
 			
 
 			<published>2016-06-11T11:55:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>http://malware.dontneedcoffee.com/2016/05/cve-2016-4117-flash-up-to-2100213-and.html</id>
-			<title>CVE-2016-4117 (Flash up to 21.0.0.213) and Exploit Kits</title>
-			<link href="http://malware.dontneedcoffee.com/2016/05/cve-2016-4117-flash-up-to-2100213-and.html" rel="alternate" type="text/html" title="CVE-2016-4117 (Flash up to 21.0.0.213) and Exploit Kits" />
-			<updated>2016-05-21T15:24:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Kafeine</name>
-					
-					
-					
-						<uri>https://twitter.com/kafeine</uri>
-					
-				</author>
-			
-			<summary>Discovered being exploited in the wild by FireEye [1] on May 8, 2016, patched 4 days later with Flash 21.0.0.242, CVE-2016-4117 is making its way to Exploit Kits.</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2016/05/cve-2016-4117-flash-up-to-2100213-and.html">&lt;br /&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://1.bp.blogspot.com/-c6yK46RdsAw/V0BdVXcxRrI/AAAAAAAAFx8/QLoXBKN38JMe1kD9oEIDJ7D-F1svNgkqwCK4B/s1600/2016-04-06_13h41_32.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://1.bp.blogspot.com/-c6yK46RdsAw/V0BdVXcxRrI/AAAAAAAAFx8/QLoXBKN38JMe1kD9oEIDJ7D-F1svNgkqwCK4B/s1600/2016-04-06_13h41_32.png&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://3.bp.blogspot.com/-Z0jDtenErhc/V0BdrNQ4S7I/AAAAAAAAFyE/LgAS38mEsSEFYYuyLA4vjhj8D5uVm6phACK4B/s1600/2016-05-21_15h07_39.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://3.bp.blogspot.com/-Z0jDtenErhc/V0BdrNQ4S7I/AAAAAAAAFyE/LgAS38mEsSEFYYuyLA4vjhj8D5uVm6phACK4B/s400/2016-05-21_15h07_39.png&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;Discovered being exploited in the wild by &lt;a href=&quot;https://www.fireeye.com/blog/threat-research/2016/05/cve-2016-4117-flash-zero-day.html&quot;&gt;FireEye&lt;/a&gt; [&lt;a href=&quot;https://www.fireeye.com/blog/threat-research/2016/05/cve-2016-4117-flash-zero-day.html&quot;&gt;1&lt;/a&gt;] on May 8, 2016, patched &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb16-15.html&quot;&gt;4 days&lt;/a&gt; later with Flash 21.0.0.242, CVE-2016-4117 is making its way to Exploit Kits.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Magnitude :&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;CVE confirmed by FireEye - Thanks !&lt;br /&gt;On 2016-05-21 Magnitude is firing an exploit to Flash up to 21.0.0.213.&lt;br /&gt;&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-DiMMRudYAwE/V0CCu7LonnI/AAAAAAAAFy0/pZsJ9jfMRIgLrljBKcSWbO0N51GEvk9bwCK4B/s1600/2016-05-21_13h40_05.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;232&quot; src=&quot;https://2.bp.blogspot.com/-DiMMRudYAwE/V0CCu7LonnI/AAAAAAAAFy0/pZsJ9jfMRIgLrljBKcSWbO0N51GEvk9bwCK4B/s640/2016-05-21_13h40_05.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 12.8px;&quot;&gt;Magnitude firing exploit to Flash 21.0.0.213 - 2016-05-21&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;/div&gt;For now &lt;u&gt;i did not get exploitation&lt;/u&gt;&amp;nbsp;in the different pass i tried but in the Flash exploit we can see some quite explicit imports :&lt;br /&gt;&lt;br /&gt;&amp;nbsp;import com.adobe.tvsdk.mediacore.timeline.operations.DeleteRangeTimelineOperation;&lt;br /&gt;&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-Rj4SzdiXvew/V0BHbAztUUI/AAAAAAAAFxg/3TOOlm_IflgYSZP8V6-TP-rgLG1z2KDMwCK4B/s1600/2016-05-21_13h31_30.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;408&quot; src=&quot;https://4.bp.blogspot.com/-Rj4SzdiXvew/V0BHbAztUUI/AAAAAAAAFxg/3TOOlm_IflgYSZP8V6-TP-rgLG1z2KDMwCK4B/s640/2016-05-21_13h31_30.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;Magnitude Flash Exploit showing import of the&amp;nbsp;&lt;span style=&quot;text-align: start;&quot;&gt;DeleteRangeTimelineOperation&lt;/span&gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&lt;/div&gt;Spotted sample : &amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/file/f5cea58952ff30e9bd2a935f5843d15952b4cf85cdd1ad5d01c8de2000c48b0a/analysis/&quot;&gt;f5cea58952ff30e9bd2a935f5843d15952b4cf85cdd1ad5d01c8de2000c48b0a&lt;/a&gt;&lt;br /&gt;&lt;div&gt;Fiddler sent &lt;a href=&quot;https://www.virustotal.com/fr/file/71f60f5d7fb43bb572d9fa93a4c744773ad197acd4fcc088d50a6d7bdc7e4967/analysis/1463836390/&quot;&gt;here&lt;/a&gt;.&lt;/div&gt;Updates to come as it appears to be a work in progress.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Neutrino :&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;2016-05-23&lt;br /&gt;Spotted by Eset.&lt;br /&gt;&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://4.bp.blogspot.com/-DcUuoukvR0U/V0LVE27oF4I/AAAAAAAAFzE/Sjct7IcVKhwDfiL_-MTvcjZhy308DxUNQCK4B/s1600/2016-05-23_11h54_50.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;266&quot; src=&quot;https://4.bp.blogspot.com/-DcUuoukvR0U/V0LVE27oF4I/AAAAAAAAFzE/Sjct7IcVKhwDfiL_-MTvcjZhy308DxUNQCK4B/s640/2016-05-23_11h54_50.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;2016-05-23 Neutrino successfully exploit CVE-2016-4117 on Flash 21.0.0.213 and drop here CryptXXX&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;Sample in that pass :&amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/file/30984accbf40f0920675f6ba0b6daf2a3b6d32c751fd6d673bddead2413170e8/analysis/1463997395/&quot;&gt;30984accbf40f0920675f6ba0b6daf2a3b6d32c751fd6d673bddead2413170e8&lt;/a&gt;&lt;br /&gt;Fiddler sent &lt;a href=&quot;https://files.dontneedcoffee.com/index.php/s/wyR9Jon1Hj9WSRx&quot;&gt;here&lt;/a&gt;&amp;nbsp;(&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;i&gt;Password is malware)&lt;/i&gt;&lt;/span&gt;&lt;br /&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;i&gt;Out of topic payload:&amp;nbsp;&lt;span style=&quot;background-color: white; color: #333333; font-family: &amp;quot;helvetica neue&amp;quot; , &amp;quot;helvetica&amp;quot; , &amp;quot;arial&amp;quot; , sans-serif; line-height: 20px;&quot;&gt;&lt;a href=&quot;https://www.virustotal.com/file/110891e2b7b992e238d4afbaa31e165a6e9c25de2aed442574d3993734fb5220/analysis/1463998834/&quot;&gt;110891e2b7b992e238d4afbaa31e165a6e9c25de2aed442574d3993734fb5220&lt;/a&gt;&amp;nbsp;&lt;/span&gt;CryptXXX&lt;/i&gt;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Angler EK:&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;2016-05-23&lt;br /&gt;CVE identification by&amp;nbsp;&lt;a href=&quot;https://twitter.com/HenriNurmi&quot;&gt;Henri Nurmi&lt;/a&gt; from F-Secure. Thanks !&lt;br /&gt;&lt;table align=&quot;center&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; class=&quot;tr-caption-container&quot; style=&quot;margin-left: auto; margin-right: auto; text-align: center;&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td style=&quot;text-align: center;&quot;&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-LMbene0jORE/V0McjWYza7I/AAAAAAAAFzU/RGZ3_S2GTpwgjyQF_kPGEzl-2DSDofK4QCK4B/s1600/2016-05-23_17h05_22.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: auto; margin-right: auto;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;248&quot; src=&quot;https://2.bp.blogspot.com/-LMbene0jORE/V0McjWYza7I/AAAAAAAAFzU/RGZ3_S2GTpwgjyQF_kPGEzl-2DSDofK4QCK4B/s640/2016-05-23_17h05_22.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&quot;tr-caption&quot; style=&quot;text-align: center;&quot;&gt;Angler EK successfully exploit Flash 21.0.0.213 on 2016-05-23 dropping Dridex&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;br /&gt;&lt;/div&gt;Sample in that pass :&amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/file/310528e97a26f3fee05baea69230f8b619481ac53c2325da90345ae7713dcee2/analysis/1464016106/&quot;&gt;310528e97a26f3fee05baea69230f8b619481ac53c2325da90345ae7713dcee2&lt;/a&gt;&lt;br /&gt;Fiddler sent &lt;a href=&quot;https://www.virustotal.com/file/adc5b851d1e736d923591df24a359b1af93c85edc04b6b597cd9094b07e371f8/analysis/1464016150/&quot;&gt;here&lt;/a&gt;&lt;br /&gt;&lt;i&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;Out of topic payload &amp;nbsp;:&amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/file/99a6f5674b738591588416390f22dedd8dac9cf5aa14d0959208b0087b718902/analysis/1464016177/&quot;&gt;99a6f5674b738591588416390f22dedd8dac9cf5aa14d0959208b0087b718902&lt;/a&gt;&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&lt;i&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;Most likely Dridex 123 targeting Germany based on distribution path.&lt;/span&gt;&lt;/i&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;&lt;br /&gt;&lt;/u&gt;&lt;/b&gt;&lt;u style=&quot;font-weight: bold;&quot;&gt;Sundown :&lt;/u&gt;&lt;span style=&quot;font-weight: bold;&quot;&gt; &amp;nbsp;&lt;/span&gt;[3]&lt;br /&gt;2016-08-27&lt;br /&gt;&lt;a href=&quot;http://2.bp.blogspot.com/-247ka1kFNno/V8qS7Ib1q9I/AAAAAAAAF4Q/1qEfQYqRPUE8mwJ7g0KKuCN3XqEfmXlrgCK4B/s1600/2016-09-03_10h04_39.png&quot; imageanchor=&quot;1&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;154&quot; src=&quot;https://2.bp.blogspot.com/-247ka1kFNno/V8qS7Ib1q9I/AAAAAAAAF4Q/1qEfQYqRPUE8mwJ7g0KKuCN3XqEfmXlrgCK4B/s640/2016-09-03_10h04_39.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;br /&gt;&lt;span style=&quot;background-color: white; color: #333333; font-family: &amp;quot;helvetica neue&amp;quot; , &amp;quot;helvetica&amp;quot; , &amp;quot;arial&amp;quot; , sans-serif; font-size: 13px;&quot;&gt;Sample in that pass :&amp;nbsp;&lt;a href=&quot;https://www.virustotal.com/en/file/cf6be39135d8663be5241229e0f6651f9195a7434202067616ae00712a4e34e6/analysis/1472321198/&quot;&gt;cf6be39135d8663be5241229e0f6651f9195a7434202067616ae00712a4e34e6&lt;/a&gt;&amp;nbsp;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Fiddler &lt;a href=&quot;https://files.dontneedcoffee.com/index.php/s/hj6nvATIDDSD6PY&quot;&gt;sent here&lt;/a&gt; &amp;nbsp;(&lt;span style=&quot;font-size: x-small;&quot;&gt;password : malware&lt;/span&gt;)&lt;br /&gt;&lt;br /&gt;&lt;b&gt;&lt;u&gt;Read More:&lt;/u&gt;&lt;/b&gt;&lt;br /&gt;[1]&amp;nbsp;&lt;a href=&quot;https://www.fireeye.com/blog/threat-research/2016/05/cve-2016-4117-flash-zero-day.html&quot;&gt;CVE-2016-4117: Flash Zero-Day Exploited in the Wild&lt;/a&gt; - 2016-05-13 - Genwei Jiang - FireEye&lt;br /&gt;[2]&amp;nbsp;&lt;a href=&quot;http://blog.trendmicro.com/trendlabs-security-intelligence/new-flash-vulnerability-cve-2016-4117-shares-similarities-with-older-pawn-storm-exploit/&quot;&gt;New Flash Vulnerability CVE-2016-4117 Shares Similarities With Older Pawn Storm Exploit&lt;/a&gt; - 2016-05-13 - Moony Li - TrendMicro&lt;br /&gt;[3]&amp;nbsp;&lt;a href=&quot;https://www.trustwave.com/Resources/SpiderLabs-Blog/Sundown-EK-%E2%80%93-Stealing-Its-Way-to-the-Top/&quot;&gt;Sundown EK – Stealing Its Way to the Top&lt;/a&gt; - 2016-09-02 - Spiderlabs</content>
-
-			
-				<category term="Exploit-Kit" />
-			
-			
-				<category term="Magnitude" />
-			
-				<category term="CVE-2016-4117" />
-			
-				<category term="Flash Player" />
-			
-				<category term="AnglerEK" />
-			
-				<category term="Exploit Kit" />
-			
-				<category term="Neutrino" />
-			
-				<category term="Exploit" />
-			
-				<category term="21.0.0.213" />
-			
-
-			<published>2016-05-21T15:24:00+02:00</published>
 		</entry>
 	
 </feed>
