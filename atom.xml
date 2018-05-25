@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-05-25T08:57:55+02:00</updated>
+	<updated>2018-05-25T09:02:40+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -46,11 +46,11 @@
 				</author>
 			
 			<summary>The CVE-2018-8174 is a bug that allows remote code execution via the VBScript Engine, spotted in the wild as a 0day at the end of April 2018, announced by Qihoo360</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Cirl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot;&gt;announced by the Qihoo360 on April 20, 2018&lt;/a&gt;. &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot;&gt;Patched by Microsoft&lt;/a&gt; on May 8, 2018. Explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;Kaspersky&lt;/a&gt;,&lt;/p&gt;
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Cirl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Found exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot;&gt;announced by the Qihoo360 on April 20, 2018&lt;/a&gt;, &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot;&gt;patched by Microsoft&lt;/a&gt; on May 8, 2018 and explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;Kaspersky&lt;/a&gt; the day after.&lt;/p&gt;
 
-&lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
+&lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Browser Exploit Kits.&lt;/p&gt;
 
-&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 in Exploit Kits and might shake the Drive-By landscape for the coming months&lt;/p&gt;
+&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 and might shake the Drive-By landscape for the coming months&lt;/p&gt;
 
 &lt;h2 id=&quot;rig&quot;&gt;&lt;a href=&quot;#rig&quot;&gt;RIG&lt;/a&gt;:&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Spotted on the 2018-05-25&lt;/em&gt;&lt;/p&gt;
