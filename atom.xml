@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-05-25T09:10:40+02:00</updated>
+	<updated>2018-05-25T13:38:27+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -51,7 +51,7 @@ Root cause analysis of the latest Internet Explorer zero day – CVE-2018-8174&q
 
 &lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Browser Exploit Kits.&lt;/p&gt;
 
-&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 and might shake the Drive-By landscape for the coming months&lt;/p&gt;
+&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 and might shake the Drive-By landscape for the coming months.&lt;/p&gt;
 
 &lt;h2 id=&quot;rig&quot;&gt;&lt;a href=&quot;#rig&quot;&gt;RIG&lt;/a&gt;:&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Spotted on the 2018-05-25&lt;/em&gt;&lt;/p&gt;
