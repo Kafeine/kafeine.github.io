@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-06-02T13:51:26+02:00</updated>
+	<updated>2018-06-02T13:54:12+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -137,7 +137,7 @@ Add CVE-2018-8174&lt;br /&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;*Files: &lt;a href=&quot;https://www.virustotal.com/#/file/57281640e8ed514803a1c47c4ecb4e14462795b02308511d154b56d33e57ec00/detection&quot;&gt;PCAP on VT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/57281640e8ed514803a1c47c4ecb4e14462795b02308511d154b56d33e57ec00/detection&quot;&gt;PCAP on VT&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -221,7 +221,7 @@ Add CVE-2018-8174&lt;br /&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;em&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/1e5d0903198baac5eb213d290dd2c53124685de250ad18b709a6e83b826cdc69/detection&quot;&gt;Fiddler on VT&lt;/a&gt; *(note: some proxy were used)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/1e5d0903198baac5eb213d290dd2c53124685de250ad18b709a6e83b826cdc69/detection&quot;&gt;Fiddler on VT&lt;/a&gt; &lt;em&gt;(note: some proxy were used)&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;
 &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
