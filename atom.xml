@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-06-01T14:10:06+02:00</updated>
+	<updated>2018-06-02T13:51:26+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -145,14 +145,90 @@ Add CVE-2018-8174&lt;br /&gt;
   &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/node5&quot;&gt;William Metcalf&lt;/a&gt; and Frank Ruiz (FoxIT InTELL) for their help.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;magnitude&quot;&gt;&lt;a href=&quot;#magnitude&quot;&gt;Magnitude&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted on the 2018-06-02&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
+&lt;p&gt;After a week without buying traffic, Magnitude is active again, now with CVE-2018-8174:
+&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/magnitude_cve-2018-8174.png&quot; alt=&quot;Magnitude_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 6: Magnitude successfully exploiting CVE-2018-8174 against IE11 on Windows 7 to deploy Magniber Ransomware - 2018-06-02 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Note: Magniber is back (after  1 month and half of GandCrab) in this infection chain and is now (as GandCrab) also accepting Dash cryptocurrency as payment&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;taxhuge[.]com|149.56.159.203&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnigate step 1&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;69j366ma35.fedpart[.]website|167.114.33.110&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnigate step 2&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a23e5cwd602oe46d.addrole[.]space|167.114.191.124&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnitude&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/5990f09396ff018600f022e621921909bea8ea823398bd10dbade4f27b59e12f/analysis/&quot;&gt;f48a248ddec2b7987778203f2f6a11b1&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Extracted VBS&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/24d17158531180849f5b0819ac965d796886b8238d8a690e2a7ecb3d7fd3bf2b/analysis/&quot;&gt;30bddd0ef9f9f178aa39599f0e49d733&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Magniber&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].bitslot[.]website|139.60.161.51&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].carefly[.]space|54.37.57.152&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].trapgo[.]host|185.244.150.110&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].farmand[.]site|64.188.10.44&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/1e5d0903198baac5eb213d290dd2c53124685de250ad18b709a6e83b826cdc69/detection&quot;&gt;Fiddler on VT&lt;/a&gt; *(note: some proxy were used)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
 &lt;a href=&quot;http://blogs.360.cn/blog/cve-2018-8174-en/&quot;&gt;Analysis of CVE-2018-8174 VBScript 0day&lt;/a&gt; - 2018-05-09 - Qihoo360&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Post publication reading:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://blog.trendmicro.com/trendlabs-security-intelligence/rig-exploit-kit-now-using-cve-2018-8174-to-deliver-monero-miner/&quot;&gt;Rig Exploit Kit Now Using CVE-2018-8174 to Deliver Monero Miner&lt;/a&gt; - 2018-05-31 Trend Micro&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Post publication reading:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://blog.trendmicro.com/trendlabs-security-intelligence/rig-exploit-kit-now-using-cve-2018-8174-to-deliver-monero-miner/&quot;&gt;Rig Exploit Kit Now Using CVE-2018-8174 to Deliver Monero Miner&lt;/a&gt; - 2018-05-31 - Trend Micro&lt;br /&gt;&lt;/p&gt;
 
 </content>
 
