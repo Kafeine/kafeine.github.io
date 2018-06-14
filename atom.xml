@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-06-14T15:20:35+02:00</updated>
+	<updated>2018-06-14T15:25:36+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -230,14 +230,7 @@ Add CVE-2018-8174&lt;br /&gt;
 &lt;center&gt;&lt;em&gt;Figure 3: GrandSoft exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-06-14 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Files:  &lt;a href=&quot;https://www.virustotal.com/#/file/b9847896178e810f9b51b07a89a78b88d5b651a629ca8c1290df57eada788937/detection&quot;&gt;Fiddler on VT&lt;/a&gt;&lt;/td&gt;
-      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/#/file/9bec88033de8f4d913a6674168faf124ec5bb47216d15a42a7293e47c54ff7ff/detection&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/b9847896178e810f9b51b07a89a78b88d5b651a629ca8c1290df57eada788937/detection&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/#/file/9bec88033de8f4d913a6674168faf124ec5bb47216d15a42a7293e47c54ff7ff/detection&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
