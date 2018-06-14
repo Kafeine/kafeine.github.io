@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-06-14T15:25:36+02:00</updated>
+	<updated>2018-06-14T15:40:10+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -253,12 +253,6 @@ Add CVE-2018-8174&lt;br /&gt;
       &lt;td&gt;Domain|IP&lt;/td&gt;
       &lt;td&gt;GrandSoft EK&lt;/td&gt;
       &lt;td&gt;2018-06-14&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;a23e5cwd602oe46d.addrole[.]space|167.114.191.124&lt;/td&gt;
-      &lt;td&gt;Domain|IP&lt;/td&gt;
-      &lt;td&gt;Magnitude&lt;/td&gt;
-      &lt;td&gt;2018-06-02&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/69ec63646a589127c573fed9498a11d3e75009751ac5e16a80e7aa684ad66240/analysis/&quot;&gt;cec253acd39fe5d920c7da485e367104&lt;/a&gt;&lt;/td&gt;
