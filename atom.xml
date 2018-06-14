@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-06-02T13:54:12+02:00</updated>
+	<updated>2018-06-14T15:20:35+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -46,7 +46,7 @@
 				</author>
 			
 			<summary>The CVE-2018-8174 is a bug that allows remote code execution via the VBScript Engine, spotted in the wild as a 0day at the end of April 2018, announced by Qihoo360</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Cirl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Found exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot; title=&quot;新型Office攻击使用浏览器“双杀”漏洞&quot;&gt;announced by Qihoo360 on April 20, 2018&lt;/a&gt;, &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot; title=&quot;CVE-2018-8174 | Windows VBScript Engine Remote Code Execution Vulnerability&quot;&gt;patched by Microsoft&lt;/a&gt; on May 8, 2018 and explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot; title=&quot;The King is dead. Long live the King!
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Circl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Found exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot; title=&quot;新型Office攻击使用浏览器“双杀”漏洞&quot;&gt;announced by Qihoo360 on April 20, 2018&lt;/a&gt;, &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot; title=&quot;CVE-2018-8174 | Windows VBScript Engine Remote Code Execution Vulnerability&quot;&gt;patched by Microsoft&lt;/a&gt; on May 8, 2018 and explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot; title=&quot;The King is dead. Long live the King!
 Root cause analysis of the latest Internet Explorer zero day – CVE-2018-8174&quot;&gt;Kaspersky&lt;/a&gt; the day after.&lt;/p&gt;
 
 &lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Browser Exploit Kits.&lt;/p&gt;
@@ -67,7 +67,7 @@ Add CVE-2018-8174&lt;br /&gt;
 &lt;p&gt;And indeed today:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/rig_cve-2018-8174.png&quot; alt=&quot;RIG_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 6: RIG  launching code exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 1: RIG  launching code exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;table&gt;
@@ -150,7 +150,7 @@ Add CVE-2018-8174&lt;br /&gt;
 
 &lt;p&gt;After a week without buying traffic, Magnitude is active again, now with CVE-2018-8174:
 &lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/magnitude_cve-2018-8174.png&quot; alt=&quot;Magnitude_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 6: Magnitude successfully exploiting CVE-2018-8174 against IE11 on Windows 7 to deploy Magniber Ransomware - 2018-06-02 &lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 2: Magnitude successfully exploiting CVE-2018-8174 against IE11 on Windows 7 to deploy Magniber Ransomware - 2018-06-02 &lt;/em&gt;&lt;/center&gt;
 
 &lt;p&gt;Note: Magniber is back (after  1 month and half of GandCrab) in this infection chain and is now (as GandCrab) also accepting Dash cryptocurrency as payment&lt;/p&gt;
 
@@ -223,6 +223,89 @@ Add CVE-2018-8174&lt;br /&gt;
 
 &lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/1e5d0903198baac5eb213d290dd2c53124685de250ad18b709a6e83b826cdc69/detection&quot;&gt;Fiddler on VT&lt;/a&gt; &lt;em&gt;(note: some proxy were used)&lt;/em&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;grandsoft&quot;&gt;&lt;a href=&quot;#grandsoft&quot;&gt;GrandSoft&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted by Trend Micro on 2018-06-14&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/grandsoft_cve-2018-8174.png&quot; alt=&quot;GrandSoft_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 3: GrandSoft exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-06-14 &lt;/em&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Files:  &lt;a href=&quot;https://www.virustotal.com/#/file/b9847896178e810f9b51b07a89a78b88d5b651a629ca8c1290df57eada788937/detection&quot;&gt;Fiddler on VT&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/#/file/9bec88033de8f4d913a6674168faf124ec5bb47216d15a42a7293e47c54ff7ff/detection&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;easternflow[.]ml|200.74.240.219&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;BlackTDS&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;uafcriminality[.]lesbianssahgbrewingqzw[.]xyz|185.17.122.212&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;GrandSoft EK&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a23e5cwd602oe46d.addrole[.]space|167.114.191.124&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnitude&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/69ec63646a589127c573fed9498a11d3e75009751ac5e16a80e7aa684ad66240/analysis/&quot;&gt;cec253acd39fe5d920c7da485e367104&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Undefined Loader&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/f75c442895e7b8c005d420759dfcd4414ac037cf6bdd5771e23cedd73693a075/analysis/&quot;&gt;a15d9257a0c1421353edd31798f03cd6&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;GandCrab&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;91.210.104.247&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;Loader C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;carder[.]bit&lt;/td&gt;
+      &lt;td&gt;Domain&lt;/td&gt;
+      &lt;td&gt;GandCrab C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ransomware[.]bit&lt;/td&gt;
+      &lt;td&gt;Domain&lt;/td&gt;
+      &lt;td&gt;GandCrab C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/jspchc&quot;&gt;Joseph Chen&lt;/a&gt; who spotted the new exploit and allowed the capture of this traffic.&lt;/li&gt;
+&lt;/ul&gt;
+
 &lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;
 &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
 &lt;a href=&quot;http://blogs.360.cn/blog/cve-2018-8174-en/&quot;&gt;Analysis of CVE-2018-8174 VBScript 0day&lt;/a&gt; - 2018-05-09 - Qihoo360&lt;br /&gt;&lt;/p&gt;
@@ -263,7 +346,7 @@ Add CVE-2018-8174&lt;br /&gt;
 				</author>
 			
 			<summary>The CVE-2018-4878 is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, announced by the South-Korean CERT on the 31st of January.</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-4878&quot; title=&quot;Cirl.lu CVE-2018-4878&quot;&gt;CVE-2018-4878&lt;/a&gt;  is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, &lt;a href=&quot;https://www.krcert.or.kr/data/secNoticeView.do?bulletin_writing_sequence=26998&quot;&gt;announced by the South-Korean CERT on the 31st of January&lt;/a&gt;. Patched on February 6, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-03.html&quot;&gt;ASPB18-03&lt;/a&gt;. Seen in &lt;a href=&quot;https://blog.morphisec.com/flash-exploit-cve-2018-4878-spotted-in-the-wild-massive-malspam-campaign&quot; title=&quot;Morphisec Blog&quot;&gt;malspam campaign&lt;/a&gt; two weeks after, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/03/CVE-2018-4878.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-4878&quot; title=&quot;Circl.lu CVE-2018-4878&quot;&gt;CVE-2018-4878&lt;/a&gt;  is a bug that allows remote code execution in Flash Player up to 28.0.0.137, spotted in the wild as a 0day, &lt;a href=&quot;https://www.krcert.or.kr/data/secNoticeView.do?bulletin_writing_sequence=26998&quot;&gt;announced by the South-Korean CERT on the 31st of January&lt;/a&gt;. Patched on February 6, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-03.html&quot;&gt;ASPB18-03&lt;/a&gt;. Seen in &lt;a href=&quot;https://blog.morphisec.com/flash-exploit-cve-2018-4878-spotted-in-the-wild-massive-malspam-campaign&quot; title=&quot;Morphisec Blog&quot;&gt;malspam campaign&lt;/a&gt; two weeks after, it’s now beeing integrated in Exploit Kits.&lt;/p&gt;
 
 &lt;p&gt;This is, as far as i know, the first new working RCE integrated in non targeted Exploit Kit&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; since &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; in july 2016 (!).&lt;/p&gt;
 
