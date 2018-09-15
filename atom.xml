@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-09-15T19:45:23+02:00</updated>
+	<updated>2018-09-15T19:50:03+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -336,6 +336,8 @@ Add CVE-2018-8174&lt;br /&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/greenflash_cve-2018-8174.png&quot; alt=&quot;GreenFlash_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
 &lt;center&gt;&lt;em&gt;Figure 7: Greenflash Sundown firing CVE-2018-8174 to spread GandCrab - 2018-09-05 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/cf61710e38803c6e255a495adda615b2457ca41d009be5369b7f9bd2c9ff3f25/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
