@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-09-15T19:27:05+02:00</updated>
+	<updated>2018-09-15T19:45:23+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -335,7 +335,7 @@ Add CVE-2018-8174&lt;br /&gt;
 &lt;p&gt;&lt;em&gt;Spotted by Chaoying Liu on 2018-09-05&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/greenflash_cve-2018-8174.png&quot; alt=&quot;GreenFlash_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 7: Greenflash Sundown firing CVE-2018-8174 to spread GanCrab - 2018-09-05 &lt;/em&gt;&lt;/center&gt;
+&lt;center&gt;&lt;em&gt;Figure 7: Greenflash Sundown firing CVE-2018-8174 to spread GandCrab - 2018-09-05 &lt;/em&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -360,6 +360,18 @@ Add CVE-2018-8174&lt;br /&gt;
 				<category term="CVE-2018-8174" />
 			
 				<category term="RIG" />
+			
+				<category term="GrandSoft" />
+			
+				<category term="Magnitude" />
+			
+				<category term="Greenflash" />
+			
+				<category term="Hunter" />
+			
+				<category term="Kaixin" />
+			
+				<category term="Fallout" />
 			
 
 			<published>2018-05-25T07:50:00+02:00</published>
