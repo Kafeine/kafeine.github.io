@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2018-11-12T14:24:37+01:00</updated>
+	<updated>2018-11-12T14:25:35+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -611,59 +611,6 @@ __Post publication reading:__&lt;br/&gt;
 	
 		<entry>
 			<id>http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html</id>
-			<title>CVE-2018-8373 (VBScript Engine) and Exploit Kits</title>
-			<link href="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html" rel="alternate" type="text/html" title="CVE-2018-8373 (VBScript Engine) and Exploit Kits" />
-			<updated>2018-10-09T07:50:00+02:00</updated>
-
-			
-				
-				<author>
-					
-						<name>Kafeine</name>
-					
-					
-					
-						<uri>https://twitter.com/kafeine</uri>
-					
-				</author>
-			
-			<summary>The CVE-2018-8373 is a bug that allows remote code execution via the VBScript Engine.</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8373&quot; title=&quot;Circl.lu CVE-2018-8373&quot;&gt;CVE-2018-8373&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine.&lt;/p&gt;
-
-&lt;p&gt;This will should replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html&quot;&gt;CVE-2018-8174&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;fallout&quot;&gt;&lt;a href=&quot;#fallout&quot;&gt;Fallout&lt;/a&gt;:&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;Announced underground and Spotted on 2018-10-04&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/fallout_cve-2018-8174.png&quot; alt=&quot;Fallout_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
-&lt;center&gt;&lt;em&gt;Figure 4: Fallout exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-08-30 &lt;/em&gt;&lt;/center&gt;
-
-&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/5202d382cb8e629a037e33117883dc4f44996b9f17ac774e18e7b0152e526eea/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/en/file/54fa6d37f97e65cc62d96a5f0c2e3de9f32f2c0b2b2bbb7bc51f4d2f1e07b206/analysis/&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Thanks to Andrew Komarov for his help.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;&lt;/p&gt;
-
-</content>
-
-			
-				<category term="Exploit-Kit" />
-			
-			
-				<category term="CVE-2018-8373" />
-			
-				<category term="Fallout" />
-			
-
-			<published>2018-10-09T07:50:00+02:00</published>
-		</entry>
-	
-		<entry>
-			<id>http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html</id>
 			<title>CVE-2018-8174 (VBScript Engine) and Exploit Kits</title>
 			<link href="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html" rel="alternate" type="text/html" title="CVE-2018-8174 (VBScript Engine) and Exploit Kits" />
 			<updated>2018-05-25T07:50:00+02:00</updated>
@@ -1779,6 +1726,355 @@ __Post publication reading:__&lt;br/&gt;
 
 [CVE-2016-0189]: https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html
 
+
+</content>
+
+			
+				<category term="Exploit-Kit" />
+			
+			
+				<category term="CVE-2018-8174" />
+			
+				<category term="RIG" />
+			
+				<category term="GrandSoft" />
+			
+				<category term="Magnitude" />
+			
+				<category term="Greenflash" />
+			
+				<category term="Hunter" />
+			
+				<category term="Kaixin" />
+			
+				<category term="Fallout" />
+			
+
+			<published>2018-05-25T07:50:00+02:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html</id>
+			<title>CVE-2018-8174 (VBScript Engine) and Exploit Kits</title>
+			<link href="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html" rel="alternate" type="text/html" title="CVE-2018-8174 (VBScript Engine) and Exploit Kits" />
+			<updated>2018-05-25T07:50:00+02:00</updated>
+
+			
+				
+				<author>
+					
+						<name>Kafeine</name>
+					
+					
+					
+						<uri>https://twitter.com/kafeine</uri>
+					
+				</author>
+			
+			<summary>The CVE-2018-8174 is a bug that allows remote code execution via the VBScript Engine, spotted in the wild as a 0day at the end of April 2018, announced by Qihoo360</summary>
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2018/05/CVE-2018-8174.html">&lt;p&gt;The &lt;a href=&quot;http://cve.circl.lu/cve/CVE-2018-8174&quot; title=&quot;Circl.lu CVE-2018-8174&quot;&gt;CVE-2018-8174&lt;/a&gt;  is a bug that allows remote code execution in the VBScript Engine. Found exploited in the wild as a 0day via Word documents, &lt;a href=&quot;https://weibo.com/ttarticle/p/show?id=2309404230886689265523&quot; title=&quot;新型Office攻击使用浏览器“双杀”漏洞&quot;&gt;announced by Qihoo360 on April 20, 2018&lt;/a&gt;, &lt;a href=&quot;https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8174&quot; title=&quot;CVE-2018-8174 | Windows VBScript Engine Remote Code Execution Vulnerability&quot;&gt;patched by Microsoft&lt;/a&gt; on May 8, 2018 and explained in details by &lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot; title=&quot;The King is dead. Long live the King!
+Root cause analysis of the latest Internet Explorer zero day – CVE-2018-8174&quot;&gt;Kaspersky&lt;/a&gt; the day after.&lt;/p&gt;
+
+&lt;p&gt;A Proof of Concept for Internet Explorer 11 on Windows 7 has been &lt;a href=&quot;https://github.com/smgorelik/Windows-RCE-exploits/tree/master/Web/VBScript&quot;&gt;shared publicly 3 days ago&lt;/a&gt;, it’s now beeing integrated in Browser Exploit Kits.&lt;/p&gt;
+
+&lt;p&gt;This will replace &lt;a href=&quot;https://malware.dontneedcoffee.com/2016/07/cve-2016-0189-internet-explorer-and.html&quot;&gt;CVE-2016-0189&lt;/a&gt; from july 2016 and might shake the Drive-By landscape for the coming months.&lt;/p&gt;
+
+&lt;h2 id=&quot;rig&quot;&gt;&lt;a href=&quot;#rig&quot;&gt;RIG&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted on the 2018-05-25&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;“TakeThat” wrote yesterday (2018-05-24) that he has integrated it and that infection rate has increased:&lt;/p&gt;
+
+&lt;p&gt;Добавлен CVE-2018-8174&lt;br /&gt;
+Add CVE-2018-8174&lt;br /&gt;
+Пробив/rate +  &lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/boom.gif&quot; alt=&quot;boom.gif&quot; /&gt;&lt;br /&gt;
+[redacted]@exploit.im&lt;br /&gt;
+[redacted]@xmpp.jp&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And indeed today:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/rig_cve-2018-8174.png&quot; alt=&quot;RIG_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 1: RIG  launching code exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-05-25 &lt;/em&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;206.189.147.254&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;Redirector&lt;/td&gt;
+      &lt;td&gt;2018-05-23&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.187&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.185&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;95.142.40.184&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;46.30.42.164&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;RIG&lt;/td&gt;
+      &lt;td&gt;2018-05-24&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vnz[.]bit|104.239.213[.]7&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Smoke Bot C2&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vnz2107[.]ru|104.239.213[.]7&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Smoke Bot C2&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/eeaa1ff2e9d33573590a8acb63cc8e6f390c0b056ff709e2945bf375d5ac5003/analysis/&quot;&gt;92e7cfc803ff73ed14c6bf7384834a09&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Smoke Bot&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/21062145f36a21cd7d8de7066f18be71f3f5bb16b1347c6d1f1065f627744fe4/analysis/&quot;&gt;58648ed843655d63570f8809ec2d6b26&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Extracted VBS&lt;/td&gt;
+      &lt;td&gt;2018-05-25&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/57281640e8ed514803a1c47c4ecb4e14462795b02308511d154b56d33e57ec00/detection&quot;&gt;PCAP on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/node5&quot;&gt;William Metcalf&lt;/a&gt; and Frank Ruiz (FoxIT InTELL) for their help.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;magnitude&quot;&gt;&lt;a href=&quot;#magnitude&quot;&gt;Magnitude&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted on the 2018-06-02&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;After a week without buying traffic, Magnitude is active again, now with CVE-2018-8174:
+&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/magnitude_cve-2018-8174.png&quot; alt=&quot;Magnitude_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 2: Magnitude successfully exploiting CVE-2018-8174 against IE11 on Windows 7 to deploy Magniber Ransomware - 2018-06-02 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Note: Magniber is back (after  1 month and half of GandCrab) in this infection chain and is now (as GandCrab) also accepting Dash cryptocurrency as payment&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;taxhuge[.]com|149.56.159.203&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnigate step 1&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;69j366ma35.fedpart[.]website|167.114.33.110&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnigate step 2&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a23e5cwd602oe46d.addrole[.]space|167.114.191.124&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magnitude&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/5990f09396ff018600f022e621921909bea8ea823398bd10dbade4f27b59e12f/analysis/&quot;&gt;f48a248ddec2b7987778203f2f6a11b1&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Extracted VBS&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/24d17158531180849f5b0819ac965d796886b8238d8a690e2a7ecb3d7fd3bf2b/analysis/&quot;&gt;30bddd0ef9f9f178aa39599f0e49d733&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Magniber&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].bitslot[.]website|139.60.161.51&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].carefly[.]space|54.37.57.152&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].trapgo[.]host|185.244.150.110&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[ID].farmand[.]site|64.188.10.44&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;Magniber Payment Server&lt;/td&gt;
+      &lt;td&gt;2018-06-02&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/1e5d0903198baac5eb213d290dd2c53124685de250ad18b709a6e83b826cdc69/detection&quot;&gt;Fiddler on VT&lt;/a&gt; &lt;em&gt;(note: some proxy were used)&lt;/em&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;grandsoft&quot;&gt;&lt;a href=&quot;#grandsoft&quot;&gt;GrandSoft&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted by &lt;a href=&quot;https://twitter.com/jspchc&quot;&gt;Joseph Chen&lt;/a&gt; on 2018-06-14&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/grandsoft_cve-2018-8174.png&quot; alt=&quot;GrandSoft_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 3: GrandSoft exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-06-14 &lt;/em&gt;&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/#/file/b9847896178e810f9b51b07a89a78b88d5b651a629ca8c1290df57eada788937/detection&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/#/file/9bec88033de8f4d913a6674168faf124ec5bb47216d15a42a7293e47c54ff7ff/detection&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;easternflow[.]ml|200.74.240.219&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;BlackTDS&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;uafcriminality[.]lesbianssahgbrewingqzw[.]xyz|185.17.122.212&lt;/td&gt;
+      &lt;td&gt;Domain|IP&lt;/td&gt;
+      &lt;td&gt;GrandSoft EK&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/69ec63646a589127c573fed9498a11d3e75009751ac5e16a80e7aa684ad66240/analysis/&quot;&gt;cec253acd39fe5d920c7da485e367104&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;Undefined Loader&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.virustotal.com/en/file/f75c442895e7b8c005d420759dfcd4414ac037cf6bdd5771e23cedd73693a075/analysis/&quot;&gt;a15d9257a0c1421353edd31798f03cd6&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;md5&lt;/td&gt;
+      &lt;td&gt;GandCrab&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;91.210.104.247&lt;/td&gt;
+      &lt;td&gt;IP&lt;/td&gt;
+      &lt;td&gt;AscentorLoader C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;carder[.]bit&lt;/td&gt;
+      &lt;td&gt;Domain&lt;/td&gt;
+      &lt;td&gt;GandCrab C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ransomware[.]bit&lt;/td&gt;
+      &lt;td&gt;Domain&lt;/td&gt;
+      &lt;td&gt;GandCrab C2&lt;/td&gt;
+      &lt;td&gt;2018-06-14&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/jspchc&quot;&gt;Joseph Chen&lt;/a&gt; who spotted the new exploit and allowed the capture of this traffic.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Edits:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2018-06-19  - Added the name for the Loader &lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;fallout&quot;&gt;&lt;a href=&quot;#fallout&quot;&gt;Fallout&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted on 2018-06-30, most probably there since 2018-06-16&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/fallout_cve-2018-8174.png&quot; alt=&quot;Fallout_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 4: Fallout exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-08-30 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/5202d382cb8e629a037e33117883dc4f44996b9f17ac774e18e7b0152e526eea/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/en/file/54fa6d37f97e65cc62d96a5f0c2e3de9f32f2c0b2b2bbb7bc51f4d2f1e07b206/analysis/&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/nao_sec&quot;&gt;Nao_Sec&lt;/a&gt; for the initial referer. Thanks to &lt;a href=&quot;https://twitter.com/jspchc&quot;&gt;Joseph Chen&lt;/a&gt; for additionnal inputs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kaixin-ek&quot;&gt;&lt;a href=&quot;#kaixin&quot;&gt;Kaixin EK&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted by &lt;a href=&quot;https://twitter.com/wugeej/status/1017208092482625536&quot;&gt;JayK&lt;/a&gt; on 2018-07-12&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/kaixin_cve-2018-8174.png&quot; alt=&quot;Kaixin_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 5: Kaixin exploiting CVE-2018-8174 against IE11 on Windows 7 - 2018-08-11 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/fc46d7d51778396261eae02f11eaddce18c97aab9ef8227547094023ee58d3cf/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/en/file/d442c4c9e0911de27f28c0d06565c1790460b832e7439233ebd0b5526eb9f801/analysis/&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;hunter-ek&quot;&gt;&lt;a href=&quot;#hunter&quot;&gt;Hunter EK&lt;/a&gt;:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://malware.dontneedcoffee.com/images/blog/CVE-2018-8174/hunter_cve-2018-8174.png&quot; alt=&quot;Hunter_CVE-2018-8174&quot; class=&quot;center&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;&lt;em&gt;Figure 6: Hunter including CVE-2018-8174 in its carpet bombing against IE11 on Windows 7 - 2018-08-30 &lt;/em&gt;&lt;/center&gt;
+
+&lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/cc9e0347ae679b9d15d2138bff532cd27edae2b4e171d6b0a46c09adc5aaed19/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Thanks to Frank Ruiz (FoxIT InTELL) for allowing this capture.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;greenflash-sundown&quot;&gt;&lt;a href=&quot;#sundown-gf&quot;&gt;Greenflash Sundown&lt;/a&gt;:&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Spotted by &lt;a href=&quot;https://twitter.com/ring_lcy&quot;&gt;Chaoying Liu&lt;/a&gt; on 2018-09-05&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Coming Soon&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Acknowledgement:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Thanks to &lt;a href=&quot;https://twitter.com/ring_lcy&quot;&gt;Chaoying Liu&lt;/a&gt; for the CVE identification.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://securelist.com/root-cause-analysis-of-cve-2018-8174/85486/&quot;&gt;The King is dead. Long live the King!&lt;/a&gt; - 2018-05-09 - SecureList&lt;br /&gt;
+&lt;a href=&quot;http://blogs.360.cn/blog/cve-2018-8174-en/&quot;&gt;Analysis of CVE-2018-8174 VBScript 0day&lt;/a&gt; - 2018-05-09 - Qihoo360&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Post publication reading:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&quot;https://blog.trendmicro.com/trendlabs-security-intelligence/rig-exploit-kit-now-using-cve-2018-8174-to-deliver-monero-miner/&quot;&gt;Rig Exploit Kit Now Using CVE-2018-8174 to Deliver Monero Miner&lt;/a&gt; - 2018-05-31 - Trend Micro&lt;br /&gt;
+&lt;a href=&quot;https://securelist.com/delving-deep-into-vbscript-analysis-of-cve-2018-8174-exploitation/86333/&quot;&gt;Delving deep into VBScript - Analysis of CVE-2018-8174 exploitation&lt;/a&gt; - 2018-07-03 - SecureList&lt;br /&gt;
+&lt;a href=&quot;https://www.nao-sec.org/2018/09/hello-fallout-exploit-kit.html&quot;&gt;Hello “Fallout Exploit Kit”&lt;/a&gt; - 2018-09-01 - &lt;a href=&quot;https://twitter.com/nao_sec&quot;&gt;Nao_Sec&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
 
 </content>
 
