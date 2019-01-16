@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-01-16T19:33:54+01:00</updated>
+	<updated>2019-01-16T19:34:42+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -96,7 +96,7 @@
     &lt;li&gt;The code obfuscation and landing generation mechanism has been completely redesigned.&lt;/li&gt;
     &lt;li&gt;Removed CVE-2018-8373 for recycling. At the moment, the flow rate is not stable.&lt;/li&gt;
     &lt;li&gt;Added new flash sploit CVE-2018-15982.&lt;/li&gt;
-    &lt;li&gt;To launch Povercell, the disable code AMSI is added to the shellcode&lt;/li&gt;
+    &lt;li&gt;To launch Powershell, the disable code AMSI is added to the shellcode&lt;/li&gt;
     &lt;li&gt;A bunch of minor edits&lt;/li&gt;
   &lt;/ol&gt;
 
