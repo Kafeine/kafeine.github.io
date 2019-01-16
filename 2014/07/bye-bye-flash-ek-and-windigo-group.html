@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bye Bye Flash EK ? (and Windigo group adapting)</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Some days ago researchers following closely the exploit kit landscape started to notice some problem on Flash EK">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2014/07/bye-bye-flash-ek-and-windigo-group.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Bye Bye Flash EK ? (and Windigo group adapting)">
+	<meta property="og:description" content="Some days ago researchers following closely the exploit kit landscape started to notice some problem on Flash EK">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2014/07/bye-bye-flash-ek-and-windigo-group.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Bye Bye Flash EK ? (and Windigo group adapting)">
+	<meta name="twitter:description" content="Some days ago researchers following closely the exploit kit landscape started to notice some problem on Flash EK">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2014-07-10  - Landscape</p>
+					<h1>Bye Bye Flash EK ? (and Windigo group adapting)</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-xvSjxpanXVE/U76VnZK4niI/AAAAAAAADaY/srJd2P0pKcM/s1600/screenshot_2014-06-06_028.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-xvSjxpanXVE/U76VnZK4niI/AAAAAAAADaY/srJd2P0pKcM/s1600/screenshot_2014-06-06_028.png" /></a></div><br /><br />&lt;spoiler: it's back&gt;<br /><br />Some days ago researchers following closely the exploit kit landscape started to notice some problem on Flash EK (afaik first noticed by <a href="https://twitter.com/node5">Will Metcalf</a>&nbsp;from Emerging Threats)<br /><br />Few days after on underground one of the two customers posted a message to get some news....<br /><br />Now the main customer (Windigo/Glupteba/ExTKR) has transitionned to RIG.<br /><br />Here is an image to sum this up:<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-H7uVENbsinY/U76ORZVnfoI/AAAAAAAADZ4/L1AnAemKPrk/s1600/screenshot_2014-07-10_074.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-H7uVENbsinY/U76ORZVnfoI/AAAAAAAADZ4/L1AnAemKPrk/s1600/screenshot_2014-07-10_074.png" height="220" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">The Windigo/Ebury group reacting to Flash EK problems and push Glupteba in RIG<br />(after migrating from Neutrino - 2014-03- and previously from <a href="http://malware.dontneedcoffee.com/2013/10/paunch-arrestationthe-end-of-era.html">Blackhole</a>&nbsp;- 2013-10)<br />Note : For those following Flash EK "codex" should sound Familiar :)</td></tr></tbody></table><br /><br />Flash EK (aka Flash Pack) &nbsp;was a fork or son of <a href="http://malware.dontneedcoffee.com/2013/04/meet-safe-pack-v20-again.html">SafePack</a>&nbsp;itself forked or son of&nbsp;<a href="http://malware.dontneedcoffee.com/2012/11/meet-critxpack-previously-vintage-pack.html">CritXPack</a>&nbsp;(formerly : Vintage Pack) &nbsp;(&lt;-- yes, if you stop following the move...then you get lost).<br /><br />Here is the advert for Flash EK :<br /><br />Original advert - 2013-12-19<br />------------------------------------------<br /><span style="color: #134f5c;">Предложение в первую очередь подойдет тем, кто дорожит своими источниками трафа.</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">В дополнение к этой теме</span><br /><span style="color: #134f5c;">Появилась возможность выдавать связку в формирующийся баннером фрейм.</span><br /><span style="color: #134f5c;">Связка тестилась и дорабатывалась в течение долгого времени.</span><br /><span style="color: #134f5c;">В составе связки шесть сплоитов:</span><br /><span style="color: #134f5c;">- 3 джавы до 1.7.21 включительно</span><br /><span style="color: #134f5c;">- ледибойе</span><br /><span style="color: #134f5c;">- дашстайл</span><br /><span style="color: #134f5c;">- сильвер</span><br /><span style="color: #134f5c;">В админке предусмотрена возможность автоматической смены доменов, чек домена и файла на палевность, загрузка файла по крону.</span><br /><span style="color: #134f5c;">Траф принимается только после баннера, но лимитов нет.</span><br /><span style="color: #134f5c;">Баннер:</span><br /><span style="color: #134f5c;">- отфильтровывает непробиваемые оси и браузеры</span><br /><span style="color: #134f5c;">- ставит флешкуку на сутки, если кука уже есть - фильтр, если не ставится - бот</span><br /><span style="color: #134f5c;">- фильтрует по разрешению монитора</span><br /><span style="color: #134f5c;">Все остальное попадает на связку.</span><br /><span style="color: #134f5c;">Пока что связка грузит только exe, работы с dll ведутся.</span><br /><span style="color: #134f5c;">Стоимость одного баннера с неограниченным количеством трафа на один поток с возможностью загрузки одного файла - 250 уев в неделю.</span><br /><span style="color: #134f5c;">Оплата - битками по курсу.</span><br /><span style="color: #134f5c;">Стоимость чисток баннера входит в стоимость аренды.</span><br /><span style="color: #134f5c;">Тест - баннер за 25 уе под одну панель на сутки.</span><br /><span style="color: #134f5c;">СНГ траф отправляется на дисней.</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">Жаба: confessor@sj.ms</span><br /><span style="color: #134f5c;">Контакт саппорта - через жабу.</span><br /><span style="color: #134f5c;">ОТР и ссылка на профиль в эксплоите обязательны.</span><br /><span style="color: #134f5c;">Олбанский, английский и гугл-транслятор по-прежнему не понимаю.</span><br /><span style="color: #134f5c;"><br /></span><span style="color: #134f5c;">PS: Возможна работа за процент от трафа, 10 процентов, объемы от 100 килограмм в сутки</span><br />------------------------------------------<br />Google translates this as:<br />------------------------------------------<br /><span style="color: #351c75;">Offer primarily for those who cherish their sources cores.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">In addition to this topic</span><br /><span style="color: #351c75;">Now you can give a bunch of emerging banner frame.</span><br /><span style="color: #351c75;">Ligament tests and been refined over time.</span><br /><span style="color: #351c75;">As part of a bunch of six sploitov:</span><br /><span style="color: #351c75;">- 3 Jawas to 1.7.21 inclusive</span><br /><span style="color: #351c75;">- lediboye</span><br /><span style="color: #351c75;">- dashstayl</span><br /><span style="color: #351c75;">- Silver</span><br /><span style="color: #351c75;">In the admin provides the ability to automatically change the domain, and check domain file on palevnost, downloading a file to the crown.</span><br /><span style="color: #351c75;">Cores taken only after the banner, but no limits.</span><br /><span style="color: #351c75;">banner:</span><br /><span style="color: #351c75;">- Filters impenetrable axis and Browsers</span><br /><span style="color: #351c75;">- Puts fleshkuku per day, if the cookie is already there - the filter if not put - bot</span><br /><span style="color: #351c75;">- By the resolution of the monitor</span><br /><span style="color: #351c75;">Everything else goes to a bunch.</span><br /><span style="color: #351c75;">So far, only a bunch of ship exe, dll work in progress.</span><br /><span style="color: #351c75;">The price of one banner with an unlimited number of cores on a single stream with the ability to download a file - 250 uev week.</span><br /><span style="color: #351c75;">Payment - chock Exchange.</span><br /><span style="color: #351c75;">Cost cleansing banner included in the rent.</span><br /><span style="color: #351c75;">Test - banner for 25 ye a single panel on the day.</span><br /><span style="color: #351c75;">CIS cores goes to disney.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Toad: confessor@sj.ms</span><br /><span style="color: #351c75;">Contact tech support - through toad.</span><br /><span style="color: #351c75;">OTR and link to a profile in the exploit required.</span><br /><span style="color: #351c75;">Albany, English and Google-translator still do not understand.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">PS: Can work for a percentage of the cores, 10 percent of the volume of 100 pounds per day</span><br />------------------------------------------<br /><br /><br />Update on march :<br />------------------------------------------<br /><span style="color: #134f5c;">Появилась возможность взять еще пять-десять арендаторов на связку.</span><br /><span style="color: #134f5c;">Слив через баннер - желательно, но не обязательно, прикручен стандартный ротатор.</span><br /><span style="color: #134f5c;">Семь сплоитов. Нелепые вопросы про ЦВЕ игнорируются.</span><br /><span style="color: #134f5c;">Траф - анлим, потоков - пять.</span><br /><span style="color: #134f5c;">Чек файла и актуального домена из админки.</span><br /><span style="color: #134f5c;">Один поток - 250 неделя, пять - 750.</span><br /><span style="color: #134f5c;">Для теста нужен проксирующий впс на nginx и свои домены.</span><br /><span style="color: #134f5c;">Если не знаете, что такое nginx или что такое домены - не стучите.</span><br /><span style="color: #134f5c;">Траф из СНГ не принимается.</span><br /><span style="color: #134f5c;">Детали - в жабе. Только ОТР.</span><br /><span style="color: #134f5c;">Саппорт закодированный, групповуху на 400 мест не планируем. Пробив на достойном уровне. Чистки регулярные.</span><br /><span style="color: #134f5c;">Всегда есть подработка для джава-кодеров.</span><br /><span style="color: #134f5c;">По-английски не понимаю. Со школьниками не общаюсь. Оставляю за собой право отказаться от сотрудничества по субъективным причинам.</span><br /><span style="color: #134f5c;">---Later</span><br /><span style="color: #134f5c;">2014-0322</span><br /><span style="color: #134f5c;">2013-0074</span><br /><span style="color: #134f5c;">2013-0634</span><br /><span style="color: #134f5c;">2013-2551</span><br /><span style="color: #134f5c;">2013-2471</span><br /><span style="color: #134f5c;">2013-2465</span><br /><span style="color: #134f5c;">2011-3544</span><br />------------------------------------------<br />Google translated :<br />------------------------------------------<br /><span style="color: #351c75;">Now you can take another five to ten tenants bunch.</span><br /><span style="color: #351c75;">Draining through banner - preferably, but not necessarily, bolted standard rotator.</span><br /><span style="color: #351c75;">Seven sploitov. Ridiculous questions about CEE ignored.</span><br /><span style="color: #351c75;">Traf - anlim, streams - five.</span><br /><span style="color: #351c75;">Check the file and the actual domain of the admin.</span><br /><span style="color: #351c75;">One thread - 250 a week, five - 750.</span><br /><span style="color: #351c75;">Need to test a proxy UPU nginx and their domains.</span><br /><span style="color: #351c75;">If you do not know what nginx or what domains - do not knock.</span><br /><span style="color: #351c75;">Cores from the CIS is not accepted.</span><br /><span style="color: #351c75;">Details - in the toad. Only OTP.</span><br /><span style="color: #351c75;">A support coded, Group 400 seats do not plan to. Breaking at a decent level. Regular cleaning.</span><br /><span style="color: #351c75;">There is always a part for java coders.</span><br /><span style="color: #351c75;">In English do not understand. With students do not communicate. I reserve the right to refuse to cooperate for subjective reasons</span><br /><span style="color: #351c75;">---Later</span><br /><span style="color: #351c75;">2014-0322</span><br /><span style="color: #351c75;">2013-0074</span><br /><span style="color: #351c75;">2013-0634</span><br /><span style="color: #351c75;">2013-2551</span><br /><span style="color: #351c75;">2013-2471</span><br /><span style="color: #351c75;">2013-2465</span><br /><span style="color: #351c75;">2011-3544</span><br />------------------------------------------<br /><br />Recent move :<br /><blockquote class="twitter-tweet" lang="en">Flash Pack is exploiting CVE-2014-0322 <a href="http://t.co/cLnWsRFtfw">http://t.co/cLnWsRFtfw</a> <a href="http://t.co/4WxKtY4wRb">pic.twitter.com/4WxKtY4wRb</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/449199513664618496">March 27, 2014</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script> <br /><blockquote class="twitter-tweet" lang="en">Flask Pack is now targeting CVE-2014-0497. Post Updated : <a href="http://t.co/m9m88Z5tb8">http://t.co/m9m88Z5tb8</a> <a href="http://t.co/dD9Zfc5jSB">pic.twitter.com/dD9Zfc5jSB</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/456227761833533442">April 16, 2014</a></blockquote><blockquote class="twitter-tweet" lang="en">CVE-2014-0515 integrating Exploit Kit (CottonCastle and Flash EK) <a href="http://t.co/IY32oCKkTZ">http://t.co/IY32oCKkTZ</a> cc/thx <a href="https://twitter.com/malware_traffic">@malware_traffic</a> <a href="http://t.co/3FEdeNEEIM">pic.twitter.com/3FEdeNEEIM</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/475383593595060226">June 7, 2014</a></blockquote><blockquote class="twitter-tweet" lang="en">Flash EK : more randomness <a href="http://t.co/pVU2yPXVik">pic.twitter.com/pVU2yPXVik</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/statuses/478674638047043585">June 16, 2014</a></blockquote><br />How was the panel &nbsp;?<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-RltqyaA09sA/U76RHZ71vaI/AAAAAAAADaE/0QVy-XP807M/s1600/screenshot_2014-07-10_091.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-RltqyaA09sA/U76RHZ71vaI/AAAAAAAADaE/0QVy-XP807M/s1600/screenshot_2014-07-10_091.png" height="322" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Flash EK - 2014-05-26</td></tr></tbody></table><br />Another one to show the Refer and country part when activated :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-5-CpBhf-6TM/U76RqAID-xI/AAAAAAAADaM/HJ-irG1L1kQ/s1600/screenshot_2014-07-10_092.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-5-CpBhf-6TM/U76RqAID-xI/AAAAAAAADaM/HJ-irG1L1kQ/s1600/screenshot_2014-07-10_092.png" height="526" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Flash EK 2014-04-16</td></tr></tbody></table>So..some think Paunch and Conf are now talking together about the old good time...maybe we'll hear about it...he'll come back or Conf will disappear without drums as Xio (Sakura) , Serv2u (Neutrino) did...<br /><span style="font-size: x-small;">(I have to admit it again. I know it's bad but each time an EK disappear I feel a little Sad...)</span>.<br />--Edit1 2014-07-11 --<br />Conf replied on Underground :<br /><br />Залил клаву на ноуте<br />Вот и вся проблема<br /><br />Saying globally that he<br /><br />spilt some liquid on his laptop keyboard.<br />That's all.<br /><br />Few hours later, the other customer ( cf first screenshot, same instance) is back :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-CGGpOZgrxkM/U8BeCsPpjzI/AAAAAAAADao/i1Uc-jrbVDk/s1600/screenshot_2014-07-11_033.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-CGGpOZgrxkM/U8BeCsPpjzI/AAAAAAAADao/i1Uc-jrbVDk/s1600/screenshot_2014-07-11_033.png" height="124" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Flash EK back 2014-07-12</td></tr></tbody></table>And since yesterday evening the "windigo" traffic is redirected to this thread.....should help figuring out when they'll switch back to an (Flash?) EK<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-C8LC4kc_WYs/U8BelktBbeI/AAAAAAAADaw/0Yx7ChUjwb0/s1600/screenshot_2014-07-11_032.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-C8LC4kc_WYs/U8BelktBbeI/AAAAAAAADaw/0Yx7ChUjwb0/s1600/screenshot_2014-07-11_032.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">MDNC traffic (unusual rate is windigo traffic)</td></tr></tbody></table><div class="separator" style="clear: both; text-align: center;"></div><br />--edit2 2014-07-13 --<br />And they are back on Flash EK<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-9DPaQXeO7bk/U8IB2Uyvl2I/AAAAAAAADbY/Lt29zfzZ4v0/s1600/screenshot_2014-07-13_006.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-9DPaQXeO7bk/U8IB2Uyvl2I/AAAAAAAADbY/Lt29zfzZ4v0/s1600/screenshot_2014-07-13_006.png" height="250" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Windigo Back on Flash EK<br />2014-07-13</td></tr></tbody></table><br />----<br /><br /><b><u>Read More :</u></b><br /><a href="http://www.welivesecurity.com/wp-content/uploads/2014/03/operation_windigo.pdf">Operation Windigo (PDF)</a> &nbsp;- 2014-03 - Eset<br /><a href="http://malware.dontneedcoffee.com/2013/04/meet-safe-pack-v20-again.html">Meet Safe Pack (v2.0)... Again :)</a> - 2013-04-21<br /><a href="http://malware.dontneedcoffee.com/2012/11/meet-critxpack-previously-vintage-pack.html">Meet CritXPack (Previously Vintage Pack)</a> - 2012-11-12<br /><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2014-07-10" itemprop="datePublished"> 2014-07-10</time>
+				
+
+				<span class="icon-archive pr20"> EXPLOIT-KIT</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Flash Pack</span> <span class="icon-price-tag pr10"> SafePack</span> <span class="icon-price-tag pr10"> conf</span> <span class="icon-price-tag pr10"> CritXPack</span> <span class="icon-price-tag pr10"> ex-Tkr</span> <span class="icon-price-tag pr10"> Windigo</span> <span class="icon-price-tag pr10"> Flask EK</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2014/07/from-alureonwowliks-to-poweliks-botnet.html">&laquo; From Alureon/Wowliks to Poweliks botnet (distribution in Affiliate mode)</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2014/07/sky-share-evolution-mining-botnet-system.html">SkyShare : Evolution Mining Botnet System &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

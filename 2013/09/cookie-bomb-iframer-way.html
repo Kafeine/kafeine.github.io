@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cookie-Bomb : The &quot;Северная Сказка&quot; Iframer way</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="The TDS/Iframer behind many redirection from compromised website">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2013/09/cookie-bomb-iframer-way.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Cookie-Bomb : The &quot;Северная Сказка&quot; Iframer way">
+	<meta property="og:description" content="The TDS/Iframer behind many redirection from compromised website">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2013/09/cookie-bomb-iframer-way.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Cookie-Bomb : The &quot;Северная Сказка&quot; Iframer way">
+	<meta name="twitter:description" content="The TDS/Iframer behind many redirection from compromised website">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2013-09-21  - Connect the dots</p>
+					<h1>Cookie-Bomb : The "Северная Сказка" Iframer way</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-XsoYJZ6k80o/Uj2UB7w4ohI/AAAAAAAABKA/BgBD5B2w7S4/s1600/Cookie_bombing_horz-499x337.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-XsoYJZ6k80o/Uj2UB7w4ohI/AAAAAAAABKA/BgBD5B2w7S4/s200/Cookie_bombing_horz-499x337.jpg" height="135" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">For Thumbnail<br />(from <a href="http://www.turn.com/casestudies/thou-shall-not-cookie-bomb">turn.com</a>)</td></tr></tbody></table>First mention of what they named "CookieBomb" code injection attack come from <a href="https://twitter.com/MalwareMustDie">@MalwareMustDie</a>&nbsp;in <a href="http://malwaremustdie.blogspot.fr/2013/07/proof-of-concept-of-cookiebomb-attack.html">this post.</a><br /><br /><blockquote class="twitter-tweet"><a href="https://twitter.com/search?q=%23MalwareMustDie&amp;src=hash">#MalwareMustDie</a> NEW <a href="https://twitter.com/search?q=%23BLOG&amp;src=hash">#BLOG</a>: Proof of Concept of "CookieBomb" attack <a href="http://t.co/Q1eh7j3KUx">http://t.co/Q1eh7j3KUx</a> <a href="http://t.co/fN1L5CnsXX">pic.twitter.com/fN1L5CnsXX</a><br />— MalwareMustDie, NPO (@MalwareMustDie) <a href="https://twitter.com/MalwareMustDie/statuses/357476493397471233">July 17, 2013</a></blockquote><br />&nbsp;I won't explain here how i know which product is behind this but know that for instance Reveton team used it (or at least one traffer for Reveton) as mentionned by <a href="https://twitter.com/Malekal_Morte">@Malekal_morte</a><br /><blockquote class="twitter-tweet">[en] Reveton go now by hacked website <a href="http://t.co/l4GHmMI0cY">http://t.co/l4GHmMI0cY</a> <a href="https://twitter.com/search?q=%23malware&amp;src=hash">#malware</a> <a href="https://twitter.com/search?q=%23infosec&amp;src=hash">#infosec</a><br />— Malekal's site (@malekal_morte) <a href="https://twitter.com/malekal_morte/statuses/367030847503093760">August 12, 2013</a></blockquote><br /><b><u>The product behind the CookieBomb :&nbsp;</u></b><b><u>Ифреймер "Северная Сказка"</u></b><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-MMaDpJF9hP0/Uj2N7HAkkoI/AAAAAAAABJw/pamDz-mdYEg/s1600/screenshot_2013-09-21_014.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-MMaDpJF9hP0/Uj2N7HAkkoI/AAAAAAAABJw/pamDz-mdYEg/s1600/screenshot_2013-09-21_014.png" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">"Snip Shot" of the Advert</td></tr></tbody></table>Original text of the advert :<br />--------------------------------------------<br /><span style="color: #134f5c;">Ифреймер "Северная Сказка"</span><br /><span style="color: #134f5c;"><br />Добрый день,<br /><br />Меня зовут Пётр Севера, и я с гордостью представляю всем желающим свой новый продукт - ифреймер "Северная Сказка". Разработка его до текущего состояния заняла несколько лет, и можно с уверенностью утверждать, что легендарная кнопка "Бабло" теперь доступна всем желающим. Ифреймер уже используют десятки людей из моего ближайшего окружения, и от всех без исключения он заслужил самые высокие оценки. Обычно, софт такого уровня вообще не доступен для широкой публики, и тихо годами приносит сверхприбыли избранным. Многие из тех, кто использует "Северную Сказку" сейчас, под разными предлогами отговаривали меня от начала продаж широкому кругу лиц. Но, посоветовавшись с партнерами по этому проекту, хорошенько взвесив все плюсы и минусы, я осознанно пошел на этот шаг.<br /><br />Что же такое ифреймер "Северная Сказка"? Как любит говорить главный разработчик — это не просто ифреймер, это целая операционная система. Итак, "Северная Сказка" — это многофункциональный серверный софт, управление которым происходит через удобную веб-панель.<br /><br />Основной функционал:<br />- многопоточный ифрейминг ваших фтп и вебшеллов — мы умеем работать со всеми популярными CMS (более трехсот), и вставляем ваш код самым оптимальным способом в любые виды скриптов. Вы можете быть уверены, мы не испортим верстку ни одной страницы, и вы получите максимум траффика с каждого аккаунта!<br />- приватные алгоритмы автоматической генерации и криптования ифрейм кода.<br />- проверка на наличие SSH доступа у всех аккаунтов фтп. Примерно 15-20% фтп имеют доступ по SSH, также можно чекать майл+пасс базы на наличие доступов по фтп или SSH.<br />- все аккаунты SSH проверяются нашими серверными эксплоитами на получение рута. С 10к аккаунтов SSH вы можете получить в районе 500 рутовых доступов к серверам! На руты устанавливается простой бэкдор для повышения прав при последующем доступе. Руткит в разработке.<br />- гибко настраиваемая система проверки на детекты АВ как кода ифрейма, так и доменов/ip доров, использующая все известные антивирусы. При детектах АВ автоматически перекриптовывается и заливается на аккаунты новый чистый код.<br />- заливка любых пользовательских скриптов с проверкой на работоспособность, заливка шеллов и массовое выполнение команд на них: ифрейминг/очистка, eval(), system(), информация о системе, ддос, и др. <br />- все действия с аккаунтами выполняются через socks-прокси. В качестве socks-прокси используюся SSH-туннели, поднимаемые на обнаруженных доступах SSH, или на аккаунтах, загруженных пользователем вручную. <br />- все поднятые на сервере socks-прокси можно использовать как на своём компьютере, так и на любых других разрешённых IP-адресах, таким образом обеспечивая себе дополнительную безопасность и анонимность в сети Интернет.<br />- встроенная TDS (гибкая система распределения и учета траффика), выдерживающая высокие нагрузки на уровне Sutra TDS.<br />- отключаемые jabber-уведомления <br />- и многое, многое другое.<br /><br />Я отдаю себе отчет, что фтп аккаунты - это очень приватная вещь, и мы приложили максимум усилий, чтобы кроме вас никто не получил к ним доступ. Все исходные коды зашифрованы, все аккаунты в базе криптуются нашим собственным алгоритмом не поддающемуся брутфорсу. Ваш пароль используется в качестве ключа шифрования, в случае утери пароля даже мы не сможем расшифровать аккаунты из базы. Установка админки производится в truecrypt контейнер. <br />Всё это создает достаточную защиту ваших данных в случае любых непредвиденных обстоятельств.<br /><br />Поддержка пользователей осуществляется почти 24 часа в сутки, 7 дней в неделю, несколькими специалистами. Софт постоянно улучшается, добавляется функционал по пожеланиям клиентов. <br /><br />Версии софта:<br />Софт предоставляется в двух комплектациях - "Lite" и "Pro".<br />Версия Lite включает в себя базовый функционал для обработки FTP аккаунтов - фреймер FTP, TDS, проверка на SSH доступ, автоматика АВ - полноценный инструмент для работы с FTP.<br />Версия Pro, помимо функционала версии Lite, имеет дополнительные возможности - заливка скриптов на аккаунты, работа с веб-шеллами, проверка получения рута на SSH, инжектор ифрейма в SWF файлы, и другие.<br />В версию Lite новый функционал добавляться не будет, в обновлениях будут только исправления найденных ошибок. Новые фичи добавляются только в версию Pro.<br /><br />Ценовая политика:<br />Лицензия на использование софта стоит 1500 долларов в месяц при покупке Pro версии, и 1000 долларов при покупке Lite версии. При оплате за год вперед скидка 50% (9000$ за Pro, 6000$ за Lite)<br />К этой цене необходимо прибавить стоимость сервера, вы можете заказать его у нас (цены начинаются от 150 долларов в месяц), или предоставить свой собственный сервер.<br /><br />Видео о возможностях проекта: http://www.youtube .com/watch?v=DvDNob628F0<br /><br />Мы принимаем Webmoney, Liberty Reserve, Perfect Money, Bitcoin<br />Зарегистрироваться и оплатить можно в автоматическом режиме на нашем сайте: https://sevska .com<br /><br />Контакты(jabber):<br />Менеджер: manager@jabber.cx (поддержка продаж, заказ услуг, общие вопросы)<br />Саппорт: 31337@libpwn.so (тех. проблемы, администрирование серверов)<br /><br />ЗЫ. Кроме этого напоминаю всем желающим, что по прежнему работает моя приватная партнерка по выкупу загрузок, даю ехе и стату, гружу только сокс, ни на чем не сказывается, можно паралельно с чем угодно грузить, по поводу продажи загрузок стучите мне в жабу jabber@honese.com<br /><br />С уважением,<br />Пётр Севера<br />__________________<br />Jabber(XMPP): jabber @ honese.com<br />ICQ: 104967</span><br />--------------------------------------------<br />Translate by @<a href="http://malwageddon.blogspot.com/">Malwageddon</a>&nbsp;-Thanks !<br />--------------------------------------------<br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Iframer "Tale of the North"</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Good day,</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">My name is Petr Severa and I'm proud to present you my new product - IFRAMEr "Tale of the North". We spent a few years developing and improving this product and I can truly say - the legendary 'Cash' button is now available to everyone. The IFRAMEr is being used by a number of trusted people already and the feedback I receive is highly positive. Normally, the software of this kind is not publicly available and only used by a few chosen ones. Many who use "Tale of the North" already, tried to talk me out of going public with it, but after talking to other project partners and discussing all the pros and cons I've decided to do just that.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">So, what is "Tale of the North"? As our lead developer likes to refer to it - it's not just an IFRAMEr, it's an operation system. So, "Tale of the North" is a multifunctional server software with easy to use control panel.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Main functions:</span><br /><span style="color: #351c75;">- multithreaded iframeing of your FTP and web shells - we can work with all popular CMS (over 300) and can insert your code into any script types. Don't worry, we won't screw your page assembly process and you will receive maximum traffic from your every account!</span><br /><span style="color: #351c75;">- private auto-generation and encryption algorithms for IFRAMEr code.</span><br /><span style="color: #351c75;">- SSH access check for all FTP accounts. Approximately, 15-20% of FTP have SSH access, also it's possible to check mail+pass databases for presence of FTP or SSH access.</span><br /><span style="color: #351c75;">- possibility of getting 'root' on all SSH accounts is checked by our server-side exploits. Out of 10K accounts you can get about 500 with server root access! Simple backdoor is installed for all 'root's to elevate the rights for consequent access. Proper rootkit is in development.</span><br /><span style="color: #351c75;">- IFRAMEr code AV detections checking system with flexible settings, also checks domain names and IPs - using all known anti-virus products. If the code is being detected it's automatically re-encrypted and uploaded to accounts.</span><br /><span style="color: #351c75;">- support for user custom scripts upload with execution check, shell upload with support for mass commands execution: iframing/cleaning, eval(), system(), OS details, DDoS, etc.</span><br /><span style="color: #351c75;">- any account actions are done through socks-proxy. SSH-tunnels are used for socks-proxy - compromised SSH or user manually specified servers are used.</span><br /><span style="color: #351c75;">- all socks-proxy available on the server can either be used from your PC or any other allowed IPs providing you with additional security and anonymity on the Internet.</span><br /><span style="color: #351c75;">- built-in TDS(flexible Traffic Distribution System), capable of handling big loads on par with Sutra TDS.</span><br /><span style="color: #351c75;">- configurable jabber-notifications</span><br /><span style="color: #351c75;">- and more, and more other features.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">I understand that FTP accounts are very private things and we applied maximum effort to protect them. All source code is encrypted, all accounts are stored encrypted in DB using our own brute-force-proof algorithm. Your password is used as the encryption key and if it's lost even us can't decrypt your account details from the database. Admin panel is installed into TrueCrypt container. All of it combined creates a good protection for your data in any unforeseen situations.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Customer support is available almost 24/7 with a few specialists ready to answer your query. Software is constantly improved, new features can be added as per customer request.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Software versions:</span><br /><span style="color: #351c75;">Software comes in two versions - "Lite" and "Pro".</span><br /><span style="color: #351c75;">Lite version includes base functions for FTP accounts processing - FTP framer, TDS, SSH access check, AV automation - complete toolbox for working with FTP.</span><br /><span style="color: #351c75;">Pro version includes all the features available in Lite and some additional ones - script upload to accounts, web-shell interface, SSH 'root' check, iframe injector for SWF files, and other features.</span><br /><span style="color: #351c75;">Lite version will never be added any new functionality, updates will include only bug fixes. New features will be added to Pro version only.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Prices:</span><br /><span style="color: #351c75;">Licence to use the software costs $1500 a month for Pro version and $1000 for Lite. 50% discount is offered when purchasing 12 months (9000$ for Pro, 6000$ for Lite)</span><br /><span style="color: #351c75;">You'll have to add the cost of a server to this price. You can either buy it from us(prices start at $150 per month) or supply your own server.</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Video featuring this project: http://www.youtube</span><br /><span style="color: #351c75;">.com/watch?v=DvDNob628F0</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">We accept Webmoney, Liberty Reserve, Perfect Money, Bitcoin</span><br /><span style="color: #351c75;">You can register and pay on our website: https://sevska</span><br /><span style="color: #351c75;">.com</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Contacts(jabber):</span><br /><span style="color: #351c75;">Manager: manager@jabber.cx (sales support, service requests, common questions)</span><br /><span style="color: #351c75;">Support: 31337@libpwn.so (technical issues, servers administration)</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">P.S. Also, i would like to remind everyone that my traffic purchasing private partner program is still active. I give EXE and stats, load SOCKS only, it won't affect anything, can be loaded with anything else. If you're interested contact me through Jabber jabber@honese.com</span><br /><span style="color: #351c75;"><br /></span><span style="color: #351c75;">Regards,</span><br /><span style="color: #351c75;">Petr Severa</span><br /><span style="color: #351c75;">__________________</span><br /><span style="color: #351c75;">Jabber(XMPP): jabber @ honese.com</span><br /><span style="color: #351c75;">ICQ: 104967</span><br /><div>--------------------------------------------</div><br />Here is the associated review in video (a copy in case the Original is being pulled out) :<br /><a href="http://www.youtube.com/watch?v=UU6MCPbZCus">http://www.youtube.com/watch?v=UU6MCPbZCus</a><br /><br />&nbsp;Thanks <a href="https://twitter.com/xylit0l">@Xylit0l</a>&nbsp;for multiple hints in that story.<br /><br /><b><u>Post Publishing reading :</u></b><br /><a href="http://www.kahusecurity.com/2014/box-php-fraud-kit/">Box.php Fraud Kit</a>&nbsp;- Darryl - KahuSecurity 2014-01-30 &nbsp;(this is Tale of the North Iframer)<br /><br /><u><b>Read more :</b></u><br /><a href="http://quequero.org/2013/09/active-cookiebomb-cve-2013-2465-reveton/">Active CookieBomb, CVE 2013-2465 and Reveton</a>&nbsp;- <a href="https://twitter.com/gN3mes1s">Giuseppe `N3mes1s`</a>&nbsp;- Quequero.org<br /><a href="http://blogs.cisco.com/security/crumbling-to-the-cookiebomb/">Crumbling to the Cookiebomb</a> - 2013-08-28 - Martin Lee - Cisco<br /><div><a href="http://research.zscaler.com/2013/08/cookiebomb-still-dropping-malicious.html">CookieBomb still dropping malicious content</a> - 2013-08-15 - Krishnan Subramanian - Zscaler&nbsp;</div><a href="http://malwaremustdie.blogspot.fr/2013/07/proof-of-concept-of-cookiebomb-attack.html">Proof of Concept of "CookieBomb" code injection attack</a>&nbsp;- 2013-07-17 -&nbsp;<a href="https://twitter.com/unixfreaxjp">@unixfreaxp</a> - Malware must die!<br />Underground [RU] :&nbsp;<a href="https://damagelab.org/index.php?showtopic=24376">https://damagelab.org/index.php?showtopic=24376</a> &nbsp;&lt;- Detailed review by Ar3s<br /><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2013-09-21" itemprop="datePublished"> 2013-09-21</time>
+				
+
+				<span class="icon-archive pr20"> TDS</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> kye</span> <span class="icon-price-tag pr10"> Iframer</span> <span class="icon-price-tag pr10"> Severa</span> <span class="icon-price-tag pr10"> advert</span> <span class="icon-price-tag pr10"> CookieBomb</span> <span class="icon-price-tag pr10"> Северная Сказка</span> <span class="icon-price-tag pr10"> Cookie-Bomb</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2013/09/jre7u21-and-earlier-click-2-play.html">&laquo; jre7u21 and earlier Click-2-Play Warning Bypass integrating Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2013/10/HiMan.html">HiMan Exploit Kit. Say Hi to one more. &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

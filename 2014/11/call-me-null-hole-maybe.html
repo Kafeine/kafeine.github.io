@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Call me Null Hole maybe ?</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A quick look at yet another Exploit-Kit : Null Hole.">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2014/11/call-me-null-hole-maybe.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Call me Null Hole maybe ?">
+	<meta property="og:description" content="A quick look at yet another Exploit-Kit : Null Hole.">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2014/11/call-me-null-hole-maybe.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Call me Null Hole maybe ?">
+	<meta name="twitter:description" content="A quick look at yet another Exploit-Kit : Null Hole.">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2014-11-23  - Landscape</p>
+					<h1>Call me Null Hole maybe ?</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://3.bp.blogspot.com/-AoqgSc3xWpM/VGpj4JZefDI/AAAAAAAAD90/sCS7GhaOPvA/s1600/Null.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://3.bp.blogspot.com/-AoqgSc3xWpM/VGpj4JZefDI/AAAAAAAAD90/sCS7GhaOPvA/s1600/Null.png" height="200" width="200" /></a></div><br /><br />Disclaimer : I won't study this one in details. The global logic should not be far from&nbsp;<a href="http://malware.dontneedcoffee.com/2013/07/a-styxy-cool-ek.html">The Styxy Cool</a>&nbsp;or&nbsp;<a href="http://malware.dontneedcoffee.com/2012/12/crossing-styx-styx-sploit-pack-20-cve.html">Styx</a>&nbsp;itself. Once again just a "connecting some dots" post.<br /><br />Since many months what i was mentally naming "Weird Styx" that was really similar to <a href="http://malware.dontneedcoffee.com/2013/11/inside-the-simda-affiliate-podmena.html">Kein/Styx Kein</a>&nbsp;puzzled me.<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-gK44ZHqIW_0/VGpcjbGxKQI/AAAAAAAAD9k/JBw-w1_QQ7o/s1600/2014-11-17_21h37_24.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-gK44ZHqIW_0/VGpcjbGxKQI/AAAAAAAAD9k/JBw-w1_QQ7o/s1600/2014-11-17_21h37_24.png" height="54" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">2013-01-22 - "a Weird Styx"</td></tr></tbody></table><br />This was as Styxy as an exploit kit can be...but not as randomized as Styx was.<br />Exploits were rotating really slowly as in Kein.<br /><br />I would not be surprised if the coder of the exploits/scheme of Styx, Styxy Cool, Kein and Null Hole is the same.<br /><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-nmNZALXVWFQ/VGpRZQFhXkI/AAAAAAAAD74/LKYbqTlIZXc/s1600/screenshot_2014-08-24_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-nmNZALXVWFQ/VGpRZQFhXkI/AAAAAAAAD74/LKYbqTlIZXc/s1600/screenshot_2014-08-24_003.png" height="340" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole - Login Page</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-HXeSC96jCM0/VGpRn4eNxuI/AAAAAAAAD8A/UiWNfqTFPQ4/s1600/screenshot_2014-08-24_004.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-HXeSC96jCM0/VGpRn4eNxuI/AAAAAAAAD8A/UiWNfqTFPQ4/s1600/screenshot_2014-08-24_004.png" height="114" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole - 1 API Call (Used for instance by TDS to get the actual landing)</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-7_4bH5HtTJI/VGpVNYw15iI/AAAAAAAAD88/aPefmTAMhaY/s1600/screenshot_2014-08-24_016.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-7_4bH5HtTJI/VGpVNYw15iI/AAAAAAAAD88/aPefmTAMhaY/s1600/screenshot_2014-08-24_016.png" height="70" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole - Raw Stats on one Thread</td></tr></tbody></table><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><br /><a href="http://3.bp.blogspot.com/-J3Jum0wFKSE/VGpT4JkrTwI/AAAAAAAAD8c/6v8wRO3nZFI/s1600/screenshot_2014-08-24_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://3.bp.blogspot.com/-J3Jum0wFKSE/VGpT4JkrTwI/AAAAAAAAD8c/6v8wRO3nZFI/s1600/screenshot_2014-08-24_008.png" height="442" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole - Partner management</td></tr></tbody></table><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-HVIYGwHn9-4/VGpUJ8jFlpI/AAAAAAAAD8k/w6Ora49GFIM/s1600/screenshot_2014-08-24_010.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-HVIYGwHn9-4/VGpUJ8jFlpI/AAAAAAAAD8k/w6Ora49GFIM/s1600/screenshot_2014-08-24_010.png" height="524" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole. A bunch of Sploits.</td></tr></tbody></table><span style="font-size: 13.3333339691162px; text-align: center;"><br /></span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-fSVqUOfMLg4/VGpUtXkk5RI/AAAAAAAAD80/BgHhrMjwMR0/s1600/screenshot_2014-08-24_014.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://4.bp.blogspot.com/-fSVqUOfMLg4/VGpUtXkk5RI/AAAAAAAAD80/BgHhrMjwMR0/s1600/screenshot_2014-08-24_014.png" height="312" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><br /><span style="font-size: 13.3333339691162px;">Null Hole - Manage Clone (vhosts/proxies)</span></td></tr></tbody></table>You remember the <a href="https://www.virustotal.com/fr/file/048321a1ea3a7c04a3dceac523ccfd7f61561049535f7d4c3776a3a9d1fa3510/analysis/">Signed Cryptowall</a>&nbsp; that got&nbsp;<a href="https://barracudalabs.com/2014/09/signed-cryptowall-distributed-via-widespread-malvertising-campaign/">some attention</a> a month ago ?<br /><br />It was pushed in Both Nuclear Pack and Null Hole.<br /><br />This is the Null Hole thread :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-nbbGMwlGevU/VGpZDi7XW7I/AAAAAAAAD9I/7MlzvG46tNQ/s1600/screenshot_2014-09-29_003.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://2.bp.blogspot.com/-nbbGMwlGevU/VGpZDi7XW7I/AAAAAAAAD9I/7MlzvG46tNQ/s1600/screenshot_2014-09-29_003.png" height="245" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole 2014-09-29</td></tr></tbody></table><br /><br />The number of Victims of that thread &nbsp;: 770.<br /><br />{"objects":[{"blocked":9963,"loads":770,"raw":47506,"stream_id":"9","unique":20584,"withdrawn":0}]}<br /><br />This Exploit Kit seems to be blinking. Used few weeks...disappear a month or two.<br /><br />Here is a fresh pass (Thanks to :&nbsp;<span style="background-color: white; color: #1f497d; font-family: Calibri, sans-serif; font-size: 15px;">@<a href="https://twitter.com/robemtnez">robemtnez</a> )</span><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-uBLf-P_W5Cw/VGpb0sAdtKI/AAAAAAAAD9c/6fOdJrvJxYw/s1600/2014-11-17_21h33_46.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://1.bp.blogspot.com/-uBLf-P_W5Cw/VGpb0sAdtKI/AAAAAAAAD9c/6fOdJrvJxYw/s1600/2014-11-17_21h33_46.png" height="94" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Null Hole - 2014-11-17<br />Here: Firing CVE-2014-0515 - 2014-0569 (Thx TimoHirvonen)<br />CVE-2013-2551</td></tr></tbody></table><br /><pre style="white-space: pre-wrap; word-wrap: break-word;">2014/11/17 20:18:09;camping.ycw94.com;80;198.50.27.162</pre><br /><b><u>Files :</u></b><br />You'll find a Pcap <a href="http://malware-traffic-analysis.net/2014/09/28/index.html">from Brad here</a>.<br /><pre style="white-space: pre-wrap; word-wrap: break-word;"></pre>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2014-11-23" itemprop="datePublished"> 2014-11-23</time>
+				
+
+				<span class="icon-archive pr20"> EXPLOIT-KIT</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> Weird Styx</span> <span class="icon-price-tag pr10"> Styx</span> <span class="icon-price-tag pr10"> Null Hole</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2014/11/cve-2014-6332.html">&laquo; CVE-2014-6332 (Internet Explorer) and Exploits Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2014/12/critroni-nl-and-it.html">Critroni += NL and IT  += DE += ES &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

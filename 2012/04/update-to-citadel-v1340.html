@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Update to Citadel : v1.3.4.0</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="A new version of Citadel has been announced : v1.3.4.0">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2012/04/update-to-citadel-v1340.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Update to Citadel : v1.3.4.0">
+	<meta property="og:description" content="A new version of Citadel has been announced : v1.3.4.0">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2012/04/update-to-citadel-v1340.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Update to Citadel : v1.3.4.0">
+	<meta name="twitter:description" content="A new version of Citadel has been announced : v1.3.4.0">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2012-04-28  - Evolution</p>
+					<h1>Update to Citadel : v1.3.4.0</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px;">A new version of Citadel has been announced : v1.3.4.0 :</span><br /><table cellpadding="0" cellspacing="0" class="tr-caption-container" style="float: left; margin-right: 1em; text-align: left;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-kQYB5Ki6SQg/T5u0cMGt1lI/AAAAAAAAAH8/ZcONShyBoIg/s1600/screenshot_629.png" imageanchor="1" style="clear: left; margin-bottom: 1em; margin-left: auto; margin-right: auto; text-align: left;"><img border="0" height="400" src="http://3.bp.blogspot.com/-kQYB5Ki6SQg/T5u0cMGt1lI/AAAAAAAAAH8/ZcONShyBoIg/s400/screenshot_629.png" width="296" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Aquabox Post on Exploit.in</td></tr></tbody></table><span style="color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span style="font-size: 14px; line-height: 19px;"></span></span><br /><span style="color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif;"><span style="font-size: 14px; line-height: 19px;"></span></span><br /><div class="separator" style="clear: both; text-align: left;"><br /></div><div class="separator" style="clear: both; text-align: center;"><br /></div><div style="text-align: left;"><b style="color: #333333; font-family: 'Helvetica Neue Light', HelveticaNeue-Light, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 19px;"><u>Original Text of the Advert :</u></b></div><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Свежая ветка&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Citadel 1.3.4.0</b><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">&nbsp;готова + доступны&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">НОВЫЕ МОДУЛИ</b><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">&nbsp;к покупке!</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Список изменений:</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Добавлена поддержка новой версии Chrome 18 [инжекты/формграббинг]</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Добавлена кнопка "Все отчеты бота" в админке, позволяет просмотреть начало и конец отчетов от конкретного бота.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Исправлен баг с ручной командой dns_filter_add, теперь блокировка URL'ов работает корректно.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Исправлен баг с отображением ехе-файлов на главной странице, удаленные ехе теперь исчезают автоматически.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Исправлен баг с работой планировщика заданий scan4you, ежедневная проверка ехе-файлов работает корректно.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Добавлена единая система CRON-работы, одно cron-задание управляет теперь всеми задачами: jabber-уведомления, проверка файлов, работа модулей и т.п.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Добавлена возможность удаления видео из админки.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Добавлена отсылка примечания к боту в Jabber в VNC-модуле.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Обновлена GeoIP база (конец 2011 года).</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Последний домен из AdvancedConfigs срабатывает с задержкой, сделано с целью защиты ваших резервных URL'ов от автоматического граббинга ханипотами.&nbsp;</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Исправлена работа скрипта архивирования данных в zip в админке (fsarc.php)</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Настройки Jabber-аккаунта и всех параметров теперь вынесены в общие настройки.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Теперь можно указывать пути в конфиге с httpS:// (неподписанные сертификаты проходят)</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Исправлен баг с регистрозависимостью в инжектах, теперь &lt;BODY&gt; и &lt;body&gt; одинаковые сущности. Все инжекты регистронезависимые.</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Список новых модулей:</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">1)&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Автоматический ифреймер FTP-акков с логов:</b><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Автоматическая обработка всех пришедних FTP-акков в логи, а также возможность ручного запуска в нужное время.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Всю работу выполняет скрипт-прокладка, заливаете ее на любой хост и работа начинается. Админ-интерфейс и прокладка общаются с собой по HTTP, посредством cron'a.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Создана фаза самотестирования, проверяет подходит ли прокладка и все ли настройки правильно выставлены.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- CRON-система каждую минуту спрашивает ифреймер как у него дела: сколько заданий выполняется, сколько в очереди, сколько готово. Если есть аккаунты с которыми он уже закончил — они вытаскиваются и сохраняются. На ифреймере эти акки удаляются для экономии памяти.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Предусмотрен механизм защиты от зависания ифреймера на сложных FTP-акков (с такой проблемой вы наверное сталкивались, когда скрипт останавливался и ничего не происходило, даже после перезапуска)</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Возможность задавания глубины ифрейминга (от 1 до 50 уровня), иначе говоря сколько папок внутри подпапок мы проходим.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Возможность задавания масок файлов для работы, а также списка игнорирования.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Несколько режимов: умный(не повреждает PHP/JS/ASP скрипты) , запись в конец, перезапись, только проверка на валидность</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Реализована проверка на дубли.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Замена старого ифрейм-кода новым. Если изменился HTML-код — он не тупо добавится, а заменит собой старый.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Опция "ифреймить только вчерашние акки". Даст сутки на то чтобы убрать из списка нужные вам FTP.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Опция: реифрейминг аккаунтов спустя N дней. Каждый аккаунт спустя N дней будет обработан заново.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Удобная и подробная статистика.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">- Из минусов: низкая скорость работы, за неделю, в среднем обрабатывается не более 3000 FTP-аккаунтов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Полное описание предоставляется в мануале, после приобретения.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Стоимость модуля: $1000.00</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">2)&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Дубль-клинер</b><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Скрипт позволяет очищать логи бота от дублей HTTP/HTTPS/FTP/POP3 отчетов.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Нагрузка на БД минимальная, хорошо работает в паре с модулем "Веб-парсер логов".</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Отключается и включается в настройках админки.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Выгода: быстрее работает поиск по базе данных, база занимает меньший размер.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Стоимость модуля: $90</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">3)&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Система защиты GeoIP</b><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Комплект скриптов позволяет спрятать ваш конфиг,ехе и гейт от ненужных вам стран, при запросе нежелательные страны и боты будут получать 404 ответ.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Хорошо помогает для защиты от трекеров и реверсеров. Включается и отключается в настройках.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Из минусов: способен выдержать только маленькие (до 2000 ботов онлайн) ботнеты, поскольку PHP не расчитан на такую тяжелую и грязную работу.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Бюджетный вариант от абуз. Рекомендуется использовать только для маленьких узконаправленных VIP-ботнетах, с целью перевода ценных ботов на особый ботнет.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Цена: $380</span><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">4)&nbsp;</span><b style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Кейлоггер</b><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">По запросам наших клиентов в СРМ, переделали модуль для перехвата нажитых клавиш (унаследован от зевса).</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Модуль позволяет перехватывать отдельно-взятые приложения и посылать данные в админку как отдельные отчеты.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">К примеру, вам нужно перехватить нажатые клавиши процесса "calc.exe", вы вводите название процесса в конфиг и все данные по нему будут приходить в админку.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Эффективно при работе с банковским софтом(+java), который ставится на PC холдера.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Цена: $300</span><br /><br /><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Размещаем заявку у support'a, выдача 30 апреля(понедельник) в 22.00.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;">Модули можно купить уже сейчас.</span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;"><br /></span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;"><b><u>Google Translation :</u></b></span><br /><span style="background-color: #f8f8f7; color: #5f5f5f; font-family: Verdana, Tahoma, Arial, 'Trebuchet MS', sans-serif, Georgia, Courier, 'Times New Roman', serif; font-size: 12px; line-height: 19px; text-align: left;"><br /></span><br /><br /><div id="gt-res-wrap" style="background-attachment: initial; background-clip: initial; background-color: whitesmoke; background-image: initial; background-origin: initial; border-bottom-color: rgb(245, 245, 245); border-bottom-style: solid; border-bottom-width: 1px; border-image: initial; border-left-color: rgb(245, 245, 245); border-left-style: solid; border-left-width: 1px; border-right-color: rgb(245, 245, 245); border-right-style: solid; border-right-width: 1px; border-top-color: rgb(245, 245, 245); border-top-style: solid; border-top-width: 1px; color: #888888; font-family: arial, sans-serif; font-size: 13px;"><div class="almost_half_cell" id="gt-res-content"><div dir="ltr" style="zoom: 1;"><span class="" id="result_box" lang="en" style="color: #333333; display: block; font-size: 16px; min-height: 93px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;"><span title="Свежая ветка Citadel 1.3.4.0 готова + доступны НОВЫЕ МОДУЛИ к покупке!">Fresh branch Citadel 1.3.4.0 is ready + new modules are available for purchase!</span><span title="Список изменений:">List of changes:</span><span title="- Добавлена поддержка новой версии Chrome 18 [инжекты/формграббинг]">- Added support for new version of Chrome 18 [injected / formgrabbing]</span><span title="- Добавлена кнопка &quot;Все отчеты бота&quot; в админке, позволяет просмотреть начало и конец отчетов от конкретного бота.">- Added button "All reports bot" in the admin, you can view the beginning and end of the reporting on the specific bot.</span><span title="- Исправлен баг с ручной командой dns_filter_add, теперь блокировка URL'ов работает корректно.">- Fixed bug with manual command dns_filter_add, blocking URLs are now working correctly.</span><span title="- Исправлен баг с отображением ехе-файлов на главной странице, удаленные ехе теперь исчезают автоматически.">- Fixed bug with display of exe files on the main page, now deleted exe disappear automatically.</span><span title="- Исправлен баг с работой планировщика заданий scan4you, ежедневная проверка ехе-файлов работает корректно.">- Fixed a bug with the work of the Task Scheduler scan4you, a daily check of the exe file is working correctly.</span><span title="- Добавлена единая система CRON-работы, одно cron-задание управляет теперь всеми задачами: jabber-уведомления, проверка файлов, работа модулей и т.п.">- Added a unified system of CRON-one cron-job runs all tasks now: jabber-notice inspection of files, work units, etc.</span><span title="- Добавлена возможность удаления видео из админки.">- Added ability to delete a video from admin.</span><span title="- Добавлена отсылка примечания к боту в Jabber в VNC-модуле.">- Added a reference to the notes in Jabber bot in the VNC-module.</span><span title="- Обновлена GeoIP база (конец 2011 года).">- Updated GeoIP database (late 2011).</span><span title="- Последний домен из AdvancedConfigs срабатывает с задержкой, сделано с целью защиты ваших резервных URL'ов от автоматического граббинга ханипотами.">- The last domain of AdvancedConfigs triggered with a delay, is made in order to protect your backup URLs from automatically grabbing hanipotami.</span><span title="- Исправлена работа скрипта архивирования данных в zip в админке (fsarc.php)">- Fixed script archiving data in a zip in the admin (fsarc.php)</span><span title="- Настройки Jabber-аккаунта и всех параметров теперь вынесены в общие настройки.">- Setting Jabber-account and all parameters are now made in the general settings.</span><span title="- Теперь можно указывать пути в конфиге с httpS:// (неподписанные сертификаты проходят)">- You can now specify the path in the config file with httpS :/ / (unsigned certificates held)</span><span title="- Исправлен баг с регистрозависимостью в инжектах, теперь &lt;BODY&gt; и &lt;body&gt; одинаковые сущности.">- Fixed case-sensitivity to inject now &nbsp;and he same entity.&nbsp;</span><span title="Все инжекты регистронезависимые.">All injected insensitive.</span><span title="Список новых модулей:">List of new modules:</span></span><span class="" id="result_box" lang="en" style="color: #333333; display: block; font-size: 16px; min-height: 93px; padding-bottom: 8px; padding-left: 8px; padding-right: 8px; padding-top: 8px;"><span title="Список новых модулей:"><br /></span><span title="1) Автоматический ифреймер FTP-акков с логов:">1) Automatic FTP-ifreymer akkov with logs:</span><span title="- Автоматическая обработка всех пришедних FTP-акков в логи, а также возможность ручного запуска в нужное время.">- Automatic processing of all FTP-prishednih akkov in the logs, as well as the ability to manually start the right time.</span><span title="- Всю работу выполняет скрипт-прокладка, заливаете ее на любой хост и работа начинается.">- All work is done by a script pad, pour it on any host, and the work begins.&nbsp;</span><span title="Админ-интерфейс и прокладка общаются с собой по HTTP, посредством cron'a.">Admin interface and communicate with a gasket over HTTP, through cron'a.</span><span title="- Создана фаза самотестирования, проверяет подходит ли прокладка и все ли настройки правильно выставлены.">- A self-test phase, checks the suitability of laying and everything is setup correctly exposed.</span><span title="- CRON-система каждую минуту спрашивает ифреймер как у него дела: сколько заданий выполняется, сколько в очереди, сколько готово.">- CRON-system every minute ifreymer asks how he's doing: how many jobs done, but in turn, how ready.&nbsp;</span><span title="Если есть аккаунты с которыми он уже закончил — они вытаскиваются и сохраняются.">If you have accounts with whom he had already finished - they pulled out and saved.&nbsp;</span><span title="На ифреймере эти акки удаляются для экономии памяти.">In these ifreymere acca removed to save memory.</span><span title="- Предусмотрен механизм защиты от зависания ифреймера на сложных FTP-акков (с такой проблемой вы наверное сталкивались, когда скрипт останавливался и ничего не происходило, даже после перезапуска)">- A mechanism of protection against freezing in complex ifreymera FTP-akkov (such a problem you might have encountered when the script stopped and nothing happened, even after a restart)</span><span title="- Возможность задавания глубины ифрейминга (от 1 до 50 уровня), иначе говоря сколько папок внутри подпапок мы проходим.">- The possibility of asking ifreyminga depth (1 to level 50), in other words how many sub folders inside we go.</span><span title="- Возможность задавания масок файлов для работы, а также списка игнорирования.">- The possibility of asking for file masks, as well as ignore list.</span><span title="- Несколько режимов: умный(не повреждает PHP/JS/ASP скрипты) , запись в конец, перезапись, только проверка на валидность">- Multiple modes: intelligent (not to damage the PHP / JS / ASP scripts), write to the end, rewriting, just check on the validity of</span><span title="- Реализована проверка на дубли.">- Implemented check for duplicates.</span><span title="- Замена старого ифрейм-кода новым.">- Replacement of old ifreym new code.&nbsp;</span><span title="Если изменился HTML-код — он не тупо добавится, а заменит собой старый.">If the changed HTML-code - it does not add stupid, and will replace the old one.</span><span title="- Опция &quot;ифреймить только вчерашние акки&quot;.">- Option "acca ifreymit only yesterday."&nbsp;</span><span title="Даст сутки на то чтобы убрать из списка нужные вам FTP.">Day to give it to remove from the list, you need FTP.</span><span title="- Опция: реифрейминг аккаунтов спустя N дней.">- Option: reifreyming accounts after N days.&nbsp;</span><span title="Каждый аккаунт спустя N дней будет обработан заново.">Each account after N days will be processed again.</span><span title="- Удобная и подробная статистика.">- Easy and detailed statistics.</span><span title="- Из минусов: низкая скорость работы, за неделю, в среднем обрабатывается не более 3000 FTP-аккаунтов.">- Of the minuses: low speed, for a week, on average, are not processed more than 3,000 FTP-accounts.</span><span title="Полное описание предоставляется в мануале, после приобретения.">A full description is provided in the manual, after the acquisition.</span><span title="Стоимость модуля: $1000.00">The cost of the module: $ 1000.00</span><span title="2) Дубль-клинер">2) Double-Cleaner</span><span title="Скрипт позволяет очищать логи бота от дублей HTTP/HTTPS/FTP/POP3 отчетов.">The script allows you to clean the logs from the bot takes HTTP/HTTPS/FTP/POP3 reports.</span><span title="Нагрузка на БД минимальная, хорошо работает в паре с модулем &quot;Веб-парсер логов&quot;.">The load on the database is minimal, works well in conjunction with the module "Web log parser."</span><span title="Отключается и включается в настройках админки.">Turned on and off in the settings of the admin.</span><span title="Выгода: быстрее работает поиск по базе данных, база занимает меньший размер.">Benefits: faster search the database, the database is smaller.</span><span title="Стоимость модуля: $90">The cost of the module: $ 90</span><span title="3) Система защиты GeoIP">3) The protection of GeoIP</span><span title="Комплект скриптов позволяет спрятать ваш конфиг,ехе и гейт от ненужных вам стран, при запросе нежелательные страны и боты будут получать 404 ответ.">The set of scripts allows you to hide your configuration file, exe and the gate of your junk at the request of the country and unwanted bots will receive a 404 response.</span><span title="Хорошо помогает для защиты от трекеров и реверсеров.">Good helps to protect against trackers and reverser.&nbsp;</span><span title="Включается и отключается в настройках.">Enabled and disabled in the settings.</span><span title="Из минусов: способен выдержать только маленькие (до 2000 ботов онлайн) ботнеты, поскольку PHP не расчитан на такую тяжелую и грязную работу.">Of the minuses: able to withstand only small (up to 2000 bots online) botnets, because PHP is not designed for such heavy and dirty work.</span><span title="Бюджетный вариант от абуз.">Budget option from the abuse.&nbsp;</span><span title="Рекомендуется использовать только для маленьких узконаправленных VIP-ботнетах, с целью перевода ценных ботов на особый ботнет.">Recommended only for small VIP-compartmentalized botnets in order to transfer the securities to a particular botnet bots.</span><span title="Цена: $380">Price: $ 380</span><span title="4) Кейлоггер">4) Keylogger</span><span title="По запросам наших клиентов в СРМ, переделали модуль для перехвата нажитых клавиш (унаследован от зевса).">At the request of our customers in the CPM, have altered the module to intercept amassed keys (derived from Zeus).</span><span title="Модуль позволяет перехватывать отдельно-взятые приложения и посылать данные в админку как отдельные отчеты.">The module allows you to capture, separate and combined applications to send data to the admin panel as separate reports.</span><span title="К примеру, вам нужно перехватить нажатые клавиши процесса &quot;calc.exe&quot;, вы вводите название процесса в конфиг и все данные по нему будут приходить в админку.">For example, you need to intercept the keystrokes of the process "calc.exe", you enter the name of the configuration process and all the data on it will be sent to the admin panel.</span><span title="Эффективно при работе с банковским софтом(+java), который ставится на PC холдера.">Effective when dealing with the banking software (+ java), which is put on the PC Holder.</span><span title="Цена: $300">Price: $ 300</span><span title="Размещаем заявку у support'a, выдача 30 апреля(понедельник) в 22.00.">Place a bid support'a, issue 30 April (Monday) at 22.00.</span><span title="Модули можно купить уже сейчас.">Modules can be purchased now.</span></span></div></div></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2012-04-28" itemprop="datePublished"> 2012-04-28</time>
+				
+
+				<span class="icon-archive pr20"> BONET</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> ad</span> <span class="icon-price-tag pr10"> citadel</span> <span class="icon-price-tag pr10"> up</span> <span class="icon-price-tag pr10"> no comment</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2012/04/phoenix-exploits-kit-31.html">&laquo; Inside Phoenix Exploit's Kit 3.1 - Exploit Kit Control Panel</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2012/04/inside-smoke-bot.html">Inside Smoke Bot - Botnet Control Panel &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

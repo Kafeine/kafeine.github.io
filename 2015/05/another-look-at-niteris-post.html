@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Another look at Niteris : post exploitation WMI and Fiddler checks</title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="In this post we&#39;ll see some of the improvements that have been brought to Niteris.">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2015/05/another-look-at-niteris-post.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Another look at Niteris : post exploitation WMI and Fiddler checks">
+	<meta property="og:description" content="In this post we&#39;ll see some of the improvements that have been brought to Niteris.">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2015/05/another-look-at-niteris-post.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Another look at Niteris : post exploitation WMI and Fiddler checks">
+	<meta name="twitter:description" content="In this post we&#39;ll see some of the improvements that have been brought to Niteris.">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2015-05-12  - Study</p>
+					<h1>Another look at Niteris : post exploitation WMI and Fiddler checks</h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<div class="separator" style="clear: both; text-align: center;"><a href="http://4.bp.blogspot.com/-e-5jyskGqiM/VVJtwybFHqI/AAAAAAAAEmk/FkH7VbtK0vs/s1600/2015-05-12_23h15_50.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="189" src="http://4.bp.blogspot.com/-e-5jyskGqiM/VVJtwybFHqI/AAAAAAAAEmk/FkH7VbtK0vs/s200/2015-05-12_23h15_50.png" width="200" /></a></div><br /><br />In this post we'll see some of the improvements that have been brought to Niteris.<br />Disclaimer : <i>Few configuration were tested, so most probably some <a href="http://malware.dontneedcoffee.com/2014/06/cottoncastle.html">added/replaced</a> CVEs are missing</i>.<br /><br />The infection chain (should be clean now) :<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-qdnJsIIN6FE/VVBfv5fU9AI/AAAAAAAAEkI/0AjtxbhtKOA/s1600/2015-05-11_09h28_57.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="268" src="http://4.bp.blogspot.com/-qdnJsIIN6FE/VVBfv5fU9AI/AAAAAAAAEkI/0AjtxbhtKOA/s640/2015-05-11_09h28_57.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Infection chain leading to Niteris<br />2015-05-07 (<a href="https://www.virustotal.com/ip-address/148.251.219.7/information/">probably 5 months</a> old)</td></tr></tbody></table><br />is the same as the one that has <a href="https://twitter.com/BelchSpeak/status/595639823504908290">been used</a> on eHow<br /><br /><i>You'll notice that the actors registered 20min .eu for the first redirect of traffic from 20min .ch,</i><br /><i>v5-static.ehowcdn .biz to mimic v5-static.ehowcdn .com, etc...</i><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-H44JzqZlC0I/VVBf69Y5CII/AAAAAAAAEkQ/OZM8xi7wdjQ/s1600/2015-05-11_09h30_16.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="640" src="http://3.bp.blogspot.com/-H44JzqZlC0I/VVBf69Y5CII/AAAAAAAAEkQ/OZM8xi7wdjQ/s640/2015-05-11_09h30_16.png" width="470" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;"><a href="https://www.virustotal.com/ip-address/148.251.219.7/information/">VT Pdns</a> from first redirector in the infection chained</td></tr></tbody></table><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://i.imgur.com/WpnXmlr.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://i.imgur.com/WpnXmlr.png" height="208" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Compromised eHow redirection chain to Nuclear Pack pushing Dyre - 2015-05-05</td></tr></tbody></table><br /><br />and on LiveStrong recently :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://i.imgur.com/16040Cq.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" src="http://i.imgur.com/16040Cq.png" height="206" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Compromised LiveStrong redirecting to same infection chain/payload as eHow - 2015-05-06</td></tr></tbody></table><br /><br /><br />which are probably compromised since at least <a href="http://malware.dontneedcoffee.com/2014/02/cve-2013-5330-flash-in-unknown-exploit.html">end of 2013</a>&nbsp;and where CVE-2013-5330 was first encountered...<br /><br /><br />Obviously Niteris has evolved &nbsp;on the Exploit integration side.<br /><br /><b><u>CVE-2014-0569 :</u></b><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-gVKT_xeuex0/VVBkM08qkUI/AAAAAAAAEko/BVm9l8Vqy2Q/s1600/2015-05-11_10h08_47.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="182" src="http://4.bp.blogspot.com/-gVKT_xeuex0/VVBkM08qkUI/AAAAAAAAEko/BVm9l8Vqy2Q/s640/2015-05-11_10h08_47.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris &nbsp;firing code to exploit CVE-2014-0569</td></tr></tbody></table>Flash Sample :&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/22ea8dd623c0f44e352ac7f3618a918b1f52a14552eec6c2d10ce0ff744bb66f/analysis/1431331843/">22ea8dd623c0f44e352ac7f3618a918b1f52a14552eec6c2d10ce0ff744bb66f</a></span><br /><br /><b><u>CVE-2014-6332 :</u></b><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-1YkCd3yBD8U/VVI1DGvbzGI/AAAAAAAAElY/yu6nWj3958w/s1600/2015-05-12_18h30_23.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="274" src="http://3.bp.blogspot.com/-1YkCd3yBD8U/VVI1DGvbzGI/AAAAAAAAElY/yu6nWj3958w/s640/2015-05-12_18h30_23.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris firing code to exploit CVE-2014-6332</td></tr></tbody></table><br /><br />Sent code :&nbsp;<a href="http://pastebin.com/raw.php?i=2hU1kDi6">http://pastebin.com/raw.php?i=2hU1kDi6</a><br />Code after js deobfuscation :&nbsp;<a href="http://pastebin.com/B5ihgFgv">http://pastebin.com/B5ihgFgv</a><br />Code after vbs deobfuscation :&nbsp;<a href="http://pastebin.com/wrBeGxzM">http://pastebin.com/wrBeGxzM</a><br /><br /><b><u>CVE-2015-0311 :</u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-_lebyxasibM/VVBijoSNj1I/AAAAAAAAEkc/uDzC4_Y0ei4/s1600/2015-05-11_10h02_17.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="114" src="http://4.bp.blogspot.com/-_lebyxasibM/VVBijoSNj1I/AAAAAAAAEkc/uDzC4_Y0ei4/s640/2015-05-11_10h02_17.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris successfully exploiting CVE-2015-0311 to push Ursnif<br />2015-05-07</td></tr></tbody></table><br />Flash Sample :&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/fr/file/d438be33030b2ed20a3db52031e110034119111cb116ab58bd393da49d6d0efe/analysis/1431331548/">d438be33030b2ed20a3db52031e110034119111cb116ab58bd393da49d6d0efe</a></span><br /><br /><b><u>CVE-2015-0336 :</u></b><br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-HfkRkiCjUmg/VVBma7xWBZI/AAAAAAAAEk0/62AaG62jiS8/s1600/2015-05-11_10h18_55.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="184" src="http://1.bp.blogspot.com/-HfkRkiCjUmg/VVBma7xWBZI/AAAAAAAAEk0/62AaG62jiS8/s640/2015-05-11_10h18_55.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Incomplete pass of Niteris Firing CVE-2015-0336<br />2015-05-04</td></tr></tbody></table>Flash Sample :&nbsp;<span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;"><a href="https://www.virustotal.com/file/d3a08acd97ee8f9d9fe0e530e34c42bb7d6e78c89021725393116bd5b5907df2/analysis/1431332617/">d3a08acd97ee8f9d9fe0e530e34c42bb7d6e78c89021725393116bd5b5907df2</a></span><br /><br />but here are some less expected stuff &nbsp;:<br /><br /><b><u>CVE-2013-1710 &amp; &nbsp;CVE-2012-3993</u></b> (Firefox Exploit - seems to be an implementation of <a href="https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/multi/browser/firefox_proto_crmfrequest.rb">this metasploit module</a>)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-cNptNQ7ZBLw/VVBp5JAG4TI/AAAAAAAAElA/6SzONqkk548/s1600/2015-05-11_10h25_59.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="384" src="http://4.bp.blogspot.com/-cNptNQ7ZBLw/VVBp5JAG4TI/AAAAAAAAElA/6SzONqkk548/s640/2015-05-11_10h25_59.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris sending code to exploit&nbsp;CVE-2013-1710 &amp; &nbsp;CVE-2012-3993<br />2015-05-07</td></tr></tbody></table><b><u>Post exploitation AntiVM / Fiddler :</u></b><br /><b><u><br /></u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-FDKfR4dmqfw/VVJms-HjjLI/AAAAAAAAEmU/zx-jk05MeUY/s1600/2015-05-12_22h37_57.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="242" src="http://3.bp.blogspot.com/-FDKfR4dmqfw/VVJms-HjjLI/AAAAAAAAEmU/zx-jk05MeUY/s640/2015-05-12_22h37_57.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris call for post exploitation checks<br />Note fake user agent.<br />2015-05-07</td></tr></tbody></table><br />Sent code :&nbsp;<a href="http://pastebin.com/mCu7AzGh">http://pastebin.com/mCu7AzGh</a><br />Code after js deobfuscation :&nbsp;<a href="http://pastebin.com/UV51KECp">http://pastebin.com/UV51KECp</a><br />Code after vbs deobfuscation : &nbsp;<a href="http://pastebin.com/VE4L48cz">http://pastebin.com/VE4L48cz</a><br /><div><br /></div>So after exploitation some WMI checks are made to gather data on the system (Security Center, running processes...)<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-pbXxn-pO7gk/VVJgu6XMsPI/AAAAAAAAEl8/3aFHGJNclh8/s1600/2015-05-12_21h34_21.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="190" src="http://3.bp.blogspot.com/-pbXxn-pO7gk/VVJgu6XMsPI/AAAAAAAAEl8/3aFHGJNclh8/s640/2015-05-12_21h34_21.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris Checks based on WMI query and read of Fiddler default error on non resolving domains<br />2015-05-07</td></tr></tbody></table><br />If Niteris spot that you are running Fiddler or inside a VM, you'll be dropped before gathering the payload.<br /><br />Here you can see a Virtualbox using Fiddler as proxy sending data to the EK<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-gEmwRa0lNw8/VVJf_Y5omuI/AAAAAAAAEl0/EXWJzZ-N5-Q/s1600/2015-05-12_21h46_59.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="212" src="http://2.bp.blogspot.com/-gEmwRa0lNw8/VVJf_Y5omuI/AAAAAAAAEl0/EXWJzZ-N5-Q/s640/2015-05-12_21h46_59.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris after close() function post Data showing that it has &nbsp;spotted <br />both VirtualBox and Fiddler (outside of the VM)<br /><span style="font-size: 12.8000001907349px;">2015-05-07</span></td></tr></tbody></table><u>Fiddler Side note :</u><br /><i>Looking at the customrules.js you'll read that this function "OnReturningError(oSession: Session)" executes just before Fiddler returns an error.</i><br /><i>This is where the Niteris check can be defeated by modifying the response.</i><br /><br />In the deofuscated code,we can see the decoding routine :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-xRjYpRte6nc/VVJTu4tKPjI/AAAAAAAAElo/XrEcKTBVd1U/s1600/2015-05-12_21h22_10.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="550" src="http://4.bp.blogspot.com/-xRjYpRte6nc/VVJTu4tKPjI/AAAAAAAAElo/XrEcKTBVd1U/s640/2015-05-12_21h22_10.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Payload decoding routine<br /><span style="text-align: start;"><span style="font-size: small;">Xor (key [g_xk] :&nbsp;97dc6e7aaa9c08</span></span><span style="font-size: xx-small; text-align: start;">9d0ed82ebfd9fca4fe)</span><br /><span style="font-size: xx-small; text-align: start;">skipping 0 and matching bytes</span></td></tr></tbody></table>The script is also using WMI to ensure the payload has been properly executed<br /><b><u><br /></u></b><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-EeLDZkaEdOA/VVJjEYJIX_I/AAAAAAAAEmI/Zu4tWAi0wvk/s1600/2015-05-12_22h30_55.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="352" src="http://1.bp.blogspot.com/-EeLDZkaEdOA/VVJjEYJIX_I/AAAAAAAAEmI/Zu4tWAi0wvk/s640/2015-05-12_22h30_55.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris routine to ensure payload is running as expected<br />2015-05-07</td></tr></tbody></table>Once done a call back (with post data ) is made to the EK<br />(contains Model and Security products. They should be able to figure out when an Antivirus Vendor is catching them, the same way Antivirus Vendor are able to figure out when they miss an EK : no more hits in the telemetry :D)<br /><br />[Edit 2015-09-15 :]<br />Note that depending on IntegrityLevel of the process, the drop won't be executed the same way.<br /><br /><div class="gmail_default" style="background-color: white; color: #222222; font-family: arial, sans-serif; font-size: 12.8px;"><span style="color: #000066; font-family: verdana, sans-serif;"></span><br /><div class="gmail_default"><span style="color: #000066; font-family: verdana, sans-serif;">g_ulvl = intlvl_identifier();</span></div><span style="color: #000066; font-family: verdana, sans-serif;"></span><div class="gmail_default"><span style="color: #000066; font-family: verdana, sans-serif;">var f, Paths = (g_ulvl) ? ['%commonprogramfiles%\\<wbr></wbr>System\\', '%allusersprofile%\\Microsoft\<wbr></wbr>\Windows\\', '%allusersprofile%\\', '%appdata%\\Microsoft\\', '%userprofile%\\', '%tmp%\\Low\\', '%tmp%\\acro_rd_dir\\'] : ['%appdata%\\..\\LocalLow\\', '%userprofile\\AppData\\<wbr></wbr>LocalLow\\'];</span></div><span style="color: #000066; font-family: verdana, sans-serif;"><div><br /></div><div><br /></div></span></div><u>With UAC deactivated :</u><br /><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-693HOay4-K8/Vfk-j8uGNQI/AAAAAAAAFH8/3J-Q26Stz3M/s1600/2015-09-16_12h02_29.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-693HOay4-K8/Vfk-j8uGNQI/AAAAAAAAFH8/3J-Q26Stz3M/s1600/2015-09-16_12h02_29.png" /></a></div><div class="separator" style="clear: both; text-align: center;"><br /></div><br />rundll32 SHELL32.dll,ShellExec_RunDLL "C:\Windows\SysWOW64\rundll32" "C:\Program Files (x86)\Common Files\System\Windows6.1-KB9739367-x64.sys",DllRegisterServer<br />and a Post call back like : /crash/report/0/11111/<br /><br /><u>With UAC activated :</u><span style="background-color: white; color: #000066; font-family: verdana, sans-serif; font-size: 12.8px;"><br /></span><br /><div class="separator" style="clear: both; text-align: center;"><a href="http://2.bp.blogspot.com/-9f99T8xd6jQ/Vfk66tkpg8I/AAAAAAAAFHo/COdmPwHjC-g/s1600/2015-09-16_11h15_50.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/-9f99T8xd6jQ/Vfk66tkpg8I/AAAAAAAAFHo/COdmPwHjC-g/s1600/2015-09-16_11h15_50.png" /></a></div><span style="background-color: white; color: #000066; font-family: verdana, sans-serif; font-size: 12.8px;"><br /></span>and a Post call back &nbsp;like :&nbsp;/crash/report/0/11110/<br /><br />[/Edit]<br /><br /><u style="font-weight: bold;">Files:</u>&nbsp;<a href="http://files.dontneedcoffee.com/index.php/s/JKCOx2uSJWjpQJA">Niteris_2015-05-12.zip</a>.<br /><br />Thanks to @<a href="https://twitter.com/unicornsec">UnicornSec</a>&nbsp;for the working Referer<br />Special thanks to @<a href="https://twitter.com/darienhuss">DarienHuss</a>&nbsp;for the impulse and help!<br />Thanks to&nbsp;@<a href="https://twitter.com/timohirvonen">TimoHirvonen</a>&nbsp;(F-Secure) &nbsp;for flash CVE identification.<br /><br />[Edit 2015-09-10 : Got another encounter]<br /><u style="font-weight: bold;">Files:</u>&nbsp;<a href="https://files.dontneedcoffee.com/index.php/s/ggLFqB6CKjVbyCH">Fiddler and payload here</a>&nbsp;(password malware)<br />Summup of the filtering.<br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-XomzJllJVeI/VfLHXZUGXAI/AAAAAAAAFG8/QGDu_97jsiA/s1600/2015-09-11_14h11_35.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="214" src="http://3.bp.blogspot.com/-XomzJllJVeI/VfLHXZUGXAI/AAAAAAAAFG8/QGDu_97jsiA/s640/2015-09-11_14h11_35.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Niteris - 2015-09-10 - Multi-layer filtering.<br />This is being done the right way :)</td></tr></tbody></table>[/Edit]<br /><br /><div><br /></div><div><b><u>Read More :</u></b></div><div><a href="http://malware.dontneedcoffee.com/2014/06/cottoncastle.html">Meet Niteris EK (formerly known as CottonCastle)</a>&nbsp;- 2014-06-09<br /><a href="http://www.govcert.admin.ch/blog/13/swiss-advertising-network-compromised-and-distributing-a-trojan">Swiss Advertising network compromised and distributing a Trojan</a> - 2015-09-22 - GovCERT.ch</div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2015-05-12" itemprop="datePublished"> 2015-05-12</time>
+				
+
+				<span class="icon-archive pr20"> EXPLOIT-KIT</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> WMI query</span> <span class="icon-price-tag pr10"> CVE-2013-1710</span> <span class="icon-price-tag pr10"> CVE-2015-0311</span> <span class="icon-price-tag pr10"> Fiddler</span> <span class="icon-price-tag pr10"> CVE-2015-0336</span> <span class="icon-price-tag pr10"> Niteris</span> <span class="icon-price-tag pr10"> CVE-2012-3993</span> <span class="icon-price-tag pr10"> CVE-2014-0569</span> <span class="icon-price-tag pr10"> CVE-2014-6332</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2015/04/cve-2015-0359-flash-up-to-1700134-and.html">&laquo; CVE-2015-0359 (Flash up to 17.0.0.134) and Exploit Kits</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2015/05/an-exploit-kit-dedicated-to-csrf.html">An  Exploit Kit dedicated to CSRF Pharming &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

