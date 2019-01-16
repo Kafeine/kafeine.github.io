@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-01-16T17:23:40+01:00</updated>
+	<updated>2019-01-16T17:27:01+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -46,7 +46,7 @@
 				</author>
 			
 			<summary>The CVE-2018-15982 is a bug that allows remote code execution in Flash Player up to 31.0.0.153</summary>
-			<content type="html" xml:base="http://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html">&lt;p&gt;The &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15982&quot; title=&quot;Circl.lu CVE-2018-15982&quot;&gt;CVE-2018-15982&lt;/a&gt; is a bug that allows remote code execution in Flash Player up to 31.0.0.153, spotted in the wild as a 0day. Patched on December 05, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-42.html&quot;&gt;APSB18-42&lt;/a&gt;.&lt;/p&gt;
+			<content type="html" xml:base="http://malware.dontneedcoffee.com/2019/01/CVE-2018-15982.html">&lt;p&gt;The &lt;a href=&quot;https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-15982&quot; title=&quot;Mitre CVE-2018-15982&quot;&gt;CVE-2018-15982&lt;/a&gt; is a bug that allows remote code execution in Flash Player up to 31.0.0.153, spotted in the wild as a 0day. Patched on December 05, 2018 with &lt;a href=&quot;https://helpx.adobe.com/security/products/flash-player/apsb18-42.html&quot;&gt;APSB18-42&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;underminer&quot;&gt;&lt;a href=&quot;#underminer&quot;&gt;Underminer&lt;/a&gt;:&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2018/12/underminer-exploit-kit-improves-latest-iteration/&quot;&gt;Underminer exploit kit improves in its latest iteration&lt;/a&gt; - 2018-12-21 - Malwarebytes&lt;/p&gt;
@@ -59,7 +59,35 @@
 
 &lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/dfbf61cca208e7a6397c3e5edc14d7fef64ca6c1b31e55a8c41da86c59a30cf2/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/en/file/a96e998297c50b26accb4ce2860e511b76f71c23b022d80fdf9028abae2d10df/analysis/&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
 
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;IOC&lt;/th&gt;
+      &lt;th&gt;Type&lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;Date&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;payformyattention[.]site|51.15.35[.]154&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Fallout EK&lt;/td&gt;
+      &lt;td&gt;2019-01-16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;bd31d8f5f7d0f68222517afc54f85da9d305e63a2ff639c6c535e082de13dede&lt;/td&gt;
+      &lt;td&gt;SHA-256&lt;/td&gt;
+      &lt;td&gt;GandCrab Ransomware&lt;/td&gt;
+      &lt;td&gt;2019-01-16&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
 &lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://atr-blog.gigamon.com/2018/12/05/adobe-flash-zero-day-exploited-in-the-wild/&quot;&gt;Adobe Flash Zero-Day Exploited In the Wild&lt;/a&gt; - 2018-12-05 - Gigamon
+&lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2018/12/underminer-exploit-kit-improves-latest-iteration/&quot;&gt;Underminer exploit kit improves in its latest iteration&lt;/a&gt; - 2018-12-21 - Malwarebytes&lt;/p&gt;
 </content>
 
 			
