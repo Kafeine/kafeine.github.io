@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-01-16T17:32:26+01:00</updated>
+	<updated>2019-01-16T19:33:54+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -58,6 +58,58 @@
 &lt;center&gt;&lt;em&gt;Figure 4: Fallout exploiting CVE-2018-15982 on Windows 7 - 2019-01-16 &lt;/em&gt;&lt;/center&gt;
 
 &lt;p&gt;Files: &lt;a href=&quot;https://www.virustotal.com/en/file/dfbf61cca208e7a6397c3e5edc14d7fef64ca6c1b31e55a8c41da86c59a30cf2/analysis/&quot;&gt;Fiddler on VT&lt;/a&gt; - &lt;a href=&quot;https://www.virustotal.com/en/file/a96e998297c50b26accb4ce2860e511b76f71c23b022d80fdf9028abae2d10df/analysis/&quot;&gt;Pcap on VT&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Associated Advert underground:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Итак! Тяжкие работы по восстановлению всей инфраструктуры связки закончены, были проведены тесты и в данный момент связка работает в полном объеме. Также были произведены множество правок и изменений.&lt;/p&gt;
+
+  &lt;p&gt;Изменения:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Увеличена производительность&lt;/li&gt;
+    &lt;li&gt;Полностью переработан механизм обфускации кода и генерации лэндинга.&lt;/li&gt;
+    &lt;li&gt;Убран CVE-2018-8373 на переработку. В данный момент сплоит ведет себя не стабильно.&lt;/li&gt;
+    &lt;li&gt;Добавлен новый флеш сплоит CVE-2018-15982.&lt;/li&gt;
+    &lt;li&gt;Для запуска повершелл в шеллкод добавлен код отключения AMSI&lt;/li&gt;
+    &lt;li&gt;Кучка мелких правок&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;ИЗМЕНЕНА ЦЕНОВАЯ ПОЛИТИКА
+Неделя 400$
+Месяц 1300$&lt;/p&gt;
+
+  &lt;p&gt;В данный момент при проверке отстука софта со связки было выявлено:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Отстук EXE на уровне 80-90%&lt;/li&gt;
+    &lt;li&gt;Отстук PowerShell на уровне 95-100%&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Translated by google as:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;So! The hard work on the restoration of the entire infrastructure of the bundle was completed, tests were carried out and at the moment the bundle is working in full. There have also been many edits and changes.&lt;/p&gt;
+
+  &lt;p&gt;Changes:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Increased performance&lt;/li&gt;
+    &lt;li&gt;The code obfuscation and landing generation mechanism has been completely redesigned.&lt;/li&gt;
+    &lt;li&gt;Removed CVE-2018-8373 for recycling. At the moment, the flow rate is not stable.&lt;/li&gt;
+    &lt;li&gt;Added new flash sploit CVE-2018-15982.&lt;/li&gt;
+    &lt;li&gt;To launch Povercell, the disable code AMSI is added to the shellcode&lt;/li&gt;
+    &lt;li&gt;A bunch of minor edits&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;CHANGED PRICE POLICY
+Week 400 $
+Month $ 1300&lt;/p&gt;
+
+  &lt;p&gt;At the moment, when checking the otstuk software from the bundle, it was revealed:&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Otstuk EXE level 80-90%&lt;/li&gt;
+    &lt;li&gt;Otstuk PowerShell at the level of 95-100%&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
