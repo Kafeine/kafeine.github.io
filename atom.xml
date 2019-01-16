@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-01-16T19:34:42+01:00</updated>
+	<updated>2019-01-16T19:47:47+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -123,6 +123,12 @@ Month $ 1300&lt;/p&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
       &lt;td&gt;payformyattention[.]site|51.15.35[.]154&lt;/td&gt;
+      &lt;td&gt;domain|IP&lt;/td&gt;
+      &lt;td&gt;Fallout EK&lt;/td&gt;
+      &lt;td&gt;2019-01-16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;whereismyteam[.]press|51.15.111[.]159&lt;/td&gt;
       &lt;td&gt;domain|IP&lt;/td&gt;
       &lt;td&gt;Fallout EK&lt;/td&gt;
       &lt;td&gt;2019-01-16&lt;/td&gt;
