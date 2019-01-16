@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-01-16T17:27:01+01:00</updated>
+	<updated>2019-01-16T17:31:52+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -86,8 +86,9 @@
 
 &lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://atr-blog.gigamon.com/2018/12/05/adobe-flash-zero-day-exploited-in-the-wild/&quot;&gt;Adobe Flash Zero-Day Exploited In the Wild&lt;/a&gt; - 2018-12-05 - Gigamon
-&lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2018/12/underminer-exploit-kit-improves-latest-iteration/&quot;&gt;Underminer exploit kit improves in its latest iteration&lt;/a&gt; - 2018-12-21 - Malwarebytes&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://atr-blog.gigamon.com/2018/12/05/adobe-flash-zero-day-exploited-in-the-wild/&quot;&gt;Adobe Flash Zero-Day Exploited In the Wild&lt;/a&gt; - 2018-12-05 - Gigamon&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.malwarebytes.com/threat-analysis/2018/12/underminer-exploit-kit-improves-latest-iteration/&quot;&gt;Underminer exploit kit improves in its latest iteration&lt;/a&gt; - 2018-12-21 - Malwarebytes&lt;/p&gt;
 </content>
 
 			
