@@ -972,6 +972,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/gandcrab/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/spora/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1420,6 +1423,15 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/sergeifrankoff/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/msftsecintel/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/malwarebyteslabs/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/campuscodi/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
