@@ -975,6 +975,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/spora/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/sload/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/snatch/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1437,6 +1443,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/authors/bbotezatu/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/tildedennis/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/xme/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
 </url>
 <url>
@@ -1510,6 +1522,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/pinchyspider/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/actors/ta554/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/cves/cve20188174/</loc>
