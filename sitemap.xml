@@ -981,6 +981,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/snatch/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/js-gholoader/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1449,6 +1452,15 @@
 <loc>http://malware.dontneedcoffee.com/refs/authors/xme/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/broadanalysis/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/sud0xd/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/malware_traffic/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
 </url>
 <url>
@@ -1525,6 +1537,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/ta554/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/actors/socgholish/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/cves/cve20188174/</loc>
