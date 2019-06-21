@@ -1002,6 +1002,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/goziisfb/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/nonransomware/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1519,6 +1522,12 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/bry_campbell/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/aliaksandrchailytko/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/amigo_a_/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
