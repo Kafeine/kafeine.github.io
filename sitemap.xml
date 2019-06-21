@@ -894,7 +894,7 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/kovter/</loc>
 </url>
 <url>
-<loc>http://malware.dontneedcoffee.com/refs/malware/grobios/</loc>
+<loc>http://malware.dontneedcoffee.com/refs/malware/ngioweb/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/malware/princess/</loc>
@@ -1528,6 +1528,12 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/amigo_a_/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/alexturing/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/yegenshen/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
