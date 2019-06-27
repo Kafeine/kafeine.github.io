@@ -1167,6 +1167,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/eks/fallout/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/eks/lcgkit/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/kafeine/</loc>
 </url>
 <url>
@@ -1603,6 +1606,15 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/nicholasgriffin/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/malforsec/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/rohitbansal/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/adityaksood/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
