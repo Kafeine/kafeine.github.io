@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2019-06-27T16:33:27+02:00</updated>
+	<updated>2019-06-27T16:50:14+02:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -227,6 +227,12 @@ Appears to be a new Exploit Kit which has some similarities with “SPL EK”. (
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;p&gt;&lt;a href=&quot;#gf-sundown&quot;&gt;GreenFlash Sundown&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/vigilantbeluga/status/1114216872725995520&quot;&gt;19.03.26 #Malvertising -&amp;gt; #GreenFlashSundown EK-&amp;gt; #SeonRansomware ver 0.2 &amp;amp; #pony &amp;amp; #miner using CVE-2018-15982&lt;/a&gt; - 2019-04-05 - &lt;a href=&quot;https://twitter.com/vigilantbeluga&quot;&gt;@vigilantbeluga&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://blog.trendmicro.com/trendlabs-security-intelligence/shadowgate-returns-to-worldwide-operations-with-evolved-greenflash-sundown-exploit-kit/&quot;&gt;Shadowgate Returns to Worldwide Operations With Evolved Greenflash Sundown Exploit Kit&lt;/a&gt; - 2019-06-27 - Trendmicro&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Read More:&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
 
