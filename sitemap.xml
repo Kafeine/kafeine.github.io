@@ -1026,6 +1026,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/shifu/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/maze/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/psixbot/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1632,7 +1638,13 @@
 <loc>http://malware.dontneedcoffee.com/refs/authors/it4sec/</loc>
 </url>
 <url>
-<loc>http://malware.dontneedcoffee.com/refs/authors/caitlynhammond/</loc>
+<loc>http://malware.dontneedcoffee.com/refs/authors/catehamm/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/antelox/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/antonioparata/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
