@@ -1032,6 +1032,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/psixbot/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/predatorthethief/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1645,6 +1648,12 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/antonioparata/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/fumik0_/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/great/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
