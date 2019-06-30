@@ -1041,6 +1041,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/seon/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/raccoon/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1675,6 +1678,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/spiderlabsresearch/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/0xffff0800/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
