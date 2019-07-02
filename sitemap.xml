@@ -1047,6 +1047,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/andromut/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/urlzone/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1687,6 +1690,15 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/j4b3x/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/viql/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/neotan/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/assafdahan/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
