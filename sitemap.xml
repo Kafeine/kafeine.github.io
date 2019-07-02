@@ -1044,6 +1044,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/raccoon/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/andromut/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1314,7 +1317,7 @@
 <loc>http://malware.dontneedcoffee.com/refs/authors/office365tr/</loc>
 </url>
 <url>
-<loc>http://malware.dontneedcoffee.com/refs/authors/proofpoinstaff/</loc>
+<loc>http://malware.dontneedcoffee.com/refs/authors/proofpointstaff/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/dynamicanalysis/</loc>
@@ -1870,6 +1873,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/tds/ztds/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/tds/gidens/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/blog/</loc>
