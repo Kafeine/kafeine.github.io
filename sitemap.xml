@@ -1050,6 +1050,9 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/urlzone/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/ostap/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1708,6 +1711,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/fedorsinitsyn/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/_psrok1/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
