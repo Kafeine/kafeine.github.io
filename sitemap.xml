@@ -1074,6 +1074,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/marap/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/systembc/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/silence/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1777,6 +1783,12 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/authors/sudosev/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/kadekarmon/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/kirillshipulin/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
