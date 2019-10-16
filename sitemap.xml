@@ -1092,6 +1092,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/nodster/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/sdbbot/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/get2/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
 </url>
 <url>
@@ -1933,6 +1939,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/ta551/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/actors/ta547/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/cves/cve20188174/</loc>
