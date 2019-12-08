@@ -990,7 +990,7 @@
 <loc>http://malware.dontneedcoffee.com/refs/malware/netwire/</loc>
 </url>
 <url>
-<loc>http://malware.dontneedcoffee.com/refs/malware/atolspammer/</loc>
+<loc>http://malware.dontneedcoffee.com/refs/malware/varenyky/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/malware/tinynuke/</loc>
@@ -1108,6 +1108,12 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/malware/frameworkpos/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/buer/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/malware/cobaltstrike/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/eks/astrum/</loc>
@@ -1896,6 +1902,12 @@
 <loc>http://malware.dontneedcoffee.com/refs/authors/douglasbienstock/</loc>
 </url>
 <url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/km3dg3/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/authors/bry_campbell/</loc>
+</url>
+<url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/apt28/</loc>
 </url>
 <url>
@@ -2005,6 +2017,9 @@
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/actors/fin6/</loc>
+</url>
+<url>
+<loc>http://malware.dontneedcoffee.com/refs/actors/ta2101/</loc>
 </url>
 <url>
 <loc>http://malware.dontneedcoffee.com/refs/cves/cve20188174/</loc>
