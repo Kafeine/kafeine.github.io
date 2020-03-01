@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://malware.dontneedcoffee.com/</id>
 	<title>MDNC | Malware don't need Coffee</title>
-	<updated>2020-02-29T10:55:54+01:00</updated>
+	<updated>2020-03-01T13:12:35+01:00</updated>
 
 	<subtitle>Sleep is a symptom of caffeine deprivation.</subtitle>
 
@@ -49,7 +49,7 @@
 			<content type="html" xml:base="http://malware.dontneedcoffee.com/2020/02/ChooseAgain.html">&lt;p&gt;This is the last post/activity you’ll see on MDNC.&lt;/p&gt;
 
 &lt;p&gt;I have now chosen to bring the MDNC (Blog/Kafeine/MISP) project to an end.&lt;br /&gt;
-Thanks to those who helped me during this incredible 7 years journey.&lt;br /&gt;
+Thanks to those who helped me during this incredible 8 years journey.&lt;br /&gt;
 &lt;br /&gt;
 The blog and twitter account will stay up (but inactive) for the records.&lt;br /&gt;
 The MDNC MISP instance will be shut down in several weeks.&lt;br /&gt;
