@@ -43,6 +43,7 @@
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="RSS Feed (Styled)">
 	<meta property="og:description" content="Sleep is a symptom of caffeine deprivation.">
+	<meta property="og:logo" content="http://malware.dontneedcoffee.com/images/DNC.png">
 	<meta property="og:url" content="http://malware.dontneedcoffee.com/assets/xslt/rss.xslt">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
